@@ -120,7 +120,7 @@ function Index() {
   const columns = useMemo(() => {
     const count = Math.min(3, visibleItems.length);
     const cols: BoardItem[][] = Array.from({ length: count }, () => []);
-    visibleItems.forEach((item, index) => cols[index % count].push(item));
+    visibleItems.forEach((item, index) => cols[index % count]!.push(item));
     return cols;
   }, [visibleItems]);
 
