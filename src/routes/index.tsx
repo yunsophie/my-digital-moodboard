@@ -117,6 +117,13 @@ function Index() {
     });
   }, [activeFolder, query]);
 
+  const columns = useMemo(() => {
+    const count = Math.min(3, visibleItems.length);
+    const cols: BoardItem[][] = Array.from({ length: count }, () => []);
+    visibleItems.forEach((item, index) => cols[index % count]!.push(item));
+    return cols;
+  }, [visibleItems]);
+
   return (
     <main className="min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-40 border-b border-border/70 bg-background/95 backdrop-blur-xl">
@@ -138,14 +145,20 @@ function Index() {
       </header>
 
       <h1 className="sr-only">Sophie Li — computer science projects and experience</h1>
-      <section aria-label="Portfolio board" className="columns-2 gap-2 px-2 pb-10 pt-3 sm:columns-3 sm:gap-3 sm:px-3 lg:columns-5 xl:columns-6">
-        {visibleItems.map((item, index) => (
-          <Button key={item.title} variant="ghost" className="group relative mb-2 h-auto w-full break-inside-avoid overflow-hidden rounded-xl p-0 shadow-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 sm:mb-3" onClick={() => setSelected(item)} aria-label={`Open ${item.title}`}>
-            <img src={item.image} alt={item.alt} width={item.imageWidth} height={item.imageHeight} loading={index < 4 ? "eager" : "lazy"} className={`block w-full object-cover transition duration-500 group-hover:scale-[1.02] ${item.ratio ?? "aspect-auto"} ${item.crop ?? "object-center"}`} />
-            <span className="absolute inset-0 bg-foreground/0 transition-colors group-hover:bg-foreground/10" />
-            <span className="absolute bottom-2 right-2 grid size-8 translate-y-1 place-items-center rounded-full bg-background/90 opacity-0 shadow-sm transition group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:opacity-100"><ArrowUpRight className="size-4" aria-hidden="true" /></span>
-          </Button>
-        ))}
+      <section aria-label="Portfolio board" className="px-2 pb-10 pt-3 sm:px-3">
+        <div className="flex items-start gap-2 sm:gap-3">
+          {columns.map((column, columnIndex) => (
+            <div key={columnIndex} className="flex min-w-0 flex-1 flex-col gap-2 sm:gap-3">
+              {column.map((item, index) => (
+                <Button key={item.title} variant="ghost" className="group relative h-auto w-full overflow-hidden rounded-xl p-0 shadow-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" onClick={() => setSelected(item)} aria-label={`Open ${item.title}`}>
+                  <img src={item.image} alt={item.alt} width={item.imageWidth} height={item.imageHeight} loading={index < 4 && columnIndex === 0 ? "eager" : "lazy"} className={`block w-full object-cover transition duration-500 group-hover:scale-[1.02] ${item.ratio ?? "aspect-auto"} ${item.crop ?? "object-center"}`} />
+                  <span className="absolute inset-0 bg-foreground/0 transition-colors group-hover:bg-foreground/10" />
+                  <span className="absolute bottom-2 right-2 grid size-8 translate-y-1 place-items-center rounded-full bg-background/90 opacity-0 shadow-sm transition group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:opacity-100"><ArrowUpRight className="size-4" aria-hidden="true" /></span>
+                </Button>
+              ))}
+            </div>
+          ))}
+        </div>
       </section>
 
       {visibleItems.length === 0 && <p className="px-5 py-24 text-center font-serif text-2xl text-muted-foreground">Nothing in this folder yet.</p>}
