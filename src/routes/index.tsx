@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowUpRight, Github, Mail, Menu, Search, X } from "lucide-react";
+import { ArrowUpRight, Github, Mail, Search, X } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 
 import codeDesk from "@/assets/editorial-code-desk.jpg";
@@ -94,7 +94,7 @@ function ProjectModal({ item, onClose }: { item: BoardItem; onClose: () => void 
             </ul>
             <div className="mt-auto flex items-center gap-5 pt-10 text-xs">
               <a className="inline-flex items-center gap-2 hover:text-accent-foreground" href="https://github.com/" target="_blank" rel="noreferrer"><Github className="size-4" aria-hidden="true" /> View GitHub</a>
-              <a className="inline-flex items-center gap-2 hover:text-accent-foreground" href="mailto:hello@example.com"><Mail className="size-4" aria-hidden="true" /> Contact</a>
+              <a className="inline-flex items-center gap-2 hover:text-accent-foreground" href="mailto:hello@sophieli.dev"><Mail className="size-4" aria-hidden="true" /> Contact</a>
             </div>
           </div>
         </div>
