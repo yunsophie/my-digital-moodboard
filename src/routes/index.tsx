@@ -138,7 +138,7 @@ function Index() {
       </header>
 
       <h1 className="sr-only">Sophie Li — computer science projects and experience</h1>
-      <section aria-label="Portfolio board" className="columns-2 gap-2 px-2 pb-10 pt-3 sm:columns-3 sm:gap-3 sm:px-3 lg:columns-5 xl:columns-6">
+      <section aria-label="Portfolio board" className="columns-3 gap-2 px-2 pb-10 pt-3 sm:gap-3 sm:px-3">
         {visibleItems.map((item, index) => (
           <Button key={item.title} variant="ghost" className="group relative mb-2 h-auto w-full break-inside-avoid overflow-hidden rounded-xl p-0 shadow-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 sm:mb-3" onClick={() => setSelected(item)} aria-label={`Open ${item.title}`}>
             <img src={item.image} alt={item.alt} width={item.imageWidth} height={item.imageHeight} loading={index < 4 ? "eager" : "lazy"} className={`block w-full object-cover transition duration-500 group-hover:scale-[1.02] ${item.ratio ?? "aspect-auto"} ${item.crop ?? "object-center"}`} />
