@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style type="text/tailwindcss">
+@theme {
+  --color-ink: #1c1a17;
+  --color-paper: #f4f1ea;
+  --color-cream: #ebe6db;
+  --color-clay: #b06a45;
+  --color-sage: #8a9080;
+  --font-serif: "Fraunces", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+</style>
+<style>
+@keyframes drift { 0%{transform:translateY(0)} 100%{transform:translateY(-14px)} }
+.drift { animation: drift 7s ease-in-out infinite alternate; }
+</style>
+</head>
+<body>
+
+<div class="min-h-screen bg-paper text-ink font-sans antialiased selection:bg-clay/20">
+
+  <!-- Top bar -->
+  <header class="border-b border-ink/10">
+    <div class="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
+      <div class="flex items-baseline gap-3">
+        <span class="font-serif text-2xl font-semibold tracking-tight">Mara Voss</span>
+        <span class="hidden sm:inline text-xs uppercase tracking-[0.2em] text-ink/40">CS · Portfolio</span>
+      </div>
+      <nav class="flex items-center gap-6 text-sm">
+        <a href="#work" class="text-ink/60 hover:text-ink">Work</a>
+        <a href="#path" class="text-ink/60 hover:text-ink">Path</a>
+        <a href="#board" class="text-ink/60 hover:text-ink">Board</a>
+        <a href="https://github.com" class="inline-flex items-center gap-1.5 bg-ink text-paper px-4 py-2 rounded-full text-sm font-medium hover:bg-ink/85">
+          <span class="size-4 shrink-0 grid place-items-center text-[11px] font-semibold">GH</span>
+          GitHub
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="max-w-6xl mx-auto px-6 pt-16 pb-12">
+    <p class="text-xs uppercase tracking-[0.25em] text-clay mb-6">A moodboard, not a résumé</p>
+    <h1 class="font-serif font-medium leading-[0.95] tracking-tight text-[clamp(2.75rem,8vw,6rem)] max-w-[16ch] text-balance">
+      I collect ideas the way others collect <span class="italic text-clay">postcards</span> — then build them.
+    </h1>
+    <div class="mt-10 grid grid-cols-12 gap-6 items-end">
+      <p class="col-span-12 md:col-span-6 md:col-start-1 text-lg leading-relaxed text-ink/70 max-w-[46ch] text-pretty">
+        Computer science student at a small college, currently into systems that feel human. I sketch in the margins, ship on weekends, and keep a running list of things worth making.
+      </p>
+      <div class="col-span-12 md:col-span-5 md:col-start-8 flex flex-col gap-3">
+        <a href="#work" class="inline-flex items-center justify-center gap-2 bg-clay text-paper font-medium py-3 px-5 rounded-full hover:bg-clay/90">
+          See the work <span class="text-sm">→</span>
+        </a>
+        <a href="#board" class="inline-flex items-center justify-center gap-2 py-3 px-5 rounded-full text-sm font-medium text-ink/70 hover:text-ink">
+          Browse the board
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="work" class="max-w-6xl mx-auto px-6 py-16">
+    <div class="flex items-end justify-between mb-10">
+      <h2 class="font-serif text-4xl font-medium tracking-tight text-balance">Selected work</h2>
+      <span class="text-xs uppercase tracking-[0.2em] text-ink/40">04 pieces</span>
+    </div>
+    <div class="grid grid-cols-12 gap-5">
+      <div class="col-span-12 md:col-span-7 group">
+        <div class="relative overflow-hidden rounded-[min(1vw,14px)]">
+          <div data-lov-image-placeholder data-prompt="softly lit terminal window with warm amber text on dark cream, minimal" data-width="1024" data-height="768" class="w-full aspect-[4/3] bg-cream outline-1 -outline-offset-1 outline-black/5 grid place-items-center"><span class="text-[10px] font-medium uppercase tracking-[0.15em] text-ink/30">Image</span></div>
+          <span class="absolute top-4 left-4 bg-paper/90 text-ink text-xs font-medium px-3 py-1 rounded-full">Systems</span>
+        </div>
+        <div class="mt-4 flex items-start justify-between gap-4">
+          <div>
+            <h3 class="font-serif text-2xl font-medium tracking-tight">Lumen Index</h3>
+            <p class="text-sm text-ink/60 mt-1 max-w-[40ch] text-pretty">A local-first search engine for personal notes, built in Rust and SQLite.</p>
+          </div>
+          <a href="https://github.com" class="shrink-0 text-sm font-medium text-clay hover:text-clay/70">GitHub →</a>
+        </div>
+      </div>
+      <div class="col-span-12 md:col-span-5 group">
+        <div class="relative overflow-hidden rounded-[min(1vw,14px)]">
+          <div data-lov-image-placeholder data-prompt="abstract data visualization of flowing lines in muted clay and sage" data-width="768" data-height="768" class="w-full aspect-[4/3] bg-sage/25 outline-1 -outline-offset-1 outline-black/5 grid place-items-center"><span class="text-[10px] font-medium uppercase tracking-[0.15em] text-ink/30">Image</span></div>
+          <span class="absolute top-4 left-4 bg-paper/90 text-ink text-xs font-medium px-3 py-1 rounded-full">Data</span>
+        </div>
+        <div class="mt-4 flex items-start justify-between gap-4">
+          <div>
+            <h3 class="font-serif text-2xl font-medium tracking-tight">Tidepool</h3>
+            <p class="text-sm text-ink/60 mt-1 max-w-[36ch] text-pretty">Realtime climate dashboard for a coastal research group.</p>
+          </div>
+          <a href="https://github.com" class="shrink-0 text-sm font-medium text-clay hover:text-clay/70">GitHub →</a>
+        </div>
+      </div>
+      <div class="col-span-12 md:col-span-5 group">
+        <div class="relative overflow-hidden rounded-[min(1vw,14px)]">
+          <div data-lov-image-placeholder data-prompt="minimal generative art of overlapping translucent circles, warm neutrals" data-width="768" data-height="768" class="w-full aspect-[4/3] bg-clay/15 outline-1 -outline-offset-1 outline-black/5 grid place-items-center"><span class="text-[10px] font-medium uppercase tracking-[0.15em] text-ink/30">Image</span></div>
+          <span class="absolute top-4 left-4 bg-paper/90 text-ink text-xs font-medium px-3 py-1 rounded-full">Creative</span>
+        </div>
+        <div class="mt-4 flex items-start justify-between gap-4">
+          <div>
+            <h3 class="font-serif text-2xl font-medium tracking-tight">Grain</h3>
+            <p class="text-sm text-ink/60 mt-1 max-w-[36ch] text-pretty">A generative poster tool that turns text into texture.</p>
+          </div>
+          <a href="https://github.com" class="shrink-0 text-sm font-medium text-clay hover:text-clay/70">GitHub →</a>
+        </div>
+      </div>
+      <div class="col-span-12 md:col-span-7 group">
+        <div class="relative overflow-hidden rounded-[min(1vw,14px)]">
+          <div data-lov-image-placeholder data-prompt="cozy desk with laptop, notebook and coffee, warm neutral tones" data-width="1024" data-height="768" class="w-full aspect-[4/3] bg-cream outline-1 -outline-offset-1 outline-black/5 grid place-items-center"><span class="text-[10px] font-medium uppercase tracking-[0.15em] text-ink/30">Image</span></div>
+          <span class="absolute top-4 left-4 bg-paper/90 text-ink text-xs font-medium px-3 py-1 rounded-full">Tooling</span>
+        </div>
+        <div class="mt-4 flex items-start justify-between gap-4">
+          <div>
+            <h3 class="font-serif text-2xl font-medium tracking-tight">Deskmate</h3>
+            <p class="text-sm text-ink/60 mt-1 max-w-[40ch] text-pretty">A tiny focus timer that lives in the menu bar and never nags.</p>
+          </div>
+          <a href="https://github.com" class="shrink-0 text-sm font-medium text-clay hover:text-clay/70">GitHub →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="path" class="bg-cream/60">
+    <div class="max-w-6xl mx-auto px-6 py-16">
+      <h2 class="font-serif text-4xl font-medium tracking-tight text-balance mb-12">The path so far</h2>
+      <ol class="relative border-l border-ink/15 pl-8 space-y-10">
+        <li class="relative">
+          <span class="absolute -left-[41px] top-1 size-3 rounded-full bg-clay"></span>
+          <p class="text-xs uppercase tracking-[0.2em] text-ink/40">2024 — Present</p>
+          <h3 class="font-serif text-xl font-medium mt-1">Software Engineering Intern · Northwind Labs</h3>
+          <p class="text-sm text-ink/60 mt-1 max-w-[52ch] text-pretty">Building internal tooling for a small data team; learned to ship small and often.</p>
+        </li>
+        <li class="relative">
+          <span class="absolute -left-[41px] top-1 size-3 rounded-full bg-sage"></span>
+          <p class="text-xs uppercase tracking-[0.2em] text-ink/40">2023 — 2024</p>
+          <h3 class="font-serif text-xl font-medium mt-1">Teaching Assistant · Algorithms</h3>
+          <p class="text-sm text-ink/60 mt-1 max-w-[52ch] text-pretty">Ran weekly office hours and redesigned the problem sets for clarity.</p>
+        </li>
+        <li class="relative">
+          <span class="absolute -left-[41px] top-1 size-3 rounded-full bg-ink/30"></span>
+          <p class="text-xs uppercase tracking-[0.2em] text-ink/40">2022 — 2024</p>
+          <h3 class="font-serif text-xl font-medium mt-1">B.S. Computer Science · Cedar College</h3>
+          <p class="text-sm text-ink/60 mt-1 max-w-[52ch] text-pretty">Focus on systems and human-computer interaction; thesis on calm interfaces.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="max-w-6xl mx-auto px-6 py-16">
+    <div class="grid grid-cols-12 gap-8">
+      <div class="col-span-12 md:col-span-4">
+        <h2 class="font-serif text-4xl font-medium tracking-tight text-balance">Skills</h2>
+        <p class="text-sm text-ink/60 mt-4 max-w-[30ch] text-pretty">The tools I reach for, and the ones I'm still learning to love.</p>
+      </div>
+      <div class="col-span-12 md:col-span-8 grid grid-cols-2 gap-x-8 gap-y-6">
+        <div>
+          <p class="text-xs uppercase tracking-[0.2em] text-ink/40 mb-3">Languages</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-ink text-paper px-3 py-1.5 rounded-full text-sm">Rust</span>
+            <span class="bg-ink text-paper px-3 py-1.5 rounded-full text-sm">Python</span>
+            <span class="bg-ink/10 px-3 py-1.5 rounded-full text-sm">TypeScript</span>
+            <span class="bg-ink/10 px-3 py-1.5 rounded-full text-sm">Go</span>
+          </div>
+        </div>
+        <div>
+          <p class="text-xs uppercase tracking-[0.2em] text-ink/40 mb-3">Craft</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-clay/15 text-clay px-3 py-1.5 rounded-full text-sm">Systems design</span>
+            <span class="bg-clay/15 text-clay px-3 py-1.5 rounded-full text-sm">UI engineering</span>
+            <span class="bg-clay/15 text-clay px-3 py-1.5 rounded-full text-sm">Data viz</span>
+          </div>
+        </div>
+        <div class="col-span-2">
+          <p class="text-xs uppercase tracking-[0.2em] text-ink/40 mb-3">Currently into</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-sage/20 px-3 py-1.5 rounded-full text-sm">Local-first apps</span>
+            <span class="bg-sage/20 px-3 py-1.5 rounded-full text-sm">Type design</span>
+            <span class="bg-sage/20 px-3 py-1.5 rounded-full text-sm">Analog photography</span>
+            <span class="bg-sage/20 px-3 py-1.5 rounded-full text-sm">Trail running</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Moodboard -->
+  <section id="board" class="max-w-6xl mx-auto px-6 py-16">
+    <div class="flex items-end justify-between mb-10">
+      <h2 class="font-serif text-4xl font-medium tracking-tight text-balance">The board</h2>
+      <span class="text-xs uppercase tracking-[0.2em] text-ink/40">Interests</span>
+    </div>
+    <div class="grid grid-cols-12 gap-4">
+      <div class="col-span-12 md:col-span-4 drift">
+        <div data-lov-image-placeholder data-prompt="stack of vintage postcards and a fountain pen on linen" data-width="768" data-height="1024" class="w-full aspect-[3/4] bg-cream outline-1 -outline-offset-1 outline-black/5 rounded-[min(1vw,14px)] grid place-items-center"><span class="text-[10px] font-medium uppercase tracking-[0.15em] text-ink/30">Image</span></div>
+      </div>
+      <div class="col-span-12 md:col-span-4">
+        <div class="h-full bg-ink text-paper rounded-[min(1vw,14px)] p-6 flex flex-col justify-between">
+          <p class="font-serif text-2xl font-medium leading-snug text-balance">“Make it feel like a object you'd keep on a shelf.”</p>
+          <p class="text-xs uppercase tracking-[0.2em] text-paper/50 mt-6">Design principle</p>
+        </div>
+      </div>
+      <div class="col-span-12 md:col-span-4">
+        <div class="h-full bg-clay/15 rounded-[min(1vw,14px)] p-6 flex flex-col justify-between">
+          <p class="text-xs uppercase tracking-[0.2em] text-clay mb-4">Currently into</p>
+          <ul class="space-y-2 text-sm text-ink/80">
+            <li>· Calm, slow software</li>
+            <li>· Serif type in interfaces</li>
+            <li>· Handmade ceramics</li>
+            <li>· Long walks, no phone</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-ink/10">
+    <div class="max-w-6xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-sm text-ink/50">© 2024 Mara Voss — built by hand, no tracking.</p>
+      <div class="flex items-center gap-5 text-sm">
+        <a href="https://github.com" class="text-ink/60 hover:text-ink">GitHub</a>
+        <a href="mailto:hi@example.com" class="text-ink/60 hover:text-ink">Email</a>
+        <a href="#top" class="text-ink/60 hover:text-ink">Back to top</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
