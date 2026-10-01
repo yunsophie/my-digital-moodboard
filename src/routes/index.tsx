@@ -133,8 +133,10 @@ function Index() {
             <span className="sr-only">Search portfolio</span>
             <input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search" className="min-w-0 flex-1 bg-transparent text-sm text-foreground outline-none placeholder:text-muted-foreground" />
           </label>
-          <a href="https://github.com/" target="_blank" rel="noreferrer" className="grid size-10 shrink-0 place-items-center rounded-full hover:bg-muted" aria-label="GitHub profile"><Github className="size-4" /></a>
-          <a href="mailto:hello@sophieli.dev" className="grid size-10 shrink-0 place-items-center rounded-full hover:bg-muted" aria-label="Email Sophie Li"><Mail className="size-4" /></a>
+          <div className="flex shrink-0 items-center gap-0">
+            <a href="https://github.com/" target="_blank" rel="noreferrer" className="grid size-10 place-items-center rounded-full hover:bg-muted" aria-label="GitHub profile"><Github className="size-4" /></a>
+            <a href="mailto:hello@sophieli.dev" className="grid size-10 place-items-center rounded-full hover:bg-muted" aria-label="Email Sophie Li"><Mail className="size-4" /></a>
+          </div>
         </div>
         <nav aria-label="Portfolio folders" className="flex gap-2 overflow-x-auto px-3 pb-3 sm:px-5">
           {folders.map((folder) => (
