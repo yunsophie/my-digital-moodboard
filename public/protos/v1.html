@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style type="text/tailwindcss">
+@theme {
+  --color-ink: #1b1b1f;
+  --color-inksoft: #55555f;
+  --color-accent: #4f46e5;
+  --color-accent2: #0ea5e9;
+  --color-paper: #eef0f6;
+  --font-serif: "Fraunces", serif;
+  --font-sans: "Inter", sans-serif;
+}
+</style>
+<style>
+  .bg-scene {
+    background:
+      radial-gradient(900px 500px at 12% -10%, rgba(79,70,229,0.22), transparent 60%),
+      radial-gradient(800px 600px at 100% 10%, rgba(14,165,233,0.20), transparent 55%),
+      radial-gradient(700px 700px at 50% 120%, rgba(168,85,247,0.16), transparent 60%),
+      linear-gradient(160deg, #eef0f6 0%, #e7e9f2 45%, #eef0f6 100%);
+  }
+  .glass {
+    background: rgba(255,255,255,0.55);
+    backdrop-filter: blur(18px) saturate(140%);
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+    border: 1px solid rgba(255,255,255,0.65);
+    box-shadow: 0 18px 40px -24px rgba(27,27,31,0.35);
+  }
+  .glass-soft {
+    background: rgba(255,255,255,0.38);
+    backdrop-filter: blur(12px) saturate(130%);
+    -webkit-backdrop-filter: blur(12px) saturate(130%);
+    border: 1px solid rgba(255,255,255,0.5);
+  }
+</style>
+</head>
+<body>
+
+<div class="bg-scene min-h-screen w-full font-sans text-ink antialiased">
+
+  <!-- NAV -->
+  <header class="max-w-6xl mx-auto px-6 pt-8">
+    <nav class="glass rounded-2xl px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="size-9 rounded-full bg-gradient-to-br from-accent to-accent2 grid place-items-center text-white text-sm font-semibold" style="font-family:'Fraunces',serif">M</div>
+        <span class="text-sm font-semibold tracking-tight">Maya Okafor</span>
+      </div>
+      <div class="hidden md:flex items-center gap-8 text-sm text-inksoft">
+        <a href="#work" class="hover:text-ink transition-colors">Work</a>
+        <a href="#experience" class="hover:text-ink transition-colors">Experience</a>
+        <a href="#about" class="hover:text-ink transition-colors">About</a>
+      </div>
+      <a href="#contact" class="text-sm font-medium bg-ink text-white px-4 py-2 rounded-full hover:bg-ink/85 transition-colors">Get in touch</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="max-w-6xl mx-auto px-6 pt-14 pb-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+    <div class="lg:col-span-7">
+      <p class="text-xs uppercase tracking-[0.25em] text-accent font-semibold mb-5">Computer Science · Class of 2026</p>
+      <h1 class="font-serif text-5xl md:text-6xl leading-[1.02] tracking-tight">
+        I build <em class="italic text-accent">calm</em> software and collect the small details.
+      </h1>
+      <p class="mt-6 text-lg text-inksoft max-w-xl leading-relaxed">
+        Third-year CS student obsessed with systems, typography, and the quiet craft of making things feel effortless. Currently interning in distributed systems.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="#work" class="bg-accent text-white px-5 py-3 rounded-full text-sm font-medium hover:bg-accent/90 transition-colors">View projects</a>
+        <a href="#about" class="glass-soft px-5 py-3 rounded-full text-sm font-medium hover:bg-white/60 transition-colors">About me</a>
+      </div>
+    </div>
+    <div class="lg:col-span-5">
+      <div class="glass rounded-3xl p-4">
+        <div data-lov-image-placeholder data-prompt="soft portrait of a young woman with warm smile, cool studio light, neutral background" data-width="1024" data-height="1280" class="w-full aspect-[4/5] bg-stone-200/60 outline-1 -outline-offset-1 outline-black/5 rounded-2xl grid place-items-center">
+          <span class="text-[10px] font-medium uppercase tracking-[0.15em] text-stone-400">Image</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="work" class="max-w-6xl mx-auto px-6 py-12">
+    <div class="flex items-end justify-between mb-8">
+      <h2 class="font-serif text-3xl md:text-4xl tracking-tight">Selected work</h2>
+      <span class="text-sm text-inksoft">03 projects</span>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="glass rounded-3xl p-5 flex flex-col">
+        <div data-lov-image-placeholder data-prompt="abstract gradient mesh of indigo and cyan, soft and airy" data-width="1024" data-height="768" class="w-full aspect-[4/3] bg-stone-200/60 outline-1 -outline-offset-1 outline-black/5 rounded-2xl grid place-items-center">
+          <span class="text-[10px] font-medium uppercase tracking-[0.15em] text-stone-400">Image</span>
+        </div>
+        <h3 class="mt-5 font-serif text-xl tracking-tight">Lumen Notes</h3>
+        <p class="mt-2 text-sm text-inksoft leading-relaxed flex-1">A local-first markdown editor with real-time sync and a focus mode.</p>
+        <div class="mt-4 flex items-center justify-between">
+          <span class="text-xs uppercase tracking-widest text-inksoft">Rust · WASM</span>
+          <a href="#" class="text-sm font-medium text-accent hover:underline">GitHub →</a>
+        </div>
+      </div>
+      <div class="glass rounded-3xl p-5 flex flex-col">
+        <div data-lov-image-placeholder data-prompt="minimal dashboard UI with soft shadows and cool tones" data-width="1024" data-height="768" class="w-full aspect-[4/3] bg-stone-200/60 outline-1 -outline-offset-1 outline-black/5 rounded-2xl grid place-items-center">
+          <span class="text-[10px] font-medium uppercase tracking-[0.15em] text-stone-400">Image</span>
+        </div>
+        <h3 class="mt-5 font-serif text-xl tracking-tight">Pulseboard</h3>
+        <p class="mt-2 text-sm text-inksoft leading-relaxed flex-1">A real-time metrics dashboard for a campus robotics team.</p>
+        <div class="mt-4 flex items-center justify-between">
+          <span class="text-xs uppercase tracking-widest text-inksoft">Go · React</span>
+          <a href="#" class="text-sm font-medium text-accent hover:underline">GitHub →</a>
+        </div>
+      </div>
+      <div class="glass rounded-3xl p-5 flex flex-col">
+        <div data-lov-image-placeholder data-prompt="isometric 3D scene of a small robot, soft neutral palette" data-width="1024" data-height="768" class="w-full aspect-[4/3] bg-stone-200/60 outline-1 -outline-offset-1 outline-black/5 rounded-2xl grid place-items-center">
+          <span class="text-[10px] font-medium uppercase tracking-[0.15em] text-stone-400">Image</span>
+        </div>
+        <h3 class="mt-5 font-serif text-xl tracking-tight">Driftbot</h3>
+        <p class="mt-2 text-sm text-inksoft leading-relaxed flex-1">A pathfinding simulator exploring A* and D* Lite algorithms.</p>
+        <div class="mt-4 flex items-center justify-between">
+          <span class="text-xs uppercase tracking-widest text-inksoft">Python · C++</span>
+          <a href="#" class="text-sm font-medium text-accent hover:underline">GitHub →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE + ABOUT -->
+  <section id="experience" class="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-12 gap-6">
+    <div class="lg:col-span-7">
+      <div class="glass rounded-3xl p-8 h-full">
+        <h2 class="font-serif text-3xl tracking-tight mb-8">Experience</h2>
+        <div class="space-y-8">
+          <div class="border-l-2 border-accent/40 pl-5">
+            <p class="text-xs uppercase tracking-widest text-inksoft">2025 · Internship</p>
+            <h3 class="mt-1 font-serif text-xl tracking-tight">Systems Engineer, Northwind Labs</h3>
+            <p class="mt-2 text-sm text-inksoft leading-relaxed">Built observability tooling for a distributed message queue; cut p99 latency by 18%.</p>
+          </div>
+          <div class="border-l-2 border-accent/40 pl-5">
+            <p class="text-xs uppercase tracking-widest text-inksoft">2024 · Research</p>
+            <h3 class="mt-1 font-serif text-xl tracking-tight">Undergrad Researcher, HCI Lab</h3>
+            <p class="mt-2 text-sm text-inksoft leading-relaxed">Studied how layout density affects reading speed in data-heavy interfaces.</p>
+          </div>
+          <div class="border-l-2 border-accent/40 pl-5">
+            <p class="text-xs uppercase tracking-widest text-inksoft">2024 · Coursework</p>
+            <h3 class="mt-1 font-serif text-xl tracking-tight">Distributed Systems · Compilers</h3>
+            <p class="mt-2 text-sm text-inksoft leading-relaxed">Designed a tiny interpreter and a raft-based key-value store for the capstone.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="about" class="lg:col-span-5">
+      <div class="glass rounded-3xl p-8 h-full">
+        <h2 class="font-serif text-3xl tracking-tight mb-6">Currently into</h2>
+        <ul class="space-y-3 text-sm text-inksoft">
+          <li class="flex gap-3"><span class="text-accent">—</span> Type design and variable fonts</li>
+          <li class="flex gap-3"><span class="text-accent">—</span> Film photography on 35mm</li>
+          <li class="flex gap-3"><span class="text-accent">—</span> Long hikes and slow coffee</li>
+          <li class="flex gap-3"><span class="text-accent">—</span> Reading about systems reliability</li>
+        </ul>
+        <div class="mt-8 pt-6 border-t border-ink/10">
+          <p class="text-xs uppercase tracking-widest text-inksoft mb-3">Skills</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="glass-soft px-3 py-1 rounded-full text-xs">Rust</span>
+            <span class="glass-soft px-3 py-1 rounded-full text-xs">Go</span>
+            <span class="glass-soft px-3 py-1 rounded-full text-xs">Python</span>
+            <span class="glass-soft px-3 py-1 rounded-full text-xs">TypeScript</span>
+            <span class="glass-soft px-3 py-1 rounded-full text-xs">SQL</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact" class="max-w-6xl mx-auto px-6 py-12">
+    <div class="glass rounded-3xl px-8 py-10 text-center">
+      <h2 class="font-serif text-3xl md:text-4xl tracking-tight">Let's make something quiet and precise.</h2>
+      <a href="mailto:hello@mayaokafor.dev" class="mt-6 inline-block bg-accent text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-accent/90 transition-colors">hello@mayaokafor.dev</a>
+      <p class="mt-6 text-xs text-inksoft">© 2025 Maya Okafor · Built with care</p>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
