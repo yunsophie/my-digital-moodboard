@@ -117,6 +117,13 @@ function Index() {
     });
   }, [activeFolder, query]);
 
+  const columns = useMemo(() => {
+    const count = Math.min(3, visibleItems.length);
+    const cols: BoardItem[][] = Array.from({ length: count }, () => []);
+    visibleItems.forEach((item, index) => cols[index % count].push(item));
+    return cols;
+  }, [visibleItems]);
+
   return (
     <main className="min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-40 border-b border-border/70 bg-background/95 backdrop-blur-xl">
