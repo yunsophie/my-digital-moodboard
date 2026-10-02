@@ -328,7 +328,7 @@ function Index() {
         </div>
       </section>
 
-      <nav aria-label="Portfolio folders" className="flex items-center gap-1 px-2 pb-3 pt-5 sm:px-4">
+      <nav aria-label="Portfolio folders" className="sticky top-[68px] z-30 flex items-center gap-1 bg-background/95 px-2 pb-3 pt-5 backdrop-blur-xl sm:px-4">
         {navScroll.left && (
           <button type="button" onClick={() => scrollNavStrip("left")} className="grid size-8 shrink-0 place-items-center rounded-full bg-background text-muted-foreground transition hover:bg-muted hover:text-foreground" aria-label="Scroll folders left"><ChevronLeft className="size-4" aria-hidden="true" /></button>
         )}
