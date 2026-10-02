@@ -292,7 +292,7 @@ function Index() {
         </div>
       </header>
 
-      <section aria-label="About this board" className="flex flex-wrap items-end justify-between gap-4 px-3 pt-6 sm:px-5">
+      <section aria-label="About this board" className="flex flex-wrap items-end justify-between gap-4 px-3 pt-2 sm:px-5">
         <div className="min-w-0">
           <h1 className="font-sans text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">sophie's portfolio</h1>
           <p className="mt-3 flex flex-wrap items-center gap-x-2 gap-y-1 font-sans text-xs text-muted-foreground sm:text-sm">
