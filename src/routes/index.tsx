@@ -282,10 +282,18 @@ function Index() {
             <a href="mailto:hello@sophieli.dev" className="grid size-10 place-items-center rounded-full hover:bg-muted" aria-label="Email Sophie Li"><Mail className="size-4" /></a>
           </div>
         </div>
-        <nav aria-label="Portfolio folders" className="flex gap-2 overflow-x-auto px-3 pb-3 sm:px-5">
-          {folders.map((folder) => (
-            <Button key={folder} variant={activeFolder === folder ? "default" : "secondary"} size="sm" className="shrink-0 rounded-full px-4 shadow-none" onClick={() => changeFolder(folder)}>{folder}</Button>
-          ))}
+        <nav aria-label="Portfolio folders" className="flex items-center gap-1 px-2 pb-3 sm:px-4">
+          {navScroll.left && (
+            <button type="button" onClick={() => scrollNavStrip("left")} className="grid size-8 shrink-0 place-items-center rounded-full text-muted-foreground transition hover:bg-muted hover:text-foreground" aria-label="Scroll folders left"><ChevronLeft className="size-4" aria-hidden="true" /></button>
+          )}
+          <div ref={navStripRef} onScroll={updateNavScroll} className="no-scrollbar flex min-w-0 flex-1 gap-2 overflow-x-auto px-1">
+            {folders.map((folder) => (
+              <Button key={folder} variant={activeFolder === folder ? "default" : "secondary"} size="sm" className="shrink-0 rounded-full px-4 shadow-none" onClick={() => changeFolder(folder)}>{folder}</Button>
+            ))}
+          </div>
+          {navScroll.right && (
+            <button type="button" onClick={() => scrollNavStrip("right")} className="grid size-8 shrink-0 place-items-center rounded-full text-muted-foreground transition hover:bg-muted hover:text-foreground" aria-label="Scroll folders right"><ChevronRight className="size-4" aria-hidden="true" /></button>
+          )}
         </nav>
       </header>
 
