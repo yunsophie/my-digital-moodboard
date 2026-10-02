@@ -120,7 +120,7 @@ function FlipImage({
             className={`block h-full w-full object-cover transition duration-500 group-hover:scale-[1.02] ${crop ?? "object-center"}`}
           />
           <span className="absolute inset-0 rounded-xl bg-blush/0 transition-colors group-hover:bg-blush/50" />
-          <span className="pointer-events-none absolute inset-x-0 bottom-0 hidden translate-y-2 bg-gradient-to-t from-foreground/80 via-foreground/35 to-transparent px-3 pb-3 pt-12 text-background opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100 md:block">
+          <span className="pointer-events-none absolute inset-x-0 bottom-0 hidden translate-y-2 bg-gradient-to-t from-foreground/80 via-foreground/35 to-transparent px-3 pb-3 pt-12 text-background opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100 lg:block">
             <span className="block truncate font-serif text-xl leading-tight">{item.title}</span>
             <span className="mt-1 block truncate font-sans text-[10px] uppercase tracking-[0.12em]">
               {item.year} · {item.tools.slice(0, 3).join(" · ")}
@@ -128,11 +128,11 @@ function FlipImage({
           </span>
           <span
             aria-hidden="true"
-            className={`tap-hint pointer-events-none absolute right-1.5 top-1.5 rounded-full bg-background/90 px-2 py-1 font-sans text-[9px] font-semibold uppercase leading-none tracking-wide text-foreground shadow-sm transition-opacity duration-700 md:hidden ${showTapBadge ? "tap-hint--visible" : "opacity-0"}`}
+            className={`tap-hint pointer-events-none absolute right-1.5 top-1.5 rounded-full bg-background/90 px-2 py-1 font-sans text-[9px] font-semibold uppercase leading-none tracking-wide text-foreground shadow-sm transition-opacity duration-700 lg:hidden ${showTapBadge ? "tap-hint--visible" : "opacity-0"}`}
           >
             Tap
           </span>
-          <span className="absolute bottom-2 right-2 hidden size-8 translate-y-1 place-items-center rounded-full bg-background/90 opacity-0 shadow-sm transition group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:opacity-100 md:grid">
+          <span className="absolute bottom-2 right-2 hidden size-8 translate-y-1 place-items-center rounded-full bg-background/90 opacity-0 shadow-sm transition group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:opacity-100 lg:grid">
             <ArrowUpRight className="size-4" aria-hidden="true" />
           </span>
         </button>
