@@ -73,11 +73,15 @@ function FlipImage({
   imageRatio,
   crop,
   eager,
+  showTapBadge = false,
+  onImageInteraction,
 }: {
   item: BoardItem;
   imageRatio: string;
   crop?: string | undefined;
   eager?: boolean | undefined;
+  showTapBadge?: boolean | undefined;
+  onImageInteraction: () => void;
 }) {
   const [flipped, setFlipped] = useState(false);
 
@@ -98,7 +102,10 @@ function FlipImage({
         <button
           type="button"
           className={`relative block w-full overflow-hidden rounded-xl bg-muted [backface-visibility:hidden] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${imageRatio}`}
-          onClick={() => setFlipped(true)}
+          onClick={() => {
+            onImageInteraction();
+            setFlipped(true);
+          }}
           aria-expanded={flipped}
           aria-label={`Flip to see details about ${item.title}`}
         >
@@ -113,14 +120,29 @@ function FlipImage({
             className={`block h-full w-full object-cover transition duration-500 group-hover:scale-[1.02] ${crop ?? "object-center"}`}
           />
           <span className="absolute inset-0 rounded-xl bg-blush/0 transition-colors group-hover:bg-blush/50" />
-          <span className="absolute bottom-2 right-2 grid size-8 translate-y-1 place-items-center rounded-full bg-background/90 opacity-0 shadow-sm transition group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:opacity-100">
+          <span className="pointer-events-none absolute inset-x-0 bottom-0 hidden translate-y-2 bg-gradient-to-t from-foreground/80 via-foreground/35 to-transparent px-3 pb-3 pt-12 text-background opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100 md:block">
+            <span className="block truncate font-serif text-xl leading-tight">{item.title}</span>
+            <span className="mt-1 block truncate font-sans text-[10px] uppercase tracking-[0.12em]">
+              {item.year} · {item.tools.slice(0, 3).join(" · ")}
+            </span>
+          </span>
+          <span
+            aria-hidden="true"
+            className={`tap-hint pointer-events-none absolute right-1.5 top-1.5 rounded-full bg-background/90 px-2 py-1 font-sans text-[9px] font-semibold uppercase leading-none tracking-wide text-foreground shadow-sm transition-opacity duration-700 md:hidden ${showTapBadge ? "tap-hint--visible" : "opacity-0"}`}
+          >
+            Tap
+          </span>
+          <span className="absolute bottom-2 right-2 hidden size-8 translate-y-1 place-items-center rounded-full bg-background/90 opacity-0 shadow-sm transition group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:opacity-100 md:grid">
             <ArrowUpRight className="size-4" aria-hidden="true" />
           </span>
         </button>
         <span
           className={`absolute inset-0 flex flex-col gap-3 overflow-y-auto rounded-xl border border-border bg-background p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] ${flipped ? "" : "pointer-events-none"}`}
           onClick={(event) => {
-            if (!(event.target as HTMLElement).closest("a")) setFlipped(false);
+            if (!(event.target as HTMLElement).closest("a")) {
+              onImageInteraction();
+              setFlipped(false);
+            }
           }}
         >
           <span>
@@ -168,8 +190,24 @@ function FlipImage({
 function Index() {
   const [activeFolder, setActiveFolder] = useState<(typeof folders)[number]>("All");
   const [query, setQuery] = useState("");
+  const [showTapBadge, setShowTapBadge] = useState(false);
   const isTimeline = activeFolder === "Experience";
   const transitionRef = useRef<{ skipTransition: () => void } | null>(null);
+  const tapHintTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const restartTapHintTimer = () => {
+    setShowTapBadge(false);
+    if (tapHintTimerRef.current) clearTimeout(tapHintTimerRef.current);
+    tapHintTimerRef.current = setTimeout(() => setShowTapBadge(true), 30_000);
+  };
+
+  useEffect(() => {
+    tapHintTimerRef.current = setTimeout(() => setShowTapBadge(true), 30_000);
+    return () => {
+      if (tapHintTimerRef.current) clearTimeout(tapHintTimerRef.current);
+    };
+  }, []);
+
   const changeFolder = (folder: (typeof folders)[number]) => {
     if (folder === activeFolder) return;
     const doc = document as Document & { startViewTransition?: (cb: () => void) => { skipTransition: () => void } };
@@ -230,7 +268,14 @@ function Index() {
                 <span aria-hidden="true" className="absolute -left-[37px] top-2 size-[9px] rounded-full bg-accent" />
                 <p className="font-sans text-[10px] uppercase tracking-[0.14em] text-muted-foreground">{item.year} · {item.category}</p>
                 <div className="mt-3">
-                  <FlipImage item={item} imageRatio="aspect-[16/10]" crop={item.crop} eager />
+                  <FlipImage
+                    item={item}
+                    imageRatio="aspect-[16/10]"
+                    crop={item.crop}
+                    eager
+                    showTapBadge={showTapBadge && item === timelineItems[0]}
+                    onImageInteraction={restartTapHintTimer}
+                  />
                 </div>
                 <h2 className="mt-4 font-serif text-2xl sm:text-3xl">{item.title}</h2>
                 <p className="mt-2 font-serif text-lg leading-relaxed text-foreground/70">{item.description}</p>
@@ -247,16 +292,18 @@ function Index() {
           {columns.map((column, columnIndex) => (
             <div key={columnIndex} className="flex min-w-0 flex-1 flex-col gap-2 sm:gap-3">
               {column.map((item, index) => (
-                <div key={item.title} className="group/cap rounded-xl pb-3 hover:bg-blush/40">
+                <div key={item.title} className="group/cap min-w-0 overflow-hidden rounded-xl pb-3 hover:bg-blush/40">
                   <FlipImage
                     item={item}
                     imageRatio={item.ratio ?? "aspect-auto"}
                     crop={item.crop}
                     eager={index < 4 && columnIndex === 0}
+                    showTapBadge={showTapBadge && columnIndex === 0 && index === 0}
+                    onImageInteraction={restartTapHintTimer}
                   />
                   <span className="flex min-w-0 items-center justify-between gap-2 px-1.5 pt-[7.5px]">
                     <span className="truncate font-sans text-[13px] font-semibold leading-none text-foreground">{item.title}</span>
-                    <span className="shrink-0 rounded-full bg-muted px-2 py-0.5 font-sans text-[10px] uppercase leading-none tracking-wide text-muted-foreground">{item.folder}</span>
+                    <span className="shrink-0 rounded-full bg-muted px-1 py-0.5 font-sans text-[8px] uppercase leading-none tracking-wide text-muted-foreground sm:px-2 sm:text-[10px]">{item.folder}</span>
                   </span>
                 </div>
               ))}

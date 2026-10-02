@@ -164,3 +164,24 @@
 ::view-transition-new(root) {
   animation: none;
 }
+
+@keyframes tap-hint-pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.tap-hint--visible {
+  animation: tap-hint-pulse 2.4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tap-hint--visible {
+    animation: none;
+    opacity: 1;
+  }
+}
