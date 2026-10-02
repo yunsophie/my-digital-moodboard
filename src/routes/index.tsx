@@ -10,6 +10,7 @@ import labCorridor from "@/assets/editorial-lab-corridor.jpg";
 import pinkAcrylic from "@/assets/pink-acrylic-tech.jpg";
 import pinkArchitecture from "@/assets/pink-architecture.jpg";
 import pinkCodeStudio from "@/assets/pink-code-studio.jpg";
+import pinkEditorialNotes from "@/assets/pink-editorial-notes.jpg";
 import pinkHardware from "@/assets/pink-hardware-grid.jpg";
 import { Button } from "@/components/ui/button";
 
@@ -53,7 +54,7 @@ type BoardItem = {
 
 const boardItems: BoardItem[] = [
   { title: "About Sophie", folder: "About", category: "Computer science student", year: "Hello", description: "I like finding the human detail inside technical problems. I build thoughtful software, learn by making, and keep a camera nearby.", tools: ["Software engineering", "Product thinking", "Curiosity"], image: pinkArchitecture, imageWidth: 1024, imageHeight: 1536, alt: "Curved pink architecture in sunlight", crop: "object-top", ratio: "aspect-[4/5]" },
-  { title: "Lumen Notes", folder: "Projects", category: "Product engineering", year: "2026", description: "A distraction-free research workspace that connects notes through semantic search and lightweight visual maps.", tools: ["React", "TypeScript", "Embeddings"], image: pinkCodeStudio, imageWidth: 1024, imageHeight: 1536, alt: "Pink coding studio with a laptop and sculptural flower" },
+  { title: "Lumen Notes", folder: "Projects", category: "Product engineering", year: "2026", description: "A distraction-free research workspace that connects notes through semantic search and lightweight visual maps.", tools: ["React", "TypeScript", "Embeddings"], image: pinkEditorialNotes, imageWidth: 1024, imageHeight: 1536, alt: "Open notebook with pink blossoms on a blush desk" },
   { title: "Interface Studies", folder: "Blog", category: "Design systems", year: "2026", description: "A component playground exploring clear information hierarchy, accessible interaction, and tactile interface patterns.", tools: ["React", "Storybook", "Figma"], image: interfaceStudy, imageWidth: 1024, imageHeight: 1024, alt: "Translucent interface cards and sketches", ratio: "aspect-[4/5]" },
   { title: "Campus Compute", folder: "Experience", category: "Research assistant", year: "2025", sortYear: 2025, description: "Built internal tools and data views for a university lab, turning noisy operational data into useful daily decisions.", tools: ["Python", "SQL", "Data visualization"], image: pinkArchitecture, imageWidth: 1024, imageHeight: 1536, alt: "Pink architectural staircase with a red chair" },
   { title: "Field Sensor", folder: "Projects", category: "Physical computing", year: "2025", description: "A low-power environmental sensor prototype with a small web dashboard for exploring live readings and trends.", tools: ["C++", "ESP32", "WebSockets"], image: pinkAcrylic, imageWidth: 1024, imageHeight: 1408, alt: "Pink acrylic forms and a small circuit board" },
