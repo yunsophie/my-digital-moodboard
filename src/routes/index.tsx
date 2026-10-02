@@ -194,6 +194,28 @@ function Index() {
   const isTimeline = activeFolder === "Experience";
   const transitionRef = useRef<{ skipTransition: () => void } | null>(null);
   const tapHintTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const navStripRef = useRef<HTMLDivElement | null>(null);
+  const [navScroll, setNavScroll] = useState({ left: false, right: false });
+
+  const updateNavScroll = () => {
+    const el = navStripRef.current;
+    if (!el) return;
+    const canLeft = el.scrollLeft > 4;
+    const canRight = el.scrollLeft < el.scrollWidth - el.clientWidth - 4;
+    setNavScroll((prev) => (prev.left === canLeft && prev.right === canRight ? prev : { left: canLeft, right: canRight }));
+  };
+
+  const scrollNavStrip = (direction: "left" | "right") => {
+    const el = navStripRef.current;
+    if (!el) return;
+    el.scrollBy({ left: direction === "left" ? -Math.round(el.clientWidth * 0.7) : Math.round(el.clientWidth * 0.7), behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    updateNavScroll();
+    window.addEventListener("resize", updateNavScroll);
+    return () => window.removeEventListener("resize", updateNavScroll);
+  }, []);
 
   const restartTapHintTimer = () => {
     setShowTapBadge(false);
