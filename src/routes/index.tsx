@@ -294,26 +294,57 @@ function Index() {
             <a href="mailto:hello@sophieli.dev" className="grid size-10 place-items-center rounded-full hover:bg-muted" aria-label="Email Sophie Li"><Mail className="size-4" /></a>
           </div>
         </div>
-        <nav aria-label="Portfolio folders" className="flex items-center gap-1 px-2 pb-3 sm:px-4">
-          {navScroll.left && (
-            <button type="button" onClick={() => scrollNavStrip("left")} className="grid size-8 shrink-0 place-items-center rounded-full bg-background text-muted-foreground transition hover:bg-muted hover:text-foreground" aria-label="Scroll folders left"><ChevronLeft className="size-4" aria-hidden="true" /></button>
-          )}
-          <div className="relative min-w-0 flex-1">
-            <div ref={navStripRef} onScroll={updateNavScroll} className="no-scrollbar flex min-w-0 gap-2 overflow-x-auto px-1">
-              {folders.map((folder) => (
-                <Button key={folder} variant={activeFolder === folder ? "default" : "secondary"} size="sm" className="shrink-0 rounded-full px-4 shadow-none" onClick={() => changeFolder(folder)}>{folder}</Button>
-              ))}
-            </div>
-            {navScroll.left && <span aria-hidden="true" className="pointer-events-none absolute inset-y-0 left-0 w-10 bg-[linear-gradient(to_right,var(--color-background)_40%,transparent)]" />}
-            {navScroll.right && <span aria-hidden="true" className="pointer-events-none absolute inset-y-0 right-0 w-10 bg-[linear-gradient(to_left,var(--color-background)_40%,transparent)]" />}
-          </div>
-          {navScroll.right && (
-            <button type="button" onClick={() => scrollNavStrip("right")} className="grid size-8 shrink-0 place-items-center rounded-full bg-background text-muted-foreground transition hover:bg-muted hover:text-foreground" aria-label="Scroll folders right"><ChevronRight className="size-4" aria-hidden="true" /></button>
-          )}
-        </nav>
       </header>
 
-      <h1 className="sr-only">Sophie Li — computer science projects and experience</h1>
+      <section aria-label="About this board" className="flex flex-wrap items-end justify-between gap-4 px-2 pt-6 sm:px-3">
+        <div className="min-w-0">
+          <h1 className="font-sans text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">sophie's portfolio</h1>
+          <p className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1 font-sans text-xs text-muted-foreground sm:text-sm">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1 font-medium text-foreground/80">
+              <Globe className="size-3.5" aria-hidden="true" />Public board
+            </span>
+            <span aria-hidden="true">·</span>
+            <span>{boardItems.length} Pins</span>
+            <span aria-hidden="true">·</span>
+            <span>1 Section</span>
+          </p>
+          <p className="mt-3 max-w-2xl font-serif text-base leading-relaxed text-foreground/70 sm:text-lg">
+            A small, ongoing collection of what I'm building, studying, and making — software, hardware, and everything in between.
+          </p>
+          <div className="mt-4 flex -space-x-1.5">
+            <span className="grid size-9 place-items-center rounded-full bg-blush/70 font-sans text-xs font-semibold text-foreground ring-2 ring-background">S</span>
+            <span className="grid size-9 place-items-center rounded-full bg-muted text-muted-foreground ring-2 ring-background">
+              <UserRoundPlus className="size-4" aria-hidden="true" />
+            </span>
+          </div>
+        </div>
+        <div className="flex shrink-0 items-center gap-2 pb-1">
+          <button type="button" onClick={copyLink} className="inline-flex h-11 items-center gap-2 rounded-full bg-muted px-5 font-sans text-sm font-semibold text-foreground transition hover:bg-blush/60">
+            {copied ? "Copied!" : (<><Upload className="size-4" aria-hidden="true" />Share</>)}
+          </button>
+          <span aria-hidden="true" className="grid size-11 place-items-center rounded-full bg-muted text-muted-foreground">
+            <MoreHorizontal className="size-4" aria-hidden="true" />
+          </span>
+        </div>
+      </section>
+
+      <nav aria-label="Portfolio folders" className="flex items-center gap-1 px-2 pb-3 pt-5 sm:px-4">
+        {navScroll.left && (
+          <button type="button" onClick={() => scrollNavStrip("left")} className="grid size-8 shrink-0 place-items-center rounded-full bg-background text-muted-foreground transition hover:bg-muted hover:text-foreground" aria-label="Scroll folders left"><ChevronLeft className="size-4" aria-hidden="true" /></button>
+        )}
+        <div className="relative min-w-0 flex-1">
+          <div ref={navStripRef} onScroll={updateNavScroll} className="no-scrollbar flex min-w-0 gap-2 overflow-x-auto px-1">
+            {folders.map((folder) => (
+              <Button key={folder} variant={activeFolder === folder ? "default" : "secondary"} size="sm" className="shrink-0 rounded-full px-4 shadow-none" onClick={() => changeFolder(folder)}>{folder}</Button>
+            ))}
+          </div>
+          {navScroll.left && <span aria-hidden="true" className="pointer-events-none absolute inset-y-0 left-0 w-10 bg-[linear-gradient(to_right,var(--color-background)_40%,transparent)]" />}
+          {navScroll.right && <span aria-hidden="true" className="pointer-events-none absolute inset-y-0 right-0 w-10 bg-[linear-gradient(to_left,var(--color-background)_40%,transparent)]" />}
+        </div>
+        {navScroll.right && (
+          <button type="button" onClick={() => scrollNavStrip("right")} className="grid size-8 shrink-0 place-items-center rounded-full bg-background text-muted-foreground transition hover:bg-muted hover:text-foreground" aria-label="Scroll folders right"><ChevronRight className="size-4" aria-hidden="true" /></button>
+        )}
+      </nav>
       <section aria-label="Portfolio board" className="px-2 pb-10 pt-3 sm:px-3">
         {isTimeline ? (
           <ol className="relative mx-auto max-w-2xl space-y-14 border-l border-border pl-8 sm:pl-10">
