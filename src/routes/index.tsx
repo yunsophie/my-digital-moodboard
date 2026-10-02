@@ -226,11 +226,19 @@ function Index() {
     });
   }, [activeFolder, query]);
 
+  const [columnCount, setColumnCount] = useState(5);
+  useEffect(() => {
+    const compute = () => setColumnCount(window.innerWidth >= 1024 ? 5 : window.innerWidth >= 768 ? 3 : 2);
+    compute();
+    window.addEventListener("resize", compute);
+    return () => window.removeEventListener("resize", compute);
+  }, []);
+
   const columns = useMemo(() => {
-    const cols: BoardItem[][] = [[], [], [], [], []];
-    visibleItems.forEach((item, index) => cols[index % 5]!.push(item));
+    const cols: BoardItem[][] = Array.from({ length: columnCount }, () => []);
+    visibleItems.forEach((item, index) => cols[index % columnCount]!.push(item));
     return cols;
-  }, [visibleItems]);
+  }, [visibleItems, columnCount]);
 
   const timelineItems = useMemo(
     () => [...visibleItems].sort((a, b) => (b.sortYear ?? 0) - (a.sortYear ?? 0)),
