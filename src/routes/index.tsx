@@ -190,14 +190,14 @@ function Index() {
           {columns.map((column, columnIndex) => (
             <div key={columnIndex} className="flex min-w-0 flex-1 flex-col gap-2 sm:gap-3">
               {column.map((item, index) => (
-                <Button key={item.title} variant="ghost" className="group flex h-auto w-full flex-col items-stretch overflow-hidden rounded-xl p-0 pb-1.5 text-left shadow-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" onClick={() => setSelected(item)} aria-label={`Open ${item.title}`}>
+                <Button key={item.title} variant="ghost" className="group flex h-auto w-full flex-col items-stretch overflow-hidden rounded-xl p-0 pb-2.5 text-left shadow-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" onClick={() => setSelected(item)} aria-label={`Open ${item.title}`}>
                   <span className="relative block overflow-hidden rounded-xl">
                     <img style={{ viewTransitionName: `pin-${item.title.replace(/[^a-zA-Z0-9]/g, "-")}` }} src={item.image} alt={item.alt} width={item.imageWidth} height={item.imageHeight} loading={index < 4 && columnIndex === 0 ? "eager" : "lazy"} className={`block w-full object-cover transition duration-500 group-hover:scale-[1.02] ${item.ratio ?? "aspect-auto"} ${item.crop ?? "object-center"}`} />
                     <span className="absolute inset-0 rounded-xl bg-foreground/0 transition-colors group-hover:bg-foreground/10" />
                     <span className="absolute bottom-2 right-2 grid size-8 translate-y-1 place-items-center rounded-full bg-background/90 opacity-0 shadow-sm transition group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:opacity-100"><ArrowUpRight className="size-4" aria-hidden="true" /></span>
                   </span>
-                  <span className="flex min-w-0 items-center justify-between gap-2 px-1.5 pt-2">
-                    <span className="truncate font-sans text-[11px] font-medium text-foreground/80">{item.title}</span>
+                  <span className="flex min-w-0 items-center justify-between gap-2 px-1.5 pt-1">
+                    <span className="truncate font-sans text-[11px] font-semibold text-foreground">{item.title}</span>
                     <span className="shrink-0 rounded-full bg-muted px-2 py-0.5 font-sans text-[9px] uppercase tracking-wide text-muted-foreground">{item.category}</span>
                   </span>
                 </Button>
