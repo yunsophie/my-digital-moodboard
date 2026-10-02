@@ -65,7 +65,7 @@ const boardItems: BoardItem[] = [
   { title: "Soft Hardware", folder: "Experiments", category: "Material study", year: "Now", description: "Ongoing experiments pairing electronics with softer visual language, warmer materials, and more inviting physical forms.", tools: ["Electronics", "Industrial design", "Research"], image: pinkHardware, imageWidth: 1024, imageHeight: 1024, alt: "Blush keyboard objects and a burgundy cable", crop: "object-bottom", ratio: "aspect-[4/5]" },
 ];
 
-const folders = ["All", "Projects", "Experience", "Experiments", "About"] as const;
+const folders = ["All", "About", "Projects", "Experience", "Experiments"] as const;
 
 function ProjectModal({ item, onClose }: { item: BoardItem; onClose: () => void }) {
   useEffect(() => {
