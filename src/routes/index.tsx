@@ -1,6 +1,6 @@
 import { flushSync } from "react-dom";
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowUpRight, ChevronLeft, ChevronRight, Github, Mail, RotateCcw, Search } from "lucide-react";
+import { ArrowUpRight, ChevronLeft, ChevronRight, Github, Globe, Mail, MoreHorizontal, RotateCcw, Search, Upload, UserRoundPlus } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 import codeDesk from "@/assets/editorial-code-desk.jpg";
@@ -197,6 +197,13 @@ function Index() {
   const tapHintTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const navStripRef = useRef<HTMLDivElement | null>(null);
   const [navScroll, setNavScroll] = useState({ left: false, right: false });
+  const [copied, setCopied] = useState(false);
+
+  const copyLink = () => {
+    if (navigator.clipboard) navigator.clipboard.writeText(window.location.href).catch(() => {});
+    setCopied(true);
+    window.setTimeout(() => setCopied(false), 1800);
+  };
 
   const updateNavScroll = () => {
     const el = navStripRef.current;
