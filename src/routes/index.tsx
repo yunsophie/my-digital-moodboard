@@ -292,7 +292,7 @@ function Index() {
           {columns.map((column, columnIndex) => (
             <div key={columnIndex} className="flex min-w-0 flex-1 flex-col gap-2 sm:gap-3">
               {column.map((item, index) => (
-                <div key={item.title} className="group/cap rounded-xl pb-3 hover:bg-blush/40">
+                <div key={item.title} className="group/cap min-w-0 overflow-hidden rounded-xl pb-3 hover:bg-blush/40">
                   <FlipImage
                     item={item}
                     imageRatio={item.ratio ?? "aspect-auto"}
@@ -303,7 +303,7 @@ function Index() {
                   />
                   <span className="flex min-w-0 items-center justify-between gap-2 px-1.5 pt-[7.5px]">
                     <span className="truncate font-sans text-[13px] font-semibold leading-none text-foreground">{item.title}</span>
-                    <span className="shrink-0 rounded-full bg-muted px-2 py-0.5 font-sans text-[10px] uppercase leading-none tracking-wide text-muted-foreground">{item.folder}</span>
+                    <span className="shrink-0 rounded-full bg-muted px-1 py-0.5 font-sans text-[8px] uppercase leading-none tracking-wide text-muted-foreground sm:px-2 sm:text-[10px]">{item.folder}</span>
                   </span>
                 </div>
               ))}
