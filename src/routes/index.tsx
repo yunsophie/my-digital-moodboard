@@ -137,7 +137,7 @@ function FlipImage({
           </span>
         </button>
         <span
-          className={`absolute inset-0 flex flex-col gap-3 overflow-y-auto rounded-xl border border-border bg-background p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] ${flipped ? "" : "pointer-events-none"}`}
+          className={`no-scrollbar absolute inset-0 flex flex-col gap-3 overflow-y-auto rounded-xl border border-border bg-background p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] ${flipped ? "" : "pointer-events-none"}`}
           onClick={(event) => {
             if (!(event.target as HTMLElement).closest("a")) {
               onImageInteraction();
