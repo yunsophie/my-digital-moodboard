@@ -1,6 +1,6 @@
 import { flushSync } from "react-dom";
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowUpRight, Github, Mail, RotateCcw, Search } from "lucide-react";
+import { ArrowUpRight, ChevronLeft, ChevronRight, Github, Mail, RotateCcw, Search } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 import codeDesk from "@/assets/editorial-code-desk.jpg";
@@ -194,6 +194,32 @@ function Index() {
   const isTimeline = activeFolder === "Experience";
   const transitionRef = useRef<{ skipTransition: () => void } | null>(null);
   const tapHintTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const navStripRef = useRef<HTMLDivElement | null>(null);
+  const [navScroll, setNavScroll] = useState({ left: false, right: false });
+
+  const updateNavScroll = () => {
+    const el = navStripRef.current;
+    if (!el) return;
+    const canLeft = el.scrollLeft > 1;
+    const canRight = el.scrollWidth - el.clientWidth - el.scrollLeft > 1;
+    setNavScroll((prev) => {
+      if (prev.left === canLeft && prev.right === canRight) return prev;
+      setTimeout(updateNavScroll, 60);
+      return { left: canLeft, right: canRight };
+    });
+  };
+
+  const scrollNavStrip = (direction: "left" | "right") => {
+    const el = navStripRef.current;
+    if (!el) return;
+    el.scrollBy({ left: direction === "left" ? -Math.round(el.clientWidth * 0.7) : Math.round(el.clientWidth * 0.7), behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    updateNavScroll();
+    window.addEventListener("resize", updateNavScroll);
+    return () => window.removeEventListener("resize", updateNavScroll);
+  }, []);
 
   const restartTapHintTimer = () => {
     setShowTapBadge(false);
@@ -260,10 +286,22 @@ function Index() {
             <a href="mailto:hello@sophieli.dev" className="grid size-10 place-items-center rounded-full hover:bg-muted" aria-label="Email Sophie Li"><Mail className="size-4" /></a>
           </div>
         </div>
-        <nav aria-label="Portfolio folders" className="flex gap-2 overflow-x-auto px-3 pb-3 sm:px-5">
-          {folders.map((folder) => (
-            <Button key={folder} variant={activeFolder === folder ? "default" : "secondary"} size="sm" className="shrink-0 rounded-full px-4 shadow-none" onClick={() => changeFolder(folder)}>{folder}</Button>
-          ))}
+        <nav aria-label="Portfolio folders" className="flex items-center gap-1 px-2 pb-3 sm:px-4">
+          {navScroll.left && (
+            <button type="button" onClick={() => scrollNavStrip("left")} className="grid size-8 shrink-0 place-items-center rounded-full bg-background text-muted-foreground transition hover:bg-muted hover:text-foreground" aria-label="Scroll folders left"><ChevronLeft className="size-4" aria-hidden="true" /></button>
+          )}
+          <div className="relative min-w-0 flex-1">
+            <div ref={navStripRef} onScroll={updateNavScroll} className="no-scrollbar flex min-w-0 gap-2 overflow-x-auto px-1">
+              {folders.map((folder) => (
+                <Button key={folder} variant={activeFolder === folder ? "default" : "secondary"} size="sm" className="shrink-0 rounded-full px-4 shadow-none" onClick={() => changeFolder(folder)}>{folder}</Button>
+              ))}
+            </div>
+            {navScroll.left && <span aria-hidden="true" className="pointer-events-none absolute inset-y-0 left-0 w-10 bg-[linear-gradient(to_right,var(--color-background)_40%,transparent)]" />}
+            {navScroll.right && <span aria-hidden="true" className="pointer-events-none absolute inset-y-0 right-0 w-10 bg-[linear-gradient(to_left,var(--color-background)_40%,transparent)]" />}
+          </div>
+          {navScroll.right && (
+            <button type="button" onClick={() => scrollNavStrip("right")} className="grid size-8 shrink-0 place-items-center rounded-full bg-background text-muted-foreground transition hover:bg-muted hover:text-foreground" aria-label="Scroll folders right"><ChevronRight className="size-4" aria-hidden="true" /></button>
+          )}
         </nav>
       </header>
 
