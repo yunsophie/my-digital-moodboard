@@ -1,7 +1,7 @@
 import { flushSync } from "react-dom";
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowUpRight, Github, Mail, Search, X } from "lucide-react";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 import codeDesk from "@/assets/editorial-code-desk.jpg";
 import hardwareStudy from "@/assets/editorial-hardware-study.jpg";
