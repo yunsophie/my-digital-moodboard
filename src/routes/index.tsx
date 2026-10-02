@@ -110,11 +110,14 @@ function Index() {
   const [query, setQuery] = useState("");
   const [selected, setSelected] = useState<BoardItem | null>(null);
   const isTimeline = activeFolder === "Experience";
+  const transitionRef = useRef<{ skipTransition: () => void } | null>(null);
   const changeFolder = (folder: (typeof folders)[number]) => {
-    const doc = document as Document & { startViewTransition?: (cb: () => void) => unknown };
+    if (folder === activeFolder) return;
+    const doc = document as Document & { startViewTransition?: (cb: () => void) => { skipTransition: () => void } };
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (!doc.startViewTransition || reduce) return setActiveFolder(folder);
-    doc.startViewTransition(() => flushSync(() => setActiveFolder(folder)));
+    transitionRef.current?.skipTransition();
+    transitionRef.current = doc.startViewTransition(() => flushSync(() => setActiveFolder(folder)));
   };
 
   const visibleItems = useMemo(() => {
@@ -168,7 +171,7 @@ function Index() {
                 <span aria-hidden="true" className="absolute -left-[37px] top-2 size-[9px] rounded-full bg-accent" />
                 <p className="font-sans text-[10px] uppercase tracking-[0.14em] text-muted-foreground">{item.year} · {item.category}</p>
                 <Button onClick={() => setSelected(item)} className="group relative mt-3 block h-auto w-full overflow-hidden rounded-xl p-0 shadow-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" aria-label={`Open ${item.title}`}>
-                  <img style={{ viewTransitionName: `pin-${item.title.replace(/[^a-zA-Z0-9]/g, "-")}` }} src={item.image} alt={item.alt} width={item.imageWidth} height={item.imageHeight} loading="lazy" className={`block aspect-[16/10] w-full object-cover transition duration-500 group-hover:scale-[1.02] ${item.crop ?? "object-center"}`} />
+                  <img style={{ viewTransitionName: `pin-${item.title.replace(/[^a-zA-Z0-9]/g, "-")}` }} src={item.image} alt={item.alt} width={item.imageWidth} height={item.imageHeight} decoding="async" className={`block aspect-[16/10] w-full object-cover transition duration-500 group-hover:scale-[1.02] ${item.crop ?? "object-center"}`} />
                   <span className="absolute inset-0 bg-foreground/0 transition-colors group-hover:bg-foreground/10" />
                   <span className="absolute bottom-2 right-2 grid size-8 translate-y-1 place-items-center rounded-full bg-background/90 opacity-0 shadow-sm transition group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:opacity-100"><ArrowUpRight className="size-4" aria-hidden="true" /></span>
                 </Button>
