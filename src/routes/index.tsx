@@ -76,8 +76,8 @@ function FlipImage({
 }: {
   item: BoardItem;
   imageRatio: string;
-  crop?: string;
-  eager?: boolean;
+  crop?: string | undefined;
+  eager?: boolean | undefined;
 }) {
   const [flipped, setFlipped] = useState(false);
 
