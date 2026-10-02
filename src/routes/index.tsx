@@ -306,7 +306,7 @@ function Index() {
             <span aria-hidden="true">·</span>
             <span>{boardItems.length} Pins</span>
             <span aria-hidden="true">·</span>
-            <span>5 Section</span>
+            <span>{folders.length} Sections</span>
           </p>
           <p className="mt-3 max-w-2xl font-serif text-base leading-relaxed text-foreground/70 sm:text-lg">
             A small, ongoing collection of what I'm building, studying, and making — software, hardware, and everything in between.
