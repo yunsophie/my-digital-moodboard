@@ -2,7 +2,7 @@
 
 help me make a personal website for a computer science studen to highlight my experience and projects. I want it to be inspired by "moodboards" -- think the style of a pinterest inspired web app, editorial style with clean editorial layouts, minimalist high-end typography, modern serif fonts, and neutral aesthetic palettes used for mood boards and social media grids. before starting, make sure it is github compatible and showcases my experience and personality.
 
-This project was built with [Lovable](https://lovable.dev).
+This project was built with [Lovable](https://lovable.dev) for CSE 490A at UW (AI-Assisted Software Development).
 
 ## Build with Lovable
 
