@@ -189,8 +189,8 @@ function Index() {
   }, [activeFolder, query]);
 
   const columns = useMemo(() => {
-    const cols: BoardItem[][] = [[], [], []];
-    visibleItems.forEach((item, index) => cols[index % 3]!.push(item));
+    const cols: BoardItem[][] = [[], [], [], [], []];
+    visibleItems.forEach((item, index) => cols[index % 5]!.push(item));
     return cols;
   }, [visibleItems]);
 
