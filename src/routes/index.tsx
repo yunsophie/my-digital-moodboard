@@ -197,8 +197,8 @@ function Index() {
                     <span className="absolute bottom-2 right-2 grid size-8 translate-y-1 place-items-center rounded-full bg-background/90 opacity-0 shadow-sm transition group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:opacity-100"><ArrowUpRight className="size-4" aria-hidden="true" /></span>
                   </span>
                   <span className="flex min-w-0 items-center justify-between gap-2 px-1.5 pt-0.5">
-                    <span className="truncate font-sans text-[13px] font-semibold text-foreground">{item.title}</span>
-                    <span className="shrink-0 rounded-full bg-muted px-2 py-0.5 font-sans text-[10px] uppercase tracking-wide text-muted-foreground">{item.folder}</span>
+                    <span className="truncate font-sans text-[13px] font-semibold leading-none text-foreground">{item.title}</span>
+                    <span className="shrink-0 rounded-full bg-muted px-2 py-0.5 font-sans text-[10px] uppercase leading-none tracking-wide text-muted-foreground">{item.folder}</span>
                   </span>
                 </Button>
               ))}
