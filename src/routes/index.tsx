@@ -191,7 +191,7 @@ function Index() {
             <div key={columnIndex} className="flex min-w-0 flex-1 flex-col gap-2 sm:gap-3">
               {column.map((item, index) => (
                 <Button key={item.title} variant="ghost" className="group flex h-auto w-full flex-col items-stretch gap-0 overflow-hidden rounded-xl p-0 pb-3 text-left shadow-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" onClick={() => setSelected(item)} aria-label={`Open ${item.title}`}>
-                  <span className="relative block overflow-hidden rounded-xl">
+                  <span className="relative block overflow-hidden rounded-xl transition-shadow group-hover:shadow-[0_12px_28px_-10px_var(--color-blush)]">
                     <img style={{ viewTransitionName: `pin-${item.title.replace(/[^a-zA-Z0-9]/g, "-")}` }} src={item.image} alt={item.alt} width={item.imageWidth} height={item.imageHeight} loading={index < 4 && columnIndex === 0 ? "eager" : "lazy"} className={`block w-full object-cover transition duration-500 group-hover:scale-[1.02] ${item.ratio ?? "aspect-auto"} ${item.crop ?? "object-center"}`} />
                     <span className="absolute inset-0 rounded-xl bg-blush/0 transition-colors group-hover:bg-blush/45" />
                     <span className="absolute bottom-2 right-2 grid size-8 translate-y-1 place-items-center rounded-full bg-background/90 opacity-0 shadow-sm transition group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:opacity-100"><ArrowUpRight className="size-4" aria-hidden="true" /></span>
