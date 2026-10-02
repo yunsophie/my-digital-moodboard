@@ -103,6 +103,7 @@ function FlipImage({
           type="button"
           className={`relative block w-full overflow-hidden rounded-xl bg-muted [backface-visibility:hidden] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${imageRatio}`}
           onClick={() => {
+            console.log("[flip] front click", item.title);
             onImageInteraction();
             setFlipped(true);
           }}
