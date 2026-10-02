@@ -289,10 +289,6 @@ function Index() {
             <span className="sr-only">Search portfolio</span>
             <input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search" className="min-w-0 flex-1 bg-transparent text-sm text-foreground outline-none placeholder:text-muted-foreground" />
           </label>
-          <div className="flex shrink-0 items-center gap-0">
-            <a href="https://github.com/" target="_blank" rel="noreferrer" className="grid size-10 place-items-center rounded-full hover:bg-muted" aria-label="GitHub profile"><Github className="size-4" /></a>
-            <a href="mailto:hello@sophieli.dev" className="grid size-10 place-items-center rounded-full hover:bg-muted" aria-label="Email Sophie Li"><Mail className="size-4" /></a>
-          </div>
         </div>
       </header>
 
@@ -319,6 +315,10 @@ function Index() {
           </div>
         </div>
         <div className="flex shrink-0 items-center gap-2 pb-1">
+          <div className="flex items-center">
+            <a href="https://github.com/" target="_blank" rel="noreferrer" className="grid size-10 place-items-center rounded-full hover:bg-muted" aria-label="GitHub profile"><Github className="size-4" /></a>
+            <a href="mailto:hello@sophieli.dev" className="grid size-10 place-items-center rounded-full hover:bg-muted" aria-label="Email Sophie Li"><Mail className="size-4" /></a>
+          </div>
           <button type="button" onClick={copyLink} className="inline-flex h-11 items-center gap-2 rounded-full bg-muted px-5 font-sans text-sm font-semibold text-foreground transition hover:bg-blush/60">
             {copied ? "Copied!" : (<><Upload className="size-4" aria-hidden="true" />Share</>)}
           </button>
