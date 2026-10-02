@@ -170,9 +170,9 @@ function Index() {
               <li key={item.title} className="relative">
                 <span aria-hidden="true" className="absolute -left-[37px] top-2 size-[9px] rounded-full bg-accent" />
                 <p className="font-sans text-[10px] uppercase tracking-[0.14em] text-muted-foreground">{item.year} · {item.category}</p>
-                <Button onClick={() => setSelected(item)} className="group relative mt-3 block h-auto w-full overflow-hidden rounded-xl p-0 shadow-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" aria-label={`Open ${item.title}`}>
+                <Button onClick={() => setSelected(item)} className="group relative mt-3 block h-auto w-full overflow-hidden rounded-xl p-0 shadow-none hover:bg-blush/40 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" aria-label={`Open ${item.title}`}>
                   <img style={{ viewTransitionName: `pin-${item.title.replace(/[^a-zA-Z0-9]/g, "-")}` }} src={item.image} alt={item.alt} width={item.imageWidth} height={item.imageHeight} decoding="async" className={`block aspect-[16/10] w-full object-cover transition duration-500 group-hover:scale-[1.02] ${item.crop ?? "object-center"}`} />
-                  <span className="absolute inset-0 bg-foreground/0 transition-colors group-hover:bg-foreground/10" />
+                  <span className="absolute inset-0 bg-blush/0 transition-colors group-hover:bg-blush/50" />
                   <span className="absolute bottom-2 right-2 grid size-8 translate-y-1 place-items-center rounded-full bg-background/90 opacity-0 shadow-sm transition group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:opacity-100"><ArrowUpRight className="size-4" aria-hidden="true" /></span>
                 </Button>
                 <h2 className="mt-4 font-serif text-2xl sm:text-3xl">{item.title}</h2>
@@ -190,10 +190,10 @@ function Index() {
           {columns.map((column, columnIndex) => (
             <div key={columnIndex} className="flex min-w-0 flex-1 flex-col gap-2 sm:gap-3">
               {column.map((item, index) => (
-                <Button key={item.title} variant="ghost" className="group flex h-auto w-full flex-col items-stretch gap-0 overflow-hidden rounded-xl p-0 pb-3 text-left shadow-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" onClick={() => setSelected(item)} aria-label={`Open ${item.title}`}>
+                <Button key={item.title} variant="ghost" className="group flex h-auto w-full flex-col items-stretch gap-0 overflow-hidden rounded-xl p-0 pb-3 text-left shadow-none hover:bg-blush/40 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" onClick={() => setSelected(item)} aria-label={`Open ${item.title}`}>
                   <span className="relative block overflow-hidden rounded-xl">
                     <img style={{ viewTransitionName: `pin-${item.title.replace(/[^a-zA-Z0-9]/g, "-")}` }} src={item.image} alt={item.alt} width={item.imageWidth} height={item.imageHeight} loading={index < 4 && columnIndex === 0 ? "eager" : "lazy"} className={`block w-full object-cover transition duration-500 group-hover:scale-[1.02] ${item.ratio ?? "aspect-auto"} ${item.crop ?? "object-center"}`} />
-                    <span className="absolute inset-0 rounded-xl bg-foreground/0 transition-colors group-hover:bg-foreground/10" />
+                    <span className="absolute inset-0 rounded-xl bg-blush/0 transition-colors group-hover:bg-blush/50" />
                     <span className="absolute bottom-2 right-2 grid size-8 translate-y-1 place-items-center rounded-full bg-background/90 opacity-0 shadow-sm transition group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:opacity-100"><ArrowUpRight className="size-4" aria-hidden="true" /></span>
                   </span>
                   <span className="flex min-w-0 items-center justify-between gap-2 px-1.5 pt-[7.5px]">
