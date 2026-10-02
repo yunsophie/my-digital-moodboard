@@ -296,8 +296,8 @@ function Index() {
                 <Button key={folder} variant={activeFolder === folder ? "default" : "secondary"} size="sm" className="shrink-0 rounded-full px-4 shadow-none" onClick={() => changeFolder(folder)}>{folder}</Button>
               ))}
             </div>
-            {navScroll.left && <span aria-hidden="true" className="pointer-events-none absolute inset-y-0 left-0 w-8 bg-gradient-to-r from-background to-transparent" />}
-            {navScroll.right && <span aria-hidden="true" className="pointer-events-none absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-background to-transparent" />}
+            {navScroll.left && <span aria-hidden="true" className="pointer-events-none absolute inset-y-0 left-0 w-10 bg-[linear-gradient(to_right,var(--color-background)_40%,transparent)]" />}
+            {navScroll.right && <span aria-hidden="true" className="pointer-events-none absolute inset-y-0 right-0 w-10 bg-[linear-gradient(to_left,var(--color-background)_40%,transparent)]" />}
           </div>
           {navScroll.right && (
             <button type="button" onClick={() => scrollNavStrip("right")} className="grid size-8 shrink-0 place-items-center rounded-full bg-background text-muted-foreground transition hover:bg-muted hover:text-foreground" aria-label="Scroll folders right"><ChevronRight className="size-4" aria-hidden="true" /></button>
