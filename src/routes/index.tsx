@@ -285,7 +285,7 @@ function Index() {
     const pool = Array.from(
       new Set(boardItems.flatMap((item) => [...item.tools, item.category])),
     );
-    if (!normalized) return ["React", "TypeScript", "Python", "Design", "Hardware", "Open source"].filter((t) => pool.some((p) => p.toLowerCase().includes(t.toLowerCase()))).concat(pool).filter((v, i, a) => a.indexOf(v) === i).slice(0, 6);
+    if (!normalized) return ["PyTorch", "Python", "Java", "C++", "AWS", "React.js"].filter((t) => pool.some((p) => p.toLowerCase().includes(t.toLowerCase()))).concat(pool).filter((v, i, a) => a.indexOf(v) === i).slice(0, 6);
     return pool
       .filter((term) => term.toLowerCase().includes(normalized) && term.toLowerCase() !== normalized)
       .slice(0, 6);
