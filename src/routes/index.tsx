@@ -1,6 +1,6 @@
 import { flushSync } from "react-dom";
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowUpRight, ChevronLeft, ChevronRight, Github, Globe, Mail, MoreHorizontal, RotateCcw, Search, Upload, UserRoundPlus } from "lucide-react";
+import { ArrowUpRight, ChevronLeft, ChevronRight, Github, Globe, Mail, MoreHorizontal, RotateCcw, Search, Upload, UserRoundPlus, X } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 import codeDesk from "@/assets/editorial-code-desk.jpg";
@@ -251,14 +251,17 @@ function Index() {
     transitionRef.current = doc.startViewTransition(() => flushSync(() => setActiveFolder(folder)));
   };
 
+  const isSearching = query.trim().length > 0;
   const visibleItems = useMemo(() => {
     const normalized = query.trim().toLowerCase();
     return boardItems.filter((item) => {
-      const folderMatches = activeFolder === "All" || item.folder === activeFolder;
-      const searchMatches = !normalized || `${item.title} ${item.category} ${item.tools.join(" ")}`.toLowerCase().includes(normalized);
+      // While searching, match across every folder — not just the active tab.
+      const folderMatches = isSearching || activeFolder === "All" || item.folder === activeFolder;
+      const haystack = `${item.title} ${item.description} ${item.category} ${item.year} ${item.folder} ${item.tools.join(" ")}`.toLowerCase();
+      const searchMatches = !normalized || haystack.includes(normalized);
       return folderMatches && searchMatches;
     });
-  }, [activeFolder, query]);
+  }, [activeFolder, isSearching, query]);
 
   const [columnCount, setColumnCount] = useState(5);
   useEffect(() => {
@@ -287,7 +290,12 @@ function Index() {
           <label className="flex h-11 flex-1 items-center gap-3 rounded-full bg-muted px-4 text-muted-foreground">
             <Search className="size-4 shrink-0" aria-hidden="true" />
             <span className="sr-only">Search portfolio</span>
-            <input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search" className="min-w-0 flex-1 bg-transparent text-sm text-foreground outline-none placeholder:text-muted-foreground" />
+            <input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search the whole board" className="min-w-0 flex-1 bg-transparent text-sm text-foreground outline-none placeholder:text-muted-foreground" />
+            {query && (
+              <button type="button" onClick={() => setQuery("")} className="grid size-5 shrink-0 place-items-center rounded-full bg-muted-foreground/20 text-muted-foreground transition hover:bg-muted-foreground/30 hover:text-foreground" aria-label="Clear search">
+                <X className="size-3" aria-hidden="true" />
+              </button>
+            )}
           </label>
         </div>
       </header>
@@ -398,7 +406,16 @@ function Index() {
         )}
       </section>
 
-      {visibleItems.length === 0 && <p className="px-5 py-24 text-center font-serif text-2xl text-muted-foreground">Nothing in this folder yet.</p>}
+      {visibleItems.length === 0 && (
+        isSearching ? (
+          <div className="flex flex-col items-center gap-4 px-5 py-24 text-center">
+            <p className="font-serif text-2xl text-muted-foreground">No items found matching "{query.trim()}"</p>
+            <Button variant="secondary" size="sm" className="rounded-full" onClick={() => setQuery("")}>Clear search</Button>
+          </div>
+        ) : (
+          <p className="px-5 py-24 text-center font-serif text-2xl text-muted-foreground">Nothing in this folder yet.</p>
+        )
+      )}
     </main>
   );
 }
