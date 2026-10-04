@@ -542,7 +542,12 @@ function Index() {
               {timelineItems.map((item, index) => (
                 <li key={item.title} className="relative grid gap-10 pl-8 md:grid-cols-2 md:pl-0">
                   <span aria-hidden="true" className="absolute -left-[37px] top-2 size-[9px] rounded-full bg-accent md:left-1/2 md:-translate-x-1/2" />
-                  <div className="min-w-0">
+                  {index === 0 && (
+                    <div className="hidden min-w-0 self-start md:block">
+                      <EducationPanel />
+                    </div>
+                  )}
+                  <div className={`min-w-0 md:col-start-2 ${index === 0 ? "" : "md:row-start-1"}`}>
                     <p className="font-sans text-[10px] uppercase tracking-[0.14em] text-muted-foreground">{item.year} · {item.category}</p>
                     <div className="mt-3 max-w-[320px]">
                       <FlipImage
@@ -564,11 +569,6 @@ function Index() {
                       ))}
                     </ul>
                   </div>
-                  {index === 0 && (
-                    <div className="hidden min-w-0 self-start md:block">
-                      <EducationPanel />
-                    </div>
-                  )}
                 </li>
               ))}
             </ol>
