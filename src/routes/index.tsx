@@ -435,6 +435,17 @@ function Index() {
                     <span className="shrink-0 rounded-full bg-muted px-2 py-0.5 font-sans text-[10px] uppercase tracking-wide text-muted-foreground">{item.folder}</span>
                   </button>
                 ))}
+                {query.trim() && suggestions.length === 0 && (
+                  <div className="flex items-center gap-3 px-2.5 py-3" role="status">
+                    <span className="grid size-10 shrink-0 place-items-center rounded-full bg-muted text-muted-foreground">
+                      <Search className="size-4" aria-hidden="true" />
+                    </span>
+                    <span className="min-w-0">
+                      <span className="block truncate font-sans text-sm font-semibold text-foreground">No results for “{query.trim()}”</span>
+                      <span className="block font-sans text-[11px] text-muted-foreground">Try a different name, tool, or category.</span>
+                    </span>
+                  </div>
+                )}
               </div>
             )}
           </div>
