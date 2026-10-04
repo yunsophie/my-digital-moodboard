@@ -1,6 +1,6 @@
 import { flushSync } from "react-dom";
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowUpRight, ChevronLeft, ChevronRight, Github, Globe, Mail, MoreHorizontal, RotateCcw, Search, Upload, UserRoundPlus, X } from "lucide-react";
+import { ArrowUpRight, ChevronLeft, ChevronRight, Globe, Linkedin, Mail, MoreHorizontal, RotateCcw, Search, Upload, UserRoundPlus, X } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 import codeDesk from "@/assets/editorial-code-desk.jpg";
@@ -213,16 +213,16 @@ function FlipImage({
             )}
             <a
               className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-accent-foreground"
-              href="https://github.com/"
+              href="https://www.linkedin.com/in/yunrui-sophie-li/"
               target="_blank"
               rel="noreferrer"
               onClick={(event) => event.stopPropagation()}
             >
-              <Github className="size-3.5" aria-hidden="true" /> GitHub
+              <Linkedin className="size-3.5" aria-hidden="true" /> LinkedIn
             </a>
             <a
               className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-accent-foreground"
-              href="mailto:hello@sophieli.dev"
+              href="mailto:yunsophieli@gmail.com"
               onClick={(event) => event.stopPropagation()}
             >
               <Mail className="size-3.5" aria-hidden="true" /> Contact
@@ -510,8 +510,8 @@ function Index() {
         </div>
         <div className="flex shrink-0 items-center gap-2 pb-1">
           <div className="flex items-center">
-            <a href="https://github.com/" target="_blank" rel="noreferrer" className="grid size-10 place-items-center rounded-full hover:bg-muted" aria-label="GitHub profile"><Github className="size-4" /></a>
-            <a href="mailto:hello@sophieli.dev" className="grid size-10 place-items-center rounded-full hover:bg-muted" aria-label="Email Sophie Li"><Mail className="size-4" /></a>
+            <a href="https://www.linkedin.com/in/yunrui-sophie-li/" target="_blank" rel="noreferrer" className="grid size-10 place-items-center rounded-full hover:bg-muted" aria-label="Sophie Li on LinkedIn"><Linkedin className="size-4" /></a>
+            <a href="mailto:yunsophieli@gmail.com" className="grid size-10 place-items-center rounded-full hover:bg-muted" aria-label="Email Sophie Li"><Mail className="size-4" /></a>
           </div>
           <button type="button" onClick={copyLink} className="inline-flex h-11 items-center gap-2 rounded-full bg-muted px-5 font-sans text-sm font-semibold text-foreground transition hover:bg-blush/60">
             {copied ? "Copied!" : (<><Upload className="size-4" aria-hidden="true" />Share</>)}
