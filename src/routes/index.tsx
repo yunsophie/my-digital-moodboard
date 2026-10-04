@@ -268,17 +268,10 @@ function Index() {
     transitionRef.current = doc.startViewTransition(() => flushSync(() => setActiveFolder(folder)));
   };
 
-  const isSearching = query.trim().length > 0;
+  // The board itself only responds to tabs — search is a pure dropdown finder.
   const visibleItems = useMemo(() => {
-    const normalized = query.trim().toLowerCase();
-    return boardItems.filter((item) => {
-      // While searching, match across every folder — not just the active tab.
-      const folderMatches = isSearching || activeFolder === "All" || item.folder === activeFolder;
-      const haystack = `${item.title} ${item.description} ${item.category} ${item.year} ${item.folder} ${item.tools.join(" ")}`.toLowerCase();
-      const searchMatches = !normalized || haystack.includes(normalized);
-      return folderMatches && searchMatches;
-    });
-  }, [activeFolder, isSearching, query]);
+    return boardItems.filter((item) => activeFolder === "All" || item.folder === activeFolder);
+  }, [activeFolder]);
 
   const suggestions = useMemo(() => {
     const normalized = query.trim().toLowerCase();
@@ -384,7 +377,7 @@ function Index() {
                 placeholder="Search the whole board"
                 className="min-w-0 flex-1 bg-transparent text-sm text-foreground outline-none placeholder:text-muted-foreground"
                 role="combobox"
-                aria-expanded={searchFocused && suggestions.length > 0}
+                aria-expanded={searchFocused && (suggestions.length > 0 || recommendations.length > 0 || query.trim() !== "")}
                 aria-controls="search-suggestions"
                 aria-autocomplete="list"
               />
@@ -394,7 +387,7 @@ function Index() {
                 </button>
               )}
             </label>
-            {searchFocused && (suggestions.length > 0 || recommendations.length > 0) && (
+            {searchFocused && (suggestions.length > 0 || recommendations.length > 0 || query.trim() !== "") && (
               <div id="search-suggestions" role="listbox" aria-label="Search suggestions" className="absolute inset-x-0 top-full z-50 mt-2 max-h-[min(60vh,26rem)] overflow-y-auto rounded-2xl border border-border bg-background p-1.5 shadow-lg">
                 {recommendations.length > 0 && (
                   <div className="px-2.5 pb-2 pt-1.5">
@@ -442,6 +435,17 @@ function Index() {
                     <span className="shrink-0 rounded-full bg-muted px-2 py-0.5 font-sans text-[10px] uppercase tracking-wide text-muted-foreground">{item.folder}</span>
                   </button>
                 ))}
+                {query.trim() && suggestions.length === 0 && (
+                  <div className="flex items-center gap-3 px-2.5 py-3" role="status">
+                    <span className="grid size-10 shrink-0 place-items-center rounded-full bg-muted text-muted-foreground">
+                      <Search className="size-4" aria-hidden="true" />
+                    </span>
+                    <span className="min-w-0">
+                      <span className="block truncate font-sans text-sm font-semibold text-foreground">No results for “{query.trim()}”</span>
+                      <span className="block font-sans text-[11px] text-muted-foreground">Try a different name, tool, or category.</span>
+                    </span>
+                  </div>
+                )}
               </div>
             )}
           </div>
@@ -559,14 +563,7 @@ function Index() {
       </section>
 
       {visibleItems.length === 0 && (
-        isSearching ? (
-          <div className="flex flex-col items-center gap-4 px-5 py-24 text-center">
-            <p className="font-serif text-2xl text-muted-foreground">No items found matching "{query.trim()}"</p>
-            <Button variant="secondary" size="sm" className="rounded-full" onClick={() => setQuery("")}>Clear search</Button>
-          </div>
-        ) : (
-          <p className="px-5 py-24 text-center font-serif text-2xl text-muted-foreground">Nothing in this folder yet.</p>
-        )
+        <p className="px-5 py-24 text-center font-serif text-2xl text-muted-foreground">Nothing in this folder yet.</p>
       )}
     </main>
   );
