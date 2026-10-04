@@ -66,6 +66,34 @@ const boardItems: BoardItem[] = [
 
 const folders = ["All", "About", "Experience", "Projects", "Blog"] as const;
 
+const coursework = [
+  "AI-Assisted Software Development",
+  "Distributed Systems",
+  "Systems Programming",
+  "Machine Learning",
+  "Artificial Intelligence",
+  "Data Structures",
+  "Algorithms",
+];
+
+function EducationPanel() {
+  return (
+    <div className="min-w-0">
+      <p className="font-sans text-[10px] uppercase tracking-[0.14em] text-muted-foreground">Seattle, WA · Paul G. Allen School</p>
+      <h2 className="mt-3 font-serif text-2xl sm:text-3xl">University of Washington</h2>
+      <p className="mt-2 font-serif text-lg leading-relaxed text-foreground/70">
+        B.S. in Computer Science, expected June 2028. My coursework spans the theory underneath the systems and models I build — from distributed protocols to machine learning.
+      </p>
+      <p className="mt-4 font-sans text-[10px] uppercase tracking-[0.14em] text-muted-foreground">Relevant coursework</p>
+      <ul className="mt-3 flex flex-wrap gap-2">
+        {coursework.map((course) => (
+          <li key={course} className="rounded-full bg-muted px-3 py-1 font-sans text-[10px] uppercase tracking-wide text-muted-foreground">{course}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
 function FlipImage({
   item,
   imageRatio,
@@ -504,33 +532,47 @@ function Index() {
       </nav>
       <section aria-label="Portfolio board" className="px-2 pb-10 pt-3 sm:px-3">
         {isTimeline ? (
-          <ol className="relative mx-auto max-w-2xl space-y-14 border-l border-border pl-8 sm:pl-10">
-            {timelineItems.map((item) => (
-              <li key={item.title} className="relative">
-                <span aria-hidden="true" className="absolute -left-[37px] top-2 size-[9px] rounded-full bg-accent" />
-                <p className="font-sans text-[10px] uppercase tracking-[0.14em] text-muted-foreground">{item.year} · {item.category}</p>
-                <div className="mt-3">
-                  <FlipImage
-                    item={item}
-                    imageRatio="aspect-[16/10]"
-                    crop={item.crop}
-                    eager
-                    showTapBadge={showTapBadge && item === timelineItems[0]}
-                    openKey={openKey}
-                    onOpenChange={setOpenKey}
-                    onImageInteraction={restartTapHintTimer}
-                  />
-                </div>
-                <h2 className="mt-4 font-serif text-2xl sm:text-3xl">{item.title}</h2>
-                <p className="mt-2 font-serif text-lg leading-relaxed text-foreground/70">{item.description}</p>
-                <ul className="mt-3 flex flex-wrap gap-2">
-                  {item.tools.map((tool) => (
-                    <li key={tool} className="rounded-full bg-muted px-3 py-1 font-sans text-[10px] uppercase tracking-wide text-muted-foreground">{tool}</li>
-                  ))}
-                </ul>
-              </li>
-            ))}
-          </ol>
+          <div className="relative mx-auto max-w-4xl">
+            <span aria-hidden="true" className="absolute inset-y-0 left-0 w-px bg-border md:left-1/2" />
+            <div className="relative mb-14 pl-8 md:hidden">
+              <span aria-hidden="true" className="absolute -left-[37px] top-2 size-[9px] rounded-full bg-accent" />
+              <EducationPanel />
+            </div>
+            <ol className="space-y-14">
+              {timelineItems.map((item, index) => (
+                <li key={item.title} className="relative grid gap-10 pl-8 md:grid-cols-2 md:pl-0">
+                  <span aria-hidden="true" className="absolute -left-[37px] top-2 size-[9px] rounded-full bg-accent md:left-1/2 md:-translate-x-1/2" />
+                  <div className="min-w-0">
+                    <p className="font-sans text-[10px] uppercase tracking-[0.14em] text-muted-foreground">{item.year} · {item.category}</p>
+                    <div className="mt-3 max-w-[320px]">
+                      <FlipImage
+                        item={item}
+                        imageRatio="aspect-[16/10]"
+                        crop={item.crop}
+                        eager
+                        showTapBadge={showTapBadge && item === timelineItems[0]}
+                        openKey={openKey}
+                        onOpenChange={setOpenKey}
+                        onImageInteraction={restartTapHintTimer}
+                      />
+                    </div>
+                    <h2 className="mt-4 font-serif text-2xl sm:text-3xl">{item.title}</h2>
+                    <p className="mt-2 font-serif text-lg leading-relaxed text-foreground/70">{item.description}</p>
+                    <ul className="mt-3 flex flex-wrap gap-2">
+                      {item.tools.map((tool) => (
+                        <li key={tool} className="rounded-full bg-muted px-3 py-1 font-sans text-[10px] uppercase tracking-wide text-muted-foreground">{tool}</li>
+                      ))}
+                    </ul>
+                  </div>
+                  {index === 0 && (
+                    <div className="hidden min-w-0 self-start md:block">
+                      <EducationPanel />
+                    </div>
+                  )}
+                </li>
+              ))}
+            </ol>
+          </div>
         ) : (
         <div className="flex items-start gap-2 sm:gap-3">
           {columns.map((column, columnIndex) => (
