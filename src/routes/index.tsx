@@ -75,6 +75,8 @@ function FlipImage({
   crop,
   eager,
   showTapBadge = false,
+  openKey = null,
+  onOpenChange,
   onImageInteraction,
 }: {
   item: BoardItem;
@@ -82,21 +84,30 @@ function FlipImage({
   crop?: string | undefined;
   eager?: boolean | undefined;
   showTapBadge?: boolean | undefined;
+  openKey?: string | null;
+  onOpenChange: (key: string | null) => void;
   onImageInteraction: () => void;
 }) {
-  const [flipped, setFlipped] = useState(false);
+  const [localFlipped, setLocalFlipped] = useState(false);
+  const flipped = openKey === item.title || localFlipped;
+  const clearExternalOpen = () => {
+    if (openKey === item.title) onOpenChange(null);
+  };
 
   useEffect(() => {
     if (!flipped) return;
     const closeOnEscape = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setFlipped(false);
+      if (event.key === "Escape") {
+        setLocalFlipped(false);
+        clearExternalOpen();
+      }
     };
     document.addEventListener("keydown", closeOnEscape);
     return () => document.removeEventListener("keydown", closeOnEscape);
   }, [flipped]);
 
   return (
-    <span className="group relative block" style={{ perspective: "1400px" }}>
+    <span id={`pin-${item.title.replace(/[^a-zA-Z0-9]/g, "-")}`} className="group relative block" style={{ perspective: "1400px" }}>
       <span
         className={`relative block w-full transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] [transform-style:preserve-3d] motion-reduce:transition-none ${flipped ? "[transform:rotateY(180deg)]" : ""}`}
       >
@@ -105,7 +116,8 @@ function FlipImage({
           className={`relative block w-full overflow-hidden rounded-xl bg-muted [backface-visibility:hidden] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${imageRatio}`}
           onClick={() => {
             onImageInteraction();
-            setFlipped(true);
+            setLocalFlipped(true);
+            onOpenChange(item.title);
           }}
           aria-expanded={flipped}
           aria-label={`Flip to see details about ${item.title}`}
