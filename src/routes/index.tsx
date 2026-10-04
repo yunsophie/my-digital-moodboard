@@ -268,17 +268,10 @@ function Index() {
     transitionRef.current = doc.startViewTransition(() => flushSync(() => setActiveFolder(folder)));
   };
 
-  const isSearching = query.trim().length > 0;
+  // The board itself only responds to tabs — search is a pure dropdown finder.
   const visibleItems = useMemo(() => {
-    const normalized = query.trim().toLowerCase();
-    return boardItems.filter((item) => {
-      // While searching, match across every folder — not just the active tab.
-      const folderMatches = isSearching || activeFolder === "All" || item.folder === activeFolder;
-      const haystack = `${item.title} ${item.description} ${item.category} ${item.year} ${item.folder} ${item.tools.join(" ")}`.toLowerCase();
-      const searchMatches = !normalized || haystack.includes(normalized);
-      return folderMatches && searchMatches;
-    });
-  }, [activeFolder, isSearching, query]);
+    return boardItems.filter((item) => activeFolder === "All" || item.folder === activeFolder);
+  }, [activeFolder]);
 
   const suggestions = useMemo(() => {
     const normalized = query.trim().toLowerCase();
@@ -559,14 +552,7 @@ function Index() {
       </section>
 
       {visibleItems.length === 0 && (
-        isSearching ? (
-          <div className="flex flex-col items-center gap-4 px-5 py-24 text-center">
-            <p className="font-serif text-2xl text-muted-foreground">No items found matching "{query.trim()}"</p>
-            <Button variant="secondary" size="sm" className="rounded-full" onClick={() => setQuery("")}>Clear search</Button>
-          </div>
-        ) : (
-          <p className="px-5 py-24 text-center font-serif text-2xl text-muted-foreground">Nothing in this folder yet.</p>
-        )
+        <p className="px-5 py-24 text-center font-serif text-2xl text-muted-foreground">Nothing in this folder yet.</p>
       )}
     </main>
   );
