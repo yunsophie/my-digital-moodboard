@@ -66,6 +66,34 @@ const boardItems: BoardItem[] = [
 
 const folders = ["All", "About", "Experience", "Projects", "Blog"] as const;
 
+const coursework = [
+  "AI-Assisted Software Development",
+  "Distributed Systems",
+  "Systems Programming",
+  "Machine Learning",
+  "Artificial Intelligence",
+  "Data Structures",
+  "Algorithms",
+];
+
+function EducationPanel() {
+  return (
+    <div className="min-w-0">
+      <p className="font-sans text-[10px] uppercase tracking-[0.14em] text-muted-foreground">Seattle, WA · Paul G. Allen School</p>
+      <h2 className="mt-3 font-serif text-2xl sm:text-3xl">University of Washington</h2>
+      <p className="mt-2 font-serif text-lg leading-relaxed text-foreground/70">
+        B.S. in Computer Science, expected June 2028. My coursework spans the theory underneath the systems and models I build — from distributed protocols to machine learning.
+      </p>
+      <p className="mt-4 font-sans text-[10px] uppercase tracking-[0.14em] text-muted-foreground">Relevant coursework</p>
+      <ul className="mt-3 flex flex-wrap gap-2">
+        {coursework.map((course) => (
+          <li key={course} className="rounded-full bg-muted px-3 py-1 font-sans text-[10px] uppercase tracking-wide text-muted-foreground">{course}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
 function FlipImage({
   item,
   imageRatio,
