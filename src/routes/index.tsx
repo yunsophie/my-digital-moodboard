@@ -4,14 +4,11 @@ import { ArrowUpRight, ChevronLeft, ChevronRight, Github, Globe, Mail, MoreHoriz
 import { useEffect, useMemo, useRef, useState } from "react";
 
 import codeDesk from "@/assets/editorial-code-desk.jpg";
-import hardwareStudy from "@/assets/editorial-hardware-study.jpg";
-import interfaceStudy from "@/assets/editorial-interface-study.jpg";
 import labCorridor from "@/assets/editorial-lab-corridor.jpg";
 import pinkAcrylic from "@/assets/pink-acrylic-tech.jpg";
 import pinkArchitecture from "@/assets/pink-architecture.jpg";
 import pinkCodeStudio from "@/assets/pink-code-studio.jpg";
 import pinkEditorialNotes from "@/assets/pink-editorial-notes.jpg";
-import pinkHardware from "@/assets/pink-hardware-grid.jpg";
 import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/")({
