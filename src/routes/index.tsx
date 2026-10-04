@@ -75,6 +75,8 @@ function FlipImage({
   crop,
   eager,
   showTapBadge = false,
+  openKey = null,
+  onOpenChange,
   onImageInteraction,
 }: {
   item: BoardItem;
@@ -82,21 +84,30 @@ function FlipImage({
   crop?: string | undefined;
   eager?: boolean | undefined;
   showTapBadge?: boolean | undefined;
+  openKey?: string | null;
+  onOpenChange: (key: string | null) => void;
   onImageInteraction: () => void;
 }) {
-  const [flipped, setFlipped] = useState(false);
+  const [localFlipped, setLocalFlipped] = useState(false);
+  const flipped = openKey === item.title || localFlipped;
+  const clearExternalOpen = () => {
+    if (openKey === item.title) onOpenChange(null);
+  };
 
   useEffect(() => {
     if (!flipped) return;
     const closeOnEscape = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setFlipped(false);
+      if (event.key === "Escape") {
+        setLocalFlipped(false);
+        clearExternalOpen();
+      }
     };
     document.addEventListener("keydown", closeOnEscape);
     return () => document.removeEventListener("keydown", closeOnEscape);
   }, [flipped]);
 
   return (
-    <span className="group relative block" style={{ perspective: "1400px" }}>
+    <span id={`pin-${item.title.replace(/[^a-zA-Z0-9]/g, "-")}`} className="group relative block" style={{ perspective: "1400px" }}>
       <span
         className={`relative block w-full transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] [transform-style:preserve-3d] motion-reduce:transition-none ${flipped ? "[transform:rotateY(180deg)]" : ""}`}
       >
@@ -105,7 +116,8 @@ function FlipImage({
           className={`relative block w-full overflow-hidden rounded-xl bg-muted [backface-visibility:hidden] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${imageRatio}`}
           onClick={() => {
             onImageInteraction();
-            setFlipped(true);
+            setLocalFlipped(true);
+            onOpenChange(item.title);
           }}
           aria-expanded={flipped}
           aria-label={`Flip to see details about ${item.title}`}
@@ -142,7 +154,8 @@ function FlipImage({
           onClick={(event) => {
             if (!(event.target as HTMLElement).closest("a")) {
               onImageInteraction();
-              setFlipped(false);
+              setLocalFlipped(false);
+              clearExternalOpen();
             }
           }}
         >
@@ -198,6 +211,10 @@ function Index() {
   const navStripRef = useRef<HTMLDivElement | null>(null);
   const [navScroll, setNavScroll] = useState({ left: false, right: false });
   const [copied, setCopied] = useState(false);
+  const [searchFocused, setSearchFocused] = useState(false);
+  const [highlightIndex, setHighlightIndex] = useState(0);
+  const [openKey, setOpenKey] = useState<string | null>(null);
+  const searchWrapRef = useRef<HTMLDivElement | null>(null);
 
   const copyLink = () => {
     if (navigator.clipboard) navigator.clipboard.writeText(window.location.href).catch(() => {});
@@ -263,6 +280,40 @@ function Index() {
     });
   }, [activeFolder, isSearching, query]);
 
+  const suggestions = useMemo(() => {
+    const normalized = query.trim().toLowerCase();
+    return boardItems
+      .filter((item) => {
+        const haystack = `${item.title} ${item.description} ${item.category} ${item.year} ${item.folder} ${item.tools.join(" ")}`.toLowerCase();
+        return !normalized || haystack.includes(normalized);
+      })
+      .slice(0, 8);
+  }, [query]);
+
+  const selectSuggestion = (item: BoardItem) => {
+    setQuery(item.title);
+    setSearchFocused(false);
+    setHighlightIndex(0);
+    if (item.folder !== activeFolder) changeFolder(item.folder);
+    window.setTimeout(() => {
+      document
+        .getElementById(`pin-${item.title.replace(/[^a-zA-Z0-9]/g, "-")}`)
+        ?.scrollIntoView({ behavior: "smooth", block: "center" });
+      setOpenKey(item.title);
+    }, 240);
+  };
+
+  useEffect(() => {
+    if (!searchFocused) return;
+    const onPointerDown = (event: MouseEvent) => {
+      if (searchWrapRef.current && !searchWrapRef.current.contains(event.target as Node)) {
+        setSearchFocused(false);
+      }
+    };
+    document.addEventListener("mousedown", onPointerDown);
+    return () => document.removeEventListener("mousedown", onPointerDown);
+  }, [searchFocused]);
+
   const [columnCount, setColumnCount] = useState(5);
   useEffect(() => {
     const compute = () => setColumnCount(window.innerWidth >= 1024 ? 5 : window.innerWidth >= 768 ? 3 : 2);
@@ -287,16 +338,77 @@ function Index() {
       <header className="sticky top-0 z-40 bg-background/95 backdrop-blur-xl">
         <div className="flex h-[68px] items-center gap-3 px-3 sm:px-5">
           <a href="/" className="w-10 shrink-0 font-serif text-2xl leading-none" aria-label="Sophie Li home">SL<span className="text-accent-foreground">.</span></a>
-          <label className="flex h-11 flex-1 items-center gap-3 rounded-full bg-muted px-4 text-muted-foreground">
-            <Search className="size-4 shrink-0" aria-hidden="true" />
-            <span className="sr-only">Search portfolio</span>
-            <input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search the whole board" className="min-w-0 flex-1 bg-transparent text-sm text-foreground outline-none placeholder:text-muted-foreground" />
-            {query && (
-              <button type="button" onClick={() => setQuery("")} className="grid size-5 shrink-0 place-items-center rounded-full bg-muted-foreground/20 text-muted-foreground transition hover:bg-muted-foreground/30 hover:text-foreground" aria-label="Clear search">
-                <X className="size-3" aria-hidden="true" />
-              </button>
+          <div ref={searchWrapRef} className="relative min-w-0 flex-1">
+            <label className="flex h-11 items-center gap-3 rounded-full bg-muted px-4 text-muted-foreground">
+              <Search className="size-4 shrink-0" aria-hidden="true" />
+              <span className="sr-only">Search portfolio</span>
+              <input
+                value={query}
+                onChange={(event) => {
+                  setQuery(event.target.value);
+                  setHighlightIndex(0);
+                  setSearchFocused(true);
+                }}
+                onFocus={() => {
+                  setSearchFocused(true);
+                  setHighlightIndex(0);
+                }}
+                onKeyDown={(event) => {
+                  if (event.key === "ArrowDown") {
+                    event.preventDefault();
+                    setHighlightIndex((index) => Math.min(index + 1, Math.max(suggestions.length - 1, 0)));
+                  } else if (event.key === "ArrowUp") {
+                    event.preventDefault();
+                    setHighlightIndex((index) => Math.max(index - 1, 0));
+                  } else if (event.key === "Enter") {
+                    const picked = suggestions[highlightIndex];
+                    if (picked) {
+                      event.preventDefault();
+                      selectSuggestion(picked);
+                    }
+                  } else if (event.key === "Escape") {
+                    setSearchFocused(false);
+                  }
+                }}
+                placeholder="Search the whole board"
+                className="min-w-0 flex-1 bg-transparent text-sm text-foreground outline-none placeholder:text-muted-foreground"
+                role="combobox"
+                aria-expanded={searchFocused && suggestions.length > 0}
+                aria-controls="search-suggestions"
+                aria-autocomplete="list"
+              />
+              {query && (
+                <button type="button" onClick={() => setQuery("")} className="grid size-5 shrink-0 place-items-center rounded-full bg-muted-foreground/20 text-muted-foreground transition hover:bg-muted-foreground/30 hover:text-foreground" aria-label="Clear search">
+                  <X className="size-3" aria-hidden="true" />
+                </button>
+              )}
+            </label>
+            {searchFocused && suggestions.length > 0 && (
+              <div id="search-suggestions" role="listbox" aria-label="Search suggestions" className="absolute inset-x-0 top-full z-50 mt-2 max-h-[min(60vh,26rem)] overflow-y-auto rounded-2xl border border-border bg-background p-1.5 shadow-lg">
+                <p className="px-2.5 pb-1 pt-1.5 font-sans text-[10px] uppercase tracking-[0.14em] text-muted-foreground">
+                  {query.trim() ? "Matches on this board" : "Browse the board"}
+                </p>
+                {suggestions.map((item, index) => (
+                  <button
+                    key={item.title}
+                    type="button"
+                    role="option"
+                    aria-selected={index === highlightIndex}
+                    onClick={() => selectSuggestion(item)}
+                    onMouseEnter={() => setHighlightIndex(index)}
+                    className={`flex w-full items-center gap-3 rounded-xl px-2 py-1.5 text-left transition ${index === highlightIndex ? "bg-blush/50" : ""}`}
+                  >
+                    <img src={item.image} alt="" className="size-10 shrink-0 rounded-lg object-cover" loading="lazy" />
+                    <span className="min-w-0 flex-1">
+                      <span className="block truncate font-sans text-sm font-semibold text-foreground">{item.title}</span>
+                      <span className="block truncate font-sans text-[11px] text-muted-foreground">{item.category} · {item.year}</span>
+                    </span>
+                    <span className="shrink-0 rounded-full bg-muted px-2 py-0.5 font-sans text-[10px] uppercase tracking-wide text-muted-foreground">{item.folder}</span>
+                  </button>
+                ))}
+              </div>
             )}
-          </label>
+          </div>
         </div>
       </header>
 
@@ -367,6 +479,8 @@ function Index() {
                     crop={item.crop}
                     eager
                     showTapBadge={showTapBadge && item === timelineItems[0]}
+                    openKey={openKey}
+                    onOpenChange={setOpenKey}
                     onImageInteraction={restartTapHintTimer}
                   />
                 </div>
@@ -392,6 +506,8 @@ function Index() {
                     crop={item.crop}
                     eager={index < 4 && columnIndex === 0}
                     showTapBadge={showTapBadge && columnIndex === 0 && index === 0}
+                    openKey={openKey}
+                    onOpenChange={setOpenKey}
                     onImageInteraction={restartTapHintTimer}
                   />
                   <span className="flex min-w-0 items-center justify-between gap-2 px-1.5 pt-[7.5px]">
