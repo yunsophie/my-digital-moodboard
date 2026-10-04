@@ -47,6 +47,7 @@ type BoardItem = {
   crop?: string;
   ratio?: string;
   sortYear?: number;
+  link?: { url: string; label: string };
 };
 
 const boardItems: BoardItem[] = [
@@ -57,6 +58,7 @@ const boardItems: BoardItem[] = [
   { title: "virtual vla !", folder: "Experience", category: "Ai2 + UW RAIVN Lab", year: "Mar — Jun 2026", sortYear: 2026.3, description: "Worked as a undergraduate researcher with Xiang Fan. Virtual VLA is a robot learning system that compresses vision, actions, and proprioception into one shared latent space, enabling unlabeled video to stand in as action data across different robots. I added temporal timestep conditioning across the encoders so the model could reason about variable frame gaps, and ran 40+ careful hyperparameter sweeps that cut validation loss 11.3% below baseline.", tools: ["PyTorch", "Weights & Biases", "Robot learning"], image: codeDesk, imageWidth: 1024, imageHeight: 1408, alt: "Code workspace with notebooks and coffee", crop: "object-top", ratio: "aspect-[3/4]" },
   { title: "i2 ta !", folder: "Experience", category: "Interactive Intelligence", year: "Oct 2025 — Jun 2026", sortYear: 2025.8, description: "I mentor a group of ~10 students exploring machine learning, deep learning, computer vision, reinforcement learning, natural language processing, and computational neuroscience. Through weekly sessions I've guided and answered questions across ten projects from MNIST classifiers to ConvNets to fine-tuning HuggingFace models.", tools: ["Machine learning", "Deep learning", "Computer vision", "Reinforcement learning", "Natural language processing", "Computer ethics", "Mentorship", "HuggingFace"], image: labCorridor, imageWidth: 1024, imageHeight: 1536, alt: "A geometric university computer lab", ratio: "aspect-[3/4]" },
   { title: "huskybids !", folder: "Experience", category: "Husky Coding Project", year: "Oct 2024 — May 2025", sortYear: 2024.8, description: "On a team of six, I helped build a full-stack React web app that lets UW students follow live sports with an engaging betting system. Along the way I got a taste of an industry-style workflow by participating in standups, reviews, version control, and finally presented our work to industry professionals at the HCP showcase.", tools: ["React.js", "JavaScript", "Teamwork"], image: pinkCodeStudio, imageWidth: 1024, imageHeight: 1536, alt: "A bright pink digital design workspace", crop: "object-bottom", ratio: "aspect-[4/5]" },
+  { title: "sustAIn", folder: "Projects", category: "Hackathon", year: "2025", description: "A sustainability tool that makes product information accessible. It pulls product data from several online platforms and compares it in real time, so shoppers can see sustainability side by side before they buy. The hardest parts were assessing sustainability when product data was incomplete or inconsistent and standardizing records across different platforms — along the way I learned a lot about sustainability metrics, data integration, and developing machine learning models. Next up: a more accurate model, support for more retailers, and a feedback feature so users can improve the ratings.", tools: ["Python", "AWS Bedrock", "Amazon Web Services", "APIs", "Figma"], image: pinkArchitecture, imageWidth: 1024, imageHeight: 1536, alt: "Pink architectural forms in soft light", crop: "object-bottom", link: { url: "https://www.figma.com", label: "Try it out" } },
 ];
 
 const folders = ["All", "About", "Experience", "Projects"] as const;
@@ -197,6 +199,17 @@ function FlipImage({
             ))}
           </span>
           <span className="flex items-center gap-4 border-t border-border pt-3 text-xs">
+            {item.link && (
+              <a
+                className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-accent-foreground"
+                href={item.link.url}
+                target="_blank"
+                rel="noreferrer"
+                onClick={(event) => event.stopPropagation()}
+              >
+                <Globe className="size-3.5" aria-hidden="true" /> {item.link.label}
+              </a>
+            )}
             <a
               className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-accent-foreground"
               href="https://github.com/"
