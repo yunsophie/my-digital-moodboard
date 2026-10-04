@@ -377,7 +377,7 @@ function Index() {
                 placeholder="Search the whole board"
                 className="min-w-0 flex-1 bg-transparent text-sm text-foreground outline-none placeholder:text-muted-foreground"
                 role="combobox"
-                aria-expanded={searchFocused && suggestions.length > 0}
+                aria-expanded={searchFocused && (suggestions.length > 0 || recommendations.length > 0 || query.trim() !== "")}
                 aria-controls="search-suggestions"
                 aria-autocomplete="list"
               />
@@ -387,7 +387,7 @@ function Index() {
                 </button>
               )}
             </label>
-            {searchFocused && (suggestions.length > 0 || recommendations.length > 0) && (
+            {searchFocused && (suggestions.length > 0 || recommendations.length > 0 || query.trim() !== "") && (
               <div id="search-suggestions" role="listbox" aria-label="Search suggestions" className="absolute inset-x-0 top-full z-50 mt-2 max-h-[min(60vh,26rem)] overflow-y-auto rounded-2xl border border-border bg-background p-1.5 shadow-lg">
                 {recommendations.length > 0 && (
                   <div className="px-2.5 pb-2 pt-1.5">
