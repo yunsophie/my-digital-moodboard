@@ -290,6 +290,17 @@ function Index() {
       .slice(0, 8);
   }, [query]);
 
+  const recommendations = useMemo(() => {
+    const normalized = query.trim().toLowerCase();
+    const pool = Array.from(
+      new Set(boardItems.flatMap((item) => [...item.tools, item.category])),
+    );
+    if (!normalized) return ["React", "TypeScript", "Python", "Design", "Hardware", "Open source"].filter((t) => pool.some((p) => p.toLowerCase().includes(t.toLowerCase()))).concat(pool).filter((v, i, a) => a.indexOf(v) === i).slice(0, 6);
+    return pool
+      .filter((term) => term.toLowerCase().includes(normalized) && term.toLowerCase() !== normalized)
+      .slice(0, 6);
+  }, [query]);
+
   const selectSuggestion = (item: BoardItem) => {
     setQuery(item.title);
     setSearchFocused(false);
@@ -383,11 +394,36 @@ function Index() {
                 </button>
               )}
             </label>
-            {searchFocused && suggestions.length > 0 && (
+            {searchFocused && (suggestions.length > 0 || recommendations.length > 0) && (
               <div id="search-suggestions" role="listbox" aria-label="Search suggestions" className="absolute inset-x-0 top-full z-50 mt-2 max-h-[min(60vh,26rem)] overflow-y-auto rounded-2xl border border-border bg-background p-1.5 shadow-lg">
+                {recommendations.length > 0 && (
+                  <div className="px-2.5 pb-2 pt-1.5">
+                    <p className="pb-2 font-sans text-[10px] uppercase tracking-[0.14em] text-muted-foreground">
+                      {query.trim() ? "Related searches" : "Recommended searches"}
+                    </p>
+                    <div className="flex flex-wrap gap-1.5">
+                      {recommendations.map((term) => (
+                        <button
+                          key={term}
+                          type="button"
+                          onClick={() => {
+                            setQuery(term);
+                            setHighlightIndex(0);
+                          }}
+                          className="inline-flex items-center gap-1 rounded-full bg-muted px-3 py-1 font-sans text-xs font-medium text-foreground/80 transition hover:bg-blush/60"
+                        >
+                          <Search className="size-3" aria-hidden="true" />
+                          {term}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                {suggestions.length > 0 && (
                 <p className="px-2.5 pb-1 pt-1.5 font-sans text-[10px] uppercase tracking-[0.14em] text-muted-foreground">
                   {query.trim() ? "Matches on this board" : "Browse the board"}
                 </p>
+                )}
                 {suggestions.map((item, index) => (
                   <button
                     key={item.title}
