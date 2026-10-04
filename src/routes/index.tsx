@@ -154,7 +154,8 @@ function FlipImage({
           onClick={(event) => {
             if (!(event.target as HTMLElement).closest("a")) {
               onImageInteraction();
-              setFlipped(false);
+              setLocalFlipped(false);
+              clearExternalOpen();
             }
           }}
         >
@@ -210,6 +211,10 @@ function Index() {
   const navStripRef = useRef<HTMLDivElement | null>(null);
   const [navScroll, setNavScroll] = useState({ left: false, right: false });
   const [copied, setCopied] = useState(false);
+  const [searchFocused, setSearchFocused] = useState(false);
+  const [highlightIndex, setHighlightIndex] = useState(0);
+  const [openKey, setOpenKey] = useState<string | null>(null);
+  const searchWrapRef = useRef<HTMLDivElement | null>(null);
 
   const copyLink = () => {
     if (navigator.clipboard) navigator.clipboard.writeText(window.location.href).catch(() => {});
@@ -274,6 +279,40 @@ function Index() {
       return folderMatches && searchMatches;
     });
   }, [activeFolder, isSearching, query]);
+
+  const suggestions = useMemo(() => {
+    const normalized = query.trim().toLowerCase();
+    return boardItems
+      .filter((item) => {
+        const haystack = `${item.title} ${item.description} ${item.category} ${item.year} ${item.folder} ${item.tools.join(" ")}`.toLowerCase();
+        return !normalized || haystack.includes(normalized);
+      })
+      .slice(0, 8);
+  }, [query]);
+
+  const selectSuggestion = (item: BoardItem) => {
+    setQuery(item.title);
+    setSearchFocused(false);
+    setHighlightIndex(0);
+    if (item.folder !== activeFolder) changeFolder(item.folder);
+    window.setTimeout(() => {
+      document
+        .getElementById(`pin-${item.title.replace(/[^a-zA-Z0-9]/g, "-")}`)
+        ?.scrollIntoView({ behavior: "smooth", block: "center" });
+      setOpenKey(item.title);
+    }, 240);
+  };
+
+  useEffect(() => {
+    if (!searchFocused) return;
+    const onPointerDown = (event: MouseEvent) => {
+      if (searchWrapRef.current && !searchWrapRef.current.contains(event.target as Node)) {
+        setSearchFocused(false);
+      }
+    };
+    document.addEventListener("mousedown", onPointerDown);
+    return () => document.removeEventListener("mousedown", onPointerDown);
+  }, [searchFocused]);
 
   const [columnCount, setColumnCount] = useState(5);
   useEffect(() => {
