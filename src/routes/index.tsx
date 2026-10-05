@@ -3,13 +3,16 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ArrowUpRight, ChevronLeft, ChevronRight, Globe, Linkedin, Mail, MoreHorizontal, RotateCcw, Search, Upload, UserRoundPlus, X } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 
-import codeDesk from "@/assets/editorial-code-desk.jpg";
-import labCorridor from "@/assets/editorial-lab-corridor.jpg";
-import pinkAcrylic from "@/assets/pink-acrylic-tech.jpg";
-import pinkArchitecture from "@/assets/pink-architecture.jpg";
-import pinkCodeStudio from "@/assets/pink-code-studio.jpg";
+import editorialAbout from "@/assets/editorial-about.jpg";
+import editorialHuskybids from "@/assets/editorial-huskybids.jpg";
+import editorialHttpServer from "@/assets/editorial-http-server.jpg";
+import editorialI2Ta from "@/assets/editorial-i2-ta.jpg";
+import editorialKvStore from "@/assets/editorial-kv-store.jpg";
+import editorialOlmoSnow from "@/assets/editorial-olmo-snow.jpg";
+import editorialStudyDucky from "@/assets/editorial-study-ducky.jpg";
+import editorialSustain from "@/assets/editorial-sustain.jpg";
+import editorialVirtualVla from "@/assets/editorial-virtual-vla.jpg";
 import uwCampus from "@/assets/editorial-uw-campus.jpg";
-import pinkEditorialNotes from "@/assets/pink-editorial-notes.jpg";
 import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/")({
@@ -54,7 +57,7 @@ type BoardItem = {
 const boardItems: BoardItem[] = [
   { title: "all about me !\n", folder: "About", category: "CS @ University of Washington", year: "Class of 2028", description: "Hello I'm Sophie! I am currently a computer science student at the University of Washington. I'm happiest somewhere between research and systems and design. I have worked on teaching robots to learn from video, reading the Earth through satellite imagery, and building distributed software that holds up when things go wrong. Outside of school, I am an avid reader, runner, and a fan of the Montreal Canadiens. ", tools: ["Machine learning", "Distributed systems", "Research"], image: pinkArchitecture, imageWidth: 1024, imageHeight: 1536, alt: "Curved pink architecture in sunlight", crop: "object-top", ratio: "aspect-[4/5]" },
   { title: "distributed key-value store", folder: "Projects", category: "Distributed systems", year: "2026", description: "\n", tools: ["Java", "Paxos", "Two-phase commit"], image: editorialKvStore, imageWidth: 1024, imageHeight: 1536, alt: "Floating frosted geometric clusters connected by translucent bridges" },
-   { title: "olmo-snow", folder: "Experience", category: "UW Civil & Environmental Engineering", year: "Jan — Jun 2026", sortYear: 2026.1, description: "Worked as an undergraduate researcher with Prof. Nicoleta Cristea. I explored how far a tiny amount of labeled data could go. By training a logistic-regression head on embeddings from OlmoEarth's frozen 300M-parameter vision transformer, I reached an F1 of 0.84 (0.975 precision) from just 20 labeled points, eliminating the need for costly fine-tuning. I also built a geospatial data pipelines aligning Sentinel-1 SAR, Sentinel-2, and LiDAR imagery over the Tuolumne River basin and finally presented the work to about 20 researchers at a symposium.", tools: ["Python", "scikit-learn", "geopandas", "AWS"], image: editorialOlmoSnow, imageWidth: 1024, imageHeight: 1536, alt: "Alpine snow relief with rose-tinted contours" },
+   { title: "olmo-snow", folder: "Experience", category: "UW Civil & Environmental Engineering", year: "Jan — Jun 2026", sortYear: 2026.1, description: "Worked as an undergraduate researcher with Prof. Nicoleta Cristea. I explored how far a tiny amount of labeled data could go. By training a simple logistic-regression head on embeddings from OlmoEarth's frozen 300M-parameter vision transformer, I reached an F1 of 0.84 (0.975 precision) from just 20 labeled points, eliminating the need for costly fine-tuning. I also built a geospatial data pipelines aligning Sentinel-1 SAR, Sentinel-2, and LiDAR imagery over the Tuolumne River basin and finally presented the work to about 20 researchers at a symposium.", tools: ["Python", "scikit-learn", "geopandas", "AWS"], image: editorialOlmoSnow, imageWidth: 1024, imageHeight: 1536, alt: "Alpine snow relief with rose-tinted contours" },
   { title: "multithreaded http server", folder: "Projects", category: "Systems programming", year: "2026", description: "\n", tools: ["C++", "Linux", "Sockets"], image: editorialHttpServer, imageWidth: 1024, imageHeight: 1408, alt: "Frosted acrylic panels with glowing circuit traces" },
    { title: "virtual vla !", folder: "Experience", category: "Ai2 + UW RAIVN Lab", year: "Mar — Jun 2026", sortYear: 2026.3, description: "Worked as a undergraduate researcher on a robot learning system that compresses vision, actions, and proprioception into one shared latent space, enabling unlabeled video to stand in as action data across different robots. I added temporal timestep conditioning across the encoders so the model could reason about variable frame gaps, and ran 40+ careful hyperparameter sweeps that cut validation loss 11.3% below baseline.", tools: ["PyTorch", "Weights & Biases", "Robot learning"], image: editorialVirtualVla, imageWidth: 1024, imageHeight: 1408, alt: "Minimal robot arm with frosted trajectory ribbons", crop: "object-top", ratio: "aspect-[3/4]" },
   { title: "i2 ta !", folder: "Experience", category: "Interactive Intelligence", year: "Oct 2025 — Jun 2026", sortYear: 2025.8, description: "I mentor a group of ~10 students exploring machine learning, deep learning, computer vision, reinforcement learning, natural language processing, and computational neuroscience. Through weekly sessions I've guided and answered questions across ten projects from MNIST classifiers to ConvNets to fine-tuning HuggingFace models.", tools: ["Machine learning", "Deep learning", "Computer vision", "Reinforcement learning", "Natural language processing", "Computer ethics", "Mentorship", "HuggingFace"], image: editorialI2Ta, imageWidth: 1024, imageHeight: 1536, alt: "A glass lattice manifold with glowing nodes", ratio: "aspect-[3/4]" },
