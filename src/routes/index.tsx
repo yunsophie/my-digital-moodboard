@@ -85,7 +85,7 @@ function EducationPanel() {
   return (
     <div className="min-w-0">
       <div className="max-w-[320px] overflow-hidden rounded-xl">
-        <img src={uwCherry.url} alt="Cherry blossoms in front of a UW campus building" width={768} height={1024} loading="lazy" decoding="async" className="block aspect-[3/4] w-full object-cover" />
+        <img src={uwCherry.url} alt="Cherry blossoms in front of a UW campus building" width={768} height={1024} loading="lazy" decoding="async" className="block aspect-auto w-full object-cover" />
       </div>
       <p className="mt-4 font-sans text-[10px] uppercase tracking-[0.14em] text-muted-foreground">Seattle, WA · Paul G. Allen School</p>
       <h2 className="mt-3 font-serif text-2xl sm:text-3xl">university of washington</h2>
@@ -593,7 +593,7 @@ function Index() {
                     <div className="mt-3 max-w-[320px]">
                       <FlipImage
                         item={item}
-                        imageRatio={item.crop ? (item.ratio ?? "aspect-auto") : "aspect-auto"}
+                        imageRatio="aspect-auto"
                         crop={item.crop}
                         eager
                         showTapBadge={showTapBadge && item === timelineItems[0]}
@@ -622,7 +622,7 @@ function Index() {
                 <div key={item.title} className="group/cap min-w-0 overflow-hidden rounded-xl pb-3 hover:bg-blush/40">
                   <FlipImage
                     item={item}
-                    imageRatio={item.ratio ?? "aspect-auto"}
+                    imageRatio="aspect-auto"
                     crop={item.crop}
                     eager={index < 4 && columnIndex === 0}
                     showTapBadge={showTapBadge && columnIndex === 0 && index === 0}
