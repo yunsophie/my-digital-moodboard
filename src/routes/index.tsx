@@ -10,7 +10,7 @@ import editorialHttpServer from "@/assets/editorial-http-server.jpg";
 import editorialI2Ta from "@/assets/editorial-i2-ta.jpg";
 import editorialKvStore from "@/assets/editorial-kv-store.jpg";
 import olmoSymposium from "@/assets/olmo-snow-symposium.jpg.asset.json";
-import studyDucky from "@/assets/study-ducky.png.asset.json";
+import studyDucky from "@/assets/study-ducky-v2.png.asset.json";
 import dubhacksSwag from "@/assets/dubhacks-swag.jpg.asset.json";
 import vlaRobotArm from "@/assets/vla-robot-arm.jpg.asset.json";
 import uwCherry from "@/assets/uw-cherry-blossoms.jpg.asset.json";
@@ -53,6 +53,7 @@ type BoardItem = {
   ratio?: string;
   sortYear?: number;
   link?: { url: string; label: string };
+  extraLink?: { url: string; label: string };
   extraImage?: { src: string; width: number; height: number; alt: string };
 };
 
@@ -220,17 +221,18 @@ function FlipImage({
             ))}
           </span>
           <span className="flex items-center gap-4 border-t border-border pt-3 text-xs">
-            {item.link && (
+            {[item.link, item.extraLink].filter(Boolean).map((l) => (
               <a
+                key={l!.url}
                 className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-accent-foreground"
-                href={item.link.url}
+                href={l!.url}
                 target="_blank"
                 rel="noreferrer"
                 onClick={(event) => event.stopPropagation()}
               >
-                <Globe className="size-3.5" aria-hidden="true" /> {item.link.label}
+                <Globe className="size-3.5" aria-hidden="true" /> {l!.label}
               </a>
-            )}
+            ))}
             <a
               className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-accent-foreground"
               href="https://www.linkedin.com/in/yunrui-sophie-li/"
