@@ -5,6 +5,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 
 import aboutSophie from "@/assets/about-sophie.jpg.asset.json";
 import huskybidsPresentation from "@/assets/huskybids-presentation.jpg.asset.json";
+import huskybidsPoster from "@/assets/huskybids-poster.jpg.asset.json";
 import editorialHttpServer from "@/assets/editorial-http-server.jpg";
 import editorialI2Ta from "@/assets/editorial-i2-ta.jpg";
 import editorialKvStore from "@/assets/editorial-kv-store.jpg";
@@ -52,6 +53,7 @@ type BoardItem = {
   ratio?: string;
   sortYear?: number;
   link?: { url: string; label: string };
+  extraImage?: { src: string; width: number; height: number; alt: string };
 };
 
 const boardItems: BoardItem[] = [
@@ -61,7 +63,7 @@ const boardItems: BoardItem[] = [
   { title: "multithreaded http server", folder: "Projects", category: "Systems programming", year: "2026", description: "\n", tools: ["C++", "Linux", "Sockets"], image: editorialHttpServer, imageWidth: 1024, imageHeight: 1408, alt: "Frosted acrylic panels with glowing circuit traces" },
    { title: "virtual vla !", folder: "Experience", category: "Ai2 + UW RAIVN Lab", year: "Mar — Jun 2026", sortYear: 2026.3, description: "Worked as a undergraduate researcher on a robot learning system that compresses vision, actions, and proprioception into one shared latent space, enabling unlabeled video to stand in as action data across different robots. I added temporal timestep conditioning across the encoders so the model could reason about variable frame gaps, and ran 40+ careful hyperparameter sweeps that cut validation loss 11.3% below baseline.", tools: ["PyTorch", "Weights & Biases", "Robot learning"], image: vlaRobotArm.url, imageWidth: 605, imageHeight: 1077, alt: "A robotic arm at a café counter", crop: "object-top", ratio: "aspect-[3/4]" },
   { title: "i2 ta !", folder: "Experience", category: "Interactive Intelligence", year: "Oct 2025 — Jun 2026", sortYear: 2025.8, description: "I mentor a group of ~10 students exploring machine learning, deep learning, computer vision, reinforcement learning, natural language processing, and computational neuroscience. Through weekly sessions I've guided and answered questions across ten projects from MNIST classifiers to ConvNets to fine-tuning HuggingFace models.", tools: ["Machine learning", "Deep learning", "Computer vision", "Reinforcement learning", "Natural language processing", "Computer ethics", "Mentorship", "HuggingFace"], image: editorialI2Ta, imageWidth: 1024, imageHeight: 1536, alt: "A glass lattice manifold with glowing nodes", ratio: "aspect-[3/4]" },
-  { title: "huskybids !", folder: "Experience", category: "Husky Coding Project", year: "Oct 2024 — May 2025", sortYear: 2024.8, description: "On a team of six, I helped build a full-stack React web app that lets UW students follow live sports with an engaging betting system. Along the way I got a taste of an industry-style workflow by participating in standups, reviews, version control, and finally presented our work to industry professionals at the HCP showcase.", tools: ["React.js", "JavaScript", "Teamwork"], image: huskybidsPresentation.url, imageWidth: 1920, imageHeight: 1280, alt: "Sophie presenting HuskyBids at the HCP showcase", ratio: "aspect-[3/2]" },
+  { title: "huskybids !", folder: "Experience", category: "Husky Coding Project", year: "Oct 2024 — May 2025", sortYear: 2024.8, description: "On a team of six, I helped build a full-stack React web app that lets UW students follow live sports with an engaging betting system. Along the way I got a taste of an industry-style workflow by participating in standups, reviews, version control, and finally presented our work to industry professionals at the HCP showcase.", tools: ["React.js", "JavaScript", "Teamwork"], image: huskybidsPresentation.url, imageWidth: 1920, imageHeight: 1280, alt: "Sophie presenting HuskyBids at the HCP showcase", ratio: "aspect-[3/2]", extraImage: { src: huskybidsPoster.url, width: 1280, height: 1920, alt: "The HuskyBids team presentation poster" } },
   { title: "sustAIn", folder: "Projects", category: "Hackathon", year: "DubHacks '24", description: "A sustainability tool that makes product information accessible. It pulls product data from several online platforms and compares it in real time, so shoppers can see sustainability side by side before they buy. The hardest parts were assessing sustainability when product data was incomplete or inconsistent and standardizing records across different platforms — along the way I learned a lot about sustainability metrics, data integration, and developing machine learning models. Next up: a more accurate model, support for more retailers, and a feedback feature so users can improve the ratings.", tools: ["Python", "AWS Bedrock", "Amazon Web Services", "APIs", "Figma"], image: dubhacksSwag.url, imageWidth: 768, imageHeight: 1024, alt: "DubHacks '24 swag: a cap, pouches, stickers, and tumblers", crop: "object-top", link: { url: "https://www.figma.com", label: "Try it out" } },
   { title: "study ducky", folder: "Projects", category: "Hackathon", year: "DubHacks '25", description: "An AI study companion inspired by rubber duck debugging — except the AI is the student and you're the teacher. You teach your Ducky about any topic while it asks adaptive questions that grow in complexity as the conversation develops, and afterwards it analyzes the exchange to highlight strengths, misunderstandings, and topics left out. I built the full stack in one weekend: React and Tailwind on the frontend, Node and Express on the backend with the Gemini API for question generation, and Firebase for authentication and chat storage — all while learning most of these tools on the fly.", tools: ["React.js", "Node.js", "Express", "Firebase", "Gemini API", "Tailwind"], image: editorialStudyDucky, imageWidth: 1024, imageHeight: 1536, alt: "A matte ceramic duck with frosted speech bubbles", crop: "object-bottom", link: { url: "https://yblii.github.io", label: "Try it out" } },
 ];
@@ -196,6 +198,18 @@ function FlipImage({
             <span className="mt-1.5 block font-serif text-2xl leading-tight text-foreground">{item.title}</span>
           </span>
           <span className="font-serif text-sm leading-relaxed text-foreground/75">{item.description}</span>
+          {item.extraImage && (
+            <img
+              src={item.extraImage.src}
+              alt={item.extraImage.alt}
+              width={item.extraImage.width}
+              height={item.extraImage.height}
+              loading="lazy"
+              decoding="async"
+              className="w-full rounded-lg bg-muted"
+              style={{ maxHeight: "55%", objectFit: "contain", objectPosition: "top" }}
+            />
+          )}
           <span className="mt-auto flex flex-wrap gap-1.5">
             {item.tools.map((tool) => (
               <span
