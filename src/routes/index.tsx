@@ -3,7 +3,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ArrowUpRight, ChevronLeft, ChevronRight, Github, Globe, Linkedin, Mail, MoreHorizontal, RotateCcw, Search, Upload, UserRoundPlus, X } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 
-import editorialAbout from "@/assets/editorial-about.jpg";
+import aboutSophie from "@/assets/about-sophie.jpg.asset.json";
 import editorialHuskybids from "@/assets/editorial-huskybids.jpg";
 import editorialHttpServer from "@/assets/editorial-http-server.jpg";
 import editorialI2Ta from "@/assets/editorial-i2-ta.jpg";
