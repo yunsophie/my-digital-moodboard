@@ -593,7 +593,7 @@ function Index() {
                     <div className="mt-3 max-w-[320px]">
                       <FlipImage
                         item={item}
-                        imageRatio="aspect-auto"
+                        imageRatio={item.crop ? (item.ratio ?? "aspect-auto") : "aspect-auto"}
                         crop={item.crop}
                         eager
                         showTapBadge={showTapBadge && item === timelineItems[0]}
