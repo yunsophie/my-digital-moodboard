@@ -1,18 +1,21 @@
 import { QueryClient } from "@tanstack/react-query";
 import { createMemoryHistory, createRouter, RouterProvider } from "@tanstack/react-router";
-import { cleanup, render, waitFor } from "@testing-library/react";
+import { cleanup, render } from "@testing-library/react";
 import { afterEach, describe, expect, it, vi } from "vitest";
 
 import { routeTree } from "@/routeTree.gen";
 
-function renderAt(path: string) {
+async function renderAt(path: string, basepath = "/") {
   const queryClient = new QueryClient();
   const router = createRouter({
     routeTree,
+    basepath,
     context: { queryClient },
     history: createMemoryHistory({ initialEntries: [path] }),
   });
-  return render(<RouterProvider router={router} />);
+  await router.load();
+  // The root shell renders <html>, so React 19 must mount it into the document.
+  return render(<RouterProvider router={router} />, { container: document });
 }
 
 afterEach(() => {
@@ -20,20 +23,28 @@ afterEach(() => {
   vi.restoreAllMocks();
 });
 
-// Assert only that the router mounts and paints, never page content:
-// routes are rewritten as the app is built and this must keep passing.
 describe("App routing", () => {
   it("renders the index route", async () => {
-    const { container } = renderAt("/");
+    const { findByRole } = await renderAt("/");
 
-    await waitFor(() => expect(container.firstChild).not.toBeNull());
+    expect(await findByRole("main")).toBeInTheDocument();
   });
 
   it("renders the not-found route", async () => {
     vi.spyOn(console, "warn").mockImplementation(() => undefined);
 
-    const { container } = renderAt("/this-route-does-not-exist");
+    const { findByRole } = await renderAt("/this-route-does-not-exist");
 
-    await waitFor(() => expect(container.firstChild).not.toBeNull());
+    expect(await findByRole("heading", { name: "Page not found" })).toBeInTheDocument();
+  });
+
+  it("keeps the home link under the GitHub Pages base path", async () => {
+    const { findByRole } = await renderAt("/my-digital-moodboard/", "/my-digital-moodboard");
+
+    expect(await findByRole("main")).toBeInTheDocument();
+    expect(await findByRole("link", { name: "Sophie Li home" })).toHaveAttribute(
+      "href",
+      "/my-digital-moodboard/",
+    );
   });
 });

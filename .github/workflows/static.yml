@@ -15,39 +15,52 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
     steps:
       - name: Checkout
-        uses: actions/checkout@v7
+        uses: actions/checkout@v6
+
+      - name: Configure GitHub Pages
+        id: pages
+        uses: actions/configure-pages@v5
 
       - name: Set up Node
-        uses: actions/setup-node@v7
+        uses: actions/setup-node@v6
         with:
           node-version: "24"
 
-      - name: Install dependencies
-        run: npm install
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: "1.4.2"
 
-      - name: Build website
-        run: npm run build -- --base=/my-digital-moodboard/
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Check routing
+        run: bun run test
+
+      - name: Build static website
+        run: bun run build:pages
+        env:
+          GITHUB_PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
 
       - name: Verify homepage exists
-        run: test -f dist/index.html
-
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v6
+        run: test -s dist/client/index.html
 
       - name: Upload built website
-        uses: actions/upload-pages-artifact@v5
+        uses: actions/upload-pages-artifact@v4
         with:
-          path: ./dist
+          path: ./dist/client
 
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v5
+        uses: actions/deploy-pages@v4

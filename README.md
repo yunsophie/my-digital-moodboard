@@ -22,3 +22,17 @@ cd <repository-name>
 npm i
 npm run dev
 ```
+
+## GitHub Pages
+
+The site deploys to [yunsophie.github.io/my-digital-moodboard](https://yunsophie.github.io/my-digital-moodboard/) when changes are pushed to `main`. In the repository's **Settings → Pages**, select **GitHub Actions** as the publishing source.
+
+The workflow installs dependencies from `bun.lock`, runs `bun run build:pages`, and uploads `dist/client`. That build prerenders the homepage to `index.html`, bundles the portfolio images, and uses the base path supplied by GitHub Pages. GitHub Pages serves these files without a running server.
+
+To build the same static site locally:
+
+```sh
+npm run build:pages
+```
+
+Set `GITHUB_PAGES_BASE_PATH` to override the default `/my-digital-moodboard` path. For a custom domain or a user site hosted at the domain root, set it to `/`. The regular `npm run build` keeps the Lovable server deployment.
