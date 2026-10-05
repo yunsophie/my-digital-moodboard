@@ -1,6 +1,6 @@
 import { flushSync } from "react-dom";
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowUpRight, ChevronLeft, ChevronRight, Globe, Linkedin, Mail, MoreHorizontal, RotateCcw, Search, Upload, UserRoundPlus, X } from "lucide-react";
+import { ArrowUpRight, ChevronLeft, ChevronRight, Github, Globe, Linkedin, Mail, MoreHorizontal, RotateCcw, Search, Upload, UserRoundPlus, X } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 import editorialAbout from "@/assets/editorial-about.jpg";
@@ -226,6 +226,15 @@ function FlipImage({
               onClick={(event) => event.stopPropagation()}
             >
               <Linkedin className="size-3.5" aria-hidden="true" /> LinkedIn
+            </a>
+            <a
+              className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-accent-foreground"
+              href="https://github.com/yunsophie"
+              target="_blank"
+              rel="noreferrer"
+              onClick={(event) => event.stopPropagation()}
+            >
+              <Github className="size-3.5" aria-hidden="true" /> GitHub
             </a>
             <a
               className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-accent-foreground"
@@ -517,6 +526,7 @@ function Index() {
         </div>
         <div className="flex shrink-0 items-center gap-2 pb-1">
           <div className="flex items-center">
+            <a href="https://github.com/yunsophie" target="_blank" rel="noreferrer" className="grid size-10 place-items-center rounded-full hover:bg-muted" aria-label="Sophie Li on GitHub"><Github className="size-4" /></a>
             <a href="https://www.linkedin.com/in/yunrui-sophie-li/" target="_blank" rel="noreferrer" className="grid size-10 place-items-center rounded-full hover:bg-muted" aria-label="Sophie Li on LinkedIn"><Linkedin className="size-4" /></a>
             <a href="mailto:yunsophieli@gmail.com" className="grid size-10 place-items-center rounded-full hover:bg-muted" aria-label="Email Sophie Li"><Mail className="size-4" /></a>
           </div>
