@@ -52,6 +52,7 @@ type BoardItem = {
   ratio?: string;
   sortYear?: number;
   link?: { url: string; label: string };
+  extraImage?: { src: string; width: number; height: number; alt: string };
 };
 
 const boardItems: BoardItem[] = [
