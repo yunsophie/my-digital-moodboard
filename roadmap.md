@@ -1,8 +1,6 @@
 # Roadmap
 
-- [x] Remove the fragile UI path causing the preview crash.
-- [x] Match Pinterest-like tile sizing and outer margins more closely.
-- [x] Add a compact top navigation and folder/category bar.
-- [x] Replace the current placeholders with a larger pink editorial image set.
-- [x] Verify the board and project overlay on desktop and mobile.
-- [x] Add desktop hover details and a mobile inactivity tap hint for image tiles.
+- [x] Add University of Washington image to education panel
+- [x] Generate custom abstract editorial art (direction 2) for all remaining board cards: all about me, olmo-snow, virtual vla, distributed key-value store, multithreaded http server, i2 ta, huskybids, sustAIn, study ducky
+- [x] Verify all images render in preview (All + Experience tabs checked via Playwright)
+- [x] Fix: Experience tab click not rendering timeline (was hydration timing; waiting ~1.5s resolves it)
