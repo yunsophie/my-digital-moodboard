@@ -8,6 +8,7 @@ import labCorridor from "@/assets/editorial-lab-corridor.jpg";
 import pinkAcrylic from "@/assets/pink-acrylic-tech.jpg";
 import pinkArchitecture from "@/assets/pink-architecture.jpg";
 import pinkCodeStudio from "@/assets/pink-code-studio.jpg";
+import uwCampus from "@/assets/editorial-uw-campus.jpg";
 import pinkEditorialNotes from "@/assets/pink-editorial-notes.jpg";
 import { Button } from "@/components/ui/button";
 
@@ -77,7 +78,10 @@ const coursework = [
 function EducationPanel() {
   return (
     <div className="min-w-0">
-      <p className="font-sans text-[10px] uppercase tracking-[0.14em] text-muted-foreground">Seattle, WA · Paul G. Allen School</p>
+      <div className="max-w-[320px] overflow-hidden rounded-xl">
+        <img src={uwCampus} alt="A soft editorial illustration of the University of Washington campus with a clock tower and arches" width={1024} height={640} loading="lazy" decoding="async" className="block aspect-[16/10] w-full object-cover" />
+      </div>
+      <p className="mt-4 font-sans text-[10px] uppercase tracking-[0.14em] text-muted-foreground">Seattle, WA · Paul G. Allen School</p>
       <h2 className="mt-3 font-serif text-2xl sm:text-3xl">university of washington</h2>
       <p className="mt-2 font-serif text-lg leading-relaxed text-foreground/70">
         Currently getting my B.A. in Computer Science, expected in June 2028 ! 
