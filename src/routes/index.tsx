@@ -12,7 +12,7 @@ import olmoSymposium from "@/assets/olmo-snow-symposium.jpg.asset.json";
 import editorialStudyDucky from "@/assets/editorial-study-ducky.jpg";
 import editorialSustain from "@/assets/editorial-sustain.jpg";
 import editorialVirtualVla from "@/assets/editorial-virtual-vla.jpg";
-import uwCampus from "@/assets/editorial-uw-campus.jpg";
+import uwCherry from "@/assets/uw-cherry-blossoms.jpg.asset.json";
 import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/")({
@@ -82,7 +82,7 @@ function EducationPanel() {
   return (
     <div className="min-w-0">
       <div className="max-w-[320px] overflow-hidden rounded-xl">
-        <img src={uwCampus} alt="A soft editorial illustration of the University of Washington campus with a clock tower and arches" width={1024} height={640} loading="lazy" decoding="async" className="block aspect-[16/10] w-full object-cover" />
+        <img src={uwCherry.url} alt="Cherry blossoms in front of a UW campus building" width={768} height={1024} loading="lazy" decoding="async" className="block aspect-[4/5] w-full object-cover" />
       </div>
       <p className="mt-4 font-sans text-[10px] uppercase tracking-[0.14em] text-muted-foreground">Seattle, WA · Paul G. Allen School</p>
       <h2 className="mt-3 font-serif text-2xl sm:text-3xl">university of washington</h2>
