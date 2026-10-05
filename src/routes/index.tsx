@@ -207,7 +207,6 @@ function FlipImage({
               loading="lazy"
               decoding="async"
               className="w-full rounded-lg bg-muted"
-              style={{ maxHeight: "55%", objectFit: "contain", objectPosition: "top" }}
             />
           )}
           <span className="mt-auto flex flex-wrap gap-1.5">
