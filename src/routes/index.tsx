@@ -85,7 +85,7 @@ function EducationPanel() {
   return (
     <div className="min-w-0">
       <div className="max-w-[320px] overflow-hidden rounded-xl">
-        <img src={uwCherry.url} alt="Cherry blossoms in front of a UW campus building" width={768} height={1024} loading="lazy" decoding="async" className="block aspect-[4/5] w-full object-cover" />
+        <img src={uwCherry.url} alt="Cherry blossoms in front of a UW campus building" width={768} height={1024} loading="lazy" decoding="async" className="block aspect-[3/4] w-full object-cover" />
       </div>
       <p className="mt-4 font-sans text-[10px] uppercase tracking-[0.14em] text-muted-foreground">Seattle, WA · Paul G. Allen School</p>
       <h2 className="mt-3 font-serif text-2xl sm:text-3xl">university of washington</h2>
@@ -593,7 +593,7 @@ function Index() {
                     <div className="mt-3 max-w-[320px]">
                       <FlipImage
                         item={item}
-                        imageRatio="aspect-[16/10]"
+                        imageRatio="aspect-auto"
                         crop={item.crop}
                         eager
                         showTapBadge={showTapBadge && item === timelineItems[0]}
