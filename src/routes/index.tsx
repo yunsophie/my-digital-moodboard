@@ -222,46 +222,23 @@ function FlipImage({
               </span>
             ))}
           </span>
-          <span className="flex items-center gap-4 border-t border-border pt-3 text-xs">
-            {[item.link, item.extraLink].filter(Boolean).map((l) => (
-              <a
-                key={l!.url}
-                className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-accent-foreground"
-                href={l!.url}
-                target="_blank"
-                rel="noreferrer"
-                onClick={(event) => event.stopPropagation()}
-              >
-                <Globe className="size-3.5" aria-hidden="true" /> {l!.label}
-              </a>
-            ))}
-            <a
-              className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-accent-foreground"
-              href="https://www.linkedin.com/in/yunrui-sophie-li/"
-              target="_blank"
-              rel="noreferrer"
-              onClick={(event) => event.stopPropagation()}
-            >
-              <Linkedin className="size-3.5" aria-hidden="true" /> LinkedIn
-            </a>
-            <a
-              className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-accent-foreground"
-              href="https://github.com/yunsophie"
-              target="_blank"
-              rel="noreferrer"
-              onClick={(event) => event.stopPropagation()}
-            >
-              <Github className="size-3.5" aria-hidden="true" /> GitHub
-            </a>
-            <a
-              className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-accent-foreground"
-              href="mailto:yunsophieli@gmail.com"
-              onClick={(event) => event.stopPropagation()}
-            >
-              <Mail className="size-3.5" aria-hidden="true" /> Contact
-            </a>
-            <RotateCcw className="ml-auto size-3.5 text-muted-foreground/60" aria-hidden="true" />
-          </span>
+          {[item.link, item.extraLink].filter(Boolean).length > 0 && (
+            <span className="flex items-center gap-4 border-t border-border pt-3 text-xs">
+              {[item.link, item.extraLink].filter(Boolean).map((l) => (
+                <a
+                  key={l!.url}
+                  className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-accent-foreground"
+                  href={l!.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  onClick={(event) => event.stopPropagation()}
+                >
+                  <Globe className="size-3.5" aria-hidden="true" /> {l!.label}
+                </a>
+              ))}
+              <RotateCcw className="ml-auto size-3.5 text-muted-foreground/60" aria-hidden="true" />
+            </span>
+          )}
         </span>
       </span>
     </span>
