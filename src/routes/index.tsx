@@ -509,7 +509,7 @@ function Index() {
             <span>{folders.length} Sections</span>
           </p>
           <p className="mt-3 max-w-2xl font-serif text-base leading-relaxed text-foreground/70 sm:text-lg">
-            A small, ongoing collection of what I'm building, studying, and making. From software, and hardware, and everything in between.
+            A small, ongoing collection of what I'm building, studying, and making.
           </p>
           <div className="mt-4 flex -space-x-1.5">
             <span className="grid size-9 place-items-center rounded-full bg-blush/70 font-sans text-xs font-semibold text-foreground ring-2 ring-background">S</span>
