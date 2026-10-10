@@ -1,3 +1,6 @@
+/**
+ * shadcn/ui `slider` primitive — reusable, theme-aware UI building block. Styled via tokens in src/styles.css.
+ */
 import * as React from "react";
 import * as SliderPrimitive from "@radix-ui/react-slider";
 

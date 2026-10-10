@@ -1,3 +1,6 @@
+/**
+ * shadcn/ui `checkbox` primitive — reusable, theme-aware UI building block. Styled via tokens in src/styles.css.
+ */
 import * as React from "react";
 import * as CheckboxPrimitive from "@radix-ui/react-checkbox";
 import { Check } from "lucide-react";

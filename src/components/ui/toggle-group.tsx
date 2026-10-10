@@ -1,4 +1,7 @@
 "use client";
+/**
+ * shadcn/ui `toggle-group` primitive — reusable, theme-aware UI building block. Styled via tokens in src/styles.css.
+ */
 
 import * as React from "react";
 import * as ToggleGroupPrimitive from "@radix-ui/react-toggle-group";

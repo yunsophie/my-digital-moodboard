@@ -1,3 +1,6 @@
+/**
+ * Vitest setup: jest-dom matchers and browser API stubs missing from jsdom.
+ */
 import "@testing-library/jest-dom/vitest";
 
 Object.defineProperty(window, "scrollTo", {

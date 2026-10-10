@@ -1,4 +1,7 @@
 "use client";
+/**
+ * shadcn/ui `dropdown-menu` primitive — reusable, theme-aware UI building block. Styled via tokens in src/styles.css.
+ */
 
 import * as React from "react";
 import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu";

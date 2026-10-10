@@ -1,3 +1,6 @@
+/**
+ * Start configuration: request middleware for error handling and CSRF protection of server functions.
+ */
 import { createStart, createCsrfMiddleware, createMiddleware } from "@tanstack/react-start";
 
 import { renderErrorPage } from "./lib/error-page";

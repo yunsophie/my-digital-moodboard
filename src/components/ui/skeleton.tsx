@@ -1,3 +1,6 @@
+/**
+ * shadcn/ui `skeleton` primitive — reusable, theme-aware UI building block. Styled via tokens in src/styles.css.
+ */
 import { cn } from "@/lib/utils";
 
 function Skeleton({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {

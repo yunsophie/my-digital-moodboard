@@ -1,4 +1,7 @@
 "use client";
+/**
+ * shadcn/ui `command` primitive — reusable, theme-aware UI building block. Styled via tokens in src/styles.css.
+ */
 
 import * as React from "react";
 import { type DialogProps } from "@radix-ui/react-dialog";

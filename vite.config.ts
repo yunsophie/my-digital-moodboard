@@ -1,3 +1,6 @@
+/**
+ * Vite config: normal Lovable server build, or a prerendered static build for GitHub Pages (`--mode github-pages`).
+ */
 // @lovable.dev/vite-tanstack-config already includes the following — do NOT add them manually
 // or the app will break with duplicate plugins:
 //   - TanStack devtools (dev-only, first), tanstackStart, viteReact, tailwindcss, tsConfigPaths,

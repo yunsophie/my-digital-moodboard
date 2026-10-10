@@ -1,3 +1,6 @@
+/**
+ * Creates the TanStack router with the generated route tree and a shared React Query client.
+ */
 import { QueryClient } from "@tanstack/react-query";
 import { createRouter } from "@tanstack/react-router";
 import { routeTree } from "./routeTree.gen";

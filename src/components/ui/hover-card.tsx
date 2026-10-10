@@ -1,3 +1,6 @@
+/**
+ * shadcn/ui `hover-card` primitive — reusable, theme-aware UI building block. Styled via tokens in src/styles.css.
+ */
 import * as React from "react";
 import * as HoverCardPrimitive from "@radix-ui/react-hover-card";
 

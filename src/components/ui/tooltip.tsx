@@ -1,4 +1,7 @@
 "use client";
+/**
+ * shadcn/ui `tooltip` primitive — reusable, theme-aware UI building block. Styled via tokens in src/styles.css.
+ */
 
 import * as React from "react";
 import * as TooltipPrimitive from "@radix-ui/react-tooltip";

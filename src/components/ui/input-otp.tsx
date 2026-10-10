@@ -1,3 +1,6 @@
+/**
+ * shadcn/ui `input-otp` primitive — reusable, theme-aware UI building block. Styled via tokens in src/styles.css.
+ */
 import * as React from "react";
 import { OTPInput, OTPInputContext } from "input-otp";
 import { Minus } from "lucide-react";
