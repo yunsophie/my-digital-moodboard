@@ -1,3 +1,6 @@
+/**
+ * Test runner config (jsdom environment, @ path alias).
+ */
 import { defineConfig } from "vitest/config";
 import react from "@vitejs/plugin-react";
 import path from "node:path";

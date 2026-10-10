@@ -1,3 +1,6 @@
+/**
+ * Forwards errors caught by React error boundaries to the Lovable editor's telemetry (no-op outside the editor).
+ */
 type LovableErrorOptions = {
   mechanism?: "manual" | "onerror" | "unhandledrejection" | "react_error_boundary";
   handled?: boolean;

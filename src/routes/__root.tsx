@@ -1,3 +1,6 @@
+/**
+ * Root layout: HTML shell, global <head> metadata, fonts, favicon, 404 page and error boundary. Renders every page via <Outlet />.
+ */
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,

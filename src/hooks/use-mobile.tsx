@@ -1,3 +1,6 @@
+/**
+ * `useIsMobile()` hook — true when the viewport is narrower than 768px.
+ */
 import * as React from "react";
 
 const MOBILE_BREAKPOINT = 768;

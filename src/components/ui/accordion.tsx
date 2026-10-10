@@ -1,3 +1,6 @@
+/**
+ * shadcn/ui `accordion` primitive — reusable, theme-aware UI building block. Styled via tokens in src/styles.css.
+ */
 import * as React from "react";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import { ChevronDown } from "lucide-react";

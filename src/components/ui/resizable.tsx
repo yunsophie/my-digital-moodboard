@@ -1,3 +1,6 @@
+/**
+ * shadcn/ui `resizable` primitive — reusable, theme-aware UI building block. Styled via tokens in src/styles.css.
+ */
 import { GripVertical } from "lucide-react";
 import { Group, Panel, Separator } from "react-resizable-panels";
 

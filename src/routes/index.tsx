@@ -1,3 +1,7 @@
+/**
+ * Home page: the Pinterest-style moodboard. Holds the typed `boardItems` portfolio data (edit here to change cards),
+ * the board hero, search dropdown, sticky folder tabs (All/About/Experience/Projects), flip cards and the Experience timeline.
+ */
 import { flushSync } from "react-dom";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight, ChevronLeft, ChevronRight, Github, Globe, Linkedin, Mail, MoreHorizontal, RotateCcw, Search, Upload, UserRoundPlus, X } from "lucide-react";
