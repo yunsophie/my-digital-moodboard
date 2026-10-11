@@ -1,20 +1,32 @@
 import { flushSync } from "react-dom";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowUpRight, ChevronLeft, ChevronRight, Github, Globe, Linkedin, Mail, MoreHorizontal, RotateCcw, Search, Upload, UserRoundPlus, X } from "lucide-react";
-import { useEffect, useMemo, useRef, useState } from "react";
+import {
+  ArrowUpRight,
+  ChevronLeft,
+  ChevronRight,
+  Github,
+  Globe,
+  Linkedin,
+  Mail,
+  MoreHorizontal,
+  RotateCcw,
+  Search,
+  Upload,
+  UserRoundPlus,
+  X,
+} from "lucide-react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
-import aboutSophie from "@/assets/about-sophie.jpg";
-import huskybidsPresentation from "@/assets/huskybids-presentation.jpg";
-import huskybidsPoster from "@/assets/huskybids-poster.jpg";
-import editorialHttpServer from "@/assets/editorial-http-server.jpg";
-import editorialI2Ta from "@/assets/editorial-i2-ta.jpg";
-import editorialKvStore from "@/assets/editorial-kv-store.jpg";
-import olmoSymposium from "@/assets/olmo-snow-symposium.jpg";
-import studyDucky from "@/assets/study-ducky-v2.png";
-import dubhacksSwag from "@/assets/dubhacks-swag.jpg";
-import vlaRobotArm from "@/assets/vla-robot-arm.jpg";
-import uwCherry from "@/assets/uw-cherry-blossoms.jpg";
+import { ResponsiveImage } from "@/components/ResponsiveImage";
 import { Button } from "@/components/ui/button";
+import { boardItems, type BoardItem } from "@/data/board-items";
+import { imageAssets } from "@/data/image-assets.generated";
+import {
+  GRID_IMAGE_SIZES,
+  GRID_POSTER_SIZES,
+  TIMELINE_IMAGE_SIZES,
+  TIMELINE_POSTER_SIZES,
+} from "@/lib/responsive-image";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -22,7 +34,8 @@ export const Route = createFileRoute("/")({
       { title: "Sophie Li — Computer Science Portfolio" },
       {
         name: "description",
-        content: "An image-led collection of Sophie Li's software projects, experiments, and experience.",
+        content:
+          "An image-led collection of Sophie Li's software projects, experiments, and experience.",
       },
       { property: "og:title", content: "Sophie Li — Computer Science Portfolio" },
       {
@@ -35,39 +48,6 @@ export const Route = createFileRoute("/")({
   }),
   component: Index,
 });
-
-type Folder = "Projects" | "Experience" | "About";
-
-type BoardItem = {
-  title: string;
-  folder: Folder;
-  category: string;
-  year: string;
-  description: string;
-  tools: string[];
-  image: string;
-  imageWidth: number;
-  imageHeight: number;
-  alt: string;
-  crop?: string;
-  ratio?: string;
-  sortYear?: number;
-  link?: { url: string; label: string };
-  extraLink?: { url: string; label: string };
-  extraImage?: { src: string; width: number; height: number; alt: string };
-};
-
-const boardItems: BoardItem[] = [
-  { title: "all about me !\n", folder: "About", category: "CS @ University of Washington", year: "Class of 2028", description: "Hello I'm Sophie, a computer science student at the University of Washington. I'm happiest somewhere between research and systems and design. I have worked on teaching robots to learn from video, reading the Earth through satellite imagery, building distributed software that holds up when things go wrong, and many other fun side projects where I let my creativity take control. Outside of work, I am an avid reader, runner, pianist, and a fan of the Montreal Canadiens. ", tools: ["Machine learning", "Distributed systems", "Research"], image: aboutSophie, imageWidth: 768, imageHeight: 1024, alt: "Sophie sitting on a bench next to a Milky mascot statue in Japan", crop: "object-top", ratio: "aspect-[4/5]" },
-  { title: "distributed key-value store !", folder: "Projects", category: "Distributed systems", year: "2026", description: "\n", tools: ["Java", "Paxos", "Two-phase commit"], image: editorialKvStore, imageWidth: 1024, imageHeight: 1536, alt: "Floating frosted geometric clusters connected by translucent bridges" },
-   { title: "olmo-snow !", folder: "Experience", category: "UW Civil & Environmental Engineering", year: "Jan — Jun 2026", sortYear: 2026.1, description: "Worked as an undergraduate researcher with Prof. Nicoleta Cristea. I explored how far a tiny amount of labeled data could go. By training a simple logistic-regression head on embeddings from OlmoEarth's frozen 300M-parameter vision transformer, I reached an F1 of 0.84 (0.975 precision) from just 20 labeled points, eliminating the need for costly fine-tuning. I also built a geospatial data pipelines aligning Sentinel-1 SAR, Sentinel-2, and LiDAR imagery over the Tuolumne River basin and finally presented the work to about 20 researchers at a symposium.", tools: ["Python", "scikit-learn", "geopandas", "AWS"], image: olmoSymposium, imageWidth: 768, imageHeight: 1024, alt: "Sophie presenting her snow cover research poster at a symposium" },
-  { title: "multithreaded http server !", folder: "Projects", category: "Systems programming", year: "2026", description: "\n", tools: ["C++", "Linux", "Sockets"], image: editorialHttpServer, imageWidth: 1024, imageHeight: 1408, alt: "Frosted acrylic panels with glowing circuit traces" },
-   { title: "virtual vla !", folder: "Experience", category: "Ai2 + UW RAIVN Lab", year: "Mar — Jun 2026", sortYear: 2026.3, description: "Worked as a undergraduate researcher on a robot learning system that compresses vision, actions, and proprioception into one shared latent space, enabling unlabeled video to stand in as action data across different robots. I added temporal timestep conditioning across the encoders so the model could reason about variable frame gaps, and ran 40+ careful hyperparameter sweeps that cut validation loss 11.3% below baseline.", tools: ["PyTorch", "Weights & Biases", "Robot learning"], image: vlaRobotArm, imageWidth: 605, imageHeight: 1077, alt: "A robotic arm at a café counter", crop: "object-top", ratio: "aspect-[3/4]" },
-  { title: "i2 teaching assistant !", folder: "Experience", category: "Interactive Intelligence", year: "Oct 2025 — Jun 2026", sortYear: 2025.8, description: "I mentor a group of ~10 students exploring machine learning, deep learning, computer vision, reinforcement learning, natural language processing, and computational neuroscience. Through weekly sessions I've guided and answered questions across ten projects from MNIST classifiers to ConvNets to fine-tuning HuggingFace models.", tools: ["Machine learning", "Deep learning", "Computer vision", "Reinforcement learning", "Natural language processing", "Computer ethics", "Mentorship", "HuggingFace"], image: editorialI2Ta, imageWidth: 1024, imageHeight: 1536, alt: "A glass lattice manifold with glowing nodes", ratio: "aspect-[3/4]" },
-  { title: "huskybids !", folder: "Experience", category: "Husky Coding Project", year: "Oct 2024 — May 2025", sortYear: 2024.8, description: "On a team of six, I helped build a full-stack React web app that lets UW students follow live sports with an engaging betting system. Along the way I got a taste of an industry-style workflow by participating in standups, reviews, version control, and finally presented our work to industry professionals at the HCP showcase.", tools: ["React.js", "JavaScript", "Teamwork"], image: huskybidsPresentation, imageWidth: 1920, imageHeight: 1280, alt: "Sophie presenting HuskyBids at the HCP showcase", ratio: "aspect-[3/2]", extraImage: { src: huskybidsPoster, width: 1280, height: 1920, alt: "The HuskyBids team presentation poster" } },
-  { title: "sustAIn !", folder: "Projects", category: "Hackathon", year: "DubHacks '24", description: "A sustainability tool that makes product information accessible. It pulls product data from several online platforms and compares it in real time, so shoppers can see sustainability side by side before they buy. The hardest parts were assessing sustainability when product data was incomplete or inconsistent and standardizing records across different platforms — along the way I learned a lot about sustainability metrics, data integration, and developing machine learning models. Next up: a more accurate model, support for more retailers, and a feedback feature so users can improve the ratings.", tools: ["Python", "AWS Bedrock", "Amazon Web Services", "APIs", "Figma"], image: dubhacksSwag, imageWidth: 768, imageHeight: 1024, alt: "DubHacks '24 swag: a cap, pouches, stickers, and tumblers", crop: "object-top", link: { url: "https://www.figma.com", label: "Try it out" } },
-  { title: "study ducky !", folder: "Projects", category: "Hackathon", year: "DubHacks '25", description: "An AI study companion inspired by rubber duck debugging — except the AI is the student and you're the teacher. You teach your Ducky about any topic while it asks adaptive questions that grow in complexity as the conversation develops, and afterwards it analyzes the exchange to highlight strengths, misunderstandings, and topics left out. I built the full stack in one weekend: React and Tailwind on the frontend, Node and Express on the backend with the Gemini API for question generation, and Firebase for authentication and chat storage — all while learning most of these tools on the fly.", tools: ["React.js", "Node.js", "Express", "Firebase", "Gemini API", "Tailwind"], image: studyDucky, imageWidth: 334, imageHeight: 488, alt: "A round yellow cartoon duck standing on a blue tiled floor", ratio: "aspect-[2/3]", link: { url: "https://yblii.github.io", label: "Try it out" }, extraLink: { url: "https://devpost.com/software/study-ducky-yuape9", label: "Devpost" } },
-];
 
 const folders = ["All", "About", "Experience", "Projects"] as const;
 
@@ -85,17 +65,33 @@ function EducationPanel() {
   return (
     <div className="min-w-0">
       <div className="max-w-[320px] overflow-hidden rounded-xl">
-        <img src={uwCherry} alt="Cherry blossoms in front of a UW campus building" width={768} height={1024} loading="lazy" decoding="async" className="block aspect-auto w-full object-cover" />
+        <ResponsiveImage
+          image={imageAssets.uwCherry}
+          sizes={TIMELINE_IMAGE_SIZES}
+          alt="Cherry blossoms in front of a UW campus building"
+          loading="lazy"
+          decoding="async"
+          className="block aspect-auto w-full object-cover"
+        />
       </div>
-      <p className="mt-4 font-sans text-[10px] uppercase tracking-[0.14em] text-muted-foreground">Seattle, WA · Paul G. Allen School</p>
+      <p className="mt-4 font-sans text-[10px] uppercase tracking-[0.14em] text-muted-foreground">
+        Seattle, WA · Paul G. Allen School
+      </p>
       <h2 className="mt-3 font-serif text-2xl sm:text-3xl">university of washington</h2>
       <p className="mt-2 font-serif text-lg leading-relaxed text-foreground/70">
-        Currently getting my B.A. in Computer Science, expected in June 2028 ! 
+        Currently getting my B.A. in Computer Science, expected in June 2028 !
       </p>
-      <p className="mt-4 font-sans text-[10px] uppercase tracking-[0.14em] text-muted-foreground">Relevant coursework</p>
+      <p className="mt-4 font-sans text-[10px] uppercase tracking-[0.14em] text-muted-foreground">
+        Relevant coursework
+      </p>
       <ul className="mt-3 flex flex-wrap gap-2">
         {coursework.map((course) => (
-          <li key={course} className="rounded-full bg-muted px-3 py-1 font-sans text-[10px] uppercase tracking-wide text-muted-foreground">{course}</li>
+          <li
+            key={course}
+            className="rounded-full bg-muted px-3 py-1 font-sans text-[10px] uppercase tracking-wide text-muted-foreground"
+          >
+            {course}
+          </li>
         ))}
       </ul>
     </div>
@@ -107,6 +103,8 @@ function FlipImage({
   imageRatio,
   crop,
   eager,
+  sizes = GRID_IMAGE_SIZES,
+  posterSizes = GRID_POSTER_SIZES,
   showTapBadge = false,
   openKey = null,
   onOpenChange,
@@ -116,6 +114,8 @@ function FlipImage({
   imageRatio: string;
   crop?: string | undefined;
   eager?: boolean | undefined;
+  sizes?: string;
+  posterSizes?: string;
   showTapBadge?: boolean | undefined;
   openKey?: string | null;
   onOpenChange: (key: string | null) => void;
@@ -123,9 +123,16 @@ function FlipImage({
 }) {
   const [localFlipped, setLocalFlipped] = useState(false);
   const flipped = openKey === item.title || localFlipped;
-  const clearExternalOpen = () => {
+  const [hasOpened, setHasOpened] = useState(false);
+
+  // Backface hiding does not prevent an image request. Mount the poster only
+  // after opening, then retain it so subsequent flips reuse the loaded image.
+  useEffect(() => {
+    if (flipped) setHasOpened(true);
+  }, [flipped]);
+  const clearExternalOpen = useCallback(() => {
     if (openKey === item.title) onOpenChange(null);
-  };
+  }, [openKey, item.title, onOpenChange]);
 
   useEffect(() => {
     if (!flipped) return;
@@ -137,11 +144,18 @@ function FlipImage({
     };
     document.addEventListener("keydown", closeOnEscape);
     return () => document.removeEventListener("keydown", closeOnEscape);
-  }, [flipped]);
+  }, [flipped, clearExternalOpen]);
 
   return (
-    <span id={`pin-${item.title.replace(/[^a-zA-Z0-9]/g, "-")}`} className="group relative block" style={{ perspective: "1400px" }}>
+    <span
+      id={`pin-${item.title.replace(/[^a-zA-Z0-9]/g, "-")}`}
+      data-testid="portfolio-pin"
+      data-folder={item.folder}
+      className="group relative block"
+      style={{ perspective: "1400px" }}
+    >
       <span
+        data-testid="pin-flipper"
         className={`relative block w-full transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] [transform-style:preserve-3d] motion-reduce:transition-none ${flipped ? "[transform:rotateY(180deg)]" : ""}`}
       >
         <button
@@ -153,15 +167,20 @@ function FlipImage({
             onOpenChange(item.title);
           }}
           aria-expanded={flipped}
+          aria-hidden={flipped}
+          tabIndex={flipped ? -1 : 0}
           aria-label={`Flip to see details about ${item.title}`}
         >
-          <img
+          <ResponsiveImage
             style={{ viewTransitionName: `pin-${item.title.replace(/[^a-zA-Z0-9]/g, "-")}` }}
-            src={item.image}
+            image={item.image}
+            sizes={sizes}
             alt={item.alt}
-            width={item.imageWidth}
-            height={item.imageHeight}
             loading={eager ? "eager" : "lazy"}
+            // The post-layout mobile audits identify this photo as LCP in all
+            // three runs. Keep high priority limited to that measured family;
+            // update the choice when a future content/layout audit changes LCP.
+            fetchPriority={item.image.id === imageAssets.vlaRobotArm.id ? "high" : "auto"}
             decoding="async"
             className={`block h-full w-full object-cover transition duration-500 group-hover:scale-[1.02] ${crop ?? "object-center"}`}
           />
@@ -183,7 +202,11 @@ function FlipImage({
           </span>
         </button>
         <span
-          className={`no-scrollbar absolute inset-0 flex flex-col gap-3 overflow-y-auto rounded-xl border border-border bg-background p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] ${flipped ? "" : "pointer-events-none"}`}
+          role="region"
+          aria-label={`Details about ${item.title}`}
+          aria-hidden={!flipped}
+          inert={!flipped}
+          className={`no-scrollbar absolute inset-0 flex flex-col gap-3 overflow-y-auto rounded-xl border border-border bg-background p-4 [overflow-wrap:anywhere] [transform:rotateY(180deg)] [backface-visibility:hidden] ${flipped ? "" : "pointer-events-none"}`}
           onClick={(event) => {
             if (!(event.target as HTMLElement).closest("a")) {
               onImageInteraction();
@@ -196,16 +219,22 @@ function FlipImage({
             <span className="block font-sans text-[10px] uppercase tracking-[0.14em] text-muted-foreground">
               {item.category} · {item.year}
             </span>
-            <span className="mt-1.5 block font-serif text-2xl leading-tight text-foreground">{item.title}</span>
+            <span className="mt-1.5 block font-serif text-2xl leading-tight text-foreground">
+              {item.title}
+            </span>
           </span>
-          <span className="font-serif text-sm leading-relaxed text-foreground/75">{item.description}</span>
-          {item.extraImage && (
-            <img
-              src={item.extraImage.src}
+          <span
+            data-testid="pin-description"
+            className="font-serif text-sm leading-relaxed text-foreground/75"
+          >
+            {item.description}
+          </span>
+          {hasOpened && item.extraImage && (
+            <ResponsiveImage
+              image={item.extraImage.image}
+              sizes={posterSizes}
               alt={item.extraImage.alt}
-              width={item.extraImage.width}
-              height={item.extraImage.height}
-              loading="lazy"
+              loading="eager"
               decoding="async"
               className="w-full rounded-lg bg-muted"
             />
@@ -220,7 +249,7 @@ function FlipImage({
               </span>
             ))}
           </span>
-          <span className="flex items-center gap-4 border-t border-border pt-3 text-xs">
+          <span className="flex flex-wrap items-center gap-4 border-t border-border pt-3 text-xs">
             {[item.link, item.extraLink].filter(Boolean).map((l) => (
               <a
                 key={l!.url}
@@ -302,7 +331,11 @@ function Index() {
   const scrollNavStrip = (direction: "left" | "right") => {
     const el = navStripRef.current;
     if (!el) return;
-    el.scrollBy({ left: direction === "left" ? -Math.round(el.clientWidth * 0.7) : Math.round(el.clientWidth * 0.7), behavior: "smooth" });
+    el.scrollBy({
+      left:
+        direction === "left" ? -Math.round(el.clientWidth * 0.7) : Math.round(el.clientWidth * 0.7),
+      behavior: "smooth",
+    });
   };
 
   useEffect(() => {
@@ -326,7 +359,9 @@ function Index() {
 
   const changeFolder = (folder: (typeof folders)[number]) => {
     if (folder === activeFolder) return;
-    const doc = document as Document & { startViewTransition?: (cb: () => void) => { skipTransition: () => void } };
+    const doc = document as Document & {
+      startViewTransition?: (cb: () => void) => { skipTransition: () => void };
+    };
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (!doc.startViewTransition || reduce) return setActiveFolder(folder);
     transitionRef.current?.skipTransition();
@@ -342,7 +377,8 @@ function Index() {
     const normalized = query.trim().toLowerCase();
     return boardItems
       .filter((item) => {
-        const haystack = `${item.title} ${item.description} ${item.category} ${item.year} ${item.folder} ${item.tools.join(" ")}`.toLowerCase();
+        const haystack =
+          `${item.title} ${item.description} ${item.category} ${item.year} ${item.folder} ${item.tools.join(" ")}`.toLowerCase();
         return !normalized || haystack.includes(normalized);
       })
       .slice(0, 8);
@@ -350,12 +386,17 @@ function Index() {
 
   const recommendations = useMemo(() => {
     const normalized = query.trim().toLowerCase();
-    const pool = Array.from(
-      new Set(boardItems.flatMap((item) => [...item.tools, item.category])),
-    );
-    if (!normalized) return ["PyTorch", "Python", "Java", "C++", "AWS", "React.js"].filter((t) => pool.some((p) => p.toLowerCase().includes(t.toLowerCase()))).concat(pool).filter((v, i, a) => a.indexOf(v) === i).slice(0, 6);
+    const pool = Array.from(new Set(boardItems.flatMap((item) => [...item.tools, item.category])));
+    if (!normalized)
+      return ["PyTorch", "Python", "Java", "C++", "AWS", "React.js"]
+        .filter((t) => pool.some((p) => p.toLowerCase().includes(t.toLowerCase())))
+        .concat(pool)
+        .filter((v, i, a) => a.indexOf(v) === i)
+        .slice(0, 6);
     return pool
-      .filter((term) => term.toLowerCase().includes(normalized) && term.toLowerCase() !== normalized)
+      .filter(
+        (term) => term.toLowerCase().includes(normalized) && term.toLowerCase() !== normalized,
+      )
       .slice(0, 6);
   }, [query]);
 
@@ -383,20 +424,6 @@ function Index() {
     return () => document.removeEventListener("mousedown", onPointerDown);
   }, [searchFocused]);
 
-  const [columnCount, setColumnCount] = useState(5);
-  useEffect(() => {
-    const compute = () => setColumnCount(window.innerWidth >= 1024 ? 5 : window.innerWidth >= 768 ? 3 : 2);
-    compute();
-    window.addEventListener("resize", compute);
-    return () => window.removeEventListener("resize", compute);
-  }, []);
-
-  const columns = useMemo(() => {
-    const cols: BoardItem[][] = Array.from({ length: columnCount }, () => []);
-    visibleItems.forEach((item, index) => cols[index % columnCount]!.push(item));
-    return cols;
-  }, [visibleItems, columnCount]);
-
   const timelineItems = useMemo(
     () => [...visibleItems].sort((a, b) => (b.sortYear ?? 0) - (a.sortYear ?? 0)),
     [visibleItems],
@@ -406,7 +433,13 @@ function Index() {
     <main className="min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-40 bg-background/95 backdrop-blur-xl">
         <div className="flex h-[68px] items-center gap-3 px-3 sm:px-5">
-          <Link to="/" className="w-10 shrink-0 font-serif text-2xl leading-none" aria-label="Sophie Li home">SL<span className="text-accent-foreground">.</span></Link>
+          <Link
+            to="/"
+            className="w-10 shrink-0 font-serif text-2xl leading-none"
+            aria-label="Sophie Li home"
+          >
+            SL<span className="text-accent-foreground">.</span>
+          </Link>
           <div ref={searchWrapRef} className="relative min-w-0 flex-1">
             <label className="flex h-11 items-center gap-3 rounded-full bg-muted px-4 text-muted-foreground">
               <Search className="size-4 shrink-0" aria-hidden="true" />
@@ -425,7 +458,9 @@ function Index() {
                 onKeyDown={(event) => {
                   if (event.key === "ArrowDown") {
                     event.preventDefault();
-                    setHighlightIndex((index) => Math.min(index + 1, Math.max(suggestions.length - 1, 0)));
+                    setHighlightIndex((index) =>
+                      Math.min(index + 1, Math.max(suggestions.length - 1, 0)),
+                    );
                   } else if (event.key === "ArrowUp") {
                     event.preventDefault();
                     setHighlightIndex((index) => Math.max(index - 1, 0));
@@ -442,87 +477,124 @@ function Index() {
                 placeholder="Search the whole board"
                 className="min-w-0 flex-1 bg-transparent text-sm text-foreground outline-none placeholder:text-muted-foreground"
                 role="combobox"
-                aria-expanded={searchFocused && (suggestions.length > 0 || recommendations.length > 0 || query.trim() !== "")}
+                aria-expanded={
+                  searchFocused &&
+                  (suggestions.length > 0 || recommendations.length > 0 || query.trim() !== "")
+                }
                 aria-controls="search-suggestions"
                 aria-autocomplete="list"
               />
               {query && (
-                <button type="button" onClick={() => setQuery("")} className="grid size-5 shrink-0 place-items-center rounded-full bg-muted-foreground/20 text-muted-foreground transition hover:bg-muted-foreground/30 hover:text-foreground" aria-label="Clear search">
+                <button
+                  type="button"
+                  onClick={() => setQuery("")}
+                  className="grid size-5 shrink-0 place-items-center rounded-full bg-muted-foreground/20 text-muted-foreground transition hover:bg-muted-foreground/30 hover:text-foreground"
+                  aria-label="Clear search"
+                >
                   <X className="size-3" aria-hidden="true" />
                 </button>
               )}
             </label>
-            {searchFocused && (suggestions.length > 0 || recommendations.length > 0 || query.trim() !== "") && (
-              <div id="search-suggestions" role="listbox" aria-label="Search suggestions" className="absolute inset-x-0 top-full z-50 mt-2 max-h-[min(60vh,26rem)] overflow-y-auto rounded-2xl border border-border bg-background p-1.5 shadow-lg">
-                {recommendations.length > 0 && (
-                  <div className="px-2.5 pb-2 pt-1.5">
-                    <p className="pb-2 font-sans text-[10px] uppercase tracking-[0.14em] text-muted-foreground">
-                      {query.trim() ? "Related searches" : "Recommended searches"}
-                    </p>
-                    <div className="flex flex-wrap gap-1.5">
-                      {recommendations.map((term) => (
-                        <button
-                          key={term}
-                          type="button"
-                          onClick={() => {
-                            setQuery(term);
-                            setHighlightIndex(0);
-                          }}
-                          className="inline-flex items-center gap-1 rounded-full bg-muted px-3 py-1 font-sans text-xs font-medium text-foreground/80 transition hover:bg-blush/60"
-                        >
-                          <Search className="size-3" aria-hidden="true" />
-                          {term}
-                        </button>
-                      ))}
+            {searchFocused &&
+              (suggestions.length > 0 || recommendations.length > 0 || query.trim() !== "") && (
+                <div
+                  id="search-suggestions"
+                  role="listbox"
+                  aria-label="Search suggestions"
+                  className="absolute inset-x-0 top-full z-50 mt-2 max-h-[min(60vh,26rem)] overflow-y-auto rounded-2xl border border-border bg-background p-1.5 shadow-lg"
+                >
+                  {recommendations.length > 0 && (
+                    <div className="px-2.5 pb-2 pt-1.5">
+                      <p className="pb-2 font-sans text-[10px] uppercase tracking-[0.14em] text-muted-foreground">
+                        {query.trim() ? "Related searches" : "Recommended searches"}
+                      </p>
+                      <div className="flex flex-wrap gap-1.5">
+                        {recommendations.map((term) => (
+                          <button
+                            key={term}
+                            type="button"
+                            onClick={() => {
+                              setQuery(term);
+                              setHighlightIndex(0);
+                            }}
+                            className="inline-flex items-center gap-1 rounded-full bg-muted px-3 py-1 font-sans text-xs font-medium text-foreground/80 transition hover:bg-blush/60"
+                          >
+                            <Search className="size-3" aria-hidden="true" />
+                            {term}
+                          </button>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                )}
-                {suggestions.length > 0 && (
-                <p className="px-2.5 pb-1 pt-1.5 font-sans text-[10px] uppercase tracking-[0.14em] text-muted-foreground">
-                  {query.trim() ? "Matches on this board" : "Browse the board"}
-                </p>
-                )}
-                {suggestions.map((item, index) => (
-                  <button
-                    key={item.title}
-                    type="button"
-                    role="option"
-                    aria-selected={index === highlightIndex}
-                    onClick={() => selectSuggestion(item)}
-                    onMouseEnter={() => setHighlightIndex(index)}
-                    className={`flex w-full items-center gap-3 rounded-xl px-2 py-1.5 text-left transition ${index === highlightIndex ? "bg-blush/50" : ""}`}
-                  >
-                    <img src={item.image} alt="" className="size-10 shrink-0 rounded-lg object-cover" loading="lazy" />
-                    <span className="min-w-0 flex-1">
-                      <span className="block truncate font-sans text-sm font-semibold text-foreground">{item.title}</span>
-                      <span className="block truncate font-sans text-[11px] text-muted-foreground">{item.category} · {item.year}</span>
-                    </span>
-                    <span className="shrink-0 rounded-full bg-muted px-2 py-0.5 font-sans text-[10px] uppercase tracking-wide text-muted-foreground">{item.folder}</span>
-                  </button>
-                ))}
-                {query.trim() && suggestions.length === 0 && (
-                  <div className="flex items-center gap-3 px-2.5 py-3" role="status">
-                    <span className="grid size-10 shrink-0 place-items-center rounded-full bg-muted text-muted-foreground">
-                      <Search className="size-4" aria-hidden="true" />
-                    </span>
-                    <span className="min-w-0">
-                      <span className="block truncate font-sans text-sm font-semibold text-foreground">No results for “{query.trim()}”</span>
-                      <span className="block font-sans text-[11px] text-muted-foreground">Try a different name, tool, or category.</span>
-                    </span>
-                  </div>
-                )}
-              </div>
-            )}
+                  )}
+                  {suggestions.length > 0 && (
+                    <p className="px-2.5 pb-1 pt-1.5 font-sans text-[10px] uppercase tracking-[0.14em] text-muted-foreground">
+                      {query.trim() ? "Matches on this board" : "Browse the board"}
+                    </p>
+                  )}
+                  {suggestions.map((item, index) => (
+                    <button
+                      key={item.title}
+                      type="button"
+                      role="option"
+                      aria-selected={index === highlightIndex}
+                      onClick={() => selectSuggestion(item)}
+                      onMouseEnter={() => setHighlightIndex(index)}
+                      className={`flex w-full items-center gap-3 rounded-xl px-2 py-1.5 text-left transition ${index === highlightIndex ? "bg-blush/50" : ""}`}
+                    >
+                      <ResponsiveImage
+                        image={item.image}
+                        sizes="40px"
+                        maxSourceWidth={160}
+                        alt=""
+                        className="size-10 shrink-0 rounded-lg object-cover"
+                        loading="lazy"
+                      />
+                      <span className="min-w-0 flex-1">
+                        <span className="block truncate font-sans text-sm font-semibold text-foreground">
+                          {item.title}
+                        </span>
+                        <span className="block truncate font-sans text-[11px] text-muted-foreground">
+                          {item.category} · {item.year}
+                        </span>
+                      </span>
+                      <span className="shrink-0 rounded-full bg-muted px-2 py-0.5 font-sans text-[10px] uppercase tracking-wide text-muted-foreground">
+                        {item.folder}
+                      </span>
+                    </button>
+                  ))}
+                  {query.trim() && suggestions.length === 0 && (
+                    <div className="flex items-center gap-3 px-2.5 py-3" role="status">
+                      <span className="grid size-10 shrink-0 place-items-center rounded-full bg-muted text-muted-foreground">
+                        <Search className="size-4" aria-hidden="true" />
+                      </span>
+                      <span className="min-w-0">
+                        <span className="block truncate font-sans text-sm font-semibold text-foreground">
+                          No results for “{query.trim()}”
+                        </span>
+                        <span className="block font-sans text-[11px] text-muted-foreground">
+                          Try a different name, tool, or category.
+                        </span>
+                      </span>
+                    </div>
+                  )}
+                </div>
+              )}
           </div>
         </div>
       </header>
 
-      <section aria-label="About this board" className="flex flex-wrap items-end justify-between gap-4 px-3 pt-2 sm:px-5">
+      <section
+        aria-label="About this board"
+        className="flex flex-wrap items-end justify-between gap-4 px-3 pt-2 sm:px-5"
+      >
         <div className="min-w-0">
-          <h1 className="font-sans text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">sophie's portfolio</h1>
+          <h1 className="font-sans text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+            sophie's portfolio
+          </h1>
           <p className="mt-3 flex flex-wrap items-center gap-x-2 gap-y-1 font-sans text-xs text-muted-foreground sm:text-sm">
             <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1 font-medium text-foreground/80">
-              <Globe className="size-3.5" aria-hidden="true" />Public board
+              <Globe className="size-3.5" aria-hidden="true" />
+              Public board
             </span>
             <span aria-hidden="true">·</span>
             <span>{boardItems.length} Pins</span>
@@ -530,10 +602,13 @@ function Index() {
             <span>{folders.length} Sections</span>
           </p>
           <p className="mt-3 max-w-2xl font-serif text-base leading-relaxed text-foreground/70 sm:text-lg">
-            A small, ongoing collection of what I'm building, studying, and making. From software, and hardware, and everything in between.
+            A small, ongoing collection of what I'm building, studying, and making. From software,
+            and hardware, and everything in between.
           </p>
           <div className="mt-4 flex -space-x-1.5">
-            <span className="grid size-9 place-items-center rounded-full bg-blush/70 font-sans text-xs font-semibold text-foreground ring-2 ring-background">S</span>
+            <span className="grid size-9 place-items-center rounded-full bg-blush/70 font-sans text-xs font-semibold text-foreground ring-2 ring-background">
+              S
+            </span>
             <span className="grid size-9 place-items-center rounded-full bg-muted text-muted-foreground ring-2 ring-background">
               <UserRoundPlus className="size-4" aria-hidden="true" />
             </span>
@@ -541,61 +616,151 @@ function Index() {
         </div>
         <div className="flex shrink-0 items-center gap-2 pb-1">
           <div className="flex items-center">
-            <a href="https://github.com/yunsophie" target="_blank" rel="noreferrer" className="grid size-10 place-items-center rounded-full hover:bg-muted" aria-label="Sophie Li on GitHub"><Github className="size-4" /></a>
-            <a href="https://www.linkedin.com/in/yunrui-sophie-li/" target="_blank" rel="noreferrer" className="grid size-10 place-items-center rounded-full hover:bg-muted" aria-label="Sophie Li on LinkedIn"><Linkedin className="size-4" /></a>
-            <a href="mailto:yunsophieli@gmail.com" className="grid size-10 place-items-center rounded-full hover:bg-muted" aria-label="Email Sophie Li"><Mail className="size-4" /></a>
+            <a
+              href="https://github.com/yunsophie"
+              target="_blank"
+              rel="noreferrer"
+              className="grid size-10 place-items-center rounded-full hover:bg-muted"
+              aria-label="Sophie Li on GitHub"
+            >
+              <Github className="size-4" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/yunrui-sophie-li/"
+              target="_blank"
+              rel="noreferrer"
+              className="grid size-10 place-items-center rounded-full hover:bg-muted"
+              aria-label="Sophie Li on LinkedIn"
+            >
+              <Linkedin className="size-4" />
+            </a>
+            <a
+              href="mailto:yunsophieli@gmail.com"
+              className="grid size-10 place-items-center rounded-full hover:bg-muted"
+              aria-label="Email Sophie Li"
+            >
+              <Mail className="size-4" />
+            </a>
           </div>
-          <button type="button" onClick={copyLink} className="inline-flex h-11 items-center gap-2 rounded-full bg-muted px-5 font-sans text-sm font-semibold text-foreground transition hover:bg-blush/60">
-            {copied ? "Copied!" : (<><Upload className="size-4" aria-hidden="true" />Share</>)}
+          <button
+            type="button"
+            onClick={copyLink}
+            className="inline-flex h-11 items-center gap-2 rounded-full bg-muted px-5 font-sans text-sm font-semibold text-foreground transition hover:bg-blush/60"
+          >
+            {copied ? (
+              "Copied!"
+            ) : (
+              <>
+                <Upload className="size-4" aria-hidden="true" />
+                Share
+              </>
+            )}
           </button>
-          <span aria-hidden="true" className="grid size-11 place-items-center rounded-full bg-muted text-muted-foreground">
+          <span
+            aria-hidden="true"
+            className="grid size-11 place-items-center rounded-full bg-muted text-muted-foreground"
+          >
             <MoreHorizontal className="size-4" aria-hidden="true" />
           </span>
         </div>
       </section>
 
-      <nav aria-label="Portfolio folders" className="sticky top-[68px] z-30 flex items-center gap-1 bg-background/95 px-2 pb-3 pt-2 backdrop-blur-xl sm:px-4">
+      <nav
+        aria-label="Portfolio folders"
+        className="sticky top-[68px] z-30 flex items-center gap-1 bg-background/95 px-2 pb-3 pt-2 backdrop-blur-xl sm:px-4"
+      >
         {navScroll.left && (
-          <button type="button" onClick={() => scrollNavStrip("left")} className="grid size-8 shrink-0 place-items-center rounded-full bg-background text-muted-foreground transition hover:bg-muted hover:text-foreground" aria-label="Scroll folders left"><ChevronLeft className="size-4" aria-hidden="true" /></button>
+          <button
+            type="button"
+            onClick={() => scrollNavStrip("left")}
+            className="grid size-8 shrink-0 place-items-center rounded-full bg-background text-muted-foreground transition hover:bg-muted hover:text-foreground"
+            aria-label="Scroll folders left"
+          >
+            <ChevronLeft className="size-4" aria-hidden="true" />
+          </button>
         )}
         <div className="relative min-w-0 flex-1">
-          <div ref={navStripRef} onScroll={updateNavScroll} className="no-scrollbar flex min-w-0 gap-2 overflow-x-auto px-1">
+          <div
+            ref={navStripRef}
+            onScroll={updateNavScroll}
+            className="no-scrollbar flex min-w-0 gap-2 overflow-x-auto px-1"
+          >
             {folders.map((folder) => (
-              <Button key={folder} variant={activeFolder === folder ? "default" : "secondary"} size="sm" className="shrink-0 rounded-full px-4 shadow-none" onClick={() => changeFolder(folder)}>{folder}</Button>
+              <Button
+                key={folder}
+                variant={activeFolder === folder ? "default" : "secondary"}
+                size="sm"
+                className="shrink-0 rounded-full px-4 shadow-none"
+                onClick={() => changeFolder(folder)}
+              >
+                {folder}
+              </Button>
             ))}
           </div>
-          {navScroll.left && <span aria-hidden="true" className="pointer-events-none absolute inset-y-0 left-0 w-10 bg-[linear-gradient(to_right,var(--color-background)_40%,transparent)]" />}
-          {navScroll.right && <span aria-hidden="true" className="pointer-events-none absolute inset-y-0 right-0 w-10 bg-[linear-gradient(to_left,var(--color-background)_40%,transparent)]" />}
+          {navScroll.left && (
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-y-0 left-0 w-10 bg-[linear-gradient(to_right,var(--color-background)_40%,transparent)]"
+            />
+          )}
+          {navScroll.right && (
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-y-0 right-0 w-10 bg-[linear-gradient(to_left,var(--color-background)_40%,transparent)]"
+            />
+          )}
         </div>
         {navScroll.right && (
-          <button type="button" onClick={() => scrollNavStrip("right")} className="grid size-8 shrink-0 place-items-center rounded-full bg-background text-muted-foreground transition hover:bg-muted hover:text-foreground" aria-label="Scroll folders right"><ChevronRight className="size-4" aria-hidden="true" /></button>
+          <button
+            type="button"
+            onClick={() => scrollNavStrip("right")}
+            className="grid size-8 shrink-0 place-items-center rounded-full bg-background text-muted-foreground transition hover:bg-muted hover:text-foreground"
+            aria-label="Scroll folders right"
+          >
+            <ChevronRight className="size-4" aria-hidden="true" />
+          </button>
         )}
       </nav>
       <section aria-label="Portfolio board" className="px-2 pb-10 pt-3 sm:px-3">
         {isTimeline ? (
           <div className="relative mx-auto max-w-4xl">
-            <span aria-hidden="true" className="absolute inset-y-0 left-0 w-px bg-border md:left-1/2" />
+            <span
+              aria-hidden="true"
+              className="absolute inset-y-0 left-0 w-px bg-border md:left-1/2"
+            />
             <div className="relative mb-14 pl-8 md:hidden">
-              <span aria-hidden="true" className="absolute -left-[37px] top-2 size-[9px] rounded-full bg-accent" />
+              <span
+                aria-hidden="true"
+                className="absolute -left-[37px] top-2 size-[9px] rounded-full bg-accent"
+              />
               <EducationPanel />
             </div>
             <ol className="space-y-14">
               {timelineItems.map((item, index) => (
                 <li key={item.title} className="relative grid gap-10 pl-8 md:grid-cols-2 md:pl-0">
-                  <span aria-hidden="true" className="absolute -left-[37px] top-2 size-[9px] rounded-full bg-accent md:left-1/2 md:-translate-x-1/2" />
+                  <span
+                    aria-hidden="true"
+                    className="absolute -left-[37px] top-2 size-[9px] rounded-full bg-accent md:left-1/2 md:-translate-x-1/2"
+                  />
                   {index === 0 && (
                     <div className="hidden min-w-0 self-start md:block">
                       <EducationPanel />
                     </div>
                   )}
                   <div className={`min-w-0 md:col-start-2 ${index === 0 ? "" : "md:row-start-1"}`}>
-                    <p className="font-sans text-[10px] uppercase tracking-[0.14em] text-muted-foreground">{item.year} · {item.category}</p>
+                    <p className="font-sans text-[10px] uppercase tracking-[0.14em] text-muted-foreground">
+                      {item.year} · {item.category}
+                    </p>
                     <div className="mt-3 max-w-[320px]">
                       <FlipImage
                         item={item}
                         imageRatio="aspect-auto"
                         crop={item.crop}
-                        eager
+                        // Eager-load the leading timeline entry; native lazy
+                        // loading handles the remaining entries as we scroll.
+                        eager={index === 0}
+                        sizes={TIMELINE_IMAGE_SIZES}
+                        posterSizes={TIMELINE_POSTER_SIZES}
                         showTapBadge={showTapBadge && item === timelineItems[0]}
                         openKey={openKey}
                         onOpenChange={setOpenKey}
@@ -603,10 +768,17 @@ function Index() {
                       />
                     </div>
                     <h2 className="mt-4 font-serif text-2xl sm:text-3xl">{item.title}</h2>
-                    <p className="mt-2 font-serif text-lg leading-relaxed text-foreground/70">{item.description}</p>
+                    <p className="mt-2 font-serif text-lg leading-relaxed text-foreground/70">
+                      {item.description}
+                    </p>
                     <ul className="mt-3 flex flex-wrap gap-2">
                       {item.tools.map((tool) => (
-                        <li key={tool} className="rounded-full bg-muted px-3 py-1 font-sans text-[10px] uppercase tracking-wide text-muted-foreground">{tool}</li>
+                        <li
+                          key={tool}
+                          className="rounded-full bg-muted px-3 py-1 font-sans text-[10px] uppercase tracking-wide text-muted-foreground"
+                        >
+                          {tool}
+                        </li>
                       ))}
                     </ul>
                   </div>
@@ -615,35 +787,46 @@ function Index() {
             </ol>
           </div>
         ) : (
-        <div className="flex items-start gap-2 sm:gap-3">
-          {columns.map((column, columnIndex) => (
-            <div key={columnIndex} className="flex min-w-0 flex-1 flex-col gap-2 sm:gap-3">
-              {column.map((item, index) => (
-                <div key={item.title} className="group/cap min-w-0 overflow-hidden rounded-xl pb-3 hover:bg-blush/40">
-                  <FlipImage
-                    item={item}
-                    imageRatio="aspect-auto"
-                    crop={item.crop}
-                    eager={index < 4 && columnIndex === 0}
-                    showTapBadge={showTapBadge && columnIndex === 0 && index === 0}
-                    openKey={openKey}
-                    onOpenChange={setOpenKey}
-                    onImageInteraction={restartTapHintTimer}
-                  />
-                  <span className="flex min-w-0 items-center justify-between gap-2 px-1.5 pt-[7.5px]">
-                    <span className="truncate font-sans text-[13px] font-semibold leading-none text-foreground">{item.title}</span>
-                    <span className="shrink-0 rounded-full bg-muted px-1 py-0.5 font-sans text-[8px] uppercase leading-none tracking-wide text-muted-foreground sm:px-2 sm:text-[10px]">{item.folder}</span>
+          // CSS columns keep the same DOM across breakpoints and hydration.
+          // Pins read down each column in collection order; no resize listener
+          // or five-column server render can reshuffle the mobile first paint.
+          <div data-testid="board-grid" className="portfolio-masonry">
+            {visibleItems.map((item, index) => (
+              <div
+                key={item.title}
+                className="portfolio-masonry-item group/cap min-w-0 overflow-hidden rounded-xl pb-3 hover:bg-blush/40"
+              >
+                <FlipImage
+                  item={item}
+                  imageRatio="aspect-auto"
+                  crop={item.crop}
+                  // CSS balancing determines column starts. The leading group
+                  // includes the tall mobile LCP candidates; later pins remain
+                  // native-lazy. Revisit this policy when the collection grows.
+                  eager={index < 5}
+                  showTapBadge={showTapBadge && index === 0}
+                  openKey={openKey}
+                  onOpenChange={setOpenKey}
+                  onImageInteraction={restartTapHintTimer}
+                />
+                <span className="flex min-w-0 items-center justify-between gap-2 px-1.5 pt-[7.5px]">
+                  <span className="truncate font-sans text-[13px] font-semibold leading-none text-foreground">
+                    {item.title}
                   </span>
-                </div>
-              ))}
-            </div>
-          ))}
-        </div>
+                  <span className="shrink-0 rounded-full bg-muted px-1 py-0.5 font-sans text-[8px] uppercase leading-none tracking-wide text-muted-foreground sm:px-2 sm:text-[10px]">
+                    {item.folder}
+                  </span>
+                </span>
+              </div>
+            ))}
+          </div>
         )}
       </section>
 
       {visibleItems.length === 0 && (
-        <p className="px-5 py-24 text-center font-serif text-2xl text-muted-foreground">Nothing in this folder yet.</p>
+        <p className="px-5 py-24 text-center font-serif text-2xl text-muted-foreground">
+          Nothing in this folder yet.
+        </p>
       )}
     </main>
   );

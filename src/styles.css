@@ -194,3 +194,38 @@
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+/* Masonry uses source order down each column. CSS chooses the column count
+ * before React hydrates, and break-inside keeps each card's two faces together.
+ * Padding/gaps match the sizes expressions in lib/responsive-image.ts. */
+.portfolio-masonry {
+  column-count: 2;
+  column-gap: 8px;
+}
+
+.portfolio-masonry-item {
+  break-inside: avoid;
+  margin-bottom: 8px;
+}
+
+@media (min-width: 640px) {
+  .portfolio-masonry {
+    column-gap: 12px;
+  }
+
+  .portfolio-masonry-item {
+    margin-bottom: 12px;
+  }
+}
+
+@media (min-width: 768px) {
+  .portfolio-masonry {
+    column-count: 3;
+  }
+}
+
+@media (min-width: 1024px) {
+  .portfolio-masonry {
+    column-count: 5;
+  }
+}

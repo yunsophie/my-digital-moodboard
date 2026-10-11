@@ -1,27 +1,31 @@
-name: Build and deploy to GitHub Pages
+name: Validate portfolio and deploy to GitHub Pages
 
 on:
   push:
+    branches: ["main"]
+  pull_request:
     branches: ["main"]
   workflow_dispatch:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  group: pages
+  group: pages-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: read
     steps:
       - name: Checkout
         uses: actions/checkout@v6
 
       - name: Configure GitHub Pages
+        if: github.event_name != 'pull_request'
         id: pages
         uses: actions/configure-pages@v5
 
@@ -38,25 +42,60 @@ jobs:
       - name: Install dependencies
         run: bun install --frozen-lockfile
 
-      - name: Check routing
+      - name: Check TypeScript
+        run: bun run typecheck
+
+      # Masters and generated files are committed together. Verify actual file
+      # hashes/dimensions before building so stale assets cannot be published.
+      - name: Verify generated image assets
+        run: bun run images:check
+
+      - name: Lint
+        run: bun run lint
+
+      - name: Check pin content and routing
         run: bun run test
 
       - name: Build static website
         run: bun run build:pages
         env:
-          GITHUB_PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+          GITHUB_PAGES_BASE_PATH: ${{ github.event_name == 'pull_request' && '/my-digital-moodboard' || steps.pages.outputs.base_path }}
 
       - name: Verify homepage exists
         run: test -s dist/client/index.html
 
+      - name: Install browser for portfolio checks
+        run: bunx playwright install --with-deps chromium
+
+      - name: Check pins in the built website
+        run: bun run test:e2e
+        env:
+          GITHUB_PAGES_BASE_PATH: ${{ github.event_name == 'pull_request' && '/my-digital-moodboard' || steps.pages.outputs.base_path }}
+
+      - name: Upload browser test report
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: portfolio-browser-report
+          path: |
+            playwright-report/
+            test-results/
+          if-no-files-found: ignore
+          retention-days: 14
+
       - name: Upload built website
+        if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v4
         with:
           path: ./dist/client
 
   deploy:
+    if: github.event_name != 'pull_request'
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

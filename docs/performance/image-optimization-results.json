@@ -1,0 +1,3748 @@
+{
+  "recordedAt": "2026-10-11T05:26:11.500Z",
+  "scope": "Local production build with the same nine-pin collection; not the current ten-pin live deployment",
+  "selectedStage": "mobile-optimized-selected",
+  "imageTransferReductionPercent": 87.46241638614566,
+  "totalTransferReductionPercent": 79.16241362598576,
+  "lcpReductionPercent": 14.981756659598222,
+  "acceptance": {
+    "imageBudgetBytes": 1467894,
+    "imageBudgetMet": true,
+    "scoreTargetMet": true,
+    "clsTargetMet": true,
+    "lcp2500msTargetMet": false
+  },
+  "validation": {
+    "vitestTestsPassed": 14,
+    "playwrightTestsPassed": 18,
+    "typecheckPassed": true,
+    "lintErrors": 0,
+    "existingLintWarnings": 7,
+    "generatedImageFamiliesVerified": 11,
+    "generatedImageCandidatesVerified": 52,
+    "masterMutationDetected": true,
+    "candidateMutationDetected": true
+  },
+  "stages": [
+    {
+      "recordedAt": "2026-10-11T04:32:30.094Z",
+      "localTimezone": "America/Los_Angeles",
+      "scope": "Current local production build; cold browser profiles; gzip text responses; no scrolling or user interaction",
+      "url": "http://127.0.0.1:4173/my-digital-moodboard/",
+      "nodeVersion": "v22.13.0",
+      "lighthouseVersion": "12.8.2",
+      "host": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "cpu": "Apple M1 Pro",
+        "logicalCpus": 8
+      },
+      "buildIndexSha256": "b320dbf1a59ead47e4c8e80cce9af9298eb09b184ffa23761d4881f067891fe2",
+      "medians": {
+        "performanceScore": 76,
+        "firstContentfulPaintMs": 1954.2444500000004,
+        "largestContentfulPaintMs": 3229.431875,
+        "speedIndexMs": 1954.2444500000004,
+        "totalBlockingTimeMs": 0,
+        "cumulativeLayoutShift": 0.3303480553190031,
+        "totalTransferBytes": 2313051,
+        "imageTransferBytes": 2096991,
+        "imageRequestCount": 10
+      },
+      "representativeRun": 3,
+      "runs": [
+        {
+          "run": 1,
+          "performanceScore": 76,
+          "firstContentfulPaintMs": 1809.0964,
+          "largestContentfulPaintMs": 3159.3016000000007,
+          "speedIndexMs": 1809.0964,
+          "totalBlockingTimeMs": 0,
+          "cumulativeLayoutShift": 0.3303480553190031,
+          "totalTransferBytes": 2313051,
+          "imageTransferBytes": 2096991,
+          "imageRequestCount": 10,
+          "imageRequests": [
+            {
+              "file": "about-sophie-BEoZnuTg.jpg",
+              "transferSize": 383076,
+              "resourceSize": 382875,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-i2-ta-D9Y2P1G7.jpg",
+              "transferSize": 131616,
+              "resourceSize": 131415,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-kv-store-py-QwfGQ.jpg",
+              "transferSize": 110947,
+              "resourceSize": 110746,
+              "statusCode": 200
+            },
+            {
+              "file": "huskybids-presentation-D3WyucNY.jpg",
+              "transferSize": 98289,
+              "resourceSize": 98089,
+              "statusCode": 200
+            },
+            {
+              "file": "huskybids-poster-Dv2yqKC7.jpg",
+              "transferSize": 216239,
+              "resourceSize": 216038,
+              "statusCode": 200
+            },
+            {
+              "file": "olmo-snow-symposium-Bi7NU61t.jpg",
+              "transferSize": 339631,
+              "resourceSize": 339430,
+              "statusCode": 200
+            },
+            {
+              "file": "dubhacks-swag-CeFJ7VM5.jpg",
+              "transferSize": 381787,
+              "resourceSize": 381586,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-http-server-D8xyaYgs.jpg",
+              "transferSize": 150619,
+              "resourceSize": 150418,
+              "statusCode": 200
+            },
+            {
+              "file": "study-ducky-v2-Df0bi67y.png",
+              "transferSize": 177561,
+              "resourceSize": 177361,
+              "statusCode": 200
+            },
+            {
+              "file": "vla-robot-arm-CPvBG_vW.jpg",
+              "transferSize": 107226,
+              "resourceSize": 107025,
+              "statusCode": 200
+            }
+          ],
+          "failedRequests": [],
+          "runWarnings": [],
+          "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+            "benchmarkIndex": 2817,
+            "credits": {}
+          },
+          "configSettings": {
+            "output": "html",
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "node",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": ["performance"],
+            "skipAudits": null
+          },
+          "lcpElement": {
+            "type": "node",
+            "lhId": "page-0-P",
+            "path": "1,HTML,1,BODY,1,MAIN,1,SECTION,0,DIV,2,P",
+            "selector": "main.min-h-screen > section.flex > div.min-w-0 > p.mt-3",
+            "boundingRect": {
+              "top": 162,
+              "bottom": 240,
+              "left": 12,
+              "right": 400,
+              "width": 388,
+              "height": 78
+            },
+            "snippet": "<p class=\"mt-3 max-w-2xl font-serif text-base leading-relaxed text-foreground/70 sm:\u2026\">",
+            "nodeLabel": "A small, ongoing collection of what I'm building, studying, and making. From so\u2026"
+          }
+        },
+        {
+          "run": 2,
+          "performanceScore": 76,
+          "firstContentfulPaintMs": 2017.5822,
+          "largestContentfulPaintMs": 3292.5822,
+          "speedIndexMs": 2017.5822,
+          "totalBlockingTimeMs": 0,
+          "cumulativeLayoutShift": 0.29083885955229877,
+          "totalTransferBytes": 2313051,
+          "imageTransferBytes": 2096991,
+          "imageRequestCount": 10,
+          "imageRequests": [
+            {
+              "file": "about-sophie-BEoZnuTg.jpg",
+              "transferSize": 383076,
+              "resourceSize": 382875,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-i2-ta-D9Y2P1G7.jpg",
+              "transferSize": 131616,
+              "resourceSize": 131415,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-kv-store-py-QwfGQ.jpg",
+              "transferSize": 110947,
+              "resourceSize": 110746,
+              "statusCode": 200
+            },
+            {
+              "file": "huskybids-presentation-D3WyucNY.jpg",
+              "transferSize": 98289,
+              "resourceSize": 98089,
+              "statusCode": 200
+            },
+            {
+              "file": "huskybids-poster-Dv2yqKC7.jpg",
+              "transferSize": 216239,
+              "resourceSize": 216038,
+              "statusCode": 200
+            },
+            {
+              "file": "olmo-snow-symposium-Bi7NU61t.jpg",
+              "transferSize": 339631,
+              "resourceSize": 339430,
+              "statusCode": 200
+            },
+            {
+              "file": "dubhacks-swag-CeFJ7VM5.jpg",
+              "transferSize": 381787,
+              "resourceSize": 381586,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-http-server-D8xyaYgs.jpg",
+              "transferSize": 150619,
+              "resourceSize": 150418,
+              "statusCode": 200
+            },
+            {
+              "file": "study-ducky-v2-Df0bi67y.png",
+              "transferSize": 177561,
+              "resourceSize": 177361,
+              "statusCode": 200
+            },
+            {
+              "file": "vla-robot-arm-CPvBG_vW.jpg",
+              "transferSize": 107226,
+              "resourceSize": 107025,
+              "statusCode": 200
+            }
+          ],
+          "failedRequests": [],
+          "runWarnings": [],
+          "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+            "benchmarkIndex": 2619.5,
+            "credits": {}
+          },
+          "configSettings": {
+            "output": "html",
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "node",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": ["performance"],
+            "skipAudits": null
+          },
+          "lcpElement": {
+            "type": "node",
+            "lhId": "page-0-P",
+            "path": "1,HTML,1,BODY,1,MAIN,1,SECTION,0,DIV,2,P",
+            "selector": "main.min-h-screen > section.flex > div.min-w-0 > p.mt-3",
+            "boundingRect": {
+              "top": 162,
+              "bottom": 240,
+              "left": 12,
+              "right": 400,
+              "width": 388,
+              "height": 78
+            },
+            "snippet": "<p class=\"mt-3 max-w-2xl font-serif text-base leading-relaxed text-foreground/70 sm:\u2026\">",
+            "nodeLabel": "A small, ongoing collection of what I'm building, studying, and making. From so\u2026"
+          }
+        },
+        {
+          "run": 3,
+          "performanceScore": 75,
+          "firstContentfulPaintMs": 1954.2444500000004,
+          "largestContentfulPaintMs": 3229.431875,
+          "speedIndexMs": 1954.2444500000004,
+          "totalBlockingTimeMs": 0,
+          "cumulativeLayoutShift": 0.3303480553190031,
+          "totalTransferBytes": 2313051,
+          "imageTransferBytes": 2096991,
+          "imageRequestCount": 10,
+          "imageRequests": [
+            {
+              "file": "about-sophie-BEoZnuTg.jpg",
+              "transferSize": 383076,
+              "resourceSize": 382875,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-i2-ta-D9Y2P1G7.jpg",
+              "transferSize": 131616,
+              "resourceSize": 131415,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-kv-store-py-QwfGQ.jpg",
+              "transferSize": 110947,
+              "resourceSize": 110746,
+              "statusCode": 200
+            },
+            {
+              "file": "huskybids-presentation-D3WyucNY.jpg",
+              "transferSize": 98289,
+              "resourceSize": 98089,
+              "statusCode": 200
+            },
+            {
+              "file": "huskybids-poster-Dv2yqKC7.jpg",
+              "transferSize": 216239,
+              "resourceSize": 216038,
+              "statusCode": 200
+            },
+            {
+              "file": "olmo-snow-symposium-Bi7NU61t.jpg",
+              "transferSize": 339631,
+              "resourceSize": 339430,
+              "statusCode": 200
+            },
+            {
+              "file": "dubhacks-swag-CeFJ7VM5.jpg",
+              "transferSize": 381787,
+              "resourceSize": 381586,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-http-server-D8xyaYgs.jpg",
+              "transferSize": 150619,
+              "resourceSize": 150418,
+              "statusCode": 200
+            },
+            {
+              "file": "study-ducky-v2-Df0bi67y.png",
+              "transferSize": 177561,
+              "resourceSize": 177361,
+              "statusCode": 200
+            },
+            {
+              "file": "vla-robot-arm-CPvBG_vW.jpg",
+              "transferSize": 107226,
+              "resourceSize": 107025,
+              "statusCode": 200
+            }
+          ],
+          "failedRequests": [],
+          "runWarnings": [],
+          "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+            "benchmarkIndex": 2890.5,
+            "credits": {}
+          },
+          "configSettings": {
+            "output": "html",
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "node",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": ["performance"],
+            "skipAudits": null
+          },
+          "lcpElement": {
+            "type": "node",
+            "lhId": "page-0-P",
+            "path": "1,HTML,1,BODY,1,MAIN,1,SECTION,0,DIV,2,P",
+            "selector": "main.min-h-screen > section.flex > div.min-w-0 > p.mt-3",
+            "boundingRect": {
+              "top": 162,
+              "bottom": 240,
+              "left": 12,
+              "right": 400,
+              "width": 388,
+              "height": 78
+            },
+            "snippet": "<p class=\"mt-3 max-w-2xl font-serif text-base leading-relaxed text-foreground/70 sm:\u2026\">",
+            "nodeLabel": "A small, ongoing collection of what I'm building, studying, and making. From so\u2026"
+          }
+        }
+      ],
+      "label": "Original local build",
+      "artifactDirectory": "artifacts/performance/mobile-baseline",
+      "assetFileCount": 14,
+      "bundledImageBytes": 2645132
+    },
+    {
+      "recordedAt": "2026-10-11T05:04:18.344Z",
+      "localTimezone": "America/Los_Angeles",
+      "scope": "Current local production build; cold browser profiles; gzip text responses; no scrolling or user interaction",
+      "url": "http://127.0.0.1:4173/my-digital-moodboard/",
+      "nodeVersion": "v22.13.0",
+      "lighthouseVersion": "12.8.2",
+      "host": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "cpu": "Apple M1 Pro",
+        "logicalCpus": 8
+      },
+      "buildIndexSha256": "8621ce4161ed729f62cff9c3f08f5b18ed5a9a728d49cf7f25aec230b122c8de",
+      "medians": {
+        "performanceScore": 75,
+        "firstContentfulPaintMs": 1953.4511500000003,
+        "largestContentfulPaintMs": 3232.511624999999,
+        "speedIndexMs": 1953.4511500000003,
+        "totalBlockingTimeMs": 0,
+        "cumulativeLayoutShift": 0.3302894656734698,
+        "totalTransferBytes": 2096779,
+        "imageTransferBytes": 1880752,
+        "imageRequestCount": 9
+      },
+      "representativeRun": 3,
+      "runs": [
+        {
+          "run": 1,
+          "performanceScore": 76,
+          "firstContentfulPaintMs": 1863.9125,
+          "largestContentfulPaintMs": 3412.890625,
+          "speedIndexMs": 1863.9125,
+          "totalBlockingTimeMs": 0,
+          "cumulativeLayoutShift": 0.29083885955229877,
+          "totalTransferBytes": 2228395,
+          "imageTransferBytes": 2012368,
+          "imageRequestCount": 10,
+          "imageRequests": [
+            {
+              "file": "about-sophie-BEoZnuTg.jpg",
+              "transferSize": 383076,
+              "resourceSize": 382875,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-i2-ta-D9Y2P1G7.jpg",
+              "transferSize": 131616,
+              "resourceSize": 131415,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-kv-store-py-QwfGQ.jpg",
+              "transferSize": 110947,
+              "resourceSize": 110746,
+              "statusCode": 200
+            },
+            {
+              "file": "huskybids-presentation-D3WyucNY.jpg",
+              "transferSize": 98289,
+              "resourceSize": 98089,
+              "statusCode": 200
+            },
+            {
+              "file": "olmo-snow-symposium-Bi7NU61t.jpg",
+              "transferSize": 339631,
+              "resourceSize": 339430,
+              "statusCode": 200
+            },
+            {
+              "file": "dubhacks-swag-CeFJ7VM5.jpg",
+              "transferSize": 381787,
+              "resourceSize": 381586,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-http-server-D8xyaYgs.jpg",
+              "transferSize": 150619,
+              "resourceSize": 150418,
+              "statusCode": 200
+            },
+            {
+              "file": "study-ducky-v2-Df0bi67y.png",
+              "transferSize": 177561,
+              "resourceSize": 177361,
+              "statusCode": 200
+            },
+            {
+              "file": "vla-robot-arm-CPvBG_vW.jpg",
+              "transferSize": 107226,
+              "resourceSize": 107025,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-i2-ta-D9Y2P1G7.jpg",
+              "transferSize": 131616,
+              "resourceSize": 131415,
+              "statusCode": 200
+            }
+          ],
+          "failedRequests": [],
+          "runWarnings": [],
+          "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+            "benchmarkIndex": 2878,
+            "credits": {}
+          },
+          "configSettings": {
+            "output": "html",
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "node",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": ["performance"],
+            "skipAudits": null
+          },
+          "lcpElement": {
+            "type": "node",
+            "lhId": "page-0-P",
+            "path": "1,HTML,1,BODY,1,MAIN,1,SECTION,0,DIV,2,P",
+            "selector": "main.min-h-screen > section.flex > div.min-w-0 > p.mt-3",
+            "boundingRect": {
+              "top": 162,
+              "bottom": 240,
+              "left": 12,
+              "right": 400,
+              "width": 388,
+              "height": 78
+            },
+            "snippet": "<p class=\"mt-3 max-w-2xl font-serif text-base leading-relaxed text-foreground/70 sm:\u2026\">",
+            "nodeLabel": "A small, ongoing collection of what I'm building, studying, and making. From so\u2026"
+          }
+        },
+        {
+          "run": 2,
+          "performanceScore": 75,
+          "firstContentfulPaintMs": 1953.4511500000003,
+          "largestContentfulPaintMs": 3228.6156250000004,
+          "speedIndexMs": 1953.4511500000003,
+          "totalBlockingTimeMs": 0,
+          "cumulativeLayoutShift": 0.3303480553190031,
+          "totalTransferBytes": 2096779,
+          "imageTransferBytes": 1880752,
+          "imageRequestCount": 9,
+          "imageRequests": [
+            {
+              "file": "about-sophie-BEoZnuTg.jpg",
+              "transferSize": 383076,
+              "resourceSize": 382875,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-i2-ta-D9Y2P1G7.jpg",
+              "transferSize": 131616,
+              "resourceSize": 131415,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-kv-store-py-QwfGQ.jpg",
+              "transferSize": 110947,
+              "resourceSize": 110746,
+              "statusCode": 200
+            },
+            {
+              "file": "huskybids-presentation-D3WyucNY.jpg",
+              "transferSize": 98289,
+              "resourceSize": 98089,
+              "statusCode": 200
+            },
+            {
+              "file": "olmo-snow-symposium-Bi7NU61t.jpg",
+              "transferSize": 339631,
+              "resourceSize": 339430,
+              "statusCode": 200
+            },
+            {
+              "file": "dubhacks-swag-CeFJ7VM5.jpg",
+              "transferSize": 381787,
+              "resourceSize": 381586,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-http-server-D8xyaYgs.jpg",
+              "transferSize": 150619,
+              "resourceSize": 150418,
+              "statusCode": 200
+            },
+            {
+              "file": "study-ducky-v2-Df0bi67y.png",
+              "transferSize": 177561,
+              "resourceSize": 177361,
+              "statusCode": 200
+            },
+            {
+              "file": "vla-robot-arm-CPvBG_vW.jpg",
+              "transferSize": 107226,
+              "resourceSize": 107025,
+              "statusCode": 200
+            }
+          ],
+          "failedRequests": [],
+          "runWarnings": [],
+          "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+            "benchmarkIndex": 2722,
+            "credits": {}
+          },
+          "configSettings": {
+            "output": "html",
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "node",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": ["performance"],
+            "skipAudits": null
+          },
+          "lcpElement": {
+            "type": "node",
+            "lhId": "page-0-P",
+            "path": "1,HTML,1,BODY,1,MAIN,1,SECTION,0,DIV,2,P",
+            "selector": "main.min-h-screen > section.flex > div.min-w-0 > p.mt-3",
+            "boundingRect": {
+              "top": 162,
+              "bottom": 240,
+              "left": 12,
+              "right": 400,
+              "width": 388,
+              "height": 78
+            },
+            "snippet": "<p class=\"mt-3 max-w-2xl font-serif text-base leading-relaxed text-foreground/70 sm:\u2026\">",
+            "nodeLabel": "A small, ongoing collection of what I'm building, studying, and making. From so\u2026"
+          }
+        },
+        {
+          "run": 3,
+          "performanceScore": 75,
+          "firstContentfulPaintMs": 1957.3267499999997,
+          "largestContentfulPaintMs": 3232.511624999999,
+          "speedIndexMs": 1957.3267499999997,
+          "totalBlockingTimeMs": 0,
+          "cumulativeLayoutShift": 0.3302894656734698,
+          "totalTransferBytes": 2096779,
+          "imageTransferBytes": 1880752,
+          "imageRequestCount": 9,
+          "imageRequests": [
+            {
+              "file": "about-sophie-BEoZnuTg.jpg",
+              "transferSize": 383076,
+              "resourceSize": 382875,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-i2-ta-D9Y2P1G7.jpg",
+              "transferSize": 131616,
+              "resourceSize": 131415,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-kv-store-py-QwfGQ.jpg",
+              "transferSize": 110947,
+              "resourceSize": 110746,
+              "statusCode": 200
+            },
+            {
+              "file": "huskybids-presentation-D3WyucNY.jpg",
+              "transferSize": 98289,
+              "resourceSize": 98089,
+              "statusCode": 200
+            },
+            {
+              "file": "olmo-snow-symposium-Bi7NU61t.jpg",
+              "transferSize": 339631,
+              "resourceSize": 339430,
+              "statusCode": 200
+            },
+            {
+              "file": "dubhacks-swag-CeFJ7VM5.jpg",
+              "transferSize": 381787,
+              "resourceSize": 381586,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-http-server-D8xyaYgs.jpg",
+              "transferSize": 150619,
+              "resourceSize": 150418,
+              "statusCode": 200
+            },
+            {
+              "file": "study-ducky-v2-Df0bi67y.png",
+              "transferSize": 177561,
+              "resourceSize": 177361,
+              "statusCode": 200
+            },
+            {
+              "file": "vla-robot-arm-CPvBG_vW.jpg",
+              "transferSize": 107226,
+              "resourceSize": 107025,
+              "statusCode": 200
+            }
+          ],
+          "failedRequests": [],
+          "runWarnings": [],
+          "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+            "benchmarkIndex": 2865.5,
+            "credits": {}
+          },
+          "configSettings": {
+            "output": "html",
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "node",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": ["performance"],
+            "skipAudits": null
+          },
+          "lcpElement": {
+            "type": "node",
+            "lhId": "page-0-P",
+            "path": "1,HTML,1,BODY,1,MAIN,1,SECTION,0,DIV,2,P",
+            "selector": "main.min-h-screen > section.flex > div.min-w-0 > p.mt-3",
+            "boundingRect": {
+              "top": 162,
+              "bottom": 240,
+              "left": 12,
+              "right": 400,
+              "width": 388,
+              "height": 78
+            },
+            "snippet": "<p class=\"mt-3 max-w-2xl font-serif text-base leading-relaxed text-foreground/70 sm:\u2026\">",
+            "nodeLabel": "A small, ongoing collection of what I'm building, studying, and making. From so\u2026"
+          }
+        }
+      ],
+      "label": "Poster deferred",
+      "artifactDirectory": "artifacts/performance/poster-deferred",
+      "assetFileCount": 14,
+      "bundledImageBytes": 2645132
+    },
+    {
+      "recordedAt": "2026-10-11T05:12:23.971Z",
+      "localTimezone": "America/Los_Angeles",
+      "scope": "Current local production build; cold browser profiles; gzip text responses; no scrolling or user interaction",
+      "url": "http://127.0.0.1:4174/my-digital-moodboard/",
+      "nodeVersion": "v22.13.0",
+      "lighthouseVersion": "12.8.2",
+      "host": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "cpu": "Apple M1 Pro",
+        "logicalCpus": 8
+      },
+      "buildIndexSha256": "432ee2c6eb5851491c9444099bd68c7dce4cbc43685b02df7268cfa5683229fe",
+      "medians": {
+        "performanceScore": 80,
+        "firstContentfulPaintMs": 1960.2683000000002,
+        "largestContentfulPaintMs": 2704.3252,
+        "speedIndexMs": 1960.2683000000002,
+        "totalBlockingTimeMs": 0,
+        "cumulativeLayoutShift": 0.3302894656734698,
+        "totalTransferBytes": 481965,
+        "imageTransferBytes": 262912,
+        "imageRequestCount": 9
+      },
+      "representativeRun": 2,
+      "runs": [
+        {
+          "run": 1,
+          "performanceScore": 76,
+          "firstContentfulPaintMs": 2317.55405,
+          "largestContentfulPaintMs": 2890.2049749999996,
+          "speedIndexMs": 2317.55405,
+          "totalBlockingTimeMs": 0,
+          "cumulativeLayoutShift": 0.3303480553190031,
+          "totalTransferBytes": 481965,
+          "imageTransferBytes": 262912,
+          "imageRequestCount": 9,
+          "imageRequests": [
+            {
+              "file": "about-sophie-480w-BH4hM70Y.webp",
+              "transferSize": 63264,
+              "resourceSize": 63064,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-kv-store-480w-BOmjwt8o.webp",
+              "transferSize": 11212,
+              "resourceSize": 11012,
+              "statusCode": 200
+            },
+            {
+              "file": "olmo-snow-symposium-480w-CdmIJYGs.webp",
+              "transferSize": 55170,
+              "resourceSize": 54970,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-http-server-480w-BGTWUzlU.webp",
+              "transferSize": 12100,
+              "resourceSize": 11900,
+              "statusCode": 200
+            },
+            {
+              "file": "vla-robot-arm-480w-ztuzzwII.webp",
+              "transferSize": 31732,
+              "resourceSize": 31532,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-i2-ta-480w-BnEpk7xZ.webp",
+              "transferSize": 15286,
+              "resourceSize": 15086,
+              "statusCode": 200
+            },
+            {
+              "file": "huskybids-presentation-480w-CrczIvjF.webp",
+              "transferSize": 8837,
+              "resourceSize": 8638,
+              "statusCode": 200
+            },
+            {
+              "file": "dubhacks-swag-480w-HoYHsUmX.webp",
+              "transferSize": 58362,
+              "resourceSize": 58162,
+              "statusCode": 200
+            },
+            {
+              "file": "study-ducky-v2-334w-6a705ib4.webp",
+              "transferSize": 6949,
+              "resourceSize": 6750,
+              "statusCode": 200
+            }
+          ],
+          "failedRequests": [],
+          "runWarnings": [],
+          "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+            "benchmarkIndex": 2770.5,
+            "credits": {}
+          },
+          "configSettings": {
+            "output": "html",
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "node",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": ["performance"],
+            "skipAudits": null
+          },
+          "lcpElement": {
+            "type": "node",
+            "lhId": "page-0-P",
+            "path": "1,HTML,1,BODY,1,MAIN,1,SECTION,0,DIV,2,P",
+            "selector": "main.min-h-screen > section.flex > div.min-w-0 > p.mt-3",
+            "boundingRect": {
+              "top": 162,
+              "bottom": 240,
+              "left": 12,
+              "right": 400,
+              "width": 388,
+              "height": 78
+            },
+            "snippet": "<p class=\"mt-3 max-w-2xl font-serif text-base leading-relaxed text-foreground/70 sm:\u2026\">",
+            "nodeLabel": "A small, ongoing collection of what I'm building, studying, and making. From so\u2026"
+          }
+        },
+        {
+          "run": 2,
+          "performanceScore": 80,
+          "firstContentfulPaintMs": 1954.3252,
+          "largestContentfulPaintMs": 2704.3252,
+          "speedIndexMs": 1954.3252,
+          "totalBlockingTimeMs": 0,
+          "cumulativeLayoutShift": 0.28178344752425377,
+          "totalTransferBytes": 481965,
+          "imageTransferBytes": 262912,
+          "imageRequestCount": 9,
+          "imageRequests": [
+            {
+              "file": "about-sophie-480w-BH4hM70Y.webp",
+              "transferSize": 63264,
+              "resourceSize": 63064,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-kv-store-480w-BOmjwt8o.webp",
+              "transferSize": 11212,
+              "resourceSize": 11012,
+              "statusCode": 200
+            },
+            {
+              "file": "olmo-snow-symposium-480w-CdmIJYGs.webp",
+              "transferSize": 55170,
+              "resourceSize": 54970,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-http-server-480w-BGTWUzlU.webp",
+              "transferSize": 12100,
+              "resourceSize": 11900,
+              "statusCode": 200
+            },
+            {
+              "file": "vla-robot-arm-480w-ztuzzwII.webp",
+              "transferSize": 31732,
+              "resourceSize": 31532,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-i2-ta-480w-BnEpk7xZ.webp",
+              "transferSize": 15286,
+              "resourceSize": 15086,
+              "statusCode": 200
+            },
+            {
+              "file": "huskybids-presentation-480w-CrczIvjF.webp",
+              "transferSize": 8837,
+              "resourceSize": 8638,
+              "statusCode": 200
+            },
+            {
+              "file": "dubhacks-swag-480w-HoYHsUmX.webp",
+              "transferSize": 58362,
+              "resourceSize": 58162,
+              "statusCode": 200
+            },
+            {
+              "file": "study-ducky-v2-334w-6a705ib4.webp",
+              "transferSize": 6949,
+              "resourceSize": 6750,
+              "statusCode": 200
+            }
+          ],
+          "failedRequests": [],
+          "runWarnings": [],
+          "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+            "benchmarkIndex": 2609,
+            "credits": {}
+          },
+          "configSettings": {
+            "output": "html",
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "node",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": ["performance"],
+            "skipAudits": null
+          },
+          "lcpElement": {
+            "type": "node",
+            "lhId": "page-0-P",
+            "path": "1,HTML,1,BODY,1,MAIN,1,SECTION,0,DIV,2,P",
+            "selector": "main.min-h-screen > section.flex > div.min-w-0 > p.mt-3",
+            "boundingRect": {
+              "top": 162,
+              "bottom": 240,
+              "left": 12,
+              "right": 400,
+              "width": 388,
+              "height": 78
+            },
+            "snippet": "<p class=\"mt-3 max-w-2xl font-serif text-base leading-relaxed text-foreground/70 sm:\u2026\">",
+            "nodeLabel": "A small, ongoing collection of what I'm building, studying, and making. From so\u2026"
+          }
+        },
+        {
+          "run": 3,
+          "performanceScore": 80,
+          "firstContentfulPaintMs": 1960.2683000000002,
+          "largestContentfulPaintMs": 2410.2683,
+          "speedIndexMs": 1960.2683000000002,
+          "totalBlockingTimeMs": 0,
+          "cumulativeLayoutShift": 0.3302894656734698,
+          "totalTransferBytes": 481965,
+          "imageTransferBytes": 262912,
+          "imageRequestCount": 9,
+          "imageRequests": [
+            {
+              "file": "about-sophie-480w-BH4hM70Y.webp",
+              "transferSize": 63264,
+              "resourceSize": 63064,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-kv-store-480w-BOmjwt8o.webp",
+              "transferSize": 11212,
+              "resourceSize": 11012,
+              "statusCode": 200
+            },
+            {
+              "file": "olmo-snow-symposium-480w-CdmIJYGs.webp",
+              "transferSize": 55170,
+              "resourceSize": 54970,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-http-server-480w-BGTWUzlU.webp",
+              "transferSize": 12100,
+              "resourceSize": 11900,
+              "statusCode": 200
+            },
+            {
+              "file": "vla-robot-arm-480w-ztuzzwII.webp",
+              "transferSize": 31732,
+              "resourceSize": 31532,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-i2-ta-480w-BnEpk7xZ.webp",
+              "transferSize": 15286,
+              "resourceSize": 15086,
+              "statusCode": 200
+            },
+            {
+              "file": "huskybids-presentation-480w-CrczIvjF.webp",
+              "transferSize": 8837,
+              "resourceSize": 8638,
+              "statusCode": 200
+            },
+            {
+              "file": "dubhacks-swag-480w-HoYHsUmX.webp",
+              "transferSize": 58362,
+              "resourceSize": 58162,
+              "statusCode": 200
+            },
+            {
+              "file": "study-ducky-v2-334w-6a705ib4.webp",
+              "transferSize": 6949,
+              "resourceSize": 6750,
+              "statusCode": 200
+            }
+          ],
+          "failedRequests": [],
+          "runWarnings": [],
+          "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+            "benchmarkIndex": 2717.5,
+            "credits": {}
+          },
+          "configSettings": {
+            "output": "html",
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "node",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": ["performance"],
+            "skipAudits": null
+          },
+          "lcpElement": {
+            "type": "node",
+            "lhId": "page-0-P",
+            "path": "1,HTML,1,BODY,1,MAIN,1,SECTION,0,DIV,2,P",
+            "selector": "main.min-h-screen > section.flex > div.min-w-0 > p.mt-3",
+            "boundingRect": {
+              "top": 162,
+              "bottom": 240,
+              "left": 12,
+              "right": 400,
+              "width": 388,
+              "height": 78
+            },
+            "snippet": "<p class=\"mt-3 max-w-2xl font-serif text-base leading-relaxed text-foreground/70 sm:\u2026\">",
+            "nodeLabel": "A small, ongoing collection of what I'm building, studying, and making. From so\u2026"
+          }
+        }
+      ],
+      "label": "Responsive WebP images",
+      "artifactDirectory": "artifacts/performance/image-optimized",
+      "assetFileCount": 55,
+      "bundledImageBytes": 2310518
+    },
+    {
+      "recordedAt": "2026-10-11T05:14:19.505Z",
+      "localTimezone": "America/Los_Angeles",
+      "scope": "Current local production build; cold browser profiles; gzip text responses; no scrolling or user interaction",
+      "url": "http://127.0.0.1:4173/my-digital-moodboard/",
+      "nodeVersion": "v22.13.0",
+      "lighthouseVersion": "12.8.2",
+      "host": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "cpu": "Apple M1 Pro",
+        "logicalCpus": 8
+      },
+      "buildIndexSha256": "d3ffd3324e33a08d0daa10017cbd99f79d9e873015e8a92875fa78706d4bee4f",
+      "medians": {
+        "performanceScore": 95,
+        "firstContentfulPaintMs": 1886.5140000000001,
+        "largestContentfulPaintMs": 2628.052875,
+        "speedIndexMs": 1886.5140000000001,
+        "totalBlockingTimeMs": 0,
+        "cumulativeLayoutShift": 0.0005422129025307531,
+        "totalTransferBytes": 481901,
+        "imageTransferBytes": 262912,
+        "imageRequestCount": 9
+      },
+      "representativeRun": 3,
+      "runs": [
+        {
+          "run": 1,
+          "performanceScore": 95,
+          "firstContentfulPaintMs": 1886.5140000000001,
+          "largestContentfulPaintMs": 2602.69875,
+          "speedIndexMs": 1886.5140000000001,
+          "totalBlockingTimeMs": 0,
+          "cumulativeLayoutShift": 0.0005422129025307531,
+          "totalTransferBytes": 481901,
+          "imageTransferBytes": 262912,
+          "imageRequestCount": 9,
+          "imageRequests": [
+            {
+              "file": "about-sophie-480w-BH4hM70Y.webp",
+              "transferSize": 63264,
+              "resourceSize": 63064,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-kv-store-480w-BOmjwt8o.webp",
+              "transferSize": 11212,
+              "resourceSize": 11012,
+              "statusCode": 200
+            },
+            {
+              "file": "olmo-snow-symposium-480w-CdmIJYGs.webp",
+              "transferSize": 55170,
+              "resourceSize": 54970,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-http-server-480w-BGTWUzlU.webp",
+              "transferSize": 12100,
+              "resourceSize": 11900,
+              "statusCode": 200
+            },
+            {
+              "file": "vla-robot-arm-480w-ztuzzwII.webp",
+              "transferSize": 31732,
+              "resourceSize": 31532,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-i2-ta-480w-BnEpk7xZ.webp",
+              "transferSize": 15286,
+              "resourceSize": 15086,
+              "statusCode": 200
+            },
+            {
+              "file": "huskybids-presentation-480w-CrczIvjF.webp",
+              "transferSize": 8837,
+              "resourceSize": 8638,
+              "statusCode": 200
+            },
+            {
+              "file": "dubhacks-swag-480w-HoYHsUmX.webp",
+              "transferSize": 58362,
+              "resourceSize": 58162,
+              "statusCode": 200
+            },
+            {
+              "file": "study-ducky-v2-334w-6a705ib4.webp",
+              "transferSize": 6949,
+              "resourceSize": 6750,
+              "statusCode": 200
+            }
+          ],
+          "failedRequests": [],
+          "runWarnings": [],
+          "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+            "benchmarkIndex": 2764,
+            "credits": {}
+          },
+          "configSettings": {
+            "output": "html",
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "node",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": ["performance"],
+            "skipAudits": null
+          },
+          "lcpElement": {
+            "type": "node",
+            "lhId": "page-0-IMG",
+            "path": "1,HTML,1,BODY,1,MAIN,3,SECTION,0,DIV,4,DIV,0,SPAN,0,SPAN,0,BUTTON,0,IMG",
+            "selector": "span#pin-virtual-vla-- > span.relative > button.relative > img.block",
+            "boundingRect": {
+              "top": 420,
+              "bottom": 765,
+              "left": 210,
+              "right": 404,
+              "width": 194,
+              "height": 345
+            },
+            "snippet": "<img style=\"view-transition-name:pin-virtual-vla--\" loading=\"eager\" class=\"block h-full w-full object-cover transition duration-500 group-hover:scale\u2026\" data-image-id=\"vlaRobotArm\" src=\"http://127.0.0.1:4173/my-digital-moodboard/assets/vla-robot-arm-480w-ztuzz\u2026\" srcset=\"/my-digital-moodboard/assets/vla-robot-arm-160w-Dt70uOtx.webp 160w, /my-di\u2026\" sizes=\"(min-width: 1024px) calc((100vw - 72px) / 5), (min-width: 768px) calc((100\u2026\" width=\"605\" height=\"1077\" alt=\"A robotic arm at a caf\u00e9 counter\" decoding=\"async\">",
+            "nodeLabel": "A robotic arm at a caf\u00e9 counter"
+          }
+        },
+        {
+          "run": 2,
+          "performanceScore": 95,
+          "firstContentfulPaintMs": 1955.2744,
+          "largestContentfulPaintMs": 2705.3673999999996,
+          "speedIndexMs": 1955.2744,
+          "totalBlockingTimeMs": 0,
+          "cumulativeLayoutShift": 0.0005422129025307531,
+          "totalTransferBytes": 481901,
+          "imageTransferBytes": 262912,
+          "imageRequestCount": 9,
+          "imageRequests": [
+            {
+              "file": "about-sophie-480w-BH4hM70Y.webp",
+              "transferSize": 63264,
+              "resourceSize": 63064,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-kv-store-480w-BOmjwt8o.webp",
+              "transferSize": 11212,
+              "resourceSize": 11012,
+              "statusCode": 200
+            },
+            {
+              "file": "olmo-snow-symposium-480w-CdmIJYGs.webp",
+              "transferSize": 55170,
+              "resourceSize": 54970,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-http-server-480w-BGTWUzlU.webp",
+              "transferSize": 12100,
+              "resourceSize": 11900,
+              "statusCode": 200
+            },
+            {
+              "file": "vla-robot-arm-480w-ztuzzwII.webp",
+              "transferSize": 31732,
+              "resourceSize": 31532,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-i2-ta-480w-BnEpk7xZ.webp",
+              "transferSize": 15286,
+              "resourceSize": 15086,
+              "statusCode": 200
+            },
+            {
+              "file": "huskybids-presentation-480w-CrczIvjF.webp",
+              "transferSize": 8837,
+              "resourceSize": 8638,
+              "statusCode": 200
+            },
+            {
+              "file": "dubhacks-swag-480w-HoYHsUmX.webp",
+              "transferSize": 58362,
+              "resourceSize": 58162,
+              "statusCode": 200
+            },
+            {
+              "file": "study-ducky-v2-334w-6a705ib4.webp",
+              "transferSize": 6949,
+              "resourceSize": 6750,
+              "statusCode": 200
+            }
+          ],
+          "failedRequests": [],
+          "runWarnings": [],
+          "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+            "benchmarkIndex": 2738,
+            "credits": {}
+          },
+          "configSettings": {
+            "output": "html",
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "node",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": ["performance"],
+            "skipAudits": null
+          },
+          "lcpElement": {
+            "type": "node",
+            "lhId": "page-0-IMG",
+            "path": "1,HTML,1,BODY,1,MAIN,3,SECTION,0,DIV,4,DIV,0,SPAN,0,SPAN,0,BUTTON,0,IMG",
+            "selector": "span#pin-virtual-vla-- > span.relative > button.relative > img.block",
+            "boundingRect": {
+              "top": 420,
+              "bottom": 765,
+              "left": 210,
+              "right": 404,
+              "width": 194,
+              "height": 345
+            },
+            "snippet": "<img style=\"view-transition-name:pin-virtual-vla--\" loading=\"eager\" class=\"block h-full w-full object-cover transition duration-500 group-hover:scale\u2026\" data-image-id=\"vlaRobotArm\" src=\"http://127.0.0.1:4173/my-digital-moodboard/assets/vla-robot-arm-480w-ztuzz\u2026\" srcset=\"/my-digital-moodboard/assets/vla-robot-arm-160w-Dt70uOtx.webp 160w, /my-di\u2026\" sizes=\"(min-width: 1024px) calc((100vw - 72px) / 5), (min-width: 768px) calc((100\u2026\" width=\"605\" height=\"1077\" alt=\"A robotic arm at a caf\u00e9 counter\" decoding=\"async\">",
+            "nodeLabel": "A robotic arm at a caf\u00e9 counter"
+          }
+        },
+        {
+          "run": 3,
+          "performanceScore": 96,
+          "firstContentfulPaintMs": 1802.925,
+          "largestContentfulPaintMs": 2628.052875,
+          "speedIndexMs": 1802.925,
+          "totalBlockingTimeMs": 0,
+          "cumulativeLayoutShift": 0.0005422129025307531,
+          "totalTransferBytes": 481901,
+          "imageTransferBytes": 262912,
+          "imageRequestCount": 9,
+          "imageRequests": [
+            {
+              "file": "about-sophie-480w-BH4hM70Y.webp",
+              "transferSize": 63264,
+              "resourceSize": 63064,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-kv-store-480w-BOmjwt8o.webp",
+              "transferSize": 11212,
+              "resourceSize": 11012,
+              "statusCode": 200
+            },
+            {
+              "file": "olmo-snow-symposium-480w-CdmIJYGs.webp",
+              "transferSize": 55170,
+              "resourceSize": 54970,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-http-server-480w-BGTWUzlU.webp",
+              "transferSize": 12100,
+              "resourceSize": 11900,
+              "statusCode": 200
+            },
+            {
+              "file": "vla-robot-arm-480w-ztuzzwII.webp",
+              "transferSize": 31732,
+              "resourceSize": 31532,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-i2-ta-480w-BnEpk7xZ.webp",
+              "transferSize": 15286,
+              "resourceSize": 15086,
+              "statusCode": 200
+            },
+            {
+              "file": "huskybids-presentation-480w-CrczIvjF.webp",
+              "transferSize": 8837,
+              "resourceSize": 8638,
+              "statusCode": 200
+            },
+            {
+              "file": "dubhacks-swag-480w-HoYHsUmX.webp",
+              "transferSize": 58362,
+              "resourceSize": 58162,
+              "statusCode": 200
+            },
+            {
+              "file": "study-ducky-v2-334w-6a705ib4.webp",
+              "transferSize": 6949,
+              "resourceSize": 6750,
+              "statusCode": 200
+            }
+          ],
+          "failedRequests": [],
+          "runWarnings": [],
+          "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+            "benchmarkIndex": 2824.5,
+            "credits": {}
+          },
+          "configSettings": {
+            "output": "html",
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "node",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": ["performance"],
+            "skipAudits": null
+          },
+          "lcpElement": {
+            "type": "node",
+            "lhId": "page-0-IMG",
+            "path": "1,HTML,1,BODY,1,MAIN,3,SECTION,0,DIV,4,DIV,0,SPAN,0,SPAN,0,BUTTON,0,IMG",
+            "selector": "span#pin-virtual-vla-- > span.relative > button.relative > img.block",
+            "boundingRect": {
+              "top": 420,
+              "bottom": 765,
+              "left": 210,
+              "right": 404,
+              "width": 194,
+              "height": 345
+            },
+            "snippet": "<img style=\"view-transition-name:pin-virtual-vla--\" loading=\"eager\" class=\"block h-full w-full object-cover transition duration-500 group-hover:scale\u2026\" data-image-id=\"vlaRobotArm\" src=\"http://127.0.0.1:4173/my-digital-moodboard/assets/vla-robot-arm-480w-ztuzz\u2026\" srcset=\"/my-digital-moodboard/assets/vla-robot-arm-160w-Dt70uOtx.webp 160w, /my-di\u2026\" sizes=\"(min-width: 1024px) calc((100vw - 72px) / 5), (min-width: 768px) calc((100\u2026\" width=\"605\" height=\"1077\" alt=\"A robotic arm at a caf\u00e9 counter\" decoding=\"async\">",
+            "nodeLabel": "A robotic arm at a caf\u00e9 counter"
+          }
+        }
+      ],
+      "label": "CSS masonry and font preconnects",
+      "artifactDirectory": "artifacts/performance/mobile-optimized-final",
+      "assetFileCount": 55,
+      "bundledImageBytes": 2310518
+    },
+    {
+      "recordedAt": "2026-10-11T05:17:07.552Z",
+      "localTimezone": "America/Los_Angeles",
+      "scope": "Current local production build; cold browser profiles; gzip text responses; no scrolling or user interaction",
+      "url": "http://127.0.0.1:4173/my-digital-moodboard/",
+      "nodeVersion": "v22.13.0",
+      "lighthouseVersion": "12.8.2",
+      "host": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "cpu": "Apple M1 Pro",
+        "logicalCpus": 8
+      },
+      "buildIndexSha256": "34d16e169a88f7a4ff2d90f12440731dbe2c0b07acdc2d7d4379a26d96f0c653",
+      "medians": {
+        "performanceScore": 95,
+        "firstContentfulPaintMs": 1952.5931,
+        "largestContentfulPaintMs": 2704.1881999999996,
+        "speedIndexMs": 1952.5931,
+        "totalBlockingTimeMs": 0,
+        "cumulativeLayoutShift": 0.0005422129025307531,
+        "totalTransferBytes": 481984,
+        "imageTransferBytes": 262912,
+        "imageRequestCount": 9
+      },
+      "representativeRun": 3,
+      "runs": [
+        {
+          "run": 1,
+          "performanceScore": 95,
+          "firstContentfulPaintMs": 1894.6513999999997,
+          "largestContentfulPaintMs": 2757.64405,
+          "speedIndexMs": 1894.6513999999997,
+          "totalBlockingTimeMs": 0,
+          "cumulativeLayoutShift": 0.0005422129025307531,
+          "totalTransferBytes": 481984,
+          "imageTransferBytes": 262912,
+          "imageRequestCount": 9,
+          "imageRequests": [
+            {
+              "file": "about-sophie-480w-BH4hM70Y.webp",
+              "transferSize": 63264,
+              "resourceSize": 63064,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-kv-store-480w-BOmjwt8o.webp",
+              "transferSize": 11212,
+              "resourceSize": 11012,
+              "statusCode": 200
+            },
+            {
+              "file": "olmo-snow-symposium-480w-CdmIJYGs.webp",
+              "transferSize": 55170,
+              "resourceSize": 54970,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-http-server-480w-BGTWUzlU.webp",
+              "transferSize": 12100,
+              "resourceSize": 11900,
+              "statusCode": 200
+            },
+            {
+              "file": "vla-robot-arm-480w-ztuzzwII.webp",
+              "transferSize": 31732,
+              "resourceSize": 31532,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-i2-ta-480w-BnEpk7xZ.webp",
+              "transferSize": 15286,
+              "resourceSize": 15086,
+              "statusCode": 200
+            },
+            {
+              "file": "huskybids-presentation-480w-CrczIvjF.webp",
+              "transferSize": 8837,
+              "resourceSize": 8638,
+              "statusCode": 200
+            },
+            {
+              "file": "dubhacks-swag-480w-HoYHsUmX.webp",
+              "transferSize": 58362,
+              "resourceSize": 58162,
+              "statusCode": 200
+            },
+            {
+              "file": "study-ducky-v2-334w-6a705ib4.webp",
+              "transferSize": 6949,
+              "resourceSize": 6750,
+              "statusCode": 200
+            }
+          ],
+          "failedRequests": [],
+          "runWarnings": [],
+          "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+            "benchmarkIndex": 2652,
+            "credits": {}
+          },
+          "configSettings": {
+            "output": "html",
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "node",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": ["performance"],
+            "skipAudits": null
+          },
+          "lcpElement": {
+            "type": "node",
+            "lhId": "page-0-IMG",
+            "path": "1,HTML,1,BODY,1,MAIN,3,SECTION,0,DIV,4,DIV,0,SPAN,0,SPAN,0,BUTTON,0,IMG",
+            "selector": "span#pin-virtual-vla-- > span.relative > button.relative > img.block",
+            "boundingRect": {
+              "top": 420,
+              "bottom": 765,
+              "left": 210,
+              "right": 404,
+              "width": 194,
+              "height": 345
+            },
+            "snippet": "<img style=\"view-transition-name:pin-virtual-vla--\" loading=\"eager\" fetchpriority=\"high\" class=\"block h-full w-full object-cover transition duration-500 group-hover:scale\u2026\" data-image-id=\"vlaRobotArm\" src=\"http://127.0.0.1:4173/my-digital-moodboard/assets/vla-robot-arm-480w-ztuzz\u2026\" srcset=\"/my-digital-moodboard/assets/vla-robot-arm-160w-Dt70uOtx.webp 160w, /my-di\u2026\" sizes=\"(min-width: 1024px) calc((100vw - 72px) / 5), (min-width: 768px) calc((100\u2026\" width=\"605\" height=\"1077\" alt=\"A robotic arm at a caf\u00e9 counter\" decoding=\"async\">",
+            "nodeLabel": "A robotic arm at a caf\u00e9 counter"
+          }
+        },
+        {
+          "run": 2,
+          "performanceScore": 95,
+          "firstContentfulPaintMs": 1952.5931,
+          "largestContentfulPaintMs": 2702.6876,
+          "speedIndexMs": 1952.5931,
+          "totalBlockingTimeMs": 0,
+          "cumulativeLayoutShift": 0.0005422129025307531,
+          "totalTransferBytes": 481984,
+          "imageTransferBytes": 262912,
+          "imageRequestCount": 9,
+          "imageRequests": [
+            {
+              "file": "about-sophie-480w-BH4hM70Y.webp",
+              "transferSize": 63264,
+              "resourceSize": 63064,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-kv-store-480w-BOmjwt8o.webp",
+              "transferSize": 11212,
+              "resourceSize": 11012,
+              "statusCode": 200
+            },
+            {
+              "file": "olmo-snow-symposium-480w-CdmIJYGs.webp",
+              "transferSize": 55170,
+              "resourceSize": 54970,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-http-server-480w-BGTWUzlU.webp",
+              "transferSize": 12100,
+              "resourceSize": 11900,
+              "statusCode": 200
+            },
+            {
+              "file": "vla-robot-arm-480w-ztuzzwII.webp",
+              "transferSize": 31732,
+              "resourceSize": 31532,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-i2-ta-480w-BnEpk7xZ.webp",
+              "transferSize": 15286,
+              "resourceSize": 15086,
+              "statusCode": 200
+            },
+            {
+              "file": "huskybids-presentation-480w-CrczIvjF.webp",
+              "transferSize": 8837,
+              "resourceSize": 8638,
+              "statusCode": 200
+            },
+            {
+              "file": "dubhacks-swag-480w-HoYHsUmX.webp",
+              "transferSize": 58362,
+              "resourceSize": 58162,
+              "statusCode": 200
+            },
+            {
+              "file": "study-ducky-v2-334w-6a705ib4.webp",
+              "transferSize": 6949,
+              "resourceSize": 6750,
+              "statusCode": 200
+            }
+          ],
+          "failedRequests": [],
+          "runWarnings": [],
+          "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+            "benchmarkIndex": 2813.5,
+            "credits": {}
+          },
+          "configSettings": {
+            "output": "html",
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "node",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": ["performance"],
+            "skipAudits": null
+          },
+          "lcpElement": {
+            "type": "node",
+            "lhId": "page-0-IMG",
+            "path": "1,HTML,1,BODY,1,MAIN,3,SECTION,0,DIV,4,DIV,0,SPAN,0,SPAN,0,BUTTON,0,IMG",
+            "selector": "span#pin-virtual-vla-- > span.relative > button.relative > img.block",
+            "boundingRect": {
+              "top": 420,
+              "bottom": 765,
+              "left": 210,
+              "right": 404,
+              "width": 194,
+              "height": 345
+            },
+            "snippet": "<img style=\"view-transition-name:pin-virtual-vla--\" loading=\"eager\" fetchpriority=\"high\" class=\"block h-full w-full object-cover transition duration-500 group-hover:scale\u2026\" data-image-id=\"vlaRobotArm\" src=\"http://127.0.0.1:4173/my-digital-moodboard/assets/vla-robot-arm-480w-ztuzz\u2026\" srcset=\"/my-digital-moodboard/assets/vla-robot-arm-160w-Dt70uOtx.webp 160w, /my-di\u2026\" sizes=\"(min-width: 1024px) calc((100vw - 72px) / 5), (min-width: 768px) calc((100\u2026\" width=\"605\" height=\"1077\" alt=\"A robotic arm at a caf\u00e9 counter\" decoding=\"async\">",
+            "nodeLabel": "A robotic arm at a caf\u00e9 counter"
+          }
+        },
+        {
+          "run": 3,
+          "performanceScore": 95,
+          "firstContentfulPaintMs": 1954.0741999999998,
+          "largestContentfulPaintMs": 2704.1881999999996,
+          "speedIndexMs": 1954.0741999999998,
+          "totalBlockingTimeMs": 0,
+          "cumulativeLayoutShift": 0.0005422129025307531,
+          "totalTransferBytes": 481984,
+          "imageTransferBytes": 262912,
+          "imageRequestCount": 9,
+          "imageRequests": [
+            {
+              "file": "about-sophie-480w-BH4hM70Y.webp",
+              "transferSize": 63264,
+              "resourceSize": 63064,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-kv-store-480w-BOmjwt8o.webp",
+              "transferSize": 11212,
+              "resourceSize": 11012,
+              "statusCode": 200
+            },
+            {
+              "file": "olmo-snow-symposium-480w-CdmIJYGs.webp",
+              "transferSize": 55170,
+              "resourceSize": 54970,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-http-server-480w-BGTWUzlU.webp",
+              "transferSize": 12100,
+              "resourceSize": 11900,
+              "statusCode": 200
+            },
+            {
+              "file": "vla-robot-arm-480w-ztuzzwII.webp",
+              "transferSize": 31732,
+              "resourceSize": 31532,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-i2-ta-480w-BnEpk7xZ.webp",
+              "transferSize": 15286,
+              "resourceSize": 15086,
+              "statusCode": 200
+            },
+            {
+              "file": "huskybids-presentation-480w-CrczIvjF.webp",
+              "transferSize": 8837,
+              "resourceSize": 8638,
+              "statusCode": 200
+            },
+            {
+              "file": "dubhacks-swag-480w-HoYHsUmX.webp",
+              "transferSize": 58362,
+              "resourceSize": 58162,
+              "statusCode": 200
+            },
+            {
+              "file": "study-ducky-v2-334w-6a705ib4.webp",
+              "transferSize": 6949,
+              "resourceSize": 6750,
+              "statusCode": 200
+            }
+          ],
+          "failedRequests": [],
+          "runWarnings": [],
+          "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+            "benchmarkIndex": 2819.5,
+            "credits": {}
+          },
+          "configSettings": {
+            "output": "html",
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "node",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": ["performance"],
+            "skipAudits": null
+          },
+          "lcpElement": {
+            "type": "node",
+            "lhId": "page-0-IMG",
+            "path": "1,HTML,1,BODY,1,MAIN,3,SECTION,0,DIV,4,DIV,0,SPAN,0,SPAN,0,BUTTON,0,IMG",
+            "selector": "span#pin-virtual-vla-- > span.relative > button.relative > img.block",
+            "boundingRect": {
+              "top": 420,
+              "bottom": 765,
+              "left": 210,
+              "right": 404,
+              "width": 194,
+              "height": 345
+            },
+            "snippet": "<img style=\"view-transition-name:pin-virtual-vla--\" loading=\"eager\" fetchpriority=\"high\" class=\"block h-full w-full object-cover transition duration-500 group-hover:scale\u2026\" data-image-id=\"vlaRobotArm\" src=\"http://127.0.0.1:4173/my-digital-moodboard/assets/vla-robot-arm-480w-ztuzz\u2026\" srcset=\"/my-digital-moodboard/assets/vla-robot-arm-160w-Dt70uOtx.webp 160w, /my-di\u2026\" sizes=\"(min-width: 1024px) calc((100vw - 72px) / 5), (min-width: 768px) calc((100\u2026\" width=\"605\" height=\"1077\" alt=\"A robotic arm at a caf\u00e9 counter\" decoding=\"async\">",
+            "nodeLabel": "A robotic arm at a caf\u00e9 counter"
+          }
+        }
+      ],
+      "label": "Measured VLA priority hint",
+      "artifactDirectory": "artifacts/performance/mobile-optimized-priority",
+      "assetFileCount": 55,
+      "bundledImageBytes": 2310518
+    },
+    {
+      "recordedAt": "2026-10-11T05:20:11.063Z",
+      "localTimezone": "America/Los_Angeles",
+      "scope": "Current local production build; cold browser profiles; gzip text responses; no scrolling or user interaction",
+      "url": "http://127.0.0.1:4173/my-digital-moodboard/",
+      "nodeVersion": "v22.13.0",
+      "lighthouseVersion": "12.8.2",
+      "host": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "cpu": "Apple M1 Pro",
+        "logicalCpus": 8
+      },
+      "buildIndexSha256": "20a4b50bb0cc46206e293cad6e9dda5f673c0e970b836c9cab9c20fd34376bba",
+      "medians": {
+        "performanceScore": 93,
+        "firstContentfulPaintMs": 1656.1986,
+        "largestContentfulPaintMs": 3078.0078000000003,
+        "speedIndexMs": 1656.1986,
+        "totalBlockingTimeMs": 0,
+        "cumulativeLayoutShift": 0,
+        "totalTransferBytes": 481231,
+        "imageTransferBytes": 262912,
+        "imageRequestCount": 9
+      },
+      "representativeRun": 3,
+      "runs": [
+        {
+          "run": 1,
+          "performanceScore": 94,
+          "firstContentfulPaintMs": 1731.2526,
+          "largestContentfulPaintMs": 2971.8157499999998,
+          "speedIndexMs": 1731.2526,
+          "totalBlockingTimeMs": 0,
+          "cumulativeLayoutShift": 0,
+          "totalTransferBytes": 481231,
+          "imageTransferBytes": 262912,
+          "imageRequestCount": 9,
+          "imageRequests": [
+            {
+              "file": "about-sophie-480w-BH4hM70Y.webp",
+              "transferSize": 63264,
+              "resourceSize": 63064,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-kv-store-480w-BOmjwt8o.webp",
+              "transferSize": 11212,
+              "resourceSize": 11012,
+              "statusCode": 200
+            },
+            {
+              "file": "olmo-snow-symposium-480w-CdmIJYGs.webp",
+              "transferSize": 55170,
+              "resourceSize": 54970,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-http-server-480w-BGTWUzlU.webp",
+              "transferSize": 12100,
+              "resourceSize": 11900,
+              "statusCode": 200
+            },
+            {
+              "file": "vla-robot-arm-480w-ztuzzwII.webp",
+              "transferSize": 31732,
+              "resourceSize": 31532,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-i2-ta-480w-BnEpk7xZ.webp",
+              "transferSize": 15286,
+              "resourceSize": 15086,
+              "statusCode": 200
+            },
+            {
+              "file": "huskybids-presentation-480w-CrczIvjF.webp",
+              "transferSize": 8837,
+              "resourceSize": 8638,
+              "statusCode": 200
+            },
+            {
+              "file": "dubhacks-swag-480w-HoYHsUmX.webp",
+              "transferSize": 58362,
+              "resourceSize": 58162,
+              "statusCode": 200
+            },
+            {
+              "file": "study-ducky-v2-334w-6a705ib4.webp",
+              "transferSize": 6949,
+              "resourceSize": 6750,
+              "statusCode": 200
+            }
+          ],
+          "failedRequests": [],
+          "runWarnings": [],
+          "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+            "benchmarkIndex": 2802.5,
+            "credits": {}
+          },
+          "configSettings": {
+            "output": "html",
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "node",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": ["performance"],
+            "skipAudits": null
+          },
+          "lcpElement": {
+            "type": "node",
+            "lhId": "page-0-IMG",
+            "path": "1,HTML,1,BODY,1,MAIN,3,SECTION,0,DIV,4,DIV,0,SPAN,0,SPAN,0,BUTTON,0,IMG",
+            "selector": "span#pin-virtual-vla-- > span.relative > button.relative > img.block",
+            "boundingRect": {
+              "top": 420,
+              "bottom": 765,
+              "left": 210,
+              "right": 404,
+              "width": 194,
+              "height": 345
+            },
+            "snippet": "<img style=\"view-transition-name:pin-virtual-vla--\" loading=\"eager\" fetchpriority=\"high\" class=\"block h-full w-full object-cover transition duration-500 group-hover:scale\u2026\" data-image-id=\"vlaRobotArm\" src=\"http://127.0.0.1:4173/my-digital-moodboard/assets/vla-robot-arm-480w-ztuzz\u2026\" srcset=\"/my-digital-moodboard/assets/vla-robot-arm-160w-Dt70uOtx.webp 160w, /my-di\u2026\" sizes=\"(min-width: 1024px) calc((100vw - 72px) / 5), (min-width: 768px) calc((100\u2026\" width=\"605\" height=\"1077\" alt=\"A robotic arm at a caf\u00e9 counter\" decoding=\"async\">",
+            "nodeLabel": "A robotic arm at a caf\u00e9 counter"
+          }
+        },
+        {
+          "run": 2,
+          "performanceScore": 93,
+          "firstContentfulPaintMs": 1656.1986,
+          "largestContentfulPaintMs": 3081.1985999999997,
+          "speedIndexMs": 1656.1986,
+          "totalBlockingTimeMs": 0,
+          "cumulativeLayoutShift": 0,
+          "totalTransferBytes": 481231,
+          "imageTransferBytes": 262912,
+          "imageRequestCount": 9,
+          "imageRequests": [
+            {
+              "file": "about-sophie-480w-BH4hM70Y.webp",
+              "transferSize": 63264,
+              "resourceSize": 63064,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-kv-store-480w-BOmjwt8o.webp",
+              "transferSize": 11212,
+              "resourceSize": 11012,
+              "statusCode": 200
+            },
+            {
+              "file": "olmo-snow-symposium-480w-CdmIJYGs.webp",
+              "transferSize": 55170,
+              "resourceSize": 54970,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-http-server-480w-BGTWUzlU.webp",
+              "transferSize": 12100,
+              "resourceSize": 11900,
+              "statusCode": 200
+            },
+            {
+              "file": "vla-robot-arm-480w-ztuzzwII.webp",
+              "transferSize": 31732,
+              "resourceSize": 31532,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-i2-ta-480w-BnEpk7xZ.webp",
+              "transferSize": 15286,
+              "resourceSize": 15086,
+              "statusCode": 200
+            },
+            {
+              "file": "huskybids-presentation-480w-CrczIvjF.webp",
+              "transferSize": 8837,
+              "resourceSize": 8638,
+              "statusCode": 200
+            },
+            {
+              "file": "dubhacks-swag-480w-HoYHsUmX.webp",
+              "transferSize": 58362,
+              "resourceSize": 58162,
+              "statusCode": 200
+            },
+            {
+              "file": "study-ducky-v2-334w-6a705ib4.webp",
+              "transferSize": 6949,
+              "resourceSize": 6750,
+              "statusCode": 200
+            }
+          ],
+          "failedRequests": [],
+          "runWarnings": [],
+          "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+            "benchmarkIndex": 2746,
+            "credits": {}
+          },
+          "configSettings": {
+            "output": "html",
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "node",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": ["performance"],
+            "skipAudits": null
+          },
+          "lcpElement": {
+            "type": "node",
+            "lhId": "page-0-IMG",
+            "path": "1,HTML,1,BODY,1,MAIN,3,SECTION,0,DIV,4,DIV,0,SPAN,0,SPAN,0,BUTTON,0,IMG",
+            "selector": "span#pin-virtual-vla-- > span.relative > button.relative > img.block",
+            "boundingRect": {
+              "top": 420,
+              "bottom": 765,
+              "left": 210,
+              "right": 404,
+              "width": 194,
+              "height": 345
+            },
+            "snippet": "<img style=\"view-transition-name:pin-virtual-vla--\" loading=\"eager\" fetchpriority=\"high\" class=\"block h-full w-full object-cover transition duration-500 group-hover:scale\u2026\" data-image-id=\"vlaRobotArm\" src=\"http://127.0.0.1:4173/my-digital-moodboard/assets/vla-robot-arm-480w-ztuzz\u2026\" srcset=\"/my-digital-moodboard/assets/vla-robot-arm-160w-Dt70uOtx.webp 160w, /my-di\u2026\" sizes=\"(min-width: 1024px) calc((100vw - 72px) / 5), (min-width: 768px) calc((100\u2026\" width=\"605\" height=\"1077\" alt=\"A robotic arm at a caf\u00e9 counter\" decoding=\"async\">",
+            "nodeLabel": "A robotic arm at a caf\u00e9 counter"
+          }
+        },
+        {
+          "run": 3,
+          "performanceScore": 93,
+          "firstContentfulPaintMs": 1653.0078,
+          "largestContentfulPaintMs": 3078.0078000000003,
+          "speedIndexMs": 1653.0078,
+          "totalBlockingTimeMs": 0,
+          "cumulativeLayoutShift": 0,
+          "totalTransferBytes": 481231,
+          "imageTransferBytes": 262912,
+          "imageRequestCount": 9,
+          "imageRequests": [
+            {
+              "file": "about-sophie-480w-BH4hM70Y.webp",
+              "transferSize": 63264,
+              "resourceSize": 63064,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-kv-store-480w-BOmjwt8o.webp",
+              "transferSize": 11212,
+              "resourceSize": 11012,
+              "statusCode": 200
+            },
+            {
+              "file": "olmo-snow-symposium-480w-CdmIJYGs.webp",
+              "transferSize": 55170,
+              "resourceSize": 54970,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-http-server-480w-BGTWUzlU.webp",
+              "transferSize": 12100,
+              "resourceSize": 11900,
+              "statusCode": 200
+            },
+            {
+              "file": "vla-robot-arm-480w-ztuzzwII.webp",
+              "transferSize": 31732,
+              "resourceSize": 31532,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-i2-ta-480w-BnEpk7xZ.webp",
+              "transferSize": 15286,
+              "resourceSize": 15086,
+              "statusCode": 200
+            },
+            {
+              "file": "huskybids-presentation-480w-CrczIvjF.webp",
+              "transferSize": 8837,
+              "resourceSize": 8638,
+              "statusCode": 200
+            },
+            {
+              "file": "dubhacks-swag-480w-HoYHsUmX.webp",
+              "transferSize": 58362,
+              "resourceSize": 58162,
+              "statusCode": 200
+            },
+            {
+              "file": "study-ducky-v2-334w-6a705ib4.webp",
+              "transferSize": 6949,
+              "resourceSize": 6750,
+              "statusCode": 200
+            }
+          ],
+          "failedRequests": [],
+          "runWarnings": [],
+          "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+            "benchmarkIndex": 2778.5,
+            "credits": {}
+          },
+          "configSettings": {
+            "output": "html",
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "node",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": ["performance"],
+            "skipAudits": null
+          },
+          "lcpElement": {
+            "type": "node",
+            "lhId": "page-0-IMG",
+            "path": "1,HTML,1,BODY,1,MAIN,3,SECTION,0,DIV,4,DIV,0,SPAN,0,SPAN,0,BUTTON,0,IMG",
+            "selector": "span#pin-virtual-vla-- > span.relative > button.relative > img.block",
+            "boundingRect": {
+              "top": 420,
+              "bottom": 765,
+              "left": 210,
+              "right": 404,
+              "width": 194,
+              "height": 345
+            },
+            "snippet": "<img style=\"view-transition-name:pin-virtual-vla--\" loading=\"eager\" fetchpriority=\"high\" class=\"block h-full w-full object-cover transition duration-500 group-hover:scale\u2026\" data-image-id=\"vlaRobotArm\" src=\"http://127.0.0.1:4173/my-digital-moodboard/assets/vla-robot-arm-480w-ztuzz\u2026\" srcset=\"/my-digital-moodboard/assets/vla-robot-arm-160w-Dt70uOtx.webp 160w, /my-di\u2026\" sizes=\"(min-width: 1024px) calc((100vw - 72px) / 5), (min-width: 768px) calc((100\u2026\" width=\"605\" height=\"1077\" alt=\"A robotic arm at a caf\u00e9 counter\" decoding=\"async\">",
+            "nodeLabel": "A robotic arm at a caf\u00e9 counter"
+          }
+        }
+      ],
+      "label": "Self-hosted fonts with preloads (rejected)",
+      "artifactDirectory": "artifacts/performance/mobile-optimized-fonts",
+      "assetFileCount": 57,
+      "bundledImageBytes": 2310518
+    },
+    {
+      "recordedAt": "2026-10-11T05:22:29.321Z",
+      "localTimezone": "America/Los_Angeles",
+      "scope": "Current local production build; cold browser profiles; gzip text responses; no scrolling or user interaction",
+      "url": "http://127.0.0.1:4173/my-digital-moodboard/",
+      "nodeVersion": "v22.13.0",
+      "lighthouseVersion": "12.8.2",
+      "host": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "cpu": "Apple M1 Pro",
+        "logicalCpus": 8
+      },
+      "buildIndexSha256": "2c4c4fafd5d20b1242442031233e244885fcdead3c1baed4ef8e8d744bf14934",
+      "medians": {
+        "performanceScore": 92,
+        "firstContentfulPaintMs": 2102.7553000000003,
+        "largestContentfulPaintMs": 3076.5698,
+        "speedIndexMs": 2102.7553000000003,
+        "totalBlockingTimeMs": 0,
+        "cumulativeLayoutShift": 0.0005422129025307531,
+        "totalTransferBytes": 481053,
+        "imageTransferBytes": 262912,
+        "imageRequestCount": 9
+      },
+      "representativeRun": 3,
+      "runs": [
+        {
+          "run": 1,
+          "performanceScore": 93,
+          "firstContentfulPaintMs": 2170.6418,
+          "largestContentfulPaintMs": 2966.8022499999997,
+          "speedIndexMs": 2170.6418,
+          "totalBlockingTimeMs": 0,
+          "cumulativeLayoutShift": 0.0005422129025307531,
+          "totalTransferBytes": 481053,
+          "imageTransferBytes": 262912,
+          "imageRequestCount": 9,
+          "imageRequests": [
+            {
+              "file": "about-sophie-480w-BH4hM70Y.webp",
+              "transferSize": 63264,
+              "resourceSize": 63064,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-kv-store-480w-BOmjwt8o.webp",
+              "transferSize": 11212,
+              "resourceSize": 11012,
+              "statusCode": 200
+            },
+            {
+              "file": "olmo-snow-symposium-480w-CdmIJYGs.webp",
+              "transferSize": 55170,
+              "resourceSize": 54970,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-http-server-480w-BGTWUzlU.webp",
+              "transferSize": 12100,
+              "resourceSize": 11900,
+              "statusCode": 200
+            },
+            {
+              "file": "vla-robot-arm-480w-ztuzzwII.webp",
+              "transferSize": 31732,
+              "resourceSize": 31532,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-i2-ta-480w-BnEpk7xZ.webp",
+              "transferSize": 15286,
+              "resourceSize": 15086,
+              "statusCode": 200
+            },
+            {
+              "file": "huskybids-presentation-480w-CrczIvjF.webp",
+              "transferSize": 8837,
+              "resourceSize": 8638,
+              "statusCode": 200
+            },
+            {
+              "file": "dubhacks-swag-480w-HoYHsUmX.webp",
+              "transferSize": 58362,
+              "resourceSize": 58162,
+              "statusCode": 200
+            },
+            {
+              "file": "study-ducky-v2-334w-6a705ib4.webp",
+              "transferSize": 6949,
+              "resourceSize": 6750,
+              "statusCode": 200
+            }
+          ],
+          "failedRequests": [],
+          "runWarnings": [],
+          "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+            "benchmarkIndex": 2756.5,
+            "credits": {}
+          },
+          "configSettings": {
+            "output": "html",
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "node",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": ["performance"],
+            "skipAudits": null
+          },
+          "lcpElement": {
+            "type": "node",
+            "lhId": "page-0-IMG",
+            "path": "1,HTML,1,BODY,1,MAIN,3,SECTION,0,DIV,4,DIV,0,SPAN,0,SPAN,0,BUTTON,0,IMG",
+            "selector": "span#pin-virtual-vla-- > span.relative > button.relative > img.block",
+            "boundingRect": {
+              "top": 420,
+              "bottom": 765,
+              "left": 210,
+              "right": 404,
+              "width": 194,
+              "height": 345
+            },
+            "snippet": "<img style=\"view-transition-name:pin-virtual-vla--\" loading=\"eager\" fetchpriority=\"high\" class=\"block h-full w-full object-cover transition duration-500 group-hover:scale\u2026\" data-image-id=\"vlaRobotArm\" src=\"http://127.0.0.1:4173/my-digital-moodboard/assets/vla-robot-arm-480w-ztuzz\u2026\" srcset=\"/my-digital-moodboard/assets/vla-robot-arm-160w-Dt70uOtx.webp 160w, /my-di\u2026\" sizes=\"(min-width: 1024px) calc((100vw - 72px) / 5), (min-width: 768px) calc((100\u2026\" width=\"605\" height=\"1077\" alt=\"A robotic arm at a caf\u00e9 counter\" decoding=\"async\">",
+            "nodeLabel": "A robotic arm at a caf\u00e9 counter"
+          }
+        },
+        {
+          "run": 2,
+          "performanceScore": 92,
+          "firstContentfulPaintMs": 2102.7553000000003,
+          "largestContentfulPaintMs": 3077.7553,
+          "speedIndexMs": 2102.7553000000003,
+          "totalBlockingTimeMs": 0,
+          "cumulativeLayoutShift": 0.0005422129025307531,
+          "totalTransferBytes": 481053,
+          "imageTransferBytes": 262912,
+          "imageRequestCount": 9,
+          "imageRequests": [
+            {
+              "file": "about-sophie-480w-BH4hM70Y.webp",
+              "transferSize": 63264,
+              "resourceSize": 63064,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-kv-store-480w-BOmjwt8o.webp",
+              "transferSize": 11212,
+              "resourceSize": 11012,
+              "statusCode": 200
+            },
+            {
+              "file": "olmo-snow-symposium-480w-CdmIJYGs.webp",
+              "transferSize": 55170,
+              "resourceSize": 54970,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-http-server-480w-BGTWUzlU.webp",
+              "transferSize": 12100,
+              "resourceSize": 11900,
+              "statusCode": 200
+            },
+            {
+              "file": "vla-robot-arm-480w-ztuzzwII.webp",
+              "transferSize": 31732,
+              "resourceSize": 31532,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-i2-ta-480w-BnEpk7xZ.webp",
+              "transferSize": 15286,
+              "resourceSize": 15086,
+              "statusCode": 200
+            },
+            {
+              "file": "huskybids-presentation-480w-CrczIvjF.webp",
+              "transferSize": 8837,
+              "resourceSize": 8638,
+              "statusCode": 200
+            },
+            {
+              "file": "dubhacks-swag-480w-HoYHsUmX.webp",
+              "transferSize": 58362,
+              "resourceSize": 58162,
+              "statusCode": 200
+            },
+            {
+              "file": "study-ducky-v2-334w-6a705ib4.webp",
+              "transferSize": 6949,
+              "resourceSize": 6750,
+              "statusCode": 200
+            }
+          ],
+          "failedRequests": [],
+          "runWarnings": [],
+          "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+            "benchmarkIndex": 2839.5,
+            "credits": {}
+          },
+          "configSettings": {
+            "output": "html",
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "node",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": ["performance"],
+            "skipAudits": null
+          },
+          "lcpElement": {
+            "type": "node",
+            "lhId": "page-0-IMG",
+            "path": "1,HTML,1,BODY,1,MAIN,3,SECTION,0,DIV,4,DIV,0,SPAN,0,SPAN,0,BUTTON,0,IMG",
+            "selector": "span#pin-virtual-vla-- > span.relative > button.relative > img.block",
+            "boundingRect": {
+              "top": 420,
+              "bottom": 765,
+              "left": 210,
+              "right": 404,
+              "width": 194,
+              "height": 345
+            },
+            "snippet": "<img style=\"view-transition-name:pin-virtual-vla--\" loading=\"eager\" fetchpriority=\"high\" class=\"block h-full w-full object-cover transition duration-500 group-hover:scale\u2026\" data-image-id=\"vlaRobotArm\" src=\"http://127.0.0.1:4173/my-digital-moodboard/assets/vla-robot-arm-480w-ztuzz\u2026\" srcset=\"/my-digital-moodboard/assets/vla-robot-arm-160w-Dt70uOtx.webp 160w, /my-di\u2026\" sizes=\"(min-width: 1024px) calc((100vw - 72px) / 5), (min-width: 768px) calc((100\u2026\" width=\"605\" height=\"1077\" alt=\"A robotic arm at a caf\u00e9 counter\" decoding=\"async\">",
+            "nodeLabel": "A robotic arm at a caf\u00e9 counter"
+          }
+        },
+        {
+          "run": 3,
+          "performanceScore": 92,
+          "firstContentfulPaintMs": 2101.5697999999998,
+          "largestContentfulPaintMs": 3076.5698,
+          "speedIndexMs": 2101.5697999999998,
+          "totalBlockingTimeMs": 0,
+          "cumulativeLayoutShift": 0.0005422129025307531,
+          "totalTransferBytes": 481053,
+          "imageTransferBytes": 262912,
+          "imageRequestCount": 9,
+          "imageRequests": [
+            {
+              "file": "about-sophie-480w-BH4hM70Y.webp",
+              "transferSize": 63264,
+              "resourceSize": 63064,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-kv-store-480w-BOmjwt8o.webp",
+              "transferSize": 11212,
+              "resourceSize": 11012,
+              "statusCode": 200
+            },
+            {
+              "file": "olmo-snow-symposium-480w-CdmIJYGs.webp",
+              "transferSize": 55170,
+              "resourceSize": 54970,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-http-server-480w-BGTWUzlU.webp",
+              "transferSize": 12100,
+              "resourceSize": 11900,
+              "statusCode": 200
+            },
+            {
+              "file": "vla-robot-arm-480w-ztuzzwII.webp",
+              "transferSize": 31732,
+              "resourceSize": 31532,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-i2-ta-480w-BnEpk7xZ.webp",
+              "transferSize": 15286,
+              "resourceSize": 15086,
+              "statusCode": 200
+            },
+            {
+              "file": "huskybids-presentation-480w-CrczIvjF.webp",
+              "transferSize": 8837,
+              "resourceSize": 8638,
+              "statusCode": 200
+            },
+            {
+              "file": "dubhacks-swag-480w-HoYHsUmX.webp",
+              "transferSize": 58362,
+              "resourceSize": 58162,
+              "statusCode": 200
+            },
+            {
+              "file": "study-ducky-v2-334w-6a705ib4.webp",
+              "transferSize": 6949,
+              "resourceSize": 6750,
+              "statusCode": 200
+            }
+          ],
+          "failedRequests": [],
+          "runWarnings": [],
+          "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+            "benchmarkIndex": 2834,
+            "credits": {}
+          },
+          "configSettings": {
+            "output": "html",
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "node",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": ["performance"],
+            "skipAudits": null
+          },
+          "lcpElement": {
+            "type": "node",
+            "lhId": "page-0-IMG",
+            "path": "1,HTML,1,BODY,1,MAIN,3,SECTION,0,DIV,4,DIV,0,SPAN,0,SPAN,0,BUTTON,0,IMG",
+            "selector": "span#pin-virtual-vla-- > span.relative > button.relative > img.block",
+            "boundingRect": {
+              "top": 420,
+              "bottom": 765,
+              "left": 210,
+              "right": 404,
+              "width": 194,
+              "height": 345
+            },
+            "snippet": "<img style=\"view-transition-name:pin-virtual-vla--\" loading=\"eager\" fetchpriority=\"high\" class=\"block h-full w-full object-cover transition duration-500 group-hover:scale\u2026\" data-image-id=\"vlaRobotArm\" src=\"http://127.0.0.1:4173/my-digital-moodboard/assets/vla-robot-arm-480w-ztuzz\u2026\" srcset=\"/my-digital-moodboard/assets/vla-robot-arm-160w-Dt70uOtx.webp 160w, /my-di\u2026\" sizes=\"(min-width: 1024px) calc((100vw - 72px) / 5), (min-width: 768px) calc((100\u2026\" width=\"605\" height=\"1077\" alt=\"A robotic arm at a caf\u00e9 counter\" decoding=\"async\">",
+            "nodeLabel": "A robotic arm at a caf\u00e9 counter"
+          }
+        }
+      ],
+      "label": "Self-hosted fonts discovered in CSS (rejected)",
+      "artifactDirectory": "artifacts/performance/mobile-optimized-fonts-css",
+      "assetFileCount": 57,
+      "bundledImageBytes": 2310518
+    },
+    {
+      "recordedAt": "2026-10-11T05:26:11.500Z",
+      "localTimezone": "America/Los_Angeles",
+      "scope": "Current local production build; cold browser profiles; gzip text responses; no scrolling or user interaction",
+      "url": "http://127.0.0.1:4173/my-digital-moodboard/",
+      "nodeVersion": "v22.13.0",
+      "lighthouseVersion": "12.8.2",
+      "host": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "cpu": "Apple M1 Pro",
+        "logicalCpus": 8
+      },
+      "buildIndexSha256": "7b410a9ec6da8e844338136ae7a0d9fa86b084b9ab32b9fbbb26e47186a4d90e",
+      "medians": {
+        "performanceScore": 95,
+        "firstContentfulPaintMs": 1879.0220000000004,
+        "largestContentfulPaintMs": 2745.60625,
+        "speedIndexMs": 1879.0220000000004,
+        "totalBlockingTimeMs": 0,
+        "cumulativeLayoutShift": 0.0005422129025307531,
+        "totalTransferBytes": 481984,
+        "imageTransferBytes": 262912,
+        "imageRequestCount": 9
+      },
+      "representativeRun": 1,
+      "runs": [
+        {
+          "run": 1,
+          "performanceScore": 95,
+          "firstContentfulPaintMs": 1879.0220000000004,
+          "largestContentfulPaintMs": 2745.60625,
+          "speedIndexMs": 1879.0220000000004,
+          "totalBlockingTimeMs": 0,
+          "cumulativeLayoutShift": 0.0005422129025307531,
+          "totalTransferBytes": 481984,
+          "imageTransferBytes": 262912,
+          "imageRequestCount": 9,
+          "imageRequests": [
+            {
+              "file": "about-sophie-480w-BH4hM70Y.webp",
+              "transferSize": 63264,
+              "resourceSize": 63064,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-kv-store-480w-BOmjwt8o.webp",
+              "transferSize": 11212,
+              "resourceSize": 11012,
+              "statusCode": 200
+            },
+            {
+              "file": "olmo-snow-symposium-480w-CdmIJYGs.webp",
+              "transferSize": 55170,
+              "resourceSize": 54970,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-http-server-480w-BGTWUzlU.webp",
+              "transferSize": 12100,
+              "resourceSize": 11900,
+              "statusCode": 200
+            },
+            {
+              "file": "vla-robot-arm-480w-ztuzzwII.webp",
+              "transferSize": 31732,
+              "resourceSize": 31532,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-i2-ta-480w-BnEpk7xZ.webp",
+              "transferSize": 15286,
+              "resourceSize": 15086,
+              "statusCode": 200
+            },
+            {
+              "file": "huskybids-presentation-480w-CrczIvjF.webp",
+              "transferSize": 8837,
+              "resourceSize": 8638,
+              "statusCode": 200
+            },
+            {
+              "file": "dubhacks-swag-480w-HoYHsUmX.webp",
+              "transferSize": 58362,
+              "resourceSize": 58162,
+              "statusCode": 200
+            },
+            {
+              "file": "study-ducky-v2-334w-6a705ib4.webp",
+              "transferSize": 6949,
+              "resourceSize": 6750,
+              "statusCode": 200
+            }
+          ],
+          "failedRequests": [],
+          "runWarnings": [],
+          "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+            "benchmarkIndex": 2797.5,
+            "credits": {}
+          },
+          "configSettings": {
+            "output": "html",
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "node",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": ["performance"],
+            "skipAudits": null
+          },
+          "lcpElement": {
+            "type": "node",
+            "lhId": "page-0-IMG",
+            "path": "1,HTML,1,BODY,1,MAIN,3,SECTION,0,DIV,4,DIV,0,SPAN,0,SPAN,0,BUTTON,0,IMG",
+            "selector": "span#pin-virtual-vla-- > span.relative > button.relative > img.block",
+            "boundingRect": {
+              "top": 420,
+              "bottom": 765,
+              "left": 210,
+              "right": 404,
+              "width": 194,
+              "height": 345
+            },
+            "snippet": "<img style=\"view-transition-name:pin-virtual-vla--\" loading=\"eager\" fetchpriority=\"high\" class=\"block h-full w-full object-cover transition duration-500 group-hover:scale\u2026\" data-image-id=\"vlaRobotArm\" src=\"http://127.0.0.1:4173/my-digital-moodboard/assets/vla-robot-arm-480w-ztuzz\u2026\" srcset=\"/my-digital-moodboard/assets/vla-robot-arm-160w-Dt70uOtx.webp 160w, /my-di\u2026\" sizes=\"(min-width: 1024px) calc((100vw - 72px) / 5), (min-width: 768px) calc((100\u2026\" width=\"605\" height=\"1077\" alt=\"A robotic arm at a caf\u00e9 counter\" decoding=\"async\">",
+            "nodeLabel": "A robotic arm at a caf\u00e9 counter"
+          }
+        },
+        {
+          "run": 2,
+          "performanceScore": 95,
+          "firstContentfulPaintMs": 1804.1438000000003,
+          "largestContentfulPaintMs": 2704.3139,
+          "speedIndexMs": 1804.1438000000003,
+          "totalBlockingTimeMs": 0,
+          "cumulativeLayoutShift": 0.0005422129025307531,
+          "totalTransferBytes": 481984,
+          "imageTransferBytes": 262912,
+          "imageRequestCount": 9,
+          "imageRequests": [
+            {
+              "file": "about-sophie-480w-BH4hM70Y.webp",
+              "transferSize": 63264,
+              "resourceSize": 63064,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-kv-store-480w-BOmjwt8o.webp",
+              "transferSize": 11212,
+              "resourceSize": 11012,
+              "statusCode": 200
+            },
+            {
+              "file": "olmo-snow-symposium-480w-CdmIJYGs.webp",
+              "transferSize": 55170,
+              "resourceSize": 54970,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-http-server-480w-BGTWUzlU.webp",
+              "transferSize": 12100,
+              "resourceSize": 11900,
+              "statusCode": 200
+            },
+            {
+              "file": "vla-robot-arm-480w-ztuzzwII.webp",
+              "transferSize": 31732,
+              "resourceSize": 31532,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-i2-ta-480w-BnEpk7xZ.webp",
+              "transferSize": 15286,
+              "resourceSize": 15086,
+              "statusCode": 200
+            },
+            {
+              "file": "huskybids-presentation-480w-CrczIvjF.webp",
+              "transferSize": 8837,
+              "resourceSize": 8638,
+              "statusCode": 200
+            },
+            {
+              "file": "dubhacks-swag-480w-HoYHsUmX.webp",
+              "transferSize": 58362,
+              "resourceSize": 58162,
+              "statusCode": 200
+            },
+            {
+              "file": "study-ducky-v2-334w-6a705ib4.webp",
+              "transferSize": 6949,
+              "resourceSize": 6750,
+              "statusCode": 200
+            }
+          ],
+          "failedRequests": [],
+          "runWarnings": [],
+          "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+            "benchmarkIndex": 2826,
+            "credits": {}
+          },
+          "configSettings": {
+            "output": "html",
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "node",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": ["performance"],
+            "skipAudits": null
+          },
+          "lcpElement": {
+            "type": "node",
+            "lhId": "page-0-IMG",
+            "path": "1,HTML,1,BODY,1,MAIN,3,SECTION,0,DIV,4,DIV,0,SPAN,0,SPAN,0,BUTTON,0,IMG",
+            "selector": "span#pin-virtual-vla-- > span.relative > button.relative > img.block",
+            "boundingRect": {
+              "top": 420,
+              "bottom": 765,
+              "left": 210,
+              "right": 404,
+              "width": 194,
+              "height": 345
+            },
+            "snippet": "<img style=\"view-transition-name:pin-virtual-vla--\" loading=\"eager\" fetchpriority=\"high\" class=\"block h-full w-full object-cover transition duration-500 group-hover:scale\u2026\" data-image-id=\"vlaRobotArm\" src=\"http://127.0.0.1:4173/my-digital-moodboard/assets/vla-robot-arm-480w-ztuzz\u2026\" srcset=\"/my-digital-moodboard/assets/vla-robot-arm-160w-Dt70uOtx.webp 160w, /my-di\u2026\" sizes=\"(min-width: 1024px) calc((100vw - 72px) / 5), (min-width: 768px) calc((100\u2026\" width=\"605\" height=\"1077\" alt=\"A robotic arm at a caf\u00e9 counter\" decoding=\"async\">",
+            "nodeLabel": "A robotic arm at a caf\u00e9 counter"
+          }
+        },
+        {
+          "run": 3,
+          "performanceScore": 92,
+          "firstContentfulPaintMs": 2294.958,
+          "largestContentfulPaintMs": 2948.888,
+          "speedIndexMs": 2294.958,
+          "totalBlockingTimeMs": 0,
+          "cumulativeLayoutShift": 0.0005422129025307531,
+          "totalTransferBytes": 481984,
+          "imageTransferBytes": 262912,
+          "imageRequestCount": 9,
+          "imageRequests": [
+            {
+              "file": "about-sophie-480w-BH4hM70Y.webp",
+              "transferSize": 63264,
+              "resourceSize": 63064,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-kv-store-480w-BOmjwt8o.webp",
+              "transferSize": 11212,
+              "resourceSize": 11012,
+              "statusCode": 200
+            },
+            {
+              "file": "olmo-snow-symposium-480w-CdmIJYGs.webp",
+              "transferSize": 55170,
+              "resourceSize": 54970,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-http-server-480w-BGTWUzlU.webp",
+              "transferSize": 12100,
+              "resourceSize": 11900,
+              "statusCode": 200
+            },
+            {
+              "file": "vla-robot-arm-480w-ztuzzwII.webp",
+              "transferSize": 31732,
+              "resourceSize": 31532,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-i2-ta-480w-BnEpk7xZ.webp",
+              "transferSize": 15286,
+              "resourceSize": 15086,
+              "statusCode": 200
+            },
+            {
+              "file": "huskybids-presentation-480w-CrczIvjF.webp",
+              "transferSize": 8837,
+              "resourceSize": 8638,
+              "statusCode": 200
+            },
+            {
+              "file": "dubhacks-swag-480w-HoYHsUmX.webp",
+              "transferSize": 58362,
+              "resourceSize": 58162,
+              "statusCode": 200
+            },
+            {
+              "file": "study-ducky-v2-334w-6a705ib4.webp",
+              "transferSize": 6949,
+              "resourceSize": 6750,
+              "statusCode": 200
+            }
+          ],
+          "failedRequests": [],
+          "runWarnings": [],
+          "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+            "benchmarkIndex": 2835,
+            "credits": {}
+          },
+          "configSettings": {
+            "output": "html",
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "node",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": ["performance"],
+            "skipAudits": null
+          },
+          "lcpElement": {
+            "type": "node",
+            "lhId": "page-0-IMG",
+            "path": "1,HTML,1,BODY,1,MAIN,3,SECTION,0,DIV,4,DIV,0,SPAN,0,SPAN,0,BUTTON,0,IMG",
+            "selector": "span#pin-virtual-vla-- > span.relative > button.relative > img.block",
+            "boundingRect": {
+              "top": 420,
+              "bottom": 765,
+              "left": 210,
+              "right": 404,
+              "width": 194,
+              "height": 345
+            },
+            "snippet": "<img style=\"view-transition-name:pin-virtual-vla--\" loading=\"eager\" fetchpriority=\"high\" class=\"block h-full w-full object-cover transition duration-500 group-hover:scale\u2026\" data-image-id=\"vlaRobotArm\" src=\"http://127.0.0.1:4173/my-digital-moodboard/assets/vla-robot-arm-480w-ztuzz\u2026\" srcset=\"/my-digital-moodboard/assets/vla-robot-arm-160w-Dt70uOtx.webp 160w, /my-di\u2026\" sizes=\"(min-width: 1024px) calc((100vw - 72px) / 5), (min-width: 768px) calc((100\u2026\" width=\"605\" height=\"1077\" alt=\"A robotic arm at a caf\u00e9 counter\" decoding=\"async\">",
+            "nodeLabel": "A robotic arm at a caf\u00e9 counter"
+          }
+        }
+      ],
+      "label": "Final selected build",
+      "artifactDirectory": "artifacts/performance/mobile-optimized-selected",
+      "assetFileCount": 55,
+      "bundledImageBytes": 2310518
+    }
+  ]
+}

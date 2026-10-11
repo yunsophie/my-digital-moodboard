@@ -6,7 +6,18 @@ import reactRefresh from "eslint-plugin-react-refresh";
 import tseslint from "typescript-eslint";
 
 export default tseslint.config(
-  { ignores: ["dist", ".output", ".vinxi"] },
+  {
+    // Measurement reports retain their original harness/settings as evidence;
+    // they are generated artifacts rather than maintained application code.
+    ignores: [
+      "dist",
+      ".output",
+      ".vinxi",
+      "playwright-report",
+      "test-results",
+      "artifacts/performance",
+    ],
+  },
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
     files: ["**/*.{ts,tsx}"],

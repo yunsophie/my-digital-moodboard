@@ -1,0 +1,469 @@
+{
+  "encoder": { "sharp": "0.35.5", "vips": "8.18.7", "format": "webp", "quality": 80 },
+  "widths": [160, 320, 480, 640, 960],
+  "images": {
+    "aboutSophie": {
+      "source": "about-sophie.jpg",
+      "sourceBytes": 382875,
+      "sourceSha256": "f336e91a88bcc23d5cd654b26165a73ddd302a5faa6a618b78f4c3b0aad776e1",
+      "width": 768,
+      "height": 1024,
+      "variants": [
+        {
+          "file": "about-sophie-160w.webp",
+          "width": 160,
+          "height": 213,
+          "bytes": 9990,
+          "sha256": "5a22621683a7db75f78a053b0a9c5f1d8866fc4fd8dd1a9bc128e400a61f105f"
+        },
+        {
+          "file": "about-sophie-320w.webp",
+          "width": 320,
+          "height": 427,
+          "bytes": 31810,
+          "sha256": "736ad8f2110cdddae1003e171a1e82572cf3468bee76549922f862d27f9f9aa2"
+        },
+        {
+          "file": "about-sophie-480w.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 63064,
+          "sha256": "a71ecbdeedee7d37bac3e656f348cb0114f6fdb0113c90953be940c6e399c3dc"
+        },
+        {
+          "file": "about-sophie-640w.webp",
+          "width": 640,
+          "height": 853,
+          "bytes": 104022,
+          "sha256": "8ddd70d7ce238154ab2097df10631b917d3c411f9cbee7af9b0454653c08e830"
+        },
+        {
+          "file": "about-sophie-768w.webp",
+          "width": 768,
+          "height": 1024,
+          "bytes": 144960,
+          "sha256": "6f3f5fda0a39f02492c19dbc2296b578f26f65b49e7ae35f84066ea70a2f06f3"
+        }
+      ]
+    },
+    "dubhacksSwag": {
+      "source": "dubhacks-swag.jpg",
+      "sourceBytes": 381586,
+      "sourceSha256": "21c47d09dae24315d6c3341ed6c0ac12ae228d0cce8444da690617a8d256ae08",
+      "width": 768,
+      "height": 1024,
+      "variants": [
+        {
+          "file": "dubhacks-swag-160w.webp",
+          "width": 160,
+          "height": 213,
+          "bytes": 8082,
+          "sha256": "7492083bdbaee0293c75bc10e147723be131e72ae3bbc214720aeb2000cf422d"
+        },
+        {
+          "file": "dubhacks-swag-320w.webp",
+          "width": 320,
+          "height": 427,
+          "bytes": 25946,
+          "sha256": "3e8fbace965bdc0c96b2192714b4ef11f21bd15b640ef2654a750a907e151226"
+        },
+        {
+          "file": "dubhacks-swag-480w.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 58162,
+          "sha256": "4b93478b9ea196f2b045bc2ac51435143072a7402a604a1d52b3bfe75021d3ec"
+        },
+        {
+          "file": "dubhacks-swag-640w.webp",
+          "width": 640,
+          "height": 853,
+          "bytes": 103864,
+          "sha256": "15fc91a913352ba53193e8e6c0f506923891ff011bab615757334715a21fe6f8"
+        },
+        {
+          "file": "dubhacks-swag-768w.webp",
+          "width": 768,
+          "height": 1024,
+          "bytes": 159228,
+          "sha256": "e2ccb417f3f031f419935bf0cbeee34e53588823699d193ed2d7f1bed37db8c3"
+        }
+      ]
+    },
+    "editorialHttpServer": {
+      "source": "editorial-http-server.jpg",
+      "sourceBytes": 150418,
+      "sourceSha256": "2bebd5de4be2b3a1e9e933254a0d147634668fcf803feabd71bf06f5d337466b",
+      "width": 1024,
+      "height": 1408,
+      "variants": [
+        {
+          "file": "editorial-http-server-160w.webp",
+          "width": 160,
+          "height": 220,
+          "bytes": 2432,
+          "sha256": "3afbeb289df8d1bb977d8640b7e1a10c424e6f6d7b39f9492b4423de83cfbc77"
+        },
+        {
+          "file": "editorial-http-server-320w.webp",
+          "width": 320,
+          "height": 440,
+          "bytes": 6182,
+          "sha256": "17440e6440efd7d48569d21330dbe9b7ebfdda440048748c5e0da3320e6f41ca"
+        },
+        {
+          "file": "editorial-http-server-480w.webp",
+          "width": 480,
+          "height": 660,
+          "bytes": 11900,
+          "sha256": "a6fb5861a5a3fd21b6b643089b4dbafdf6a749712d38ef16edbd02d4896c5938"
+        },
+        {
+          "file": "editorial-http-server-640w.webp",
+          "width": 640,
+          "height": 880,
+          "bytes": 24062,
+          "sha256": "2b98f55f95cfa882eb5d3a1f1cb1be472fe463c68b8d0b05dd8fb4e87ede055a"
+        },
+        {
+          "file": "editorial-http-server-960w.webp",
+          "width": 960,
+          "height": 1320,
+          "bytes": 59498,
+          "sha256": "33ba90fd59630a4dc535baa74a10235dbea537cc608b4f9344c9fa5008865888"
+        }
+      ]
+    },
+    "editorialI2Ta": {
+      "source": "editorial-i2-ta.jpg",
+      "sourceBytes": 131415,
+      "sourceSha256": "27447480837d984938780e9d61095c7601520dd6f50fae50ac14548c155512c0",
+      "width": 1024,
+      "height": 1536,
+      "variants": [
+        {
+          "file": "editorial-i2-ta-160w.webp",
+          "width": 160,
+          "height": 240,
+          "bytes": 2854,
+          "sha256": "5590e30f45a27419efb6b2767f6b3d3332fe47284f0cb9d84c51980c9ba174cb"
+        },
+        {
+          "file": "editorial-i2-ta-320w.webp",
+          "width": 320,
+          "height": 480,
+          "bytes": 8048,
+          "sha256": "7e152acc5c8f4ddbdb1c03e7fc8381b6f664728dc2d1b4efa9f323617e371d6b"
+        },
+        {
+          "file": "editorial-i2-ta-480w.webp",
+          "width": 480,
+          "height": 720,
+          "bytes": 15086,
+          "sha256": "29df657d5449d4badca3f0306316e1d0e810e324f9c2de77456bb209072d9938"
+        },
+        {
+          "file": "editorial-i2-ta-640w.webp",
+          "width": 640,
+          "height": 960,
+          "bytes": 22994,
+          "sha256": "37186a53086ad46c07db8a45ea899ab904e42287816f103441a05566c8f3376e"
+        },
+        {
+          "file": "editorial-i2-ta-960w.webp",
+          "width": 960,
+          "height": 1440,
+          "bytes": 41710,
+          "sha256": "202093a93de5e27410d522f4c7de1d08d4f0f313e843f2574406f999b22cd1ba"
+        }
+      ]
+    },
+    "editorialKvStore": {
+      "source": "editorial-kv-store.jpg",
+      "sourceBytes": 110746,
+      "sourceSha256": "6fe027fda766f7ee97cadda37f656b541aaf40d40c7efd3ea636782d6a8f82ff",
+      "width": 1024,
+      "height": 1536,
+      "variants": [
+        {
+          "file": "editorial-kv-store-160w.webp",
+          "width": 160,
+          "height": 240,
+          "bytes": 2544,
+          "sha256": "31ac19b0caf441767f99677ad641eff1345506f7b48556f1fd92438aeee69c35"
+        },
+        {
+          "file": "editorial-kv-store-320w.webp",
+          "width": 320,
+          "height": 480,
+          "bytes": 6280,
+          "sha256": "f7754e2da205dd83671604157e7c25681c2b793052d08d19c2de6f5f2e8b737c"
+        },
+        {
+          "file": "editorial-kv-store-480w.webp",
+          "width": 480,
+          "height": 720,
+          "bytes": 11012,
+          "sha256": "841fdb9cbc10d1c8f4168b7ed92b4f95a10aa120e1fe5dc2ac5b5d31b8917005"
+        },
+        {
+          "file": "editorial-kv-store-640w.webp",
+          "width": 640,
+          "height": 960,
+          "bytes": 16764,
+          "sha256": "31da3eba950eadd4288ec1d661cb10580bd97675ec590a408280c1c7f5a178e4"
+        },
+        {
+          "file": "editorial-kv-store-960w.webp",
+          "width": 960,
+          "height": 1440,
+          "bytes": 31114,
+          "sha256": "ff2efdef48503b97a5b444ba8f671b43ba241c8efaa376ac51d2c58f6a08fa4d"
+        }
+      ]
+    },
+    "huskybidsPoster": {
+      "source": "huskybids-poster.jpg",
+      "sourceBytes": 216038,
+      "sourceSha256": "7e183a92c0fa47931046404f327d1204c69cec11880b23635d918b99229f7ee5",
+      "width": 1280,
+      "height": 1920,
+      "variants": [
+        {
+          "file": "huskybids-poster-160w.webp",
+          "width": 160,
+          "height": 240,
+          "bytes": 8134,
+          "sha256": "7df5080e5020147e6a4fb1b66c9d0af34e055163eb4ad52d94c50f2c7a8c91f7"
+        },
+        {
+          "file": "huskybids-poster-320w.webp",
+          "width": 320,
+          "height": 480,
+          "bytes": 24026,
+          "sha256": "eddae5adb5857b9ceeea5edd3df4df45c31515cec2a6201b06cc2f8f97df3a0e"
+        },
+        {
+          "file": "huskybids-poster-480w.webp",
+          "width": 480,
+          "height": 720,
+          "bytes": 44084,
+          "sha256": "4ddd1ec71531567cbe5af3c30dfb174a3d72baf2cc517b633933d3a0a564923a"
+        },
+        {
+          "file": "huskybids-poster-640w.webp",
+          "width": 640,
+          "height": 960,
+          "bytes": 66358,
+          "sha256": "029a5721366113c56c61f6177e0c9846ec54c3420eca63910c3bc8e56999ae0d"
+        },
+        {
+          "file": "huskybids-poster-960w.webp",
+          "width": 960,
+          "height": 1440,
+          "bytes": 109198,
+          "sha256": "51a570bf984c0842757a8fcf4600afed086901af9aa9b5e348fb2836b98b045d"
+        }
+      ]
+    },
+    "huskybidsPresentation": {
+      "source": "huskybids-presentation.jpg",
+      "sourceBytes": 98089,
+      "sourceSha256": "0c8275880648c40fdaf6034a540f50a32fcfbf216416411672a88f4f62f357e4",
+      "width": 1920,
+      "height": 1280,
+      "variants": [
+        {
+          "file": "huskybids-presentation-160w.webp",
+          "width": 160,
+          "height": 107,
+          "bytes": 2302,
+          "sha256": "b852f9e97691342fb6540b7cccdfea5a38bcd6d5f6dcf541925eeed03eca9ec0"
+        },
+        {
+          "file": "huskybids-presentation-320w.webp",
+          "width": 320,
+          "height": 213,
+          "bytes": 5356,
+          "sha256": "f4a8fc732cc9ac6692f5a4a409720b93ae4d2d5e7d1b0e78032d69002734a8a6"
+        },
+        {
+          "file": "huskybids-presentation-480w.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 8638,
+          "sha256": "86dea67ac44957c568842ff286032c04c54782ff495a9f0700d1ba72aacd52cb"
+        },
+        {
+          "file": "huskybids-presentation-640w.webp",
+          "width": 640,
+          "height": 427,
+          "bytes": 12034,
+          "sha256": "72947c3bb062b100ffdeb3856c80451910bd7c81d363837a3df03c7818215149"
+        },
+        {
+          "file": "huskybids-presentation-960w.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 20384,
+          "sha256": "d59d90d87b551f8e0745a060460c6516db46fa204865654ce36b74234bee655c"
+        }
+      ]
+    },
+    "olmoSymposium": {
+      "source": "olmo-snow-symposium.jpg",
+      "sourceBytes": 339430,
+      "sourceSha256": "7a251b8345aa9e0b22b444348f46f57e878e441d8ef2edff29a38d07b169365b",
+      "width": 768,
+      "height": 1024,
+      "variants": [
+        {
+          "file": "olmo-snow-symposium-160w.webp",
+          "width": 160,
+          "height": 213,
+          "bytes": 8290,
+          "sha256": "abb524315e1e6c718bfd5171586e19ce2e0262b1484cff96c90d1c6c1353c6a3"
+        },
+        {
+          "file": "olmo-snow-symposium-320w.webp",
+          "width": 320,
+          "height": 427,
+          "bytes": 27646,
+          "sha256": "851b8239af842b74740dddc0a4a9b1b6d9a3fb4724386ff49162836cc49676c9"
+        },
+        {
+          "file": "olmo-snow-symposium-480w.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 54970,
+          "sha256": "bc259f869ef916404fdee3d1b32cf4aaec9ad0d661d51d08b5ee02b01096e467"
+        },
+        {
+          "file": "olmo-snow-symposium-640w.webp",
+          "width": 640,
+          "height": 853,
+          "bytes": 88454,
+          "sha256": "c187ce340cbd46ab34587509b760169c99f915cd13601ab593f14ffd7a10fa95"
+        },
+        {
+          "file": "olmo-snow-symposium-768w.webp",
+          "width": 768,
+          "height": 1024,
+          "bytes": 122232,
+          "sha256": "d23de9daa67cc1504b31de8c46b0a8f43953f9e8cae5ce3dd22a91fdc518284a"
+        }
+      ]
+    },
+    "studyDucky": {
+      "source": "study-ducky-v2.png",
+      "sourceBytes": 177361,
+      "sourceSha256": "cc449d2ad139873215d8dbffb20bd73ea3e73c3889fde7ae0369911ecef35d6e",
+      "width": 334,
+      "height": 488,
+      "variants": [
+        {
+          "file": "study-ducky-v2-160w.webp",
+          "width": 160,
+          "height": 234,
+          "bytes": 3426,
+          "sha256": "88f81e7f4f50dfe09d9a726980494778becfa36f2a44671a6e5a7418c2e37b18"
+        },
+        {
+          "file": "study-ducky-v2-320w.webp",
+          "width": 320,
+          "height": 468,
+          "bytes": 6360,
+          "sha256": "17b394d7f7d5c6be6b86a757ea34dfc68f6c26757b0eaca95e58f71bc3e37d18"
+        },
+        {
+          "file": "study-ducky-v2-334w.webp",
+          "width": 334,
+          "height": 488,
+          "bytes": 6750,
+          "sha256": "eac2dbae91c0885994519c6525b963a0abf4ed646efab24ffb7501a13b84cbbf"
+        }
+      ]
+    },
+    "uwCherry": {
+      "source": "uw-cherry-blossoms.jpg",
+      "sourceBytes": 550149,
+      "sourceSha256": "b4b654a2e44b8252b6d27150a3d55b1680a7d4dd10dbebc5ceb448dd84a01e46",
+      "width": 768,
+      "height": 1024,
+      "variants": [
+        {
+          "file": "uw-cherry-blossoms-160w.webp",
+          "width": 160,
+          "height": 213,
+          "bytes": 10868,
+          "sha256": "9024c1dedbd149323308c915ed650c8537c1b0488f24495ac89fc7b574ee29d1"
+        },
+        {
+          "file": "uw-cherry-blossoms-320w.webp",
+          "width": 320,
+          "height": 427,
+          "bytes": 45640,
+          "sha256": "8dd04e01579516144b414534c67bdbaf587e60e71960c2d95d6a4dd74d70e330"
+        },
+        {
+          "file": "uw-cherry-blossoms-480w.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 104544,
+          "sha256": "2b4a242952e2cb3576c3174348b34534c39c0795f24a0f3d6ceb3d275becea53"
+        },
+        {
+          "file": "uw-cherry-blossoms-640w.webp",
+          "width": 640,
+          "height": 853,
+          "bytes": 185910,
+          "sha256": "cf8e04beac76b816ff18aaf8492b049c38786d826e9d7c5718d64f97f716e43d"
+        },
+        {
+          "file": "uw-cherry-blossoms-768w.webp",
+          "width": 768,
+          "height": 1024,
+          "bytes": 272632,
+          "sha256": "e5c2d8f2fc724399165d4a6240820934ecfbf110b71d1b7808fb69c4f278a394"
+        }
+      ]
+    },
+    "vlaRobotArm": {
+      "source": "vla-robot-arm.jpg",
+      "sourceBytes": 107025,
+      "sourceSha256": "41a845ae207ad9e643a5708cd8f2ca6ca5c0f95265b8a1e2a0ef60266066299b",
+      "width": 605,
+      "height": 1077,
+      "variants": [
+        {
+          "file": "vla-robot-arm-160w.webp",
+          "width": 160,
+          "height": 285,
+          "bytes": 7056,
+          "sha256": "51f34d4776aead02e5266f5c8388fce0f6dcb50805f8d7cb446d4b7f3460a284"
+        },
+        {
+          "file": "vla-robot-arm-320w.webp",
+          "width": 320,
+          "height": 570,
+          "bytes": 18750,
+          "sha256": "94befb2f3c008474aae7c40ceb8778365334a72d48bd97b25db4324533069e46"
+        },
+        {
+          "file": "vla-robot-arm-480w.webp",
+          "width": 480,
+          "height": 854,
+          "bytes": 31532,
+          "sha256": "21561045c39a4e73ec31faec98415593bd3026fbdd4dcd99878b9f3252fff75f"
+        },
+        {
+          "file": "vla-robot-arm-605w.webp",
+          "width": 605,
+          "height": 1077,
+          "bytes": 43336,
+          "sha256": "3141dcef366dda465a327f8ae32675db1a70674a2b4fdd996c6af9e26ca865ae"
+        }
+      ]
+    }
+  }
+}

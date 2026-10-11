@@ -14,7 +14,9 @@ export default (env: ConfigEnv) => {
     : "/";
 
   return defineConfig({
-    vite: { base },
+    // Keep even small candidates as cacheable files. Inlining them in JS would
+    // make thumbnail data part of every visit and obscure image byte budgets.
+    vite: { base, build: { assetsInlineLimit: 0 } },
     // Pages serves the prerendered client build; Lovable keeps its server build.
     nitro: !isGitHubPages,
     tanstackStart: {

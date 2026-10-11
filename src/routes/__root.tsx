@@ -82,11 +82,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "Software projects and visual experiments by Sophie Li." },
       { name: "author", content: "Sophie Li" },
       { property: "og:title", content: "Sophie Li — Portfolio" },
-      { property: "og:description", content: "Software projects and visual experiments by Sophie Li." },
+      {
+        property: "og:description",
+        content: "Software projects and visual experiments by Sophie Li.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
+      // Keep connections ready for the existing fonts. Self-hosted variants
+      // worsened measured mobile LCP; retain this delivery method until a
+      // matching deployment audit demonstrates a better option.
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
         href: appCss,

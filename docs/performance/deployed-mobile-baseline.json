@@ -1,0 +1,1173 @@
+{
+  "recordedAt": "2026-10-11T04:54:38.339Z",
+  "localTimezone": "America/Los_Angeles",
+  "scope": "Deployed GitHub Pages URL; fresh cold browser profiles; real hosting responses; simulated mobile slow 4G; no interaction or scrolling",
+  "url": "https://yunsophie.github.io/my-digital-moodboard/",
+  "nodeVersion": "v22.13.0",
+  "lighthouseVersion": "12.8.2",
+  "host": {
+    "platform": "darwin",
+    "arch": "arm64",
+    "cpu": "Apple M1 Pro",
+    "logicalCpus": 8
+  },
+  "deploymentUnchangedDuringAudit": true,
+  "deployedBefore": {
+    "fetchedAt": "2026-10-11T04:54:12.599Z",
+    "finalUrl": "https://yunsophie.github.io/my-digital-moodboard/",
+    "status": 200,
+    "sha256": "6a8592744bb14e13e5a6a34bf2e86133b7dfbf38d46c8c69d7194fd33b020f57",
+    "htmlBytes": 59350,
+    "headers": {
+      "age": "0",
+      "cache-control": "max-age=600",
+      "content-encoding": "gzip",
+      "content-length": "8824",
+      "content-type": "text/html; charset=utf-8",
+      "etag": "W/\"6aca9dfd-e7d6\"",
+      "last-modified": "Sat, 10 Oct 2026 20:20:13 GMT",
+      "server": "GitHub.com",
+      "x-cache": "MISS",
+      "x-github-edge-region": "westus2",
+      "x-proxy-cache": "MISS"
+    },
+    "title": "Sophie Li \u2014 Computer Science Portfolio",
+    "pinIds": [
+      "pin-all-about-me---",
+      "pin-i2-teaching-assistant--",
+      "pin-distributed-key-value-store--",
+      "pin-huskybids--",
+      "pin-olmo-snow--",
+      "pin-sustAIn--",
+      "pin-333gle-search-engine--",
+      "pin-study-ducky--",
+      "pin-virtual-vla--",
+      "pin-visual-discovery--"
+    ],
+    "assetFiles": [
+      "about-sophie-BEoZnuTg.jpg",
+      "dubhacks-swag-CeFJ7VM5.jpg",
+      "editorial-http-server-D8xyaYgs.jpg",
+      "editorial-i2-ta-D9Y2P1G7.jpg",
+      "editorial-kv-store-py-QwfGQ.jpg",
+      "huskybids-poster-Dv2yqKC7.jpg",
+      "huskybids-presentation-D3WyucNY.jpg",
+      "index-JH6YkW96.js",
+      "olmo-snow-symposium-Bi7NU61t.jpg",
+      "pink-hardware-grid-BaMxu21J.jpg",
+      "routes-Lo7LTReA.js",
+      "study-ducky-v2-Df0bi67y.png",
+      "styles-DWMCgLDB.css",
+      "vla-robot-arm-CPvBG_vW.jpg"
+    ]
+  },
+  "deployedAfter": {
+    "fetchedAt": "2026-10-11T04:54:38.338Z",
+    "finalUrl": "https://yunsophie.github.io/my-digital-moodboard/",
+    "status": 200,
+    "sha256": "6a8592744bb14e13e5a6a34bf2e86133b7dfbf38d46c8c69d7194fd33b020f57",
+    "htmlBytes": 59350,
+    "headers": {
+      "age": "26",
+      "cache-control": "max-age=600",
+      "content-encoding": "gzip",
+      "content-length": "8824",
+      "content-type": "text/html; charset=utf-8",
+      "etag": "W/\"6aca9dfd-e7d6\"",
+      "last-modified": "Sat, 10 Oct 2026 20:20:13 GMT",
+      "server": "GitHub.com",
+      "x-cache": "HIT",
+      "x-github-edge-region": "westus2",
+      "x-proxy-cache": "MISS"
+    },
+    "title": "Sophie Li \u2014 Computer Science Portfolio",
+    "pinIds": [
+      "pin-all-about-me---",
+      "pin-i2-teaching-assistant--",
+      "pin-distributed-key-value-store--",
+      "pin-huskybids--",
+      "pin-olmo-snow--",
+      "pin-sustAIn--",
+      "pin-333gle-search-engine--",
+      "pin-study-ducky--",
+      "pin-virtual-vla--",
+      "pin-visual-discovery--"
+    ],
+    "assetFiles": [
+      "about-sophie-BEoZnuTg.jpg",
+      "dubhacks-swag-CeFJ7VM5.jpg",
+      "editorial-http-server-D8xyaYgs.jpg",
+      "editorial-i2-ta-D9Y2P1G7.jpg",
+      "editorial-kv-store-py-QwfGQ.jpg",
+      "huskybids-poster-Dv2yqKC7.jpg",
+      "huskybids-presentation-D3WyucNY.jpg",
+      "index-JH6YkW96.js",
+      "olmo-snow-symposium-Bi7NU61t.jpg",
+      "pink-hardware-grid-BaMxu21J.jpg",
+      "routes-Lo7LTReA.js",
+      "study-ducky-v2-Df0bi67y.png",
+      "styles-DWMCgLDB.css",
+      "vla-robot-arm-CPvBG_vW.jpg"
+    ]
+  },
+  "comparison": {
+    "localBaselineUrl": "http://127.0.0.1:4173/my-digital-moodboard/",
+    "localBaselineMedians": {
+      "performanceScore": 76,
+      "firstContentfulPaintMs": 1954.2444500000004,
+      "largestContentfulPaintMs": 3229.431875,
+      "speedIndexMs": 1954.2444500000004,
+      "totalBlockingTimeMs": 0,
+      "cumulativeLayoutShift": 0.3303480553190031,
+      "totalTransferBytes": 2313051,
+      "imageTransferBytes": 2096991,
+      "imageRequestCount": 10
+    },
+    "localBuildIndexSha256": "b320dbf1a59ead47e4c8e80cce9af9298eb09b184ffa23761d4881f067891fe2",
+    "liveDocumentMatchesCurrentLocal": false,
+    "localPinCount": 9,
+    "livePinCount": 10,
+    "localOnlyAssetFiles": ["index-CursdNWv.js", "routes-QUVS361f.js", "styles-DUixIk_b.css"],
+    "liveOnlyAssetFiles": [
+      "index-JH6YkW96.js",
+      "pink-hardware-grid-BaMxu21J.jpg",
+      "routes-Lo7LTReA.js",
+      "styles-DWMCgLDB.css"
+    ]
+  },
+  "medians": {
+    "performanceScore": 72,
+    "firstContentfulPaintMs": 2167.6085000000003,
+    "largestContentfulPaintMs": 9104.034999999998,
+    "speedIndexMs": 2167.6085000000003,
+    "totalBlockingTimeMs": 0,
+    "cumulativeLayoutShift": 0.08229757672545217,
+    "documentResponseTimeMs": 8.628000000000002,
+    "totalTransferBytes": 2459330,
+    "imageTransferBytes": 2241160,
+    "imageRequestCount": 11
+  },
+  "representativeRun": 2,
+  "runs": [
+    {
+      "run": 1,
+      "requestedUrl": "https://yunsophie.github.io/my-digital-moodboard/",
+      "finalDisplayedUrl": "https://yunsophie.github.io/my-digital-moodboard/",
+      "performanceScore": 67,
+      "firstContentfulPaintMs": 2919.7349999999997,
+      "largestContentfulPaintMs": 12797.063999999998,
+      "speedIndexMs": 2932.5218439326286,
+      "totalBlockingTimeMs": 0,
+      "cumulativeLayoutShift": 0.0976680071792419,
+      "documentResponseTimeMs": 8.628000000000002,
+      "totalTransferBytes": 2459346,
+      "imageTransferBytes": 2241199,
+      "imageRequestCount": 11,
+      "imageRequests": [
+        {
+          "file": "about-sophie-BEoZnuTg.jpg",
+          "transferSize": 383274,
+          "resourceSize": 382875,
+          "statusCode": 200,
+          "protocol": "h2",
+          "networkRequestTime": 44.27800011634827,
+          "networkEndTime": 294.92000007629395
+        },
+        {
+          "file": "editorial-i2-ta-D9Y2P1G7.jpg",
+          "transferSize": 131660,
+          "resourceSize": 131415,
+          "statusCode": 200,
+          "protocol": "h2",
+          "networkRequestTime": 44.563000202178955,
+          "networkEndTime": 279.21799993515015
+        },
+        {
+          "file": "editorial-kv-store-py-QwfGQ.jpg",
+          "transferSize": 110973,
+          "resourceSize": 110746,
+          "statusCode": 200,
+          "protocol": "h2",
+          "networkRequestTime": 242.05700016021729,
+          "networkEndTime": 342.87600016593933
+        },
+        {
+          "file": "huskybids-presentation-D3WyucNY.jpg",
+          "transferSize": 98287,
+          "resourceSize": 98089,
+          "statusCode": 200,
+          "protocol": "h2",
+          "networkRequestTime": 242.21700024604797,
+          "networkEndTime": 357.6489999294281
+        },
+        {
+          "file": "huskybids-poster-Dv2yqKC7.jpg",
+          "transferSize": 216300,
+          "resourceSize": 216038,
+          "statusCode": 200,
+          "protocol": "h2",
+          "networkRequestTime": 242.45800018310547,
+          "networkEndTime": 429.0859999656677
+        },
+        {
+          "file": "olmo-snow-symposium-Bi7NU61t.jpg",
+          "transferSize": 339802,
+          "resourceSize": 339430,
+          "statusCode": 200,
+          "protocol": "h2",
+          "networkRequestTime": 242.57200002670288,
+          "networkEndTime": 350.8140001296997
+        },
+        {
+          "file": "dubhacks-swag-CeFJ7VM5.jpg",
+          "transferSize": 382076,
+          "resourceSize": 381586,
+          "statusCode": 200,
+          "protocol": "h2",
+          "networkRequestTime": 242.66200017929077,
+          "networkEndTime": 365.39800000190735
+        },
+        {
+          "file": "editorial-http-server-D8xyaYgs.jpg",
+          "transferSize": 150659,
+          "resourceSize": 150418,
+          "statusCode": 200,
+          "protocol": "h2",
+          "networkRequestTime": 242.76300024986267,
+          "networkEndTime": 339.64800000190735
+        },
+        {
+          "file": "study-ducky-v2-Df0bi67y.png",
+          "transferSize": 177745,
+          "resourceSize": 177361,
+          "statusCode": 200,
+          "protocol": "h2",
+          "networkRequestTime": 242.87700009346008,
+          "networkEndTime": 551.4460000991821
+        },
+        {
+          "file": "vla-robot-arm-CPvBG_vW.jpg",
+          "transferSize": 107367,
+          "resourceSize": 107025,
+          "statusCode": 200,
+          "protocol": "h2",
+          "networkRequestTime": 242.97300004959106,
+          "networkEndTime": 341.65899991989136
+        },
+        {
+          "file": "pink-hardware-grid-BaMxu21J.jpg",
+          "transferSize": 143056,
+          "resourceSize": 142798,
+          "statusCode": 200,
+          "protocol": "h2",
+          "networkRequestTime": 243.0730001926422,
+          "networkEndTime": 369.78400015830994
+        }
+      ],
+      "mainRequest": {
+        "url": "https://yunsophie.github.io/my-digital-moodboard/",
+        "sessionTargetType": "page",
+        "protocol": "h2",
+        "rendererStartTime": 0,
+        "networkRequestTime": 1.7960000038146973,
+        "networkEndTime": 26.621000051498413,
+        "finished": true,
+        "transferSize": 9240,
+        "resourceSize": 59350,
+        "statusCode": 200,
+        "mimeType": "text/html",
+        "resourceType": "Document",
+        "priority": "VeryHigh",
+        "experimentalFromMainFrame": true,
+        "entity": "GitHub"
+      },
+      "lcpElement": {
+        "type": "node",
+        "lhId": "page-8-IMG",
+        "path": "1,HTML,1,BODY,1,MAIN,3,SECTION,0,DIV,1,DIV,0,DIV,0,SPAN,0,SPAN,0,BUTTON,0,IMG",
+        "selector": "span#pin-distributed-key-value-store-- > span.relative > button.relative > img.block",
+        "boundingRect": {
+          "top": 394,
+          "bottom": 685,
+          "left": 210,
+          "right": 404,
+          "width": 194,
+          "height": 291
+        },
+        "snippet": "<img style=\"view-transition-name:pin-distributed-key-value-store--\" src=\"/my-digital-moodboard/assets/editorial-kv-store-py-QwfGQ.jpg\" alt=\"Floating frosted geometric clusters connected by translucent bridges\" width=\"1024\" height=\"1536\" loading=\"lazy\" decoding=\"async\" class=\"block h-full w-full object-cover transition duration-500 group-hover:scale\u2026\">",
+        "nodeLabel": "Floating frosted geometric clusters connected by translucent bridges"
+      },
+      "layoutShifts": [
+        {
+          "node": {
+            "type": "node",
+            "lhId": "page-11-DIV",
+            "path": "1,HTML,1,BODY,1,MAIN,3,SECTION,0,DIV,1,DIV",
+            "selector": "main.min-h-screen > section.px-2 > div.flex > div.flex",
+            "boundingRect": {
+              "top": 394,
+              "bottom": 1889,
+              "left": 210,
+              "right": 404,
+              "width": 194,
+              "height": 1496
+            },
+            "snippet": "<div class=\"flex min-w-0 flex-1 flex-col gap-2 sm:gap-3\">",
+            "nodeLabel": "TAP\nDISTRIBUTED SYSTEMS \u00b7 2026\ndistributed key-value store !\nJAVA\nPAXOS\nTWO-PHA\u2026"
+          },
+          "score": 0.0976680071792419
+        }
+      ],
+      "resourceSummary": [
+        {
+          "resourceType": "total",
+          "label": "Total",
+          "requestCount": 19,
+          "transferSize": 2459346
+        },
+        {
+          "resourceType": "image",
+          "label": "Image",
+          "requestCount": 11,
+          "transferSize": 2241199
+        },
+        {
+          "resourceType": "script",
+          "label": "Script",
+          "requestCount": 2,
+          "transferSize": 129896
+        },
+        {
+          "resourceType": "font",
+          "label": "Font",
+          "requestCount": 2,
+          "transferSize": 62413
+        },
+        {
+          "resourceType": "stylesheet",
+          "label": "Stylesheet",
+          "requestCount": 2,
+          "transferSize": 16145
+        },
+        {
+          "resourceType": "document",
+          "label": "Document",
+          "requestCount": 1,
+          "transferSize": 9240
+        },
+        {
+          "resourceType": "other",
+          "label": "Other",
+          "requestCount": 1,
+          "transferSize": 453
+        },
+        {
+          "resourceType": "media",
+          "label": "Media",
+          "requestCount": 0,
+          "transferSize": 0
+        },
+        {
+          "resourceType": "third-party",
+          "label": "Third-party",
+          "requestCount": 19,
+          "transferSize": 2459346
+        }
+      ],
+      "failedRequests": [],
+      "runWarnings": [],
+      "environment": {
+        "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+        "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "benchmarkIndex": 2774.5,
+        "credits": {}
+      },
+      "configSettings": {
+        "output": "html",
+        "maxWaitForFcp": 30000,
+        "maxWaitForLoad": 45000,
+        "pauseAfterFcpMs": 1000,
+        "pauseAfterLoadMs": 1000,
+        "networkQuietThresholdMs": 1000,
+        "cpuQuietThresholdMs": 1000,
+        "formFactor": "mobile",
+        "throttling": {
+          "rttMs": 150,
+          "throughputKbps": 1638.4,
+          "requestLatencyMs": 562.5,
+          "downloadThroughputKbps": 1474.5600000000002,
+          "uploadThroughputKbps": 675,
+          "cpuSlowdownMultiplier": 4
+        },
+        "throttlingMethod": "simulate",
+        "screenEmulation": {
+          "mobile": true,
+          "width": 412,
+          "height": 823,
+          "deviceScaleFactor": 1.75,
+          "disabled": false
+        },
+        "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+        "auditMode": false,
+        "gatherMode": false,
+        "clearStorageTypes": ["file_systems", "shader_cache", "service_workers", "cache_storage"],
+        "disableStorageReset": false,
+        "debugNavigation": false,
+        "channel": "node",
+        "usePassiveGathering": false,
+        "disableFullPageScreenshot": false,
+        "skipAboutBlank": false,
+        "blankPage": "about:blank",
+        "ignoreStatusCode": false,
+        "locale": "en-US",
+        "blockedUrlPatterns": null,
+        "additionalTraceCategories": null,
+        "extraHeaders": null,
+        "precomputedLanternData": null,
+        "onlyAudits": null,
+        "onlyCategories": ["performance"],
+        "skipAudits": null
+      }
+    },
+    {
+      "run": 2,
+      "requestedUrl": "https://yunsophie.github.io/my-digital-moodboard/",
+      "finalDisplayedUrl": "https://yunsophie.github.io/my-digital-moodboard/",
+      "performanceScore": 72,
+      "firstContentfulPaintMs": 2164,
+      "largestContentfulPaintMs": 9104.034999999998,
+      "speedIndexMs": 2164,
+      "totalBlockingTimeMs": 0,
+      "cumulativeLayoutShift": 0.08229757672545217,
+      "documentResponseTimeMs": 10.378,
+      "totalTransferBytes": 2459330,
+      "imageTransferBytes": 2241160,
+      "imageRequestCount": 11,
+      "imageRequests": [
+        {
+          "file": "about-sophie-BEoZnuTg.jpg",
+          "transferSize": 383234,
+          "resourceSize": 382875,
+          "statusCode": 200,
+          "protocol": "h2",
+          "networkRequestTime": 39.41300010681152,
+          "networkEndTime": 78.61500000953674
+        },
+        {
+          "file": "editorial-i2-ta-D9Y2P1G7.jpg",
+          "transferSize": 131664,
+          "resourceSize": 131415,
+          "statusCode": 200,
+          "protocol": "h2",
+          "networkRequestTime": 39.71000027656555,
+          "networkEndTime": 63.217000246047974
+        },
+        {
+          "file": "editorial-kv-store-py-QwfGQ.jpg",
+          "transferSize": 111016,
+          "resourceSize": 110746,
+          "statusCode": 200,
+          "protocol": "h2",
+          "networkRequestTime": 116.52999997138977,
+          "networkEndTime": 132.30200028419495
+        },
+        {
+          "file": "huskybids-presentation-D3WyucNY.jpg",
+          "transferSize": 98301,
+          "resourceSize": 98089,
+          "statusCode": 200,
+          "protocol": "h2",
+          "networkRequestTime": 116.66300010681152,
+          "networkEndTime": 128.9539999961853
+        },
+        {
+          "file": "huskybids-poster-Dv2yqKC7.jpg",
+          "transferSize": 216324,
+          "resourceSize": 216038,
+          "statusCode": 200,
+          "protocol": "h2",
+          "networkRequestTime": 116.89900016784668,
+          "networkEndTime": 150.24300026893616
+        },
+        {
+          "file": "olmo-snow-symposium-Bi7NU61t.jpg",
+          "transferSize": 339797,
+          "resourceSize": 339430,
+          "statusCode": 200,
+          "protocol": "h2",
+          "networkRequestTime": 116.99700021743774,
+          "networkEndTime": 156.14000010490417
+        },
+        {
+          "file": "dubhacks-swag-CeFJ7VM5.jpg",
+          "transferSize": 382067,
+          "resourceSize": 381586,
+          "statusCode": 200,
+          "protocol": "h2",
+          "networkRequestTime": 117.1870002746582,
+          "networkEndTime": 166.2660002708435
+        },
+        {
+          "file": "editorial-http-server-D8xyaYgs.jpg",
+          "transferSize": 150767,
+          "resourceSize": 150418,
+          "statusCode": 200,
+          "protocol": "h2",
+          "networkRequestTime": 117.7260000705719,
+          "networkEndTime": 150.38700008392334
+        },
+        {
+          "file": "study-ducky-v2-Df0bi67y.png",
+          "transferSize": 177668,
+          "resourceSize": 177361,
+          "statusCode": 200,
+          "protocol": "h2",
+          "networkRequestTime": 117.87299990653992,
+          "networkEndTime": 159.9700002670288
+        },
+        {
+          "file": "vla-robot-arm-CPvBG_vW.jpg",
+          "transferSize": 107270,
+          "resourceSize": 107025,
+          "statusCode": 200,
+          "protocol": "h2",
+          "networkRequestTime": 117.98100018501282,
+          "networkEndTime": 161.05299997329712
+        },
+        {
+          "file": "pink-hardware-grid-BaMxu21J.jpg",
+          "transferSize": 143052,
+          "resourceSize": 142798,
+          "statusCode": 200,
+          "protocol": "h2",
+          "networkRequestTime": 118.0680000782013,
+          "networkEndTime": 167.3880000114441
+        }
+      ],
+      "mainRequest": {
+        "url": "https://yunsophie.github.io/my-digital-moodboard/",
+        "sessionTargetType": "page",
+        "protocol": "h2",
+        "rendererStartTime": 0,
+        "networkRequestTime": 0.6480000019073486,
+        "networkEndTime": 33.8030002117157,
+        "finished": true,
+        "transferSize": 9240,
+        "resourceSize": 59350,
+        "statusCode": 200,
+        "mimeType": "text/html",
+        "resourceType": "Document",
+        "priority": "VeryHigh",
+        "experimentalFromMainFrame": true,
+        "entity": "GitHub"
+      },
+      "lcpElement": {
+        "type": "node",
+        "lhId": "page-2-IMG",
+        "path": "1,HTML,1,BODY,1,MAIN,3,SECTION,0,DIV,0,DIV,1,DIV,0,SPAN,0,SPAN,0,BUTTON,0,IMG",
+        "selector": "span#pin-olmo-snow-- > span.relative > button.relative > img.block",
+        "boundingRect": {
+          "top": 693,
+          "bottom": 951,
+          "left": 8,
+          "right": 202,
+          "width": 194,
+          "height": 259
+        },
+        "snippet": "<img alt=\"Sophie presenting her snow cover research poster at a symposium\" width=\"768\" height=\"1024\" loading=\"eager\" decoding=\"async\" class=\"block h-full w-full object-cover transition duration-500 group-hover:scale\u2026\" src=\"/my-digital-moodboard/assets/olmo-snow-symposium-Bi7NU61t.jpg\" style=\"view-transition-name: pin-olmo-snow--;\">",
+        "nodeLabel": "Sophie presenting her snow cover research poster at a symposium"
+      },
+      "layoutShifts": [
+        {
+          "node": {
+            "type": "node",
+            "lhId": "page-16-DIV",
+            "path": "1,HTML,1,BODY,1,MAIN,3,SECTION,0,DIV,1,DIV",
+            "selector": "main.min-h-screen > section.px-2 > div.flex > div.flex",
+            "boundingRect": {
+              "top": 394,
+              "bottom": 1889,
+              "left": 210,
+              "right": 404,
+              "width": 194,
+              "height": 1496
+            },
+            "snippet": "<div class=\"flex min-w-0 flex-1 flex-col gap-2 sm:gap-3\">",
+            "nodeLabel": "TAP\nDISTRIBUTED SYSTEMS \u00b7 2026\ndistributed key-value store !\nJAVA\nPAXOS\nTWO-PHA\u2026"
+          },
+          "score": 0.08169812133609562
+        },
+        {
+          "node": {
+            "type": "node",
+            "lhId": "page-11-H1",
+            "path": "1,HTML,1,BODY,1,MAIN,1,SECTION,0,DIV,0,H1",
+            "selector": "main.min-h-screen > section.flex > div.min-w-0 > h1.font-sans",
+            "boundingRect": {
+              "top": 76,
+              "bottom": 114,
+              "left": 12,
+              "right": 400,
+              "width": 388,
+              "height": 38
+            },
+            "snippet": "<h1 class=\"font-sans text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:t\u2026\">",
+            "nodeLabel": "sophie's portfolio"
+          },
+          "score": 0.0005849423578941653,
+          "subItems": {
+            "type": "subitems",
+            "items": [
+              {
+                "extra": {
+                  "type": "url",
+                  "value": "https://fonts.gstatic.com/s/manrope/v20/xn7gYHE41ni1AdIRggexSvfedN4.woff2"
+                },
+                "cause": "Web font loaded"
+              }
+            ]
+          }
+        },
+        {
+          "node": {
+            "type": "node",
+            "lhId": "page-15-SPAN",
+            "path": "1,HTML,1,BODY,1,MAIN,0,HEADER,0,DIV,0,A,1,SPAN",
+            "selector": "header.sticky > div.flex > a.w-10 > span.text-accent-foreground",
+            "boundingRect": {
+              "top": 19,
+              "bottom": 48,
+              "left": 37,
+              "right": 41,
+              "width": 5,
+              "height": 29
+            },
+            "snippet": "<span class=\"text-accent-foreground\">",
+            "nodeLabel": "."
+          },
+          "score": 1.451303146237448e-5,
+          "subItems": {
+            "type": "subitems",
+            "items": [
+              {
+                "extra": {
+                  "type": "url",
+                  "value": "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYqXtKky2F7g.woff2"
+                },
+                "cause": "Web font loaded"
+              }
+            ]
+          }
+        }
+      ],
+      "resourceSummary": [
+        {
+          "resourceType": "total",
+          "label": "Total",
+          "requestCount": 19,
+          "transferSize": 2459330
+        },
+        {
+          "resourceType": "image",
+          "label": "Image",
+          "requestCount": 11,
+          "transferSize": 2241160
+        },
+        {
+          "resourceType": "script",
+          "label": "Script",
+          "requestCount": 2,
+          "transferSize": 129906
+        },
+        {
+          "resourceType": "font",
+          "label": "Font",
+          "requestCount": 2,
+          "transferSize": 62413
+        },
+        {
+          "resourceType": "stylesheet",
+          "label": "Stylesheet",
+          "requestCount": 2,
+          "transferSize": 16165
+        },
+        {
+          "resourceType": "document",
+          "label": "Document",
+          "requestCount": 1,
+          "transferSize": 9240
+        },
+        {
+          "resourceType": "other",
+          "label": "Other",
+          "requestCount": 1,
+          "transferSize": 446
+        },
+        {
+          "resourceType": "media",
+          "label": "Media",
+          "requestCount": 0,
+          "transferSize": 0
+        },
+        {
+          "resourceType": "third-party",
+          "label": "Third-party",
+          "requestCount": 19,
+          "transferSize": 2459330
+        }
+      ],
+      "failedRequests": [],
+      "runWarnings": [],
+      "environment": {
+        "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+        "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "benchmarkIndex": 2893.5,
+        "credits": {}
+      },
+      "configSettings": {
+        "output": "html",
+        "maxWaitForFcp": 30000,
+        "maxWaitForLoad": 45000,
+        "pauseAfterFcpMs": 1000,
+        "pauseAfterLoadMs": 1000,
+        "networkQuietThresholdMs": 1000,
+        "cpuQuietThresholdMs": 1000,
+        "formFactor": "mobile",
+        "throttling": {
+          "rttMs": 150,
+          "throughputKbps": 1638.4,
+          "requestLatencyMs": 562.5,
+          "downloadThroughputKbps": 1474.5600000000002,
+          "uploadThroughputKbps": 675,
+          "cpuSlowdownMultiplier": 4
+        },
+        "throttlingMethod": "simulate",
+        "screenEmulation": {
+          "mobile": true,
+          "width": 412,
+          "height": 823,
+          "deviceScaleFactor": 1.75,
+          "disabled": false
+        },
+        "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+        "auditMode": false,
+        "gatherMode": false,
+        "clearStorageTypes": ["file_systems", "shader_cache", "service_workers", "cache_storage"],
+        "disableStorageReset": false,
+        "debugNavigation": false,
+        "channel": "node",
+        "usePassiveGathering": false,
+        "disableFullPageScreenshot": false,
+        "skipAboutBlank": false,
+        "blankPage": "about:blank",
+        "ignoreStatusCode": false,
+        "locale": "en-US",
+        "blockedUrlPatterns": null,
+        "additionalTraceCategories": null,
+        "extraHeaders": null,
+        "precomputedLanternData": null,
+        "onlyAudits": null,
+        "onlyCategories": ["performance"],
+        "skipAudits": null
+      }
+    },
+    {
+      "run": 3,
+      "requestedUrl": "https://yunsophie.github.io/my-digital-moodboard/",
+      "finalDisplayedUrl": "https://yunsophie.github.io/my-digital-moodboard/",
+      "performanceScore": 72,
+      "firstContentfulPaintMs": 2167.6085000000003,
+      "largestContentfulPaintMs": 8961.2525,
+      "speedIndexMs": 2167.6085000000003,
+      "totalBlockingTimeMs": 0,
+      "cumulativeLayoutShift": 0.08229757672545217,
+      "documentResponseTimeMs": 8.253,
+      "totalTransferBytes": 2459296,
+      "imageTransferBytes": 2241141,
+      "imageRequestCount": 11,
+      "imageRequests": [
+        {
+          "file": "about-sophie-BEoZnuTg.jpg",
+          "transferSize": 383268,
+          "resourceSize": 382875,
+          "statusCode": 200,
+          "protocol": "h2",
+          "networkRequestTime": 31.479999780654907,
+          "networkEndTime": 77.58399987220764
+        },
+        {
+          "file": "editorial-i2-ta-D9Y2P1G7.jpg",
+          "transferSize": 131638,
+          "resourceSize": 131415,
+          "statusCode": 200,
+          "protocol": "h2",
+          "networkRequestTime": 31.609999895095825,
+          "networkEndTime": 77.73199987411499
+        },
+        {
+          "file": "editorial-kv-store-py-QwfGQ.jpg",
+          "transferSize": 110968,
+          "resourceSize": 110746,
+          "statusCode": 200,
+          "protocol": "h2",
+          "networkRequestTime": 110.79299974441528,
+          "networkEndTime": 124.17599987983704
+        },
+        {
+          "file": "huskybids-presentation-D3WyucNY.jpg",
+          "transferSize": 98341,
+          "resourceSize": 98089,
+          "statusCode": 200,
+          "protocol": "h2",
+          "networkRequestTime": 110.92499995231628,
+          "networkEndTime": 155.93299984931946
+        },
+        {
+          "file": "huskybids-poster-Dv2yqKC7.jpg",
+          "transferSize": 216344,
+          "resourceSize": 216038,
+          "statusCode": 200,
+          "protocol": "h2",
+          "networkRequestTime": 111.14699983596802,
+          "networkEndTime": 161.29900002479553
+        },
+        {
+          "file": "olmo-snow-symposium-Bi7NU61t.jpg",
+          "transferSize": 339901,
+          "resourceSize": 339430,
+          "statusCode": 200,
+          "protocol": "h2",
+          "networkRequestTime": 111.95099997520447,
+          "networkEndTime": 146.1380000114441
+        },
+        {
+          "file": "dubhacks-swag-CeFJ7VM5.jpg",
+          "transferSize": 381952,
+          "resourceSize": 381586,
+          "statusCode": 200,
+          "protocol": "h2",
+          "networkRequestTime": 112.03499984741211,
+          "networkEndTime": 167.41799998283386
+        },
+        {
+          "file": "editorial-http-server-D8xyaYgs.jpg",
+          "transferSize": 150689,
+          "resourceSize": 150418,
+          "statusCode": 200,
+          "protocol": "h2",
+          "networkRequestTime": 112.20099973678589,
+          "networkEndTime": 125.89100003242493
+        },
+        {
+          "file": "study-ducky-v2-Df0bi67y.png",
+          "transferSize": 177605,
+          "resourceSize": 177361,
+          "statusCode": 200,
+          "protocol": "h2",
+          "networkRequestTime": 112.34999990463257,
+          "networkEndTime": 155.5389997959137
+        },
+        {
+          "file": "vla-robot-arm-CPvBG_vW.jpg",
+          "transferSize": 107373,
+          "resourceSize": 107025,
+          "statusCode": 200,
+          "protocol": "h2",
+          "networkRequestTime": 112.4670000076294,
+          "networkEndTime": 161.5569999217987
+        },
+        {
+          "file": "pink-hardware-grid-BaMxu21J.jpg",
+          "transferSize": 143062,
+          "resourceSize": 142798,
+          "statusCode": 200,
+          "protocol": "h2",
+          "networkRequestTime": 112.60199975967407,
+          "networkEndTime": 161.1710000038147
+        }
+      ],
+      "mainRequest": {
+        "url": "https://yunsophie.github.io/my-digital-moodboard/",
+        "sessionTargetType": "page",
+        "protocol": "h2",
+        "rendererStartTime": 0,
+        "networkRequestTime": 0.5359997749328613,
+        "networkEndTime": 26.311999797821045,
+        "finished": true,
+        "transferSize": 9241,
+        "resourceSize": 59350,
+        "statusCode": 200,
+        "mimeType": "text/html",
+        "resourceType": "Document",
+        "priority": "VeryHigh",
+        "experimentalFromMainFrame": true,
+        "entity": "GitHub"
+      },
+      "lcpElement": {
+        "type": "node",
+        "lhId": "page-2-IMG",
+        "path": "1,HTML,1,BODY,1,MAIN,3,SECTION,0,DIV,0,DIV,1,DIV,0,SPAN,0,SPAN,0,BUTTON,0,IMG",
+        "selector": "span#pin-olmo-snow-- > span.relative > button.relative > img.block",
+        "boundingRect": {
+          "top": 693,
+          "bottom": 951,
+          "left": 8,
+          "right": 202,
+          "width": 194,
+          "height": 259
+        },
+        "snippet": "<img alt=\"Sophie presenting her snow cover research poster at a symposium\" width=\"768\" height=\"1024\" loading=\"eager\" decoding=\"async\" class=\"block h-full w-full object-cover transition duration-500 group-hover:scale\u2026\" src=\"/my-digital-moodboard/assets/olmo-snow-symposium-Bi7NU61t.jpg\" style=\"view-transition-name: pin-olmo-snow--;\">",
+        "nodeLabel": "Sophie presenting her snow cover research poster at a symposium"
+      },
+      "layoutShifts": [
+        {
+          "node": {
+            "type": "node",
+            "lhId": "page-16-DIV",
+            "path": "1,HTML,1,BODY,1,MAIN,3,SECTION,0,DIV,1,DIV",
+            "selector": "main.min-h-screen > section.px-2 > div.flex > div.flex",
+            "boundingRect": {
+              "top": 394,
+              "bottom": 1889,
+              "left": 210,
+              "right": 404,
+              "width": 194,
+              "height": 1496
+            },
+            "snippet": "<div class=\"flex min-w-0 flex-1 flex-col gap-2 sm:gap-3\">",
+            "nodeLabel": "TAP\nDISTRIBUTED SYSTEMS \u00b7 2026\ndistributed key-value store !\nJAVA\nPAXOS\nTWO-PHA\u2026"
+          },
+          "score": 0.08169812133609562
+        },
+        {
+          "node": {
+            "type": "node",
+            "lhId": "page-11-H1",
+            "path": "1,HTML,1,BODY,1,MAIN,1,SECTION,0,DIV,0,H1",
+            "selector": "main.min-h-screen > section.flex > div.min-w-0 > h1.font-sans",
+            "boundingRect": {
+              "top": 76,
+              "bottom": 114,
+              "left": 12,
+              "right": 400,
+              "width": 388,
+              "height": 38
+            },
+            "snippet": "<h1 class=\"font-sans text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:t\u2026\">",
+            "nodeLabel": "sophie's portfolio"
+          },
+          "score": 0.0005849423578941653,
+          "subItems": {
+            "type": "subitems",
+            "items": [
+              {
+                "extra": {
+                  "type": "url",
+                  "value": "https://fonts.gstatic.com/s/manrope/v20/xn7gYHE41ni1AdIRggexSvfedN4.woff2"
+                },
+                "cause": "Web font loaded"
+              }
+            ]
+          }
+        },
+        {
+          "node": {
+            "type": "node",
+            "lhId": "page-15-SPAN",
+            "path": "1,HTML,1,BODY,1,MAIN,0,HEADER,0,DIV,0,A,1,SPAN",
+            "selector": "header.sticky > div.flex > a.w-10 > span.text-accent-foreground",
+            "boundingRect": {
+              "top": 19,
+              "bottom": 48,
+              "left": 37,
+              "right": 41,
+              "width": 5,
+              "height": 29
+            },
+            "snippet": "<span class=\"text-accent-foreground\">",
+            "nodeLabel": "."
+          },
+          "score": 1.451303146237448e-5,
+          "subItems": {
+            "type": "subitems",
+            "items": [
+              {
+                "extra": {
+                  "type": "url",
+                  "value": "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYqXtKky2F7g.woff2"
+                },
+                "cause": "Web font loaded"
+              }
+            ]
+          }
+        }
+      ],
+      "resourceSummary": [
+        {
+          "resourceType": "total",
+          "label": "Total",
+          "requestCount": 19,
+          "transferSize": 2459296
+        },
+        {
+          "resourceType": "image",
+          "label": "Image",
+          "requestCount": 11,
+          "transferSize": 2241141
+        },
+        {
+          "resourceType": "script",
+          "label": "Script",
+          "requestCount": 2,
+          "transferSize": 129873
+        },
+        {
+          "resourceType": "font",
+          "label": "Font",
+          "requestCount": 2,
+          "transferSize": 62413
+        },
+        {
+          "resourceType": "stylesheet",
+          "label": "Stylesheet",
+          "requestCount": 2,
+          "transferSize": 16191
+        },
+        {
+          "resourceType": "document",
+          "label": "Document",
+          "requestCount": 1,
+          "transferSize": 9241
+        },
+        {
+          "resourceType": "other",
+          "label": "Other",
+          "requestCount": 1,
+          "transferSize": 437
+        },
+        {
+          "resourceType": "media",
+          "label": "Media",
+          "requestCount": 0,
+          "transferSize": 0
+        },
+        {
+          "resourceType": "third-party",
+          "label": "Third-party",
+          "requestCount": 19,
+          "transferSize": 2459296
+        }
+      ],
+      "failedRequests": [],
+      "runWarnings": [],
+      "environment": {
+        "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+        "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "benchmarkIndex": 2907,
+        "credits": {}
+      },
+      "configSettings": {
+        "output": "html",
+        "maxWaitForFcp": 30000,
+        "maxWaitForLoad": 45000,
+        "pauseAfterFcpMs": 1000,
+        "pauseAfterLoadMs": 1000,
+        "networkQuietThresholdMs": 1000,
+        "cpuQuietThresholdMs": 1000,
+        "formFactor": "mobile",
+        "throttling": {
+          "rttMs": 150,
+          "throughputKbps": 1638.4,
+          "requestLatencyMs": 562.5,
+          "downloadThroughputKbps": 1474.5600000000002,
+          "uploadThroughputKbps": 675,
+          "cpuSlowdownMultiplier": 4
+        },
+        "throttlingMethod": "simulate",
+        "screenEmulation": {
+          "mobile": true,
+          "width": 412,
+          "height": 823,
+          "deviceScaleFactor": 1.75,
+          "disabled": false
+        },
+        "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+        "auditMode": false,
+        "gatherMode": false,
+        "clearStorageTypes": ["file_systems", "shader_cache", "service_workers", "cache_storage"],
+        "disableStorageReset": false,
+        "debugNavigation": false,
+        "channel": "node",
+        "usePassiveGathering": false,
+        "disableFullPageScreenshot": false,
+        "skipAboutBlank": false,
+        "blankPage": "about:blank",
+        "ignoreStatusCode": false,
+        "locale": "en-US",
+        "blockedUrlPatterns": null,
+        "additionalTraceCategories": null,
+        "extraHeaders": null,
+        "precomputedLanternData": null,
+        "onlyAudits": null,
+        "onlyCategories": ["performance"],
+        "skipAudits": null
+      }
+    }
+  ],
+  "observations": {
+    "imageShareOfStartupTransferPercent": 91.12888469623842,
+    "sameLiveContentImageReductionTargetBytes": 1568812,
+    "lcpCandidatesByRun": [
+      {
+        "run": 1,
+        "label": "Floating frosted geometric clusters connected by translucent bridges",
+        "selector": "span#pin-distributed-key-value-store-- > span.relative > button.relative > img.block",
+        "snippet": "<img style=\"view-transition-name:pin-distributed-key-value-store--\" src=\"/my-digital-moodboard/assets/editorial-kv-store-py-QwfGQ.jpg\" alt=\"Floating frosted geometric clusters connected by translucent bridges\" width=\"1024\" height=\"1536\" loading=\"lazy\" decoding=\"async\" class=\"block h-full w-full object-cover transition duration-500 group-hover:scale\u2026\">"
+      },
+      {
+        "run": 2,
+        "label": "Sophie presenting her snow cover research poster at a symposium",
+        "selector": "span#pin-olmo-snow-- > span.relative > button.relative > img.block",
+        "snippet": "<img alt=\"Sophie presenting her snow cover research poster at a symposium\" width=\"768\" height=\"1024\" loading=\"eager\" decoding=\"async\" class=\"block h-full w-full object-cover transition duration-500 group-hover:scale\u2026\" src=\"/my-digital-moodboard/assets/olmo-snow-symposium-Bi7NU61t.jpg\" style=\"view-transition-name: pin-olmo-snow--;\">"
+      },
+      {
+        "run": 3,
+        "label": "Sophie presenting her snow cover research poster at a symposium",
+        "selector": "span#pin-olmo-snow-- > span.relative > button.relative > img.block",
+        "snippet": "<img alt=\"Sophie presenting her snow cover research poster at a symposium\" width=\"768\" height=\"1024\" loading=\"eager\" decoding=\"async\" class=\"block h-full w-full object-cover transition duration-500 group-hover:scale\u2026\" src=\"/my-digital-moodboard/assets/olmo-snow-symposium-Bi7NU61t.jpg\" style=\"view-transition-name: pin-olmo-snow--;\">"
+      }
+    ],
+    "representativeLcpPhases": [
+      {
+        "phase": "TTFB",
+        "timing": 613.324,
+        "percent": "7%"
+      },
+      {
+        "phase": "Load Delay",
+        "timing": 4462.825581863552,
+        "percent": "49%"
+      },
+      {
+        "phase": "Load Time",
+        "timing": 1673.21304438696,
+        "percent": "18%"
+      },
+      {
+        "phase": "Render Delay",
+        "timing": 2354.6723737494867,
+        "percent": "26%"
+      }
+    ],
+    "imageOpportunities": {
+      "modern-image-formats": {
+        "displayValue": "Est savings of 1,230\u00a0KiB",
+        "estimatedLcpSavingsMs": 3860
+      },
+      "uses-responsive-images": {
+        "displayValue": "Est savings of 1,698\u00a0KiB",
+        "estimatedLcpSavingsMs": 4470
+      }
+    }
+  }
+}
