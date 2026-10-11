@@ -1,3 +1,6 @@
+/**
+ * shadcn/ui `separator` primitive — reusable, theme-aware UI building block. Styled via tokens in src/styles.css.
+ */
 import * as React from "react";
 import * as SeparatorPrimitive from "@radix-ui/react-separator";
 

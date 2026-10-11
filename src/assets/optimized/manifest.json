@@ -354,6 +354,50 @@
         }
       ]
     },
+    "pinkHardwareGrid": {
+      "source": "pink-hardware-grid.jpg",
+      "sourceBytes": 142798,
+      "sourceSha256": "4c14c93873c11c18bf53278bc73e0f77026db9b1ec721bfe63f163153f05c5c9",
+      "width": 1024,
+      "height": 1024,
+      "variants": [
+        {
+          "file": "pink-hardware-grid-160w.webp",
+          "width": 160,
+          "height": 160,
+          "bytes": 4504,
+          "sha256": "578bf1528977a4231886dec542cf484ff4c428cc14dc6aaee266b453d5ce55a8"
+        },
+        {
+          "file": "pink-hardware-grid-320w.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 13284,
+          "sha256": "778eb603ef28ef59d15abb8ceafa97f06dcbe6f1e68b292a5d6114f5c97b0817"
+        },
+        {
+          "file": "pink-hardware-grid-480w.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 25260,
+          "sha256": "90b5358d29f280f37cc2a4ce536899800e079df6d0df60e9fcf8f00407d75738"
+        },
+        {
+          "file": "pink-hardware-grid-640w.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 39266,
+          "sha256": "d4d1bab08efcba0fd635ceacde251f3708e6e200a7448c59144e374c1bd398a8"
+        },
+        {
+          "file": "pink-hardware-grid-960w.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 70468,
+          "sha256": "cfa0c5d2d5456afd1fea7073ab6af3c75fca3a57b8a58410460a8b27c649c082"
+        }
+      ]
+    },
     "studyDucky": {
       "source": "study-ducky-v2.png",
       "sourceBytes": 177361,

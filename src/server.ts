@@ -1,3 +1,6 @@
+/**
+ * Server entry: wraps the TanStack Start handler and turns unexpected SSR crashes into a friendly HTML error page.
+ */
 import "./lib/error-capture";
 
 import { consumeLastCapturedError } from "./lib/error-capture";

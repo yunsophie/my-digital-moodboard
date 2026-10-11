@@ -1,3 +1,4 @@
+/** Checks every portfolio entry for complete content and usable image metadata. */
 import { describe, expect, it } from "vitest";
 
 import { boardItems } from "@/data/board-items";

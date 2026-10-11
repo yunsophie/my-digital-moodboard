@@ -1,3 +1,4 @@
+/** Curated portfolio cards shared by the home route and content checks. */
 import { imageAssets } from "@/data/image-assets.generated";
 import type { ResponsiveImageAsset } from "@/lib/responsive-image";
 
@@ -29,7 +30,7 @@ export const boardItems: readonly BoardItem[] = [
     category: "CS @ University of Washington",
     year: "Class of 2028",
     description:
-      "Hello I'm Sophie, a computer science student at the University of Washington. I'm happiest somewhere between research and systems and design. I have worked on teaching robots to learn from video, reading the Earth through satellite imagery, building distributed software that holds up when things go wrong, and many other fun side projects where I let my creativity take control. Outside of work, I am an avid reader, runner, pianist, and a fan of the Montreal Canadiens. ",
+      "Hello I'm Sophie, a computer science student at the University of Washington. I'm happiest somewhere between research and systems and design. I have worked on teaching robots to learn from video, reading the Earth through satellite imagery, building distributed software that holds up when things go wrong, and many other fun side projects where I let my creativity take control. Outside of work, I am an avid reader, runner, pianist, and a fan of the Montreal Canadiens.",
     tools: ["Machine learning", "Distributed systems", "Research"],
     image: imageAssets.aboutSophie,
     alt: "Sophie sitting on a bench next to a Milky mascot statue in Japan",
@@ -59,12 +60,13 @@ export const boardItems: readonly BoardItem[] = [
     alt: "Sophie presenting her snow cover research poster at a symposium",
   },
   {
-    title: "multithreaded http server !",
+    title: "333gle search engine !",
     folder: "Projects",
     category: "Systems programming",
-    year: "2026",
-    description: "A multithreaded HTTP server built with C++, Linux, and sockets.",
-    tools: ["C++", "Linux", "Sockets"],
+    year: "CSE 333",
+    description:
+      "A concurrent HTTP search engine written in C++ that handles many clients at once, keeps connections alive across requests, serves static files, and returns ranked search results. I built a POSIX thread pool that coordinates up to eight worker threads with mutexes, condition variables, a task queue, and graceful shutdown, and made file serving safe with path traversal protection, URI decoding, HTML escaping, MIME detection, and binary-safe reads.",
+    tools: ["C++", "POSIX TCP", "IPv4/IPv6", "Unix", "pthreads"],
     image: imageAssets.editorialHttpServer,
     alt: "Frosted acrylic panels with glowing circuit traces",
   },
@@ -140,12 +142,23 @@ export const boardItems: readonly BoardItem[] = [
     category: "Hackathon",
     year: "DubHacks '25",
     description:
-      "An AI study companion inspired by rubber duck debugging — except the AI is the student and you're the teacher. You teach your Ducky about any topic while it asks adaptive questions that grow in complexity as the conversation develops, and afterwards it analyzes the exchange to highlight strengths, misunderstandings, and topics left out. I built the full stack in one weekend: React and Tailwind on the frontend, Node and Express on the backend with the Gemini API for question generation, and Firebase for authentication and chat storage — all while learning most of these tools on the fly.",
+      "An AI study companion inspired by rubber duck debugging — except the AI is the student and you're the teacher. You teach your Ducky about any topic while it asks adaptive questions, and afterwards it analyzes the exchange to highlight strengths, misunderstandings, and gaps. I built the full stack with React and Node/Express, writing REST APIs for context-aware tutoring and conversation analysis. Gemini returns schema-constrained JSON to estimate topic understanding and generate personalized study recommendations, and Firestore stores timestamp-ordered messages with batch writes that save new messages and session metadata in a single atomic commit.",
     tools: ["React.js", "Node.js", "Express", "Firebase", "Gemini API", "Tailwind"],
     image: imageAssets.studyDucky,
     alt: "A round yellow cartoon duck standing on a blue tiled floor",
     ratio: "aspect-[2/3]",
     link: { url: "https://yblii.github.io", label: "Try it out" },
     extraLink: { url: "https://devpost.com/software/study-ducky-yuape9", label: "Devpost" },
+  },
+  {
+    title: "visual discovery !",
+    folder: "Projects",
+    category: "Personal project",
+    year: "2026",
+    description:
+      "An interior-design discovery interface that helps people turn a vague aesthetic feeling into words they can search with — by picking images they love, browsing descriptive vocabulary, and refining results visually. I wrote the MVP specification covering user journeys, feature scope, success criteria, and security and cost constraints, and planned CLIP-based image retrieval with MMR reranking and Cloudflare R2 storage.",
+    tools: ["React", "JavaScript", "CLIP", "Cloudflare R2"],
+    image: imageAssets.pinkHardwareGrid,
+    alt: "A soft pink grid of hardware pieces",
   },
 ];

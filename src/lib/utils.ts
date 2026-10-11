@@ -1,3 +1,6 @@
+/**
+ * `cn()` helper — merges conditional Tailwind class names without conflicts.
+ */
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 

@@ -1,0 +1,967 @@
+{
+  "scope": "Ten-card local production build after merging origin/main; historical nine-card results remain separate",
+  "upstreamCommit": "5e31100",
+  "optimizedParentCommit": "c90e12d",
+  "stages": [
+    {
+      "recordedAt": "2026-10-11T06:08:02.854Z",
+      "localTimezone": "America/Los_Angeles",
+      "scope": "Current local production build; cold browser profiles; gzip text responses; no scrolling or user interaction",
+      "url": "http://127.0.0.1:4173/my-digital-moodboard/",
+      "nodeVersion": "v22.13.0",
+      "lighthouseVersion": "12.8.2",
+      "host": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "cpu": "Apple M1 Pro",
+        "logicalCpus": 8
+      },
+      "buildIndexSha256": "e22b5ddb7692b9afce31e61917b22e00737c6f8261db9b544c6811101abe33ce",
+      "medians": {
+        "performanceScore": 90,
+        "firstContentfulPaintMs": 1806.4968000000001,
+        "largestContentfulPaintMs": 3457.6336499999998,
+        "speedIndexMs": 1806.4968000000001,
+        "totalBlockingTimeMs": 0,
+        "cumulativeLayoutShift": 0.0005422129025307531,
+        "totalTransferBytes": 508389,
+        "imageTransferBytes": 288372,
+        "imageRequestCount": 10
+      },
+      "representativeRun": 2,
+      "runs": [
+        {
+          "run": 1,
+          "performanceScore": 90,
+          "firstContentfulPaintMs": 1866.984,
+          "largestContentfulPaintMs": 3473.5599999999995,
+          "speedIndexMs": 1866.984,
+          "totalBlockingTimeMs": 0,
+          "cumulativeLayoutShift": 0.0005422129025307531,
+          "totalTransferBytes": 508389,
+          "imageTransferBytes": 288372,
+          "imageRequestCount": 10,
+          "imageRequests": [
+            {
+              "file": "about-sophie-480w-BH4hM70Y.webp",
+              "transferSize": 63264,
+              "resourceSize": 63064,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-kv-store-480w-BOmjwt8o.webp",
+              "transferSize": 11212,
+              "resourceSize": 11012,
+              "statusCode": 200
+            },
+            {
+              "file": "olmo-snow-symposium-480w-CdmIJYGs.webp",
+              "transferSize": 55170,
+              "resourceSize": 54970,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-http-server-480w-BGTWUzlU.webp",
+              "transferSize": 12100,
+              "resourceSize": 11900,
+              "statusCode": 200
+            },
+            {
+              "file": "vla-robot-arm-480w-ztuzzwII.webp",
+              "transferSize": 31732,
+              "resourceSize": 31532,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-i2-ta-480w-BnEpk7xZ.webp",
+              "transferSize": 15286,
+              "resourceSize": 15086,
+              "statusCode": 200
+            },
+            {
+              "file": "huskybids-presentation-480w-CrczIvjF.webp",
+              "transferSize": 8837,
+              "resourceSize": 8638,
+              "statusCode": 200
+            },
+            {
+              "file": "dubhacks-swag-480w-HoYHsUmX.webp",
+              "transferSize": 58362,
+              "resourceSize": 58162,
+              "statusCode": 200
+            },
+            {
+              "file": "study-ducky-v2-334w-6a705ib4.webp",
+              "transferSize": 6949,
+              "resourceSize": 6750,
+              "statusCode": 200
+            },
+            {
+              "file": "pink-hardware-grid-480w-CHSdStIl.webp",
+              "transferSize": 25460,
+              "resourceSize": 25260,
+              "statusCode": 200
+            }
+          ],
+          "failedRequests": [],
+          "runWarnings": [],
+          "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+            "benchmarkIndex": 2810,
+            "credits": {}
+          },
+          "configSettings": {
+            "output": "html",
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "node",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": ["performance"],
+            "skipAudits": null
+          },
+          "lcpElement": {
+            "type": "node",
+            "lhId": "page-0-IMG",
+            "path": "1,HTML,1,BODY,1,MAIN,3,SECTION,0,DIV,5,DIV,0,SPAN,0,SPAN,0,BUTTON,0,IMG",
+            "selector": "span#pin-i2-teaching-assistant-- > span.relative > button.relative > img.block",
+            "boundingRect": {
+              "top": 394,
+              "bottom": 685,
+              "left": 210,
+              "right": 404,
+              "width": 194,
+              "height": 291
+            },
+            "snippet": "<img style=\"view-transition-name:pin-i2-teaching-assistant--\" loading=\"lazy\" fetchpriority=\"auto\" class=\"block h-full w-full object-cover transition duration-500 group-hover:scale\u2026\" data-image-id=\"editorialI2Ta\" src=\"http://127.0.0.1:4173/my-digital-moodboard/assets/editorial-i2-ta-480w-BnE\u2026\" srcset=\"/my-digital-moodboard/assets/editorial-i2-ta-160w-CIx-8qsL.webp 160w, /my-\u2026\" sizes=\"(min-width: 1024px) calc((100vw - 72px) / 5), (min-width: 768px) calc((100\u2026\" width=\"1024\" height=\"1536\" alt=\"A glass lattice manifold with glowing nodes\" decoding=\"async\" \u2026>",
+            "nodeLabel": "A glass lattice manifold with glowing nodes"
+          },
+          "lcpLazyLoadingScore": 0
+        },
+        {
+          "run": 2,
+          "performanceScore": 90,
+          "firstContentfulPaintMs": 1806.4968000000001,
+          "largestContentfulPaintMs": 3457.6336499999998,
+          "speedIndexMs": 1806.4968000000001,
+          "totalBlockingTimeMs": 0,
+          "cumulativeLayoutShift": 0.0005422129025307531,
+          "totalTransferBytes": 508389,
+          "imageTransferBytes": 288372,
+          "imageRequestCount": 10,
+          "imageRequests": [
+            {
+              "file": "about-sophie-480w-BH4hM70Y.webp",
+              "transferSize": 63264,
+              "resourceSize": 63064,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-kv-store-480w-BOmjwt8o.webp",
+              "transferSize": 11212,
+              "resourceSize": 11012,
+              "statusCode": 200
+            },
+            {
+              "file": "olmo-snow-symposium-480w-CdmIJYGs.webp",
+              "transferSize": 55170,
+              "resourceSize": 54970,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-http-server-480w-BGTWUzlU.webp",
+              "transferSize": 12100,
+              "resourceSize": 11900,
+              "statusCode": 200
+            },
+            {
+              "file": "vla-robot-arm-480w-ztuzzwII.webp",
+              "transferSize": 31732,
+              "resourceSize": 31532,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-i2-ta-480w-BnEpk7xZ.webp",
+              "transferSize": 15286,
+              "resourceSize": 15086,
+              "statusCode": 200
+            },
+            {
+              "file": "huskybids-presentation-480w-CrczIvjF.webp",
+              "transferSize": 8837,
+              "resourceSize": 8638,
+              "statusCode": 200
+            },
+            {
+              "file": "dubhacks-swag-480w-HoYHsUmX.webp",
+              "transferSize": 58362,
+              "resourceSize": 58162,
+              "statusCode": 200
+            },
+            {
+              "file": "study-ducky-v2-334w-6a705ib4.webp",
+              "transferSize": 6949,
+              "resourceSize": 6750,
+              "statusCode": 200
+            },
+            {
+              "file": "pink-hardware-grid-480w-CHSdStIl.webp",
+              "transferSize": 25460,
+              "resourceSize": 25260,
+              "statusCode": 200
+            }
+          ],
+          "failedRequests": [],
+          "runWarnings": [],
+          "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+            "benchmarkIndex": 2813,
+            "credits": {}
+          },
+          "configSettings": {
+            "output": "html",
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "node",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": ["performance"],
+            "skipAudits": null
+          },
+          "lcpElement": {
+            "type": "node",
+            "lhId": "page-0-IMG",
+            "path": "1,HTML,1,BODY,1,MAIN,3,SECTION,0,DIV,5,DIV,0,SPAN,0,SPAN,0,BUTTON,0,IMG",
+            "selector": "span#pin-i2-teaching-assistant-- > span.relative > button.relative > img.block",
+            "boundingRect": {
+              "top": 394,
+              "bottom": 685,
+              "left": 210,
+              "right": 404,
+              "width": 194,
+              "height": 291
+            },
+            "snippet": "<img style=\"view-transition-name:pin-i2-teaching-assistant--\" loading=\"lazy\" fetchpriority=\"auto\" class=\"block h-full w-full object-cover transition duration-500 group-hover:scale\u2026\" data-image-id=\"editorialI2Ta\" src=\"http://127.0.0.1:4173/my-digital-moodboard/assets/editorial-i2-ta-480w-BnE\u2026\" srcset=\"/my-digital-moodboard/assets/editorial-i2-ta-160w-CIx-8qsL.webp 160w, /my-\u2026\" sizes=\"(min-width: 1024px) calc((100vw - 72px) / 5), (min-width: 768px) calc((100\u2026\" width=\"1024\" height=\"1536\" alt=\"A glass lattice manifold with glowing nodes\" decoding=\"async\" \u2026>",
+            "nodeLabel": "A glass lattice manifold with glowing nodes"
+          },
+          "lcpLazyLoadingScore": 0
+        },
+        {
+          "run": 3,
+          "performanceScore": 90,
+          "firstContentfulPaintMs": 1803.7292,
+          "largestContentfulPaintMs": 3454.1186,
+          "speedIndexMs": 1803.7292,
+          "totalBlockingTimeMs": 0,
+          "cumulativeLayoutShift": 0.0005422129025307531,
+          "totalTransferBytes": 508389,
+          "imageTransferBytes": 288372,
+          "imageRequestCount": 10,
+          "imageRequests": [
+            {
+              "file": "about-sophie-480w-BH4hM70Y.webp",
+              "transferSize": 63264,
+              "resourceSize": 63064,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-kv-store-480w-BOmjwt8o.webp",
+              "transferSize": 11212,
+              "resourceSize": 11012,
+              "statusCode": 200
+            },
+            {
+              "file": "olmo-snow-symposium-480w-CdmIJYGs.webp",
+              "transferSize": 55170,
+              "resourceSize": 54970,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-http-server-480w-BGTWUzlU.webp",
+              "transferSize": 12100,
+              "resourceSize": 11900,
+              "statusCode": 200
+            },
+            {
+              "file": "vla-robot-arm-480w-ztuzzwII.webp",
+              "transferSize": 31732,
+              "resourceSize": 31532,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-i2-ta-480w-BnEpk7xZ.webp",
+              "transferSize": 15286,
+              "resourceSize": 15086,
+              "statusCode": 200
+            },
+            {
+              "file": "huskybids-presentation-480w-CrczIvjF.webp",
+              "transferSize": 8837,
+              "resourceSize": 8638,
+              "statusCode": 200
+            },
+            {
+              "file": "dubhacks-swag-480w-HoYHsUmX.webp",
+              "transferSize": 58362,
+              "resourceSize": 58162,
+              "statusCode": 200
+            },
+            {
+              "file": "study-ducky-v2-334w-6a705ib4.webp",
+              "transferSize": 6949,
+              "resourceSize": 6750,
+              "statusCode": 200
+            },
+            {
+              "file": "pink-hardware-grid-480w-CHSdStIl.webp",
+              "transferSize": 25460,
+              "resourceSize": 25260,
+              "statusCode": 200
+            }
+          ],
+          "failedRequests": [],
+          "runWarnings": [],
+          "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+            "benchmarkIndex": 2827.5,
+            "credits": {}
+          },
+          "configSettings": {
+            "output": "html",
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "node",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": ["performance"],
+            "skipAudits": null
+          },
+          "lcpElement": {
+            "type": "node",
+            "lhId": "page-0-IMG",
+            "path": "1,HTML,1,BODY,1,MAIN,3,SECTION,0,DIV,5,DIV,0,SPAN,0,SPAN,0,BUTTON,0,IMG",
+            "selector": "span#pin-i2-teaching-assistant-- > span.relative > button.relative > img.block",
+            "boundingRect": {
+              "top": 394,
+              "bottom": 685,
+              "left": 210,
+              "right": 404,
+              "width": 194,
+              "height": 291
+            },
+            "snippet": "<img style=\"view-transition-name:pin-i2-teaching-assistant--\" loading=\"lazy\" fetchpriority=\"auto\" class=\"block h-full w-full object-cover transition duration-500 group-hover:scale\u2026\" data-image-id=\"editorialI2Ta\" src=\"http://127.0.0.1:4173/my-digital-moodboard/assets/editorial-i2-ta-480w-BnE\u2026\" srcset=\"/my-digital-moodboard/assets/editorial-i2-ta-160w-CIx-8qsL.webp 160w, /my-\u2026\" sizes=\"(min-width: 1024px) calc((100vw - 72px) / 5), (min-width: 768px) calc((100\u2026\" width=\"1024\" height=\"1536\" alt=\"A glass lattice manifold with glowing nodes\" decoding=\"async\" \u2026>",
+            "nodeLabel": "A glass lattice manifold with glowing nodes"
+          },
+          "lcpLazyLoadingScore": 0
+        }
+      ],
+      "label": "Merged content before priority correction"
+    },
+    {
+      "recordedAt": "2026-10-11T06:11:20.268Z",
+      "localTimezone": "America/Los_Angeles",
+      "scope": "Current local production build; cold browser profiles; gzip text responses; no scrolling or user interaction",
+      "url": "http://127.0.0.1:4173/my-digital-moodboard/",
+      "nodeVersion": "v22.13.0",
+      "lighthouseVersion": "12.8.2",
+      "host": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "cpu": "Apple M1 Pro",
+        "logicalCpus": 8
+      },
+      "buildIndexSha256": "4edce3442bf2114196c3226ad15d3bcdbab293942c5d483ed777e4fa78068acd",
+      "medians": {
+        "performanceScore": 95,
+        "firstContentfulPaintMs": 1951.8817999999999,
+        "largestContentfulPaintMs": 2777.0369,
+        "speedIndexMs": 1951.8817999999999,
+        "totalBlockingTimeMs": 0,
+        "cumulativeLayoutShift": 0.0005422129025307531,
+        "totalTransferBytes": 508530,
+        "imageTransferBytes": 288372,
+        "imageRequestCount": 10
+      },
+      "representativeRun": 2,
+      "runs": [
+        {
+          "run": 1,
+          "performanceScore": 95,
+          "firstContentfulPaintMs": 1862.8632000000002,
+          "largestContentfulPaintMs": 2736.6477750000004,
+          "speedIndexMs": 1862.8632000000002,
+          "totalBlockingTimeMs": 0,
+          "cumulativeLayoutShift": 0.0005422129025307531,
+          "totalTransferBytes": 508530,
+          "imageTransferBytes": 288372,
+          "imageRequestCount": 10,
+          "imageRequests": [
+            {
+              "file": "about-sophie-480w-BH4hM70Y.webp",
+              "transferSize": 63264,
+              "resourceSize": 63064,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-kv-store-480w-BOmjwt8o.webp",
+              "transferSize": 11212,
+              "resourceSize": 11012,
+              "statusCode": 200
+            },
+            {
+              "file": "olmo-snow-symposium-480w-CdmIJYGs.webp",
+              "transferSize": 55170,
+              "resourceSize": 54970,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-http-server-480w-BGTWUzlU.webp",
+              "transferSize": 12100,
+              "resourceSize": 11900,
+              "statusCode": 200
+            },
+            {
+              "file": "vla-robot-arm-480w-ztuzzwII.webp",
+              "transferSize": 31732,
+              "resourceSize": 31532,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-i2-ta-480w-BnEpk7xZ.webp",
+              "transferSize": 15286,
+              "resourceSize": 15086,
+              "statusCode": 200
+            },
+            {
+              "file": "huskybids-presentation-480w-CrczIvjF.webp",
+              "transferSize": 8837,
+              "resourceSize": 8638,
+              "statusCode": 200
+            },
+            {
+              "file": "dubhacks-swag-480w-HoYHsUmX.webp",
+              "transferSize": 58362,
+              "resourceSize": 58162,
+              "statusCode": 200
+            },
+            {
+              "file": "study-ducky-v2-334w-6a705ib4.webp",
+              "transferSize": 6949,
+              "resourceSize": 6750,
+              "statusCode": 200
+            },
+            {
+              "file": "pink-hardware-grid-480w-CHSdStIl.webp",
+              "transferSize": 25460,
+              "resourceSize": 25260,
+              "statusCode": 200
+            }
+          ],
+          "failedRequests": [],
+          "runWarnings": [],
+          "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+            "benchmarkIndex": 2851,
+            "credits": {}
+          },
+          "configSettings": {
+            "output": "html",
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "node",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": ["performance"],
+            "skipAudits": null
+          },
+          "lcpElement": {
+            "type": "node",
+            "lhId": "page-0-IMG",
+            "path": "1,HTML,1,BODY,1,MAIN,3,SECTION,0,DIV,5,DIV,0,SPAN,0,SPAN,0,BUTTON,0,IMG",
+            "selector": "span#pin-i2-teaching-assistant-- > span.relative > button.relative > img.block",
+            "boundingRect": {
+              "top": 394,
+              "bottom": 685,
+              "left": 210,
+              "right": 404,
+              "width": 194,
+              "height": 291
+            },
+            "snippet": "<img style=\"view-transition-name:pin-i2-teaching-assistant--\" loading=\"eager\" fetchpriority=\"high\" class=\"block h-full w-full object-cover transition duration-500 group-hover:scale\u2026\" data-image-id=\"editorialI2Ta\" src=\"http://127.0.0.1:4173/my-digital-moodboard/assets/editorial-i2-ta-480w-BnE\u2026\" srcset=\"/my-digital-moodboard/assets/editorial-i2-ta-160w-CIx-8qsL.webp 160w, /my-\u2026\" sizes=\"(min-width: 1024px) calc((100vw - 72px) / 5), (min-width: 768px) calc((100\u2026\" width=\"1024\" height=\"1536\" alt=\"A glass lattice manifold with glowing nodes\" decoding=\"async\" \u2026>",
+            "nodeLabel": "A glass lattice manifold with glowing nodes"
+          },
+          "lcpLazyLoadingScore": 1
+        },
+        {
+          "run": 2,
+          "performanceScore": 95,
+          "firstContentfulPaintMs": 1951.8817999999999,
+          "largestContentfulPaintMs": 2777.0369,
+          "speedIndexMs": 1951.8817999999999,
+          "totalBlockingTimeMs": 0,
+          "cumulativeLayoutShift": 0.0005422129025307531,
+          "totalTransferBytes": 508530,
+          "imageTransferBytes": 288372,
+          "imageRequestCount": 10,
+          "imageRequests": [
+            {
+              "file": "about-sophie-480w-BH4hM70Y.webp",
+              "transferSize": 63264,
+              "resourceSize": 63064,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-kv-store-480w-BOmjwt8o.webp",
+              "transferSize": 11212,
+              "resourceSize": 11012,
+              "statusCode": 200
+            },
+            {
+              "file": "olmo-snow-symposium-480w-CdmIJYGs.webp",
+              "transferSize": 55170,
+              "resourceSize": 54970,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-http-server-480w-BGTWUzlU.webp",
+              "transferSize": 12100,
+              "resourceSize": 11900,
+              "statusCode": 200
+            },
+            {
+              "file": "vla-robot-arm-480w-ztuzzwII.webp",
+              "transferSize": 31732,
+              "resourceSize": 31532,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-i2-ta-480w-BnEpk7xZ.webp",
+              "transferSize": 15286,
+              "resourceSize": 15086,
+              "statusCode": 200
+            },
+            {
+              "file": "huskybids-presentation-480w-CrczIvjF.webp",
+              "transferSize": 8837,
+              "resourceSize": 8638,
+              "statusCode": 200
+            },
+            {
+              "file": "dubhacks-swag-480w-HoYHsUmX.webp",
+              "transferSize": 58362,
+              "resourceSize": 58162,
+              "statusCode": 200
+            },
+            {
+              "file": "study-ducky-v2-334w-6a705ib4.webp",
+              "transferSize": 6949,
+              "resourceSize": 6750,
+              "statusCode": 200
+            },
+            {
+              "file": "pink-hardware-grid-480w-CHSdStIl.webp",
+              "transferSize": 25460,
+              "resourceSize": 25260,
+              "statusCode": 200
+            }
+          ],
+          "failedRequests": [],
+          "runWarnings": [],
+          "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+            "benchmarkIndex": 2824.5,
+            "credits": {}
+          },
+          "configSettings": {
+            "output": "html",
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "node",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": ["performance"],
+            "skipAudits": null
+          },
+          "lcpElement": {
+            "type": "node",
+            "lhId": "page-0-IMG",
+            "path": "1,HTML,1,BODY,1,MAIN,3,SECTION,0,DIV,5,DIV,0,SPAN,0,SPAN,0,BUTTON,0,IMG",
+            "selector": "span#pin-i2-teaching-assistant-- > span.relative > button.relative > img.block",
+            "boundingRect": {
+              "top": 394,
+              "bottom": 685,
+              "left": 210,
+              "right": 404,
+              "width": 194,
+              "height": 291
+            },
+            "snippet": "<img style=\"view-transition-name:pin-i2-teaching-assistant--\" loading=\"eager\" fetchpriority=\"high\" class=\"block h-full w-full object-cover transition duration-500 group-hover:scale\u2026\" data-image-id=\"editorialI2Ta\" src=\"http://127.0.0.1:4173/my-digital-moodboard/assets/editorial-i2-ta-480w-BnE\u2026\" srcset=\"/my-digital-moodboard/assets/editorial-i2-ta-160w-CIx-8qsL.webp 160w, /my-\u2026\" sizes=\"(min-width: 1024px) calc((100vw - 72px) / 5), (min-width: 768px) calc((100\u2026\" width=\"1024\" height=\"1536\" alt=\"A glass lattice manifold with glowing nodes\" decoding=\"async\" \u2026>",
+            "nodeLabel": "A glass lattice manifold with glowing nodes"
+          },
+          "lcpLazyLoadingScore": 1
+        },
+        {
+          "run": 3,
+          "performanceScore": 94,
+          "firstContentfulPaintMs": 1952.7749999999999,
+          "largestContentfulPaintMs": 2777.8905000000004,
+          "speedIndexMs": 1952.7749999999999,
+          "totalBlockingTimeMs": 0,
+          "cumulativeLayoutShift": 0.0005422129025307531,
+          "totalTransferBytes": 508530,
+          "imageTransferBytes": 288372,
+          "imageRequestCount": 10,
+          "imageRequests": [
+            {
+              "file": "about-sophie-480w-BH4hM70Y.webp",
+              "transferSize": 63264,
+              "resourceSize": 63064,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-kv-store-480w-BOmjwt8o.webp",
+              "transferSize": 11212,
+              "resourceSize": 11012,
+              "statusCode": 200
+            },
+            {
+              "file": "olmo-snow-symposium-480w-CdmIJYGs.webp",
+              "transferSize": 55170,
+              "resourceSize": 54970,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-http-server-480w-BGTWUzlU.webp",
+              "transferSize": 12100,
+              "resourceSize": 11900,
+              "statusCode": 200
+            },
+            {
+              "file": "vla-robot-arm-480w-ztuzzwII.webp",
+              "transferSize": 31732,
+              "resourceSize": 31532,
+              "statusCode": 200
+            },
+            {
+              "file": "editorial-i2-ta-480w-BnEpk7xZ.webp",
+              "transferSize": 15286,
+              "resourceSize": 15086,
+              "statusCode": 200
+            },
+            {
+              "file": "huskybids-presentation-480w-CrczIvjF.webp",
+              "transferSize": 8837,
+              "resourceSize": 8638,
+              "statusCode": 200
+            },
+            {
+              "file": "dubhacks-swag-480w-HoYHsUmX.webp",
+              "transferSize": 58362,
+              "resourceSize": 58162,
+              "statusCode": 200
+            },
+            {
+              "file": "study-ducky-v2-334w-6a705ib4.webp",
+              "transferSize": 6949,
+              "resourceSize": 6750,
+              "statusCode": 200
+            },
+            {
+              "file": "pink-hardware-grid-480w-CHSdStIl.webp",
+              "transferSize": 25460,
+              "resourceSize": 25260,
+              "statusCode": 200
+            }
+          ],
+          "failedRequests": [],
+          "runWarnings": [],
+          "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+            "benchmarkIndex": 2811,
+            "credits": {}
+          },
+          "configSettings": {
+            "output": "html",
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "node",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": ["performance"],
+            "skipAudits": null
+          },
+          "lcpElement": {
+            "type": "node",
+            "lhId": "page-0-IMG",
+            "path": "1,HTML,1,BODY,1,MAIN,3,SECTION,0,DIV,5,DIV,0,SPAN,0,SPAN,0,BUTTON,0,IMG",
+            "selector": "span#pin-i2-teaching-assistant-- > span.relative > button.relative > img.block",
+            "boundingRect": {
+              "top": 394,
+              "bottom": 685,
+              "left": 210,
+              "right": 404,
+              "width": 194,
+              "height": 291
+            },
+            "snippet": "<img style=\"view-transition-name:pin-i2-teaching-assistant--\" loading=\"eager\" fetchpriority=\"high\" class=\"block h-full w-full object-cover transition duration-500 group-hover:scale\u2026\" data-image-id=\"editorialI2Ta\" src=\"http://127.0.0.1:4173/my-digital-moodboard/assets/editorial-i2-ta-480w-BnE\u2026\" srcset=\"/my-digital-moodboard/assets/editorial-i2-ta-160w-CIx-8qsL.webp 160w, /my-\u2026\" sizes=\"(min-width: 1024px) calc((100vw - 72px) / 5), (min-width: 768px) calc((100\u2026\" width=\"1024\" height=\"1536\" alt=\"A glass lattice manifold with glowing nodes\" decoding=\"async\" \u2026>",
+            "nodeLabel": "A glass lattice manifold with glowing nodes"
+          },
+          "lcpLazyLoadingScore": 1
+        }
+      ],
+      "label": "Merged content with measured LCP correction"
+    }
+  ]
+}

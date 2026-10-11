@@ -1,3 +1,4 @@
+/** Shared image element for generated candidates, logical dimensions, and slot sizes. */
 import type { ComponentPropsWithoutRef } from "react";
 
 import type { ResponsiveImageAsset } from "@/lib/responsive-image";

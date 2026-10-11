@@ -1,3 +1,6 @@
+/**
+ * Lint rules: recommended JS/TS, React hooks, React refresh, and Prettier formatting.
+ */
 import js from "@eslint/js";
 import eslintPluginPrettier from "eslint-plugin-prettier/recommended";
 import globals from "globals";

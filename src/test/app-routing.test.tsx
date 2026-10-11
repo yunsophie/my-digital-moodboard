@@ -1,3 +1,6 @@
+/**
+ * Routing tests: home page, 404 page, and links under the GitHub Pages base path.
+ */
 import { QueryClient } from "@tanstack/react-query";
 import { createMemoryHistory, createRouter, RouterProvider } from "@tanstack/react-router";
 import { cleanup, fireEvent, render, within } from "@testing-library/react";

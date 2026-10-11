@@ -1,3 +1,6 @@
+/**
+ * Static HTML fallback page shown when the server fails to render.
+ */
 export function renderErrorPage(): string {
   return `<!doctype html>
 <html lang="en">

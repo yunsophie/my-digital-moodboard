@@ -41,6 +41,11 @@ import olmoSymposium320 from "@/assets/optimized/olmo-snow-symposium-320w.webp";
 import olmoSymposium480 from "@/assets/optimized/olmo-snow-symposium-480w.webp";
 import olmoSymposium640 from "@/assets/optimized/olmo-snow-symposium-640w.webp";
 import olmoSymposium768 from "@/assets/optimized/olmo-snow-symposium-768w.webp";
+import pinkHardwareGrid160 from "@/assets/optimized/pink-hardware-grid-160w.webp";
+import pinkHardwareGrid320 from "@/assets/optimized/pink-hardware-grid-320w.webp";
+import pinkHardwareGrid480 from "@/assets/optimized/pink-hardware-grid-480w.webp";
+import pinkHardwareGrid640 from "@/assets/optimized/pink-hardware-grid-640w.webp";
+import pinkHardwareGrid960 from "@/assets/optimized/pink-hardware-grid-960w.webp";
 import studyDucky160 from "@/assets/optimized/study-ducky-v2-160w.webp";
 import studyDucky320 from "@/assets/optimized/study-ducky-v2-320w.webp";
 import studyDucky334 from "@/assets/optimized/study-ducky-v2-334w.webp";
@@ -164,6 +169,20 @@ export const imageAssets = {
       { src: olmoSymposium480, width: 480, height: 640, bytes: 54970 },
       { src: olmoSymposium640, width: 640, height: 853, bytes: 88454 },
       { src: olmoSymposium768, width: 768, height: 1024, bytes: 122232 },
+    ],
+  },
+  pinkHardwareGrid: {
+    id: "pinkHardwareGrid",
+    src: pinkHardwareGrid640,
+    srcSet: `${pinkHardwareGrid160} 160w, ${pinkHardwareGrid320} 320w, ${pinkHardwareGrid480} 480w, ${pinkHardwareGrid640} 640w, ${pinkHardwareGrid960} 960w`,
+    width: 1024,
+    height: 1024,
+    candidates: [
+      { src: pinkHardwareGrid160, width: 160, height: 160, bytes: 4504 },
+      { src: pinkHardwareGrid320, width: 320, height: 320, bytes: 13284 },
+      { src: pinkHardwareGrid480, width: 480, height: 480, bytes: 25260 },
+      { src: pinkHardwareGrid640, width: 640, height: 640, bytes: 39266 },
+      { src: pinkHardwareGrid960, width: 960, height: 960, bytes: 70468 },
     ],
   },
   studyDucky: {

@@ -1,3 +1,8 @@
+/**
+ * Home page: the moodboard hero, search, folders, flip cards, and Experience timeline.
+ * Portfolio content lives in src/data/board-items.ts; image families are generated
+ * separately so this route stays compatible with static GitHub Pages hosting.
+ */
 import { flushSync } from "react-dom";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
@@ -103,6 +108,7 @@ function FlipImage({
   imageRatio,
   crop,
   eager,
+  priority = false,
   sizes = GRID_IMAGE_SIZES,
   posterSizes = GRID_POSTER_SIZES,
   showTapBadge = false,
@@ -114,6 +120,7 @@ function FlipImage({
   imageRatio: string;
   crop?: string | undefined;
   eager?: boolean | undefined;
+  priority?: boolean;
   sizes?: string;
   posterSizes?: string;
   showTapBadge?: boolean | undefined;
@@ -176,11 +183,10 @@ function FlipImage({
             image={item.image}
             sizes={sizes}
             alt={item.alt}
-            loading={eager ? "eager" : "lazy"}
-            // The post-layout mobile audits identify this photo as LCP in all
-            // three runs. Keep high priority limited to that measured family;
-            // update the choice when a future content/layout audit changes LCP.
-            fetchPriority={item.image.id === imageAssets.vlaRobotArm.id ? "high" : "auto"}
+            // A measured priority candidate must also be eager. The caller
+            // chooses it per view so an offscreen timeline image is not boosted.
+            loading={eager || priority ? "eager" : "lazy"}
+            fetchPriority={priority ? "high" : "auto"}
             decoding="async"
             className={`block h-full w-full object-cover transition duration-500 group-hover:scale-[1.02] ${crop ?? "object-center"}`}
           />
@@ -249,46 +255,23 @@ function FlipImage({
               </span>
             ))}
           </span>
-          <span className="flex flex-wrap items-center gap-4 border-t border-border pt-3 text-xs">
-            {[item.link, item.extraLink].filter(Boolean).map((l) => (
-              <a
-                key={l!.url}
-                className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-accent-foreground"
-                href={l!.url}
-                target="_blank"
-                rel="noreferrer"
-                onClick={(event) => event.stopPropagation()}
-              >
-                <Globe className="size-3.5" aria-hidden="true" /> {l!.label}
-              </a>
-            ))}
-            <a
-              className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-accent-foreground"
-              href="https://www.linkedin.com/in/yunrui-sophie-li/"
-              target="_blank"
-              rel="noreferrer"
-              onClick={(event) => event.stopPropagation()}
-            >
-              <Linkedin className="size-3.5" aria-hidden="true" /> LinkedIn
-            </a>
-            <a
-              className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-accent-foreground"
-              href="https://github.com/yunsophie"
-              target="_blank"
-              rel="noreferrer"
-              onClick={(event) => event.stopPropagation()}
-            >
-              <Github className="size-3.5" aria-hidden="true" /> GitHub
-            </a>
-            <a
-              className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-accent-foreground"
-              href="mailto:yunsophieli@gmail.com"
-              onClick={(event) => event.stopPropagation()}
-            >
-              <Mail className="size-3.5" aria-hidden="true" /> Contact
-            </a>
-            <RotateCcw className="ml-auto size-3.5 text-muted-foreground/60" aria-hidden="true" />
-          </span>
+          {[item.link, item.extraLink].filter(Boolean).length > 0 && (
+            <span className="flex flex-wrap items-center gap-4 border-t border-border pt-3 text-xs">
+              {[item.link, item.extraLink].filter(Boolean).map((l) => (
+                <a
+                  key={l!.url}
+                  className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-accent-foreground"
+                  href={l!.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  onClick={(event) => event.stopPropagation()}
+                >
+                  <Globe className="size-3.5" aria-hidden="true" /> {l!.label}
+                </a>
+              ))}
+              <RotateCcw className="ml-auto size-3.5 text-muted-foreground/60" aria-hidden="true" />
+            </span>
+          )}
         </span>
       </span>
     </span>
@@ -602,8 +585,7 @@ function Index() {
             <span>{folders.length} Sections</span>
           </p>
           <p className="mt-3 max-w-2xl font-serif text-base leading-relaxed text-foreground/70 sm:text-lg">
-            A small, ongoing collection of what I'm building, studying, and making. From software,
-            and hardware, and everything in between.
+            A small, ongoing collection of what I'm building, studying, and making.
           </p>
           <div className="mt-4 flex -space-x-1.5">
             <span className="grid size-9 place-items-center rounded-full bg-blush/70 font-sans text-xs font-semibold text-foreground ring-2 ring-background">
@@ -804,6 +786,9 @@ function Index() {
                   // includes the tall mobile LCP candidates; later pins remain
                   // native-lazy. Revisit this policy when the collection grows.
                   eager={index < 5}
+                  // The ten-card merge moves mobile LCP to this first-row
+                  // image. Re-audit the choice when content or layout changes.
+                  priority={item.image.id === imageAssets.editorialI2Ta.id}
                   showTapBadge={showTapBadge && index === 0}
                   openKey={openKey}
                   onOpenChange={setOpenKey}
