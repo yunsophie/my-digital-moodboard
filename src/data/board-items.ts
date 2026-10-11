@@ -30,7 +30,7 @@ export const boardItems: readonly BoardItem[] = [
     category: "CS @ University of Washington",
     year: "Class of 2028",
     description:
-      "Hello I'm Sophie, a computer science student at the University of Washington. I'm happiest somewhere between research and systems and design. I have worked on teaching robots to learn from video, reading the Earth through satellite imagery, building distributed software that holds up when things go wrong, and many other fun side projects where I let my creativity take control. Outside of work, I am an avid reader, runner, pianist, and a fan of the Montreal Canadiens.",
+      "Hello, I'm Sophie ! I'm a computer science student at the University of Washington, and I love bringing my technical and creative interests together. I've worked on teaching robots to learn from video, mapping snow with satellite imagery, and building distributed systems that hold up through failures. I also make room for side projects inspired by how I study and the images I save. Pinterest was my first social media platform in early middle school, so a moodboard felt like home for my portfolio ! Outside of coding and research, you'll find me reading, running, playing piano, or cheering for the Montreal Canadiens.",
     tools: ["Machine learning", "Distributed systems", "Research"],
     image: imageAssets.aboutSophie,
     alt: "Sophie sitting on a bench next to a Milky mascot statue in Japan",
@@ -42,7 +42,8 @@ export const boardItems: readonly BoardItem[] = [
     folder: "Projects",
     category: "Distributed systems",
     year: "2026",
-    description: "A distributed key-value store built with Java, Paxos, and two-phase commit.",
+    description:
+      "For CSE 452, I built a Java key-value store to keep data consistent through unreliable networks and server failures. I started with asynchronous RPCs, timeout retries, sequence tracking, and request deduplication for exactly-once execution. Then I added primary–backup replication with heartbeats, automatic failover, and acknowledged state transfer, followed by Multi-Paxos with majority quorums, leader election, replica catch-up, and log garbage collection. I sharded storage across Paxos groups with configuration-aware routing, deterministic load balancing, and shard migration that preserves deduplication state. For cross-shard reads, writes, and swaps, I implemented two-phase commit with key-level locks, configuration checks, and commit/abort retries. I debugged the protocols with JUnit and model-checking suites covering message loss, duplication, network partitions, concurrent requests, and safety/liveness violations.",
     tools: ["Java", "Paxos", "Two-phase commit"],
     image: imageAssets.editorialKvStore,
     alt: "Floating frosted geometric clusters connected by translucent bridges",
@@ -54,7 +55,7 @@ export const boardItems: readonly BoardItem[] = [
     year: "Jan — Jun 2026",
     sortYear: 2026.1,
     description:
-      "Worked as an undergraduate researcher with Prof. Nicoleta Cristea. I explored how far a tiny amount of labeled data could go. By training a simple logistic-regression head on embeddings from OlmoEarth's frozen 300M-parameter vision transformer, I reached an F1 of 0.84 (0.975 precision) from just 20 labeled points, eliminating the need for costly fine-tuning. I also built a geospatial data pipelines aligning Sentinel-1 SAR, Sentinel-2, and LiDAR imagery over the Tuolumne River basin and finally presented the work to about 20 researchers at a symposium.",
+      "As an undergraduate researcher with Prof. Nicoleta Cristea, I explored how far a small set of labels could take snow-cover mapping. I trained a scikit-learn logistic-regression classifier on 128-dimensional embeddings from OlmoEarth's frozen 300M-parameter vision transformer, reaching 0.756 weighted F1 on 264 held-out points with only 20 training labels. For the Tuolumne River basin, I paired Sentinel-1 SAR and Sentinel-2 imagery with 10 LiDAR surveys. Using Python, NumPy, Rasterio, rslearn, and multiprocessing, I generated 723 labeled training windows with nodata filtering and deterministic train/validation/test splits. I also built Rasterio, PyProj, and Shapely tools for coordinate conversion, flight-date extraction, and GeoJSON export, producing 600 balanced point labels and polygon annotations. I validated predictions across 1.64 million pixels in 100,000-pixel batches against three LiDAR surveys, reporting F1, IoU, precision, recall, and confusion matrices. For repeatable fine-tuning, I configured PyTorch Lightning and rslearn through YAML, staged encoder freezing, learning-rate scheduling, checkpoint selection, and Weights & Biases tracking. I shared the work with about 20 researchers at a symposium !",
     tools: ["Python", "scikit-learn", "geopandas", "AWS"],
     image: imageAssets.olmoSymposium,
     alt: "Sophie presenting her snow cover research poster at a symposium",
@@ -65,7 +66,7 @@ export const boardItems: readonly BoardItem[] = [
     category: "Systems programming",
     year: "CSE 333",
     description:
-      "A concurrent HTTP search engine written in C++ that handles many clients at once, keeps connections alive across requests, serves static files, and returns ranked search results. I built a POSIX thread pool that coordinates up to eight worker threads with mutexes, condition variables, a task queue, and graceful shutdown, and made file serving safe with path traversal protection, URI decoding, HTML escaping, MIME detection, and binary-safe reads.",
+      "Building my own search engine meant getting into the details of what happens between a browser and a server. For CSE 333, I built a C++17 HTTP engine that serves static files and ranked search results over IPv4/IPv6 POSIX TCP sockets. I coordinated eight worker threads with mutexes, condition variables, a task queue, and graceful shutdown. I tested HTTP parsing and socket I/O with back-to-back and fragmented requests, including keep-alive and connection-close behavior. For file serving, I added path traversal protection, URI decoding, HTML escaping, MIME detection for 7+ file types, and binary-safe reads. I tested the thread pool with 10 workers processing 300 queued tasks and used GoogleTest to check networking, parsing, file I/O, URL handling, and security.",
     tools: ["C++", "POSIX TCP", "IPv4/IPv6", "Unix", "pthreads"],
     image: imageAssets.editorialHttpServer,
     alt: "Frosted acrylic panels with glowing circuit traces",
@@ -77,7 +78,7 @@ export const boardItems: readonly BoardItem[] = [
     year: "Mar — Jun 2026",
     sortYear: 2026.3,
     description:
-      "Worked as a undergraduate researcher on a robot learning system that compresses vision, actions, and proprioception into one shared latent space, enabling unlabeled video to stand in as action data across different robots. I added temporal timestep conditioning across the encoders so the model could reason about variable frame gaps, and ran 40+ careful hyperparameter sweeps that cut validation loss 11.3% below baseline.",
+      "At Ai2 + UW's RAIVN Lab, I worked on a robot learning system that represents vision, actions, and proprioception (a robot's sense of its own position) in a shared latent space. Our goal was to learn from unlabeled video across different robots. I added temporal timestep conditioning to the observation, proprioception, and action encoders using sinusoidal embeddings and modality-specific MLPs, so the model could account for variable frame gaps. In PyTorch, I ran 40+ controlled experiments varying learning rates, KL divergence coefficients, loss weights, and flow-matching noise schedules. I tracked the runs in Weights & Biases and reduced validation loss by 11.3% relative to baseline.",
     tools: ["PyTorch", "Weights & Biases", "Robot learning"],
     image: imageAssets.vlaRobotArm,
     alt: "A robotic arm at a café counter",
@@ -91,7 +92,7 @@ export const boardItems: readonly BoardItem[] = [
     year: "Oct 2025 — Jun 2026",
     sortYear: 2025.8,
     description:
-      "I mentor a group of ~10 students exploring machine learning, deep learning, computer vision, reinforcement learning, natural language processing, and computational neuroscience. Through weekly sessions I've guided and answered questions across ten projects from MNIST classifiers to ConvNets to fine-tuning HuggingFace models.",
+      "As an Interactive Intelligence TA, I mentored about 10 students exploring machine learning, deep learning, computer vision, reinforcement learning, natural language processing, and computational neuroscience. I helped them work through seven projects, from MNIST classifiers and ConvNets to fine-tuning Hugging Face models. In our weekly sessions, we asked questions and worked through the ideas behind the code together !",
     tools: [
       "Machine learning",
       "Deep learning",
@@ -113,7 +114,7 @@ export const boardItems: readonly BoardItem[] = [
     year: "Oct 2024 — May 2025",
     sortYear: 2024.8,
     description:
-      "On a team of six, I helped build a full-stack React web app that lets UW students follow live sports with an engaging betting system. Along the way I got a taste of an industry-style workflow by participating in standups, reviews, version control, and finally presented our work to industry professionals at the HCP showcase.",
+      "I helped build a React and JavaScript web app where UW students could follow live sports and take part in a betting system. On a six-person team, I contributed to the frontend from design through deployment, using standups, project reviews, and Git version control to coordinate our work. We wrapped up by presenting the app to industry professionals at the HCP showcase !",
     tools: ["React.js", "JavaScript", "Teamwork"],
     image: imageAssets.huskybidsPresentation,
     alt: "Sophie presenting HuskyBids at the HCP showcase",
@@ -129,7 +130,7 @@ export const boardItems: readonly BoardItem[] = [
     category: "Hackathon",
     year: "DubHacks '24",
     description:
-      "A sustainability tool that makes product information accessible. It pulls product data from several online platforms and compares it in real time, so shoppers can see sustainability side by side before they buy. The hardest parts were assessing sustainability when product data was incomplete or inconsistent and standardizing records across different platforms — along the way I learned a lot about sustainability metrics, data integration, and developing machine learning models. Next up: a more accurate model, support for more retailers, and a feedback feature so users can improve the ratings.",
+      "For DubHacks '24, I worked on a sustainability tool to help shoppers compare products before buying. We used Python, AWS Bedrock, and APIs to pull product data from several online platforms and compare sustainability information in real time, with Figma for the design. The challenge was making sense of incomplete or inconsistent product data and standardizing records across platforms. I learned about sustainability metrics, data integration, and developing machine learning models as we worked through it. Next, I'd love to improve rating accuracy, support more retailers, and let shoppers contribute feedback on the ratings !",
     tools: ["Python", "AWS Bedrock", "Amazon Web Services", "APIs", "Figma"],
     image: imageAssets.dubhacksSwag,
     alt: "DubHacks '24 swag: a cap, pouches, stickers, and tumblers",
@@ -142,7 +143,7 @@ export const boardItems: readonly BoardItem[] = [
     category: "Hackathon",
     year: "DubHacks '25",
     description:
-      "An AI study companion inspired by rubber duck debugging — except the AI is the student and you're the teacher. You teach your Ducky about any topic while it asks adaptive questions, and afterwards it analyzes the exchange to highlight strengths, misunderstandings, and gaps. I built the full stack with React and Node/Express, writing REST APIs for context-aware tutoring and conversation analysis. Gemini returns schema-constrained JSON to estimate topic understanding and generate personalized study recommendations, and Firestore stores timestamp-ordered messages with batch writes that save new messages and session metadata in a single atomic commit.",
+      "For DubHacks '25, I built a study companion inspired by rubber duck debugging: you teach your Ducky a topic, and it asks questions to help you think it through ! I built the full stack with React, Tailwind CSS, and Node.js/Express, with REST APIs for context-aware tutoring and conversation analysis. I used conversation history in Gemini prompts to adapt question difficulty and probe misconceptions. To analyze each session, I requested schema-constrained JSON responses to estimate topic understanding, identify knowledge gaps, and generate personalized study recommendations. In Firestore, I kept messages in timestamp order and used incremental batch writes to save new messages and update session metadata in one atomic commit.",
     tools: ["React.js", "Node.js", "Express", "Firebase", "Gemini API", "Tailwind"],
     image: imageAssets.studyDucky,
     alt: "A round yellow cartoon duck standing on a blue tiled floor",
@@ -156,7 +157,7 @@ export const boardItems: readonly BoardItem[] = [
     category: "Personal project",
     year: "2026",
     description:
-      "An interior-design discovery interface that helps people turn a vague aesthetic feeling into words they can search with — by picking images they love, browsing descriptive vocabulary, and refining results visually. I wrote the MVP specification covering user journeys, feature scope, success criteria, and security and cost constraints, and planned CLIP-based image retrieval with MMR reranking and Cloudflare R2 storage.",
+      "I wanted a way to search for interiors when I knew what I liked but couldn't name the style. For Visual Discovery, I designed an interface where you choose images, explore descriptive vocabulary, and refine results around your taste. I wrote the MVP specification, from user journeys and feature scope to success criteria, security, and cost limits. For the retrieval pipeline, I planned OpenCLIP embeddings, MMR reranking to balance relevance and variety, and Cloudflare R2 storage, with React for the interface and Python, FastAPI, and PyTorch for the backend.",
     tools: ["React", "JavaScript", "CLIP", "Cloudflare R2"],
     image: imageAssets.pinkHardwareGrid,
     alt: "A soft pink grid of hardware pieces",
